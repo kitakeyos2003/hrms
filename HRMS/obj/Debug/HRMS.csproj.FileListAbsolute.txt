@@ -36,3 +36,4 @@ C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.csproj.CoreCompileInputs.ca
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.csproj.CopyComplete
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.exe
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.pdb
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.Introduction.resources

@@ -36,9 +36,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(383, 219);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Personnel";
+            this.label1.Text = "Nhân sự";
             // 
             // Personnel
             // 
@@ -48,7 +48,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Personnel";
-            this.Text = "Personnel";
+            this.Text = "Nhân sự";
             this.ResumeLayout(false);
             this.PerformLayout();
 

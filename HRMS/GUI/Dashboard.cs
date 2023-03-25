@@ -26,6 +26,7 @@ namespace HRMS
         private PerformanceReview performanceReview;
         private Timekeeping timekeeping;
         private SalaryCalculator salaryCalculator;
+        private Introduction introduction;
         IconButton selected;
         public Dashboard(Login login)
         {
@@ -46,12 +47,14 @@ namespace HRMS
             performanceReview = new PerformanceReview(panelDesktop);
             timekeeping = new Timekeeping(panelDesktop);
             salaryCalculator = new SalaryCalculator(panelDesktop);
+            introduction = new Introduction(panelDesktop);
             AddControl(home);
             AddControl(personnel);
             AddControl(recruitment);
             AddControl(performanceReview);
             AddControl(timekeeping);
             AddControl(salaryCalculator);
+            AddControl(introduction);
         }
 
         private void AddControl(Form control)
@@ -278,7 +281,7 @@ namespace HRMS
             login.Show();
         }
 
-        private void ChoiceTab(object sender, EventArgs e)
+        private void OpenNewTabAndCloseCurrentTab(object sender, EventArgs e)
         {
             if (selected != null)
             {
@@ -303,6 +306,7 @@ namespace HRMS
             Form form = GetForm(selected);
             if (form != null)
             {
+                this.Text = form.Text;
                 this.selected = selected;
                 selected.BackColor = Color.FromArgb(0, 110, 220);
                 selected.Enabled = false;
@@ -338,12 +342,21 @@ namespace HRMS
                 {
                     return salaryCalculator;
                 }
+                else if (selected == btnIntrodction)
+                {
+                    return introduction;
+                }
             }
             return null;
         }
         private void SetDefaultTab()
         {
             OpenTab(btnHome);
+        }
+
+        private void ChoiceTab(object sender, EventArgs e)
+        {
+
         }
     }
 

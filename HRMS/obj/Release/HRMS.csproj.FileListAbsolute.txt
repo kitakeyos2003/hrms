@@ -15,3 +15,10 @@ C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.csproj.CoreCompileInputs.
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.csproj.CopyComplete
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.exe
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.pdb
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.Home.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.Introduction.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.PerformanceReview.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.Personnel.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.Recruitment.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.SalaryCalculator.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.Timekeeping.resources

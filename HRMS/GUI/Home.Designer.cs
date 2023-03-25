@@ -48,7 +48,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
-            this.Text = "Home";
+            this.Text = "Trang chủ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
