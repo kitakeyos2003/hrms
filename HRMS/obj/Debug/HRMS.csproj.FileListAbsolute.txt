@@ -19,10 +19,11 @@ C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\bin\Debug\FontAwesome.Sha
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\bin\Debug\RJCodeAdvance.RJControls.dll
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.csproj.AssemblyReference.cache
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.csproj.SuggestedBindingRedirects.cache
-C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.Form1.resources
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.Properties.Resources.resources
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.csproj.GenerateResource.cache
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.csproj.CoreCompileInputs.cache
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.csproj.CopyComplete
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.exe
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.pdb
+C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.Dashboard.resources
+C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.GUI.Login.resources

@@ -16,7 +16,8 @@ namespace HRMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashboardForm());
+            Database.GetInstance().Connect();
+            Application.Run(new Dashboard());
         }
     }
 }

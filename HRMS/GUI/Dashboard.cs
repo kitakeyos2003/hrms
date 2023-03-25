@@ -1,4 +1,5 @@
-﻿using RJCodeAdvance.RJControls;
+﻿using HRMS.GUI;
+using RJCodeAdvance.RJControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,16 +13,22 @@ using System.Windows.Forms;
 
 namespace HRMS
 {
-    public partial class Form1 : Form
+    public partial class Dashboard : Form
     {
         private int borderSize = 2;
         private Size formSize;
-        public Form1()
+        public Dashboard()
         {
             InitializeComponent();
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
+            Login login = new Login();
+            login.Location = new Point(100, 100);
+            login.TopLevel = false;
+            login.AutoScroll = true;
+            panelDesktop.Controls.Add(login);
+            login.Show();
         }
 
         //Drag Form
@@ -149,7 +156,7 @@ namespace HRMS
             }
             else
             { //Expand menu
-                panelMenu.Width = 230;
+                panelMenu.Width = 240;
                 logo.Visible = true;
                 btnMenu.Dock = DockStyle.None;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
