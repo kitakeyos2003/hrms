@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HRMS.GUI.alert;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -146,6 +147,8 @@ namespace HRMS.GUI
         {
             Hide();
             dashboard.Show();
+            Alert alert = new Alert();
+            alert.ShowAlert("Đăng nhập thành công", Alert.EnumType.SUCCESS);
         }
     }
 }

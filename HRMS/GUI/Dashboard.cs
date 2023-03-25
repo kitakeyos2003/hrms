@@ -1,4 +1,6 @@
-﻿using HRMS.GUI;
+﻿using FontAwesome.Sharp;
+using HRMS.GUI;
+using HRMS.GUI.alert;
 using RJCodeAdvance.RJControls;
 using System;
 using System.Collections.Generic;
@@ -18,13 +20,45 @@ namespace HRMS
         private int borderSize = 2;
         private Size formSize;
         private Login login;
+        private Home home;
+        private Personnel personnel;
+        private Recruitment recruitment;
+        private PerformanceReview performanceReview;
+        private Timekeeping timekeeping;
+        private SalaryCalculator salaryCalculator;
+        IconButton selected;
         public Dashboard(Login login)
         {
-            InitializeComponent();
-            CollapseMenu();
             this.login = login;
+            InitializeComponent();
+            Init();
+            CollapseMenu();
+            SetDefaultTab();
+        }
+
+        private void Init()
+        {
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
+            home = new Home(panelDesktop);
+            personnel = new Personnel(panelDesktop);
+            recruitment = new Recruitment(panelDesktop);
+            performanceReview = new PerformanceReview(panelDesktop);
+            timekeeping = new Timekeeping(panelDesktop);
+            salaryCalculator = new SalaryCalculator(panelDesktop);
+            AddControl(home);
+            AddControl(personnel);
+            AddControl(recruitment);
+            AddControl(performanceReview);
+            AddControl(timekeeping);
+            AddControl(salaryCalculator);
+        }
+
+        private void AddControl(Form control)
+        {
+            control.TopLevel = false;
+            control.AutoScroll = true;
+            panelDesktop.Controls.Add(control);
         }
 
         //Drag Form
@@ -214,7 +248,7 @@ namespace HRMS
         }
         private void Open_DropdownMenu(RJDropdownMenu dropdownMenu, object sender)
         {
-            Control control = (Control) sender;
+            Control control = (Control)sender;
             dropdownMenu.VisibleChanged += new EventHandler((sender2, ev) =>
             {
                 DropdownMenu_VisibleChanged(sender2, ev, control);
@@ -224,13 +258,14 @@ namespace HRMS
 
         private void DropdownMenu_VisibleChanged(object sender, EventArgs ev, Control control)
         {
-            RJDropdownMenu dropdownMenu = (RJDropdownMenu) sender;
+            RJDropdownMenu dropdownMenu = (RJDropdownMenu)sender;
             if (!DesignMode)
             {
                 if (dropdownMenu.Visible)
                 {
                     control.BackColor = Color.FromArgb(159, 161, 224);
-                } else
+                }
+                else
                 {
                     control.BackColor = Color.FromArgb(98, 102, 244);
                 }
@@ -242,7 +277,77 @@ namespace HRMS
             Hide();
             login.Show();
         }
+
+        private void ChoiceTab(object sender, EventArgs e)
+        {
+            if (selected != null)
+            {
+                HideTab(selected);
+            }
+            OpenTab((IconButton)sender);
+        }
+
+        private void HideTab(IconButton selected)
+        {
+            Form form = GetForm(selected);
+            if (form != null)
+            {
+                selected.BackColor = Color.FromArgb(96, 110, 253);
+                selected.Enabled = true;
+                form.Hide();
+            }
+        }
+
+        private void OpenTab(IconButton selected)
+        {
+            Form form = GetForm(selected);
+            if (form != null)
+            {
+                this.selected = selected;
+                selected.BackColor = Color.FromArgb(0, 110, 220);
+                selected.Enabled = false;
+                form.Show();
+            }
+        }
+
+        private Form GetForm(IconButton selected)
+        {
+            if (selected != null)
+            {
+                if (selected == btnHome)
+                {
+                    return home;
+                }
+                else if (selected == btnPersonnel)
+                {
+                    return personnel;
+                }
+                else if (selected == btnRecruitment)
+                {
+                    return recruitment;
+                }
+                else if (selected == btnPerformanceReview)
+                {
+                    return performanceReview;
+                }
+                else if (selected == btnTimekeeping)
+                {
+                    return timekeeping;
+                }
+                else if (selected == btnSalaryCalculator)
+                {
+                    return salaryCalculator;
+                }
+            }
+            return null;
+        }
+        private void SetDefaultTab()
+        {
+            OpenTab(btnHome);
+        }
     }
+
+
 
 
 }

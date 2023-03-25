@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.btnSalaryCalculator = new FontAwesome.Sharp.IconButton();
+            this.btnPerformanceReview = new FontAwesome.Sharp.IconButton();
+            this.btnTimekeeping = new FontAwesome.Sharp.IconButton();
+            this.btnRecruitment = new FontAwesome.Sharp.IconButton();
+            this.btnPersonnel = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
@@ -55,11 +56,11 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.panelMenu.Controls.Add(this.btnLogout);
-            this.panelMenu.Controls.Add(this.iconButton7);
-            this.panelMenu.Controls.Add(this.iconButton6);
-            this.panelMenu.Controls.Add(this.iconButton5);
-            this.panelMenu.Controls.Add(this.iconButton4);
-            this.panelMenu.Controls.Add(this.iconButton3);
+            this.panelMenu.Controls.Add(this.btnSalaryCalculator);
+            this.panelMenu.Controls.Add(this.btnPerformanceReview);
+            this.panelMenu.Controls.Add(this.btnTimekeeping);
+            this.panelMenu.Controls.Add(this.btnRecruitment);
+            this.panelMenu.Controls.Add(this.btnPersonnel);
             this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -92,120 +93,125 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // iconButton7
+            // btnSalaryCalculator
             // 
-            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.White;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.BalanceScale;
-            this.iconButton7.IconColor = System.Drawing.Color.White;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 30;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(0, 316);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton7.Size = new System.Drawing.Size(200, 46);
-            this.iconButton7.TabIndex = 6;
-            this.iconButton7.Tag = "Tiền Lương";
-            this.iconButton7.Text = "Tiền Lương";
-            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = true;
+            this.btnSalaryCalculator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalaryCalculator.FlatAppearance.BorderSize = 0;
+            this.btnSalaryCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalaryCalculator.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalaryCalculator.ForeColor = System.Drawing.Color.White;
+            this.btnSalaryCalculator.IconChar = FontAwesome.Sharp.IconChar.BalanceScale;
+            this.btnSalaryCalculator.IconColor = System.Drawing.Color.White;
+            this.btnSalaryCalculator.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalaryCalculator.IconSize = 30;
+            this.btnSalaryCalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalaryCalculator.Location = new System.Drawing.Point(0, 304);
+            this.btnSalaryCalculator.Name = "btnSalaryCalculator";
+            this.btnSalaryCalculator.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSalaryCalculator.Size = new System.Drawing.Size(200, 46);
+            this.btnSalaryCalculator.TabIndex = 6;
+            this.btnSalaryCalculator.Tag = "Tiền Lương";
+            this.btnSalaryCalculator.Text = "Tiền Lương";
+            this.btnSalaryCalculator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalaryCalculator.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalaryCalculator.UseVisualStyleBackColor = true;
+            this.btnSalaryCalculator.Click += new System.EventHandler(this.ChoiceTab);
             // 
-            // iconButton6
+            // btnPerformanceReview
             // 
-            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Smile;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 30;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 270);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton6.Size = new System.Drawing.Size(200, 46);
-            this.iconButton6.TabIndex = 5;
-            this.iconButton6.Tag = "Đánh Giá";
-            this.iconButton6.Text = "Đánh Giá";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = true;
+            this.btnPerformanceReview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerformanceReview.FlatAppearance.BorderSize = 0;
+            this.btnPerformanceReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerformanceReview.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerformanceReview.ForeColor = System.Drawing.Color.White;
+            this.btnPerformanceReview.IconChar = FontAwesome.Sharp.IconChar.Smile;
+            this.btnPerformanceReview.IconColor = System.Drawing.Color.White;
+            this.btnPerformanceReview.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPerformanceReview.IconSize = 30;
+            this.btnPerformanceReview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerformanceReview.Location = new System.Drawing.Point(0, 258);
+            this.btnPerformanceReview.Name = "btnPerformanceReview";
+            this.btnPerformanceReview.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPerformanceReview.Size = new System.Drawing.Size(200, 46);
+            this.btnPerformanceReview.TabIndex = 5;
+            this.btnPerformanceReview.Tag = "Đánh Giá";
+            this.btnPerformanceReview.Text = "Đánh Giá";
+            this.btnPerformanceReview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerformanceReview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerformanceReview.UseVisualStyleBackColor = true;
+            this.btnPerformanceReview.Click += new System.EventHandler(this.ChoiceTab);
             // 
-            // iconButton5
+            // btnTimekeeping
             // 
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 30;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 224);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton5.Size = new System.Drawing.Size(200, 46);
-            this.iconButton5.TabIndex = 4;
-            this.iconButton5.Tag = "Chấm Công";
-            this.iconButton5.Text = "Chấm Công";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
+            this.btnTimekeeping.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTimekeeping.FlatAppearance.BorderSize = 0;
+            this.btnTimekeeping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimekeeping.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimekeeping.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTimekeeping.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnTimekeeping.IconColor = System.Drawing.Color.White;
+            this.btnTimekeeping.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTimekeeping.IconSize = 30;
+            this.btnTimekeeping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimekeeping.Location = new System.Drawing.Point(0, 212);
+            this.btnTimekeeping.Name = "btnTimekeeping";
+            this.btnTimekeeping.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTimekeeping.Size = new System.Drawing.Size(200, 46);
+            this.btnTimekeeping.TabIndex = 4;
+            this.btnTimekeeping.Tag = "Chấm Công";
+            this.btnTimekeeping.Text = "Chấm Công";
+            this.btnTimekeeping.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimekeeping.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTimekeeping.UseVisualStyleBackColor = true;
+            this.btnTimekeeping.Click += new System.EventHandler(this.ChoiceTab);
             // 
-            // iconButton4
+            // btnRecruitment
             // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 30;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 178);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton4.Size = new System.Drawing.Size(200, 46);
-            this.iconButton4.TabIndex = 3;
-            this.iconButton4.Tag = "Tuyển Dụng";
-            this.iconButton4.Text = "Tuyển Dụng";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
+            this.btnRecruitment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRecruitment.FlatAppearance.BorderSize = 0;
+            this.btnRecruitment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecruitment.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecruitment.ForeColor = System.Drawing.Color.White;
+            this.btnRecruitment.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            this.btnRecruitment.IconColor = System.Drawing.Color.White;
+            this.btnRecruitment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRecruitment.IconSize = 30;
+            this.btnRecruitment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecruitment.Location = new System.Drawing.Point(0, 166);
+            this.btnRecruitment.Name = "btnRecruitment";
+            this.btnRecruitment.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnRecruitment.Size = new System.Drawing.Size(200, 46);
+            this.btnRecruitment.TabIndex = 3;
+            this.btnRecruitment.Tag = "Tuyển Dụng";
+            this.btnRecruitment.Text = "Tuyển Dụng";
+            this.btnRecruitment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecruitment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRecruitment.UseVisualStyleBackColor = true;
+            this.btnRecruitment.Click += new System.EventHandler(this.ChoiceTab);
             // 
-            // iconButton3
+            // btnPersonnel
             // 
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Person;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 132);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(200, 46);
-            this.iconButton3.TabIndex = 2;
-            this.iconButton3.Tag = "Nhân Sự";
-            this.iconButton3.Text = "Nhân Sự";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.btnPersonnel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPersonnel.FlatAppearance.BorderSize = 0;
+            this.btnPersonnel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonnel.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonnel.ForeColor = System.Drawing.Color.White;
+            this.btnPersonnel.IconChar = FontAwesome.Sharp.IconChar.Person;
+            this.btnPersonnel.IconColor = System.Drawing.Color.White;
+            this.btnPersonnel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPersonnel.IconSize = 30;
+            this.btnPersonnel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonnel.Location = new System.Drawing.Point(0, 120);
+            this.btnPersonnel.Name = "btnPersonnel";
+            this.btnPersonnel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPersonnel.Size = new System.Drawing.Size(200, 46);
+            this.btnPersonnel.TabIndex = 2;
+            this.btnPersonnel.Tag = "Nhân Sự";
+            this.btnPersonnel.Text = "Nhân Sự";
+            this.btnPersonnel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonnel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPersonnel.UseVisualStyleBackColor = true;
+            this.btnPersonnel.Click += new System.EventHandler(this.ChoiceTab);
             // 
             // btnHome
             // 
@@ -219,7 +225,7 @@
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHome.IconSize = 30;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 86);
+            this.btnHome.Location = new System.Drawing.Point(0, 74);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnHome.Size = new System.Drawing.Size(200, 46);
@@ -229,6 +235,7 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.ChoiceTab);
             // 
             // panel1
             // 
@@ -237,7 +244,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 86);
+            this.panel1.Size = new System.Drawing.Size(200, 74);
             this.panel1.TabIndex = 0;
             // 
             // btnMenu
@@ -276,7 +283,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(200, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(934, 60);
+            this.panelTitleBar.Size = new System.Drawing.Size(934, 57);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -300,9 +307,9 @@
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 15;
-            this.btnMinimize.Location = new System.Drawing.Point(799, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(829, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
+            this.btnMinimize.Size = new System.Drawing.Size(35, 20);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -317,9 +324,9 @@
             this.btnMaximize.IconColor = System.Drawing.Color.White;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 15;
-            this.btnMaximize.Location = new System.Drawing.Point(844, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(864, 0);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(45, 25);
+            this.btnMaximize.Size = new System.Drawing.Size(35, 20);
             this.btnMaximize.TabIndex = 3;
             this.btnMaximize.UseVisualStyleBackColor = false;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -334,9 +341,9 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(889, 0);
+            this.btnClose.Location = new System.Drawing.Point(899, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 25);
+            this.btnClose.Size = new System.Drawing.Size(35, 20);
             this.btnClose.TabIndex = 2;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -345,10 +352,10 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(200, 60);
+            this.panelDesktop.Location = new System.Drawing.Point(200, 57);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panelDesktop.Size = new System.Drawing.Size(934, 501);
+            this.panelDesktop.Size = new System.Drawing.Size(934, 504);
             this.panelDesktop.TabIndex = 2;
             // 
             // Dashboard
@@ -359,6 +366,7 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1148, 594);
             this.Name = "Dashboard";
             this.Text = "Form1";
@@ -381,11 +389,11 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnMenu;
         private FontAwesome.Sharp.IconButton btnLogout;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnSalaryCalculator;
+        private FontAwesome.Sharp.IconButton btnPerformanceReview;
+        private FontAwesome.Sharp.IconButton btnTimekeeping;
+        private FontAwesome.Sharp.IconButton btnRecruitment;
+        private FontAwesome.Sharp.IconButton btnPersonnel;
         private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnMaximize;

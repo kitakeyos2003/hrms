@@ -1,11 +1,14 @@
-C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\HRMS.exe.config
 C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\HRMS.exe
-C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\HRMS.pdb
 C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\FontAwesome.Sharp.dll
+C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\HRMS.exe.config
+C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\HRMS.pdb
+C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\Microsoft.VisualBasic.PowerPacks.Vs.dll
 C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\RJCodeAdvance.RJControls.dll
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.csproj.AssemblyReference.cache
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.csproj.SuggestedBindingRedirects.cache
-C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.Form1.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.alert.Alert.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.Dashboard.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.Login.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.Properties.Resources.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.csproj.GenerateResource.cache
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.csproj.CoreCompileInputs.cache
