@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using HRMS.GUI;
+using System;
 using System.Windows.Forms;
 
 namespace HRMS
@@ -16,8 +14,7 @@ namespace HRMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Database.GetInstance().Connect();
-            Application.Run(new Dashboard());
+            Application.Run(new Login());
         }
     }
 }

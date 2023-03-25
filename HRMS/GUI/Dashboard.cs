@@ -17,18 +17,14 @@ namespace HRMS
     {
         private int borderSize = 2;
         private Size formSize;
-        public Dashboard()
+        private Login login;
+        public Dashboard(Login login)
         {
             InitializeComponent();
             CollapseMenu();
+            this.login = login;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
-            Login login = new Login();
-            login.Location = new Point(100, 100);
-            login.TopLevel = false;
-            login.AutoScroll = true;
-            panelDesktop.Controls.Add(login);
-            login.Show();
         }
 
         //Drag Form
@@ -142,9 +138,9 @@ namespace HRMS
 
         private void CollapseMenu()
         {
-            if (this.panelMenu.Width > 200) //Collapse menu
+            if (this.panelMenu.Width >= 200) //Collapse menu
             {
-                panelMenu.Width = 100;
+                panelMenu.Width = 60;
                 logo.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
@@ -156,7 +152,7 @@ namespace HRMS
             }
             else
             { //Expand menu
-                panelMenu.Width = 240;
+                panelMenu.Width = 200;
                 logo.Visible = true;
                 btnMenu.Dock = DockStyle.None;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
@@ -239,6 +235,12 @@ namespace HRMS
                     control.BackColor = Color.FromArgb(98, 102, 244);
                 }
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Hide();
+            login.Show();
         }
     }
 
