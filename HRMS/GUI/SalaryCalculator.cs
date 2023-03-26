@@ -17,8 +17,6 @@ namespace HRMS.GUI
         {
             this.panel = panel;
             InitializeComponent();
-            this.Width = panel.Width;
-            this.Height = panel.Height;
             this.BackColor = panel.BackColor;
         }
     }

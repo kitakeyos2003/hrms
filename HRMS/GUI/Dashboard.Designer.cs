@@ -55,7 +55,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
             this.panelMenu.Controls.Add(this.btnIntrodction);
             this.panelMenu.Controls.Add(this.btnLogout);
             this.panelMenu.Controls.Add(this.btnSalaryCalculator);
@@ -376,6 +376,7 @@
             // 
             // panelDesktop
             // 
+            this.panelDesktop.AutoScroll = true;
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(200, 57);
@@ -383,6 +384,7 @@
             this.panelDesktop.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.panelDesktop.Size = new System.Drawing.Size(934, 504);
             this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.Resize += new System.EventHandler(this.PanelResize);
             // 
             // Dashboard
             // 

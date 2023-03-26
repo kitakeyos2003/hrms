@@ -249,31 +249,6 @@ namespace HRMS
         {
             Application.Exit();
         }
-        private void Open_DropdownMenu(RJDropdownMenu dropdownMenu, object sender)
-        {
-            Control control = (Control)sender;
-            dropdownMenu.VisibleChanged += new EventHandler((sender2, ev) =>
-            {
-                DropdownMenu_VisibleChanged(sender2, ev, control);
-            });
-            dropdownMenu.Show();
-        }
-
-        private void DropdownMenu_VisibleChanged(object sender, EventArgs ev, Control control)
-        {
-            RJDropdownMenu dropdownMenu = (RJDropdownMenu)sender;
-            if (!DesignMode)
-            {
-                if (dropdownMenu.Visible)
-                {
-                    control.BackColor = Color.FromArgb(159, 161, 224);
-                }
-                else
-                {
-                    control.BackColor = Color.FromArgb(98, 102, 244);
-                }
-            }
-        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -292,10 +267,10 @@ namespace HRMS
 
         private void HideTab(IconButton selected)
         {
-            Form form = GetForm(selected);
+            Form form = GetFormSelected(selected);
             if (form != null)
             {
-                selected.BackColor = Color.FromArgb(96, 110, 253);
+                selected.BackColor = Color.FromArgb(0, 145, 255);
                 selected.Enabled = true;
                 form.Hide();
             }
@@ -303,18 +278,19 @@ namespace HRMS
 
         private void OpenTab(IconButton selected)
         {
-            Form form = GetForm(selected);
+            Form form = GetFormSelected(selected);
             if (form != null)
             {
                 this.Text = form.Text;
                 this.selected = selected;
                 selected.BackColor = Color.FromArgb(0, 110, 220);
                 selected.Enabled = false;
+                SetLocationForFormChildren(form, panelDesktop);
                 form.Show();
             }
         }
 
-        private Form GetForm(IconButton selected)
+        private Form GetFormSelected(IconButton selected)
         {
             if (selected != null)
             {
@@ -354,9 +330,18 @@ namespace HRMS
             OpenTab(btnHome);
         }
 
-        private void ChoiceTab(object sender, EventArgs e)
+        private void PanelResize(object sender, EventArgs e)
         {
+            Form form = GetFormSelected(selected);
+            if (form != null)
+            {
+                SetLocationForFormChildren(form, panelDesktop);
+            }
+        }
 
+        public void SetLocationForFormChildren(Form children, Panel panel)
+        {
+            children.Location = new Point(panel.Width / 2 - children.Width / 2, panel.Height / 2 - children.Height / 2);
         }
     }
 

@@ -17,9 +17,14 @@ namespace HRMS.GUI
         {
             this.panel = panel;
             InitializeComponent();
-            this.Width = panel.Width;
-            this.Height = panel.Height;
             this.BackColor = panel.BackColor;
+            SetVersion();
+        }
+
+        private void SetVersion()
+        {
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            txtVersion.Text = String.Format("Phiên bản {0}", version);
         }
     }
 }
