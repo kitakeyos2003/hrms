@@ -48,6 +48,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerformanceReview";
+            this.Tag = "Đánh giá nhân viên";
             this.Text = "Đánh giá";
             this.ResumeLayout(false);
             this.PerformLayout();

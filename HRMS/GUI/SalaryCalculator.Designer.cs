@@ -48,7 +48,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SalaryCalculator";
-            this.Text = "Tiền lương";
+            this.Tag = "Tính tiền lương";
+            this.Text = "Tính tiền lương";
             this.ResumeLayout(false);
             this.PerformLayout();
 

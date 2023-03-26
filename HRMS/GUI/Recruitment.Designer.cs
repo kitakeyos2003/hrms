@@ -48,6 +48,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Recruitment";
+            this.Tag = "Tuyển dụng";
             this.Text = "Tuyển dụng";
             this.ResumeLayout(false);
             this.PerformLayout();

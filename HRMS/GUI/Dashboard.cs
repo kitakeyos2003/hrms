@@ -231,7 +231,7 @@ namespace HRMS
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnMaximize_Click(object sender, EventArgs e)
+        /*private void btnMaximize_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
             {
@@ -243,7 +243,7 @@ namespace HRMS
                 this.WindowState = FormWindowState.Normal;
                 this.Size = formSize;
             }
-        }
+        }*/
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -282,6 +282,7 @@ namespace HRMS
             if (form != null)
             {
                 this.Text = form.Text;
+                this.lbTitle.Text = form.Tag.ToString();
                 this.selected = selected;
                 selected.BackColor = Color.FromArgb(0, 110, 220);
                 selected.Enabled = false;
@@ -341,7 +342,13 @@ namespace HRMS
 
         public void SetLocationForFormChildren(Form children, Panel panel)
         {
-            children.Location = new Point(panel.Width / 2 - children.Width / 2, panel.Height / 2 - children.Height / 2);
+            int x = panel.Width / 2 - children.Width / 2;
+            int y = 0;
+            if (x < 0)
+            {
+                x = 0;
+            }
+            children.Location = new Point(x, y);
         }
     }
 

@@ -48,6 +48,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Timekeeping";
+            this.Tag = "Quản lý chấm công";
             this.Text = "Chấm công";
             this.ResumeLayout(false);
             this.PerformLayout();
