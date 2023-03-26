@@ -239,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\teamwork.png" />
     <None Include="Resources\app-icon.png" />
   </ItemGroup>
   <ItemGroup>
