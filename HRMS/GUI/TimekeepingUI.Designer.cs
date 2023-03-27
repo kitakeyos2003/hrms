@@ -1,6 +1,6 @@
 ﻿namespace HRMS.GUI
 {
-    partial class Recruitment
+    partial class TimekeepingUI
     {
         /// <summary>
         /// Required designer variable.
@@ -38,18 +38,18 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Recruiment";
+            this.label1.Text = "Chấm công";
             // 
-            // Recruitment
+            // Timekeeping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Recruitment";
-            this.Tag = "Tuyển dụng";
-            this.Text = "Tuyển dụng";
+            this.Name = "Timekeeping";
+            this.Tag = "Quản lý chấm công";
+            this.Text = "Chấm công";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,6 +1,6 @@
 ﻿namespace HRMS.GUI
 {
-    partial class Home
+    partial class HomeUI
     {
         /// <summary>
         /// Required designer variable.

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class SalaryCalculator : Form
+    public partial class ContractUI : Form
     {
         private Panel panel;
-        public SalaryCalculator(Panel panel)
+        public ContractUI(Panel panel)
         {
             this.panel = panel;
             InitializeComponent();

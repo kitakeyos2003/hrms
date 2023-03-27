@@ -1,6 +1,6 @@
 ﻿namespace HRMS.GUI
 {
-    partial class Timekeeping
+    partial class SalaryCalculatorUI
     {
         /// <summary>
         /// Required designer variable.
@@ -36,20 +36,20 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(383, 219);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Chấm công";
+            this.label1.Text = "Tiền lương";
             // 
-            // Timekeeping
+            // SalaryCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Timekeeping";
-            this.Tag = "Quản lý chấm công";
-            this.Text = "Chấm công";
+            this.Name = "SalaryCalculator";
+            this.Tag = "Tính tiền lương";
+            this.Text = "Tính tiền lương";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,6 +1,5 @@
 ﻿using FontAwesome.Sharp;
 using HRMS.GUI;
-using HRMS.GUI.alert;
 using RJCodeAdvance.RJControls;
 using System;
 using System.Collections.Generic;
@@ -19,16 +18,17 @@ namespace HRMS
     {
         private int borderSize = 2;
         private Size formSize;
-        private Login login;
-        private Home home;
-        private Personnel personnel;
-        private Recruitment recruitment;
-        private PerformanceReview performanceReview;
-        private Timekeeping timekeeping;
-        private SalaryCalculator salaryCalculator;
-        private Introduction introduction;
+        private LoginUI login;
+        private HomeUI home;
+        private EmployeeUI employee;
+        private RecruitmentUI recruitment;
+        private PerformanceReviewUI performanceReview;
+        private TimekeepingUI timekeeping;
+        private SalaryCalculatorUI salaryCalculator;
+        private AboutMeUI aboutMe;
+        private ContractUI contract;
         IconButton selected;
-        public Dashboard(Login login)
+        public Dashboard(LoginUI login)
         {
             this.login = login;
             InitializeComponent();
@@ -41,20 +41,22 @@ namespace HRMS
         {
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
-            home = new Home(panelDesktop);
-            personnel = new Personnel(panelDesktop);
-            recruitment = new Recruitment(panelDesktop);
-            performanceReview = new PerformanceReview(panelDesktop);
-            timekeeping = new Timekeeping(panelDesktop);
-            salaryCalculator = new SalaryCalculator(panelDesktop);
-            introduction = new Introduction(panelDesktop);
+            home = new HomeUI(panelDesktop);
+            employee = new EmployeeUI(panelDesktop);
+            recruitment = new RecruitmentUI(panelDesktop);
+            performanceReview = new PerformanceReviewUI(panelDesktop);
+            timekeeping = new TimekeepingUI(panelDesktop);
+            salaryCalculator = new SalaryCalculatorUI(panelDesktop);
+            aboutMe = new AboutMeUI(panelDesktop);
+            contract = new ContractUI(panelDesktop);
             AddControl(home);
-            AddControl(personnel);
+            AddControl(employee);
             AddControl(recruitment);
             AddControl(performanceReview);
             AddControl(timekeeping);
             AddControl(salaryCalculator);
-            AddControl(introduction);
+            AddControl(aboutMe);
+            AddControl(contract);
         }
 
         private void AddControl(Form control)
@@ -299,9 +301,9 @@ namespace HRMS
                 {
                     return home;
                 }
-                else if (selected == btnPersonnel)
+                else if (selected == btnEmployee)
                 {
-                    return personnel;
+                    return employee;
                 }
                 else if (selected == btnRecruitment)
                 {
@@ -319,9 +321,13 @@ namespace HRMS
                 {
                     return salaryCalculator;
                 }
-                else if (selected == btnIntrodction)
+                else if (selected == btnAboutMe)
                 {
-                    return introduction;
+                    return aboutMe;
+                }
+                else if (selected == btnContract)
+                {
+                    return contract;
                 }
             }
             return null;

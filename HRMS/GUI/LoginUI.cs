@@ -1,5 +1,4 @@
-﻿using HRMS.GUI.alert;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +11,13 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class Login : Form
+    public partial class LoginUI : Form
     {
         private int borderSize = 2;
         private Size formSize;
         Dashboard dashboard;
 
-        public Login()
+        public LoginUI()
         {
             InitializeComponent();
             dashboard = new Dashboard(this);
@@ -145,9 +144,21 @@ namespace HRMS.GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Alert alert = new Alert();
+            string username = txtUsername.Texts;
+            string password = txtPassword.Texts;
+            if (username == null || username.Equals(""))
+            {
+                alert.ShowAlert("Tài khoản không được bỏ trống!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (password == null || password.Equals(""))
+            {
+                alert.ShowAlert("Mật khẩu không được bỏ trống!", Alert.EnumType.WARNING);
+                return;
+            }
             Hide();
             dashboard.Show();
-            Alert alert = new Alert();
             alert.ShowAlert("Đăng nhập thành công", Alert.EnumType.SUCCESS);
         }
     }

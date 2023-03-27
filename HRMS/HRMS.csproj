@@ -66,6 +66,9 @@
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -86,11 +89,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\JsonReader.cs" />
+    <Compile Include="DTO\Version.cs" />
     <Compile Include="GUI\alert\Alert.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\alert\Alert.Designer.cs">
       <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ContractUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ContractUI.Designer.cs">
+      <DependentUpon>ContractUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Dashboard.cs">
       <SubType>Form</SubType>
@@ -98,85 +109,88 @@
     <Compile Include="GUI\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Home.cs">
+    <Compile Include="GUI\HomeUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="GUI\HomeUI.Designer.cs">
+      <DependentUpon>HomeUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Introduction.cs">
+    <Compile Include="GUI\AboutMeUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Introduction.Designer.cs">
-      <DependentUpon>Introduction.cs</DependentUpon>
+    <Compile Include="GUI\AboutMeUI.Designer.cs">
+      <DependentUpon>AboutMeUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Login.cs">
+    <Compile Include="GUI\LoginUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="GUI\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\PerformanceReview.cs">
+    <Compile Include="GUI\PerformanceReviewUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\PerformanceReview.Designer.cs">
-      <DependentUpon>PerformanceReview.cs</DependentUpon>
+    <Compile Include="GUI\PerformanceReviewUI.Designer.cs">
+      <DependentUpon>PerformanceReviewUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Personnel.cs">
+    <Compile Include="GUI\EmployeeUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Personnel.Designer.cs">
-      <DependentUpon>Personnel.cs</DependentUpon>
+    <Compile Include="GUI\EmployeeUI.Designer.cs">
+      <DependentUpon>EmployeeUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Recruitment.cs">
+    <Compile Include="GUI\RecruitmentUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Recruitment.Designer.cs">
-      <DependentUpon>Recruitment.cs</DependentUpon>
+    <Compile Include="GUI\RecruitmentUI.Designer.cs">
+      <DependentUpon>RecruitmentUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SalaryCalculator.cs">
+    <Compile Include="GUI\SalaryCalculatorUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SalaryCalculator.Designer.cs">
-      <DependentUpon>SalaryCalculator.cs</DependentUpon>
+    <Compile Include="GUI\SalaryCalculatorUI.Designer.cs">
+      <DependentUpon>SalaryCalculatorUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Timekeeping.cs">
+    <Compile Include="GUI\TimekeepingUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Timekeeping.Designer.cs">
-      <DependentUpon>Timekeeping.cs</DependentUpon>
+    <Compile Include="GUI\TimekeepingUI.Designer.cs">
+      <DependentUpon>TimekeepingUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\alert\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ContractUI.resx">
+      <DependentUpon>ContractUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\HomeUI.resx">
+      <DependentUpon>HomeUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Introduction.resx">
-      <DependentUpon>Introduction.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\AboutMeUI.resx">
+      <DependentUpon>AboutMeUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PerformanceReview.resx">
-      <DependentUpon>PerformanceReview.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\PerformanceReviewUI.resx">
+      <DependentUpon>PerformanceReviewUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Personnel.resx">
-      <DependentUpon>Personnel.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\EmployeeUI.resx">
+      <DependentUpon>EmployeeUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Recruitment.resx">
-      <DependentUpon>Recruitment.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\RecruitmentUI.resx">
+      <DependentUpon>RecruitmentUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SalaryCalculator.resx">
-      <DependentUpon>SalaryCalculator.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\SalaryCalculatorUI.resx">
+      <DependentUpon>SalaryCalculatorUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Timekeeping.resx">
-      <DependentUpon>Timekeeping.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\TimekeepingUI.resx">
+      <DependentUpon>TimekeepingUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -202,11 +216,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS\" />
-    <Folder Include="DAL\" />
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\logo.png" />
   </ItemGroup>

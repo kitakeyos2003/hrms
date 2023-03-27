@@ -10,21 +10,14 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class Introduction : Form
+    public partial class TimekeepingUI : Form
     {
         private Panel panel;
-        public Introduction(Panel panel)
+        public TimekeepingUI(Panel panel)
         {
             this.panel = panel;
             InitializeComponent();
             this.BackColor = panel.BackColor;
-            SetVersion();
-        }
-
-        private void SetVersion()
-        {
-            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            txtVersion.Text = String.Format("Phiên bản {0}", version);
         }
     }
 }

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class Recruitment : Form
+    public partial class HomeUI : Form
     {
         private Panel panel;
-        public Recruitment(Panel panel)
+        public HomeUI(Panel panel)
         {
             this.panel = panel;
             InitializeComponent();
