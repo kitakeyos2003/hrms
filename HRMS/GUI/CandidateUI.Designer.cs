@@ -1,6 +1,6 @@
 ﻿namespace HRMS.GUI
 {
-    partial class EmployeeUI
+    partial class CandidateUI
     {
         /// <summary>
         /// Required designer variable.
@@ -42,18 +42,20 @@
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
-            this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CandidateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PositionApplied = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartmentApplied = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Resume = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactInformation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WorkExperience = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Skills = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InterviewDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Interviewer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InterviewResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OfferStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OfferDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).BeginInit();
@@ -69,7 +71,7 @@
             this.panel1.Location = new System.Drawing.Point(40, 40);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 500);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             this.panel1.Tag = "";
             // 
             // panel4
@@ -89,18 +91,20 @@
             // 
             this.listEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EmployeeID,
+            this.CandidateID,
             this.FullName,
-            this.BirthDay,
-            this.Sex,
-            this.PhoneNumber,
-            this.Address,
-            this.Department,
-            this.Position,
-            this.Salary,
-            this.StartDate,
-            this.EndDate,
-            this.Status});
+            this.PositionApplied,
+            this.DepartmentApplied,
+            this.Resume,
+            this.ContactInformation,
+            this.Education,
+            this.WorkExperience,
+            this.Skills,
+            this.InterviewDate,
+            this.Interviewer,
+            this.InterviewResult,
+            this.OfferStatus,
+            this.OfferDetails});
             this.listEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listEmployee.Location = new System.Drawing.Point(20, 20);
             this.listEmployee.Name = "listEmployee";
@@ -147,7 +151,6 @@
             this.btnEdit.Size = new System.Drawing.Size(30, 30);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -163,7 +166,6 @@
             this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel3
             // 
@@ -199,7 +201,6 @@
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnReset
             // 
@@ -215,7 +216,6 @@
             this.btnReset.Size = new System.Drawing.Size(30, 30);
             this.btnReset.TabIndex = 3;
             this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSearch
             // 
@@ -231,7 +231,6 @@
             this.btnSearch.Size = new System.Drawing.Size(30, 30);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtKeyword
             // 
@@ -255,12 +254,11 @@
             this.txtKeyword.TabIndex = 0;
             this.txtKeyword.Texts = "";
             this.txtKeyword.UnderlinedStyle = false;
-            this.txtKeyword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKeyword_KeyDown);
             // 
-            // EmployeeID
+            // CandidateID
             // 
-            this.EmployeeID.HeaderText = "Mã nhân viên";
-            this.EmployeeID.Name = "EmployeeID";
+            this.CandidateID.HeaderText = "Mã ứng viên";
+            this.CandidateID.Name = "CandidateID";
             // 
             // FullName
             // 
@@ -269,66 +267,76 @@
             this.FullName.Name = "FullName";
             this.FullName.Width = 79;
             // 
-            // BirthDay
+            // PositionApplied
             // 
-            this.BirthDay.HeaderText = "Ngày sinh";
-            this.BirthDay.Name = "BirthDay";
+            this.PositionApplied.HeaderText = "Vị trí ứng tuyển";
+            this.PositionApplied.Name = "PositionApplied";
             // 
-            // Sex
+            // DepartmentApplied
             // 
-            this.Sex.HeaderText = "Giới tính";
-            this.Sex.Name = "Sex";
+            this.DepartmentApplied.HeaderText = "Phòng ban ứng tuyển";
+            this.DepartmentApplied.Name = "DepartmentApplied";
             // 
-            // PhoneNumber
+            // Resume
             // 
-            this.PhoneNumber.HeaderText = "Số điện thoại";
-            this.PhoneNumber.Name = "PhoneNumber";
+            this.Resume.HeaderText = "Hồ sơ ứng viên";
+            this.Resume.Name = "Resume";
             // 
-            // Address
+            // ContactInformation
             // 
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.Name = "Address";
+            this.ContactInformation.HeaderText = "Thông tin liên lạc";
+            this.ContactInformation.Name = "ContactInformation";
             // 
-            // Department
+            // Education
             // 
-            this.Department.HeaderText = "Phòng ban";
-            this.Department.Name = "Department";
+            this.Education.HeaderText = "Trình độ học vấn";
+            this.Education.Name = "Education";
             // 
-            // Position
+            // WorkExperience
             // 
-            this.Position.HeaderText = "Chức vụ";
-            this.Position.Name = "Position";
+            this.WorkExperience.HeaderText = "Kinh nghiệm làm việc";
+            this.WorkExperience.Name = "WorkExperience";
             // 
-            // Salary
+            // Skills
             // 
-            this.Salary.HeaderText = "Lương";
-            this.Salary.Name = "Salary";
+            this.Skills.HeaderText = "Kỹ năng";
+            this.Skills.Name = "Skills";
             // 
-            // StartDate
+            // InterviewDate
             // 
-            this.StartDate.HeaderText = "Ngày bắt đầu";
-            this.StartDate.Name = "StartDate";
+            this.InterviewDate.HeaderText = "Ngày phỏng vấn";
+            this.InterviewDate.Name = "InterviewDate";
             // 
-            // EndDate
+            // Interviewer
             // 
-            this.EndDate.HeaderText = "Ngày kết thúc";
-            this.EndDate.Name = "EndDate";
+            this.Interviewer.HeaderText = "Người phỏng vấn";
+            this.Interviewer.Name = "Interviewer";
             // 
-            // Status
+            // InterviewResult
             // 
-            this.Status.HeaderText = "Trạng thái";
-            this.Status.Name = "Status";
+            this.InterviewResult.HeaderText = "Kết quả phỏng vấn";
+            this.InterviewResult.Name = "InterviewResult";
             // 
-            // EmployeeUI
+            // OfferStatus
+            // 
+            this.OfferStatus.HeaderText = "Tình trạng đề nghị việc làm";
+            this.OfferStatus.Name = "OfferStatus";
+            // 
+            // OfferDetails
+            // 
+            this.OfferDetails.HeaderText = "Chi tiết đề nghị việc làm";
+            this.OfferDetails.Name = "OfferDetails";
+            // 
+            // RecruitmentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 580);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EmployeeUI";
-            this.Tag = "Quản lý nhân sự";
-            this.Text = "Nhân sự";
+            this.Name = "RecruitmentUI";
+            this.Tag = "Tuyển dụng";
+            this.Text = "Tuyển dụng";
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).EndInit();
@@ -341,30 +349,32 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private RJCodeAdvance.RJControls.RJTextBox txtKeyword;
-        private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton btnAdd;
-        private FontAwesome.Sharp.IconButton btnReset;
-        private FontAwesome.Sharp.IconButton btnEdit;
-        private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.DataGridView listEmployee;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
+        private System.Windows.Forms.Panel panel5;
+        private FontAwesome.Sharp.IconButton btnEdit;
+        private FontAwesome.Sharp.IconButton btnDelete;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton btnAdd;
+        private FontAwesome.Sharp.IconButton btnReset;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private RJCodeAdvance.RJControls.RJTextBox txtKeyword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CandidateID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BirthDay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Department;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Position;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PositionApplied;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentApplied;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Resume;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContactInformation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Education;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WorkExperience;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Skills;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InterviewDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Interviewer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InterviewResult;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OfferStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OfferDetails;
     }
 }

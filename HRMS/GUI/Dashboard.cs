@@ -15,9 +15,9 @@ namespace HRMS
         private LoginUI login;
         private HomeUI home;
         private EmployeeUI employee;
-        private RecruitmentUI recruitment;
-        private PerformanceReviewUI performanceReview;
-        private TimekeepingUI timekeeping;
+        private CandidateUI candidate;
+        private EvaluateUI evaluate;
+        private AttendanceUI attendance;
         private SalaryCalculatorUI salaryCalculator;
         private AboutMeUI aboutMe;
         private ContractUI contract;
@@ -36,17 +36,17 @@ namespace HRMS
             this.BackColor = Color.FromArgb(98, 102, 244);
             home = new HomeUI(panelDesktop);
             employee = new EmployeeUI(panelDesktop);
-            recruitment = new RecruitmentUI(panelDesktop);
-            performanceReview = new PerformanceReviewUI(panelDesktop);
-            timekeeping = new TimekeepingUI(panelDesktop);
+            candidate = new CandidateUI(panelDesktop);
+            evaluate = new EvaluateUI(panelDesktop);
+            attendance = new AttendanceUI(panelDesktop);
             salaryCalculator = new SalaryCalculatorUI(panelDesktop);
             aboutMe = new AboutMeUI(panelDesktop);
             contract = new ContractUI(panelDesktop);
             AddControl(home);
             AddControl(employee);
-            AddControl(recruitment);
-            AddControl(performanceReview);
-            AddControl(timekeeping);
+            AddControl(candidate);
+            AddControl(evaluate);
+            AddControl(attendance);
             AddControl(salaryCalculator);
             AddControl(aboutMe);
             AddControl(contract);
@@ -304,17 +304,17 @@ namespace HRMS
                 {
                     return employee;
                 }
-                else if (selected == btnRecruitment)
+                else if (selected == btnCandidate)
                 {
-                    return recruitment;
+                    return candidate;
                 }
-                else if (selected == btnPerformanceReview)
+                else if (selected == btnEvaluate)
                 {
-                    return performanceReview;
+                    return evaluate;
                 }
-                else if (selected == btnTimekeeping)
+                else if (selected == btnAttendance)
                 {
-                    return timekeeping;
+                    return attendance;
                 }
                 else if (selected == btnSalaryCalculator)
                 {

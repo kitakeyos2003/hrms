@@ -32,11 +32,11 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnAboutMe = new FontAwesome.Sharp.IconButton();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
-            this.btnPerformanceReview = new FontAwesome.Sharp.IconButton();
+            this.btnEvaluate = new FontAwesome.Sharp.IconButton();
             this.btnSalaryCalculator = new FontAwesome.Sharp.IconButton();
-            this.btnTimekeeping = new FontAwesome.Sharp.IconButton();
+            this.btnAttendance = new FontAwesome.Sharp.IconButton();
             this.btnContract = new FontAwesome.Sharp.IconButton();
-            this.btnRecruitment = new FontAwesome.Sharp.IconButton();
+            this.btnCandidate = new FontAwesome.Sharp.IconButton();
             this.btnEmployee = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,11 +58,11 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
             this.panelMenu.Controls.Add(this.btnAboutMe);
             this.panelMenu.Controls.Add(this.btnLogout);
-            this.panelMenu.Controls.Add(this.btnPerformanceReview);
+            this.panelMenu.Controls.Add(this.btnEvaluate);
             this.panelMenu.Controls.Add(this.btnSalaryCalculator);
-            this.panelMenu.Controls.Add(this.btnTimekeeping);
+            this.panelMenu.Controls.Add(this.btnAttendance);
             this.panelMenu.Controls.Add(this.btnContract);
-            this.panelMenu.Controls.Add(this.btnRecruitment);
+            this.panelMenu.Controls.Add(this.btnCandidate);
             this.panelMenu.Controls.Add(this.btnEmployee);
             this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.panel1);
@@ -122,27 +122,27 @@
             // 
             // btnPerformanceReview
             // 
-            this.btnPerformanceReview.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPerformanceReview.FlatAppearance.BorderSize = 0;
-            this.btnPerformanceReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerformanceReview.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerformanceReview.ForeColor = System.Drawing.Color.White;
-            this.btnPerformanceReview.IconChar = FontAwesome.Sharp.IconChar.Wpforms;
-            this.btnPerformanceReview.IconColor = System.Drawing.Color.White;
-            this.btnPerformanceReview.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPerformanceReview.IconSize = 25;
-            this.btnPerformanceReview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerformanceReview.Location = new System.Drawing.Point(0, 350);
-            this.btnPerformanceReview.Name = "btnPerformanceReview";
-            this.btnPerformanceReview.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPerformanceReview.Size = new System.Drawing.Size(200, 46);
-            this.btnPerformanceReview.TabIndex = 6;
-            this.btnPerformanceReview.Tag = "Đánh giá";
-            this.btnPerformanceReview.Text = "Đánh giá";
-            this.btnPerformanceReview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerformanceReview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPerformanceReview.UseVisualStyleBackColor = true;
-            this.btnPerformanceReview.Click += new System.EventHandler(this.OpenNewTabAndCloseCurrentTab);
+            this.btnEvaluate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEvaluate.FlatAppearance.BorderSize = 0;
+            this.btnEvaluate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEvaluate.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEvaluate.ForeColor = System.Drawing.Color.White;
+            this.btnEvaluate.IconChar = FontAwesome.Sharp.IconChar.Wpforms;
+            this.btnEvaluate.IconColor = System.Drawing.Color.White;
+            this.btnEvaluate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEvaluate.IconSize = 25;
+            this.btnEvaluate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEvaluate.Location = new System.Drawing.Point(0, 350);
+            this.btnEvaluate.Name = "btnPerformanceReview";
+            this.btnEvaluate.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEvaluate.Size = new System.Drawing.Size(200, 46);
+            this.btnEvaluate.TabIndex = 6;
+            this.btnEvaluate.Tag = "Đánh giá";
+            this.btnEvaluate.Text = "Đánh giá";
+            this.btnEvaluate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEvaluate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEvaluate.UseVisualStyleBackColor = true;
+            this.btnEvaluate.Click += new System.EventHandler(this.OpenNewTabAndCloseCurrentTab);
             // 
             // btnSalaryCalculator
             // 
@@ -170,27 +170,27 @@
             // 
             // btnTimekeeping
             // 
-            this.btnTimekeeping.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTimekeeping.FlatAppearance.BorderSize = 0;
-            this.btnTimekeeping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimekeeping.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimekeeping.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTimekeeping.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
-            this.btnTimekeeping.IconColor = System.Drawing.Color.White;
-            this.btnTimekeeping.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimekeeping.IconSize = 25;
-            this.btnTimekeeping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimekeeping.Location = new System.Drawing.Point(0, 258);
-            this.btnTimekeeping.Name = "btnTimekeeping";
-            this.btnTimekeeping.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTimekeeping.Size = new System.Drawing.Size(200, 46);
-            this.btnTimekeeping.TabIndex = 5;
-            this.btnTimekeeping.Tag = "Chấm công";
-            this.btnTimekeeping.Text = "Chấm công";
-            this.btnTimekeeping.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimekeeping.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTimekeeping.UseVisualStyleBackColor = true;
-            this.btnTimekeeping.Click += new System.EventHandler(this.OpenNewTabAndCloseCurrentTab);
+            this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAttendance.FlatAppearance.BorderSize = 0;
+            this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAttendance.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttendance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAttendance.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
+            this.btnAttendance.IconColor = System.Drawing.Color.White;
+            this.btnAttendance.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAttendance.IconSize = 25;
+            this.btnAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttendance.Location = new System.Drawing.Point(0, 258);
+            this.btnAttendance.Name = "btnTimekeeping";
+            this.btnAttendance.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAttendance.Size = new System.Drawing.Size(200, 46);
+            this.btnAttendance.TabIndex = 5;
+            this.btnAttendance.Tag = "Chấm công";
+            this.btnAttendance.Text = "Chấm công";
+            this.btnAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttendance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAttendance.UseVisualStyleBackColor = true;
+            this.btnAttendance.Click += new System.EventHandler(this.OpenNewTabAndCloseCurrentTab);
             // 
             // btnContract
             // 
@@ -218,27 +218,27 @@
             // 
             // btnRecruitment
             // 
-            this.btnRecruitment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRecruitment.FlatAppearance.BorderSize = 0;
-            this.btnRecruitment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecruitment.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecruitment.ForeColor = System.Drawing.Color.White;
-            this.btnRecruitment.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnRecruitment.IconColor = System.Drawing.Color.White;
-            this.btnRecruitment.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRecruitment.IconSize = 25;
-            this.btnRecruitment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecruitment.Location = new System.Drawing.Point(0, 166);
-            this.btnRecruitment.Name = "btnRecruitment";
-            this.btnRecruitment.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRecruitment.Size = new System.Drawing.Size(200, 46);
-            this.btnRecruitment.TabIndex = 3;
-            this.btnRecruitment.Tag = "Tuyển dụng";
-            this.btnRecruitment.Text = "Tuyển dụng";
-            this.btnRecruitment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecruitment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRecruitment.UseVisualStyleBackColor = true;
-            this.btnRecruitment.Click += new System.EventHandler(this.OpenNewTabAndCloseCurrentTab);
+            this.btnCandidate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCandidate.FlatAppearance.BorderSize = 0;
+            this.btnCandidate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCandidate.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCandidate.ForeColor = System.Drawing.Color.White;
+            this.btnCandidate.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnCandidate.IconColor = System.Drawing.Color.White;
+            this.btnCandidate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCandidate.IconSize = 25;
+            this.btnCandidate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCandidate.Location = new System.Drawing.Point(0, 166);
+            this.btnCandidate.Name = "btnRecruitment";
+            this.btnCandidate.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCandidate.Size = new System.Drawing.Size(200, 46);
+            this.btnCandidate.TabIndex = 3;
+            this.btnCandidate.Tag = "Tuyển dụng";
+            this.btnCandidate.Text = "Tuyển dụng";
+            this.btnCandidate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCandidate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCandidate.UseVisualStyleBackColor = true;
+            this.btnCandidate.Click += new System.EventHandler(this.OpenNewTabAndCloseCurrentTab);
             // 
             // btnPersonnel
             // 
@@ -428,9 +428,9 @@
         private FontAwesome.Sharp.IconButton btnMenu;
         private FontAwesome.Sharp.IconButton btnLogout;
         private FontAwesome.Sharp.IconButton btnSalaryCalculator;
-        private FontAwesome.Sharp.IconButton btnPerformanceReview;
-        private FontAwesome.Sharp.IconButton btnTimekeeping;
-        private FontAwesome.Sharp.IconButton btnRecruitment;
+        private FontAwesome.Sharp.IconButton btnEvaluate;
+        private FontAwesome.Sharp.IconButton btnAttendance;
+        private FontAwesome.Sharp.IconButton btnCandidate;
         private FontAwesome.Sharp.IconButton btnEmployee;
         private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconButton btnMinimize;

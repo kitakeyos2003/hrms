@@ -31,14 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listEmployee = new System.Windows.Forms.DataGridView();
-            this.employeeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -50,6 +42,20 @@
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
+            this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BasicSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Allowance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GrossSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deductions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NetSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaymentMethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaySlip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).BeginInit();
@@ -85,61 +91,25 @@
             // 
             this.listEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.employeeCode,
-            this.fullName,
-            this.birthDay,
-            this.sex,
-            this.phoneNumber,
-            this.address,
-            this.department,
-            this.position});
+            this.EmployeeID,
+            this.FullName,
+            this.Position,
+            this.Department,
+            this.BasicSalary,
+            this.Allowance,
+            this.Bonus,
+            this.GrossSalary,
+            this.Tax,
+            this.Deductions,
+            this.NetSalary,
+            this.PaymentDate,
+            this.PaymentMethod,
+            this.PaySlip});
             this.listEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listEmployee.Location = new System.Drawing.Point(20, 20);
             this.listEmployee.Name = "listEmployee";
             this.listEmployee.Size = new System.Drawing.Size(940, 410);
             this.listEmployee.TabIndex = 4;
-            // 
-            // employeeCode
-            // 
-            this.employeeCode.HeaderText = "Mã nhân viên";
-            this.employeeCode.Name = "employeeCode";
-            // 
-            // fullName
-            // 
-            this.fullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.fullName.HeaderText = "Họ và tên";
-            this.fullName.Name = "fullName";
-            this.fullName.Width = 79;
-            // 
-            // birthDay
-            // 
-            this.birthDay.HeaderText = "Ngày sinh";
-            this.birthDay.Name = "birthDay";
-            // 
-            // sex
-            // 
-            this.sex.HeaderText = "Giới tính";
-            this.sex.Name = "sex";
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.HeaderText = "Số điện thoại";
-            this.phoneNumber.Name = "phoneNumber";
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Quê quán";
-            this.address.Name = "address";
-            // 
-            // department
-            // 
-            this.department.HeaderText = "Phòng ban";
-            this.department.Name = "department";
-            // 
-            // position
-            // 
-            this.position.HeaderText = "Chức vụ";
-            this.position.Name = "position";
             // 
             // panel7
             // 
@@ -285,6 +255,78 @@
             this.txtKeyword.Texts = "";
             this.txtKeyword.UnderlinedStyle = false;
             // 
+            // EmployeeID
+            // 
+            this.EmployeeID.HeaderText = "Mã nhân viên";
+            this.EmployeeID.Name = "EmployeeID";
+            // 
+            // FullName
+            // 
+            this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.FullName.HeaderText = "Họ và tên";
+            this.FullName.Name = "FullName";
+            this.FullName.Width = 79;
+            // 
+            // Position
+            // 
+            this.Position.HeaderText = "Chức vụ";
+            this.Position.Name = "Position";
+            // 
+            // Department
+            // 
+            this.Department.HeaderText = "Phòng ban";
+            this.Department.Name = "Department";
+            // 
+            // BasicSalary
+            // 
+            this.BasicSalary.HeaderText = "Lương cơ bản";
+            this.BasicSalary.Name = "BasicSalary";
+            // 
+            // Allowance
+            // 
+            this.Allowance.HeaderText = "Phụ cấp";
+            this.Allowance.Name = "Allowance";
+            // 
+            // Bonus
+            // 
+            this.Bonus.HeaderText = "Tiền thưởng";
+            this.Bonus.Name = "Bonus";
+            // 
+            // GrossSalary
+            // 
+            this.GrossSalary.HeaderText = "Tổng thu nhập";
+            this.GrossSalary.Name = "GrossSalary";
+            // 
+            // Tax
+            // 
+            this.Tax.HeaderText = "Thuế";
+            this.Tax.Name = "Tax";
+            // 
+            // Deductions
+            // 
+            this.Deductions.HeaderText = "Các khoản khấu trừ";
+            this.Deductions.Name = "Deductions";
+            // 
+            // NetSalary
+            // 
+            this.NetSalary.HeaderText = "Số tiền được nhận";
+            this.NetSalary.Name = "NetSalary";
+            // 
+            // PaymentDate
+            // 
+            this.PaymentDate.HeaderText = "Ngày thanh toán";
+            this.PaymentDate.Name = "PaymentDate";
+            // 
+            // PaymentMethod
+            // 
+            this.PaymentMethod.HeaderText = "P.thức thanh toán";
+            this.PaymentMethod.Name = "PaymentMethod";
+            // 
+            // PaySlip
+            // 
+            this.PaySlip.HeaderText = "Biên lai";
+            this.PaySlip.Name = "PaySlip";
+            // 
             // SalaryCalculatorUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,14 +351,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView listEmployee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthDay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn department;
-        private System.Windows.Forms.DataGridViewTextBoxColumn position;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
@@ -328,5 +362,19 @@
         private FontAwesome.Sharp.IconButton btnReset;
         private FontAwesome.Sharp.IconButton btnSearch;
         private RJCodeAdvance.RJControls.RJTextBox txtKeyword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Department;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BasicSalary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Allowance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bonus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GrossSalary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Deductions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NetSalary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaymentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaymentMethod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaySlip;
     }
 }

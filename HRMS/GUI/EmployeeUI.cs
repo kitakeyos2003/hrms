@@ -52,7 +52,7 @@ namespace HRMS.GUI
             listEmployee.Rows.Clear();
             foreach (Employee employee in employees)
             {
-                listEmployee.Rows.Add(employee.Id, employee.FullName, employee.BirthDay.ToString("dd/MM/yyyy"), employee.Gender, employee.Address, employee.PhoneNumber, employee.Department.Name, employee.Position.Name);
+                //listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.Address, employee.PhoneNumber, employee.Department.Name, employee.Position.Name);
             }
         }
 

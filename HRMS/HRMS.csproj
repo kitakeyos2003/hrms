@@ -132,9 +132,14 @@
     <Compile Include="DAL\EmployeeService.cs" />
     <Compile Include="DAL\HomeService.cs" />
     <Compile Include="DAL\Models\ApiResponse.cs" />
+    <Compile Include="DAL\Models\Attendance.cs" />
+    <Compile Include="DAL\Models\Candidate.cs" />
+    <Compile Include="DAL\Models\Contract.cs" />
     <Compile Include="DAL\Models\Department.cs" />
+    <Compile Include="DAL\Models\EmployeeEvaluation.cs" />
     <Compile Include="DAL\Models\HomeModel.cs" />
     <Compile Include="DAL\Models\Position.cs" />
+    <Compile Include="DAL\Models\Salary.cs" />
     <Compile Include="DAL\Models\TokenModel.cs" />
     <Compile Include="DAL\UserService.cs" />
     <Compile Include="DAL\Models\Employee.cs" />
@@ -176,11 +181,11 @@
     <Compile Include="GUI\LoginUI.Designer.cs">
       <DependentUpon>LoginUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\PerformanceReviewUI.cs">
+    <Compile Include="GUI\EvaluateUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\PerformanceReviewUI.Designer.cs">
-      <DependentUpon>PerformanceReviewUI.cs</DependentUpon>
+    <Compile Include="GUI\EvaluateUI.Designer.cs">
+      <DependentUpon>EvaluateUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\EmployeeUI.cs">
       <SubType>Form</SubType>
@@ -188,11 +193,11 @@
     <Compile Include="GUI\EmployeeUI.Designer.cs">
       <DependentUpon>EmployeeUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\RecruitmentUI.cs">
+    <Compile Include="GUI\CandidateUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\RecruitmentUI.Designer.cs">
-      <DependentUpon>RecruitmentUI.cs</DependentUpon>
+    <Compile Include="GUI\CandidateUI.Designer.cs">
+      <DependentUpon>CandidateUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SalaryCalculatorUI.cs">
       <SubType>Form</SubType>
@@ -200,11 +205,11 @@
     <Compile Include="GUI\SalaryCalculatorUI.Designer.cs">
       <DependentUpon>SalaryCalculatorUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\TimekeepingUI.cs">
+    <Compile Include="GUI\AttendanceUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\TimekeepingUI.Designer.cs">
-      <DependentUpon>TimekeepingUI.cs</DependentUpon>
+    <Compile Include="GUI\AttendanceUI.Designer.cs">
+      <DependentUpon>AttendanceUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,20 +231,20 @@
     <EmbeddedResource Include="GUI\LoginUI.resx">
       <DependentUpon>LoginUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PerformanceReviewUI.resx">
-      <DependentUpon>PerformanceReviewUI.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\EvaluateUI.resx">
+      <DependentUpon>EvaluateUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EmployeeUI.resx">
       <DependentUpon>EmployeeUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\RecruitmentUI.resx">
-      <DependentUpon>RecruitmentUI.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\CandidateUI.resx">
+      <DependentUpon>CandidateUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SalaryCalculatorUI.resx">
       <DependentUpon>SalaryCalculatorUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TimekeepingUI.resx">
-      <DependentUpon>TimekeepingUI.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\AttendanceUI.resx">
+      <DependentUpon>AttendanceUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

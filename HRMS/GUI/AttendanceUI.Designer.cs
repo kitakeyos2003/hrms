@@ -1,6 +1,6 @@
 ﻿namespace HRMS.GUI
 {
-    partial class EmployeeUI
+    partial class AttendanceUI
     {
         /// <summary>
         /// Required designer variable.
@@ -44,16 +44,17 @@
             this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
             this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShiftStartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShiftEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActualStartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActualEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EarlyLeaveTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Overtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AttendanceStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AttendanceNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).BeginInit();
@@ -69,7 +70,7 @@
             this.panel1.Location = new System.Drawing.Point(40, 40);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 500);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             this.panel1.Tag = "";
             // 
             // panel4
@@ -91,16 +92,17 @@
             this.listEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EmployeeID,
             this.FullName,
-            this.BirthDay,
-            this.Sex,
-            this.PhoneNumber,
-            this.Address,
             this.Department,
-            this.Position,
-            this.Salary,
-            this.StartDate,
-            this.EndDate,
-            this.Status});
+            this.Date,
+            this.ShiftStartTime,
+            this.ShiftEndTime,
+            this.ActualStartTime,
+            this.ActualEndTime,
+            this.LateTime,
+            this.EarlyLeaveTime,
+            this.Overtime,
+            this.AttendanceStatus,
+            this.AttendanceNote});
             this.listEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listEmployee.Location = new System.Drawing.Point(20, 20);
             this.listEmployee.Name = "listEmployee";
@@ -147,7 +149,6 @@
             this.btnEdit.Size = new System.Drawing.Size(30, 30);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -163,7 +164,6 @@
             this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel3
             // 
@@ -199,7 +199,6 @@
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnReset
             // 
@@ -215,7 +214,6 @@
             this.btnReset.Size = new System.Drawing.Size(30, 30);
             this.btnReset.TabIndex = 3;
             this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSearch
             // 
@@ -231,7 +229,6 @@
             this.btnSearch.Size = new System.Drawing.Size(30, 30);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtKeyword
             // 
@@ -255,7 +252,6 @@
             this.txtKeyword.TabIndex = 0;
             this.txtKeyword.Texts = "";
             this.txtKeyword.UnderlinedStyle = false;
-            this.txtKeyword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKeyword_KeyDown);
             // 
             // EmployeeID
             // 
@@ -269,66 +265,71 @@
             this.FullName.Name = "FullName";
             this.FullName.Width = 79;
             // 
-            // BirthDay
-            // 
-            this.BirthDay.HeaderText = "Ngày sinh";
-            this.BirthDay.Name = "BirthDay";
-            // 
-            // Sex
-            // 
-            this.Sex.HeaderText = "Giới tính";
-            this.Sex.Name = "Sex";
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.HeaderText = "Số điện thoại";
-            this.PhoneNumber.Name = "PhoneNumber";
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.Name = "Address";
-            // 
             // Department
             // 
             this.Department.HeaderText = "Phòng ban";
             this.Department.Name = "Department";
             // 
-            // Position
+            // Date
             // 
-            this.Position.HeaderText = "Chức vụ";
-            this.Position.Name = "Position";
+            this.Date.HeaderText = "Ngày làm việc";
+            this.Date.Name = "Date";
             // 
-            // Salary
+            // ShiftStartTime
             // 
-            this.Salary.HeaderText = "Lương";
-            this.Salary.Name = "Salary";
+            this.ShiftStartTime.HeaderText = "T.gian bắt đầu ca làm việc";
+            this.ShiftStartTime.Name = "ShiftStartTime";
             // 
-            // StartDate
+            // ShiftEndTime
             // 
-            this.StartDate.HeaderText = "Ngày bắt đầu";
-            this.StartDate.Name = "StartDate";
+            this.ShiftEndTime.HeaderText = "T.gian k.thúc ca làm việc";
+            this.ShiftEndTime.Name = "ShiftEndTime";
             // 
-            // EndDate
+            // ActualStartTime
             // 
-            this.EndDate.HeaderText = "Ngày kết thúc";
-            this.EndDate.Name = "EndDate";
+            this.ActualStartTime.HeaderText = "T.gian bắt đầu làm việc thực tế";
+            this.ActualStartTime.Name = "ActualStartTime";
             // 
-            // Status
+            // ActualEndTime
             // 
-            this.Status.HeaderText = "Trạng thái";
-            this.Status.Name = "Status";
+            this.ActualEndTime.HeaderText = "T.gian k.thúc làm việc thực tế";
+            this.ActualEndTime.Name = "ActualEndTime";
             // 
-            // EmployeeUI
+            // LateTime
+            // 
+            this.LateTime.HeaderText = "T.gian đi làm trễ";
+            this.LateTime.Name = "LateTime";
+            // 
+            // EarlyLeaveTime
+            // 
+            this.EarlyLeaveTime.HeaderText = "T.gian về sớm";
+            this.EarlyLeaveTime.Name = "EarlyLeaveTime";
+            // 
+            // Overtime
+            // 
+            this.Overtime.HeaderText = "Giờ làm thêm";
+            this.Overtime.Name = "Overtime";
+            // 
+            // AttendanceStatus
+            // 
+            this.AttendanceStatus.HeaderText = "Trạng thái điểm danh";
+            this.AttendanceStatus.Name = "AttendanceStatus";
+            // 
+            // AttendanceNote
+            // 
+            this.AttendanceNote.HeaderText = "Ghi chú";
+            this.AttendanceNote.Name = "AttendanceNote";
+            // 
+            // TimekeepingUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 580);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EmployeeUI";
-            this.Tag = "Quản lý nhân sự";
-            this.Text = "Nhân sự";
+            this.Name = "TimekeepingUI";
+            this.Tag = "Quản lý chấm công";
+            this.Text = "Chấm công";
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).EndInit();
@@ -341,30 +342,31 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private RJCodeAdvance.RJControls.RJTextBox txtKeyword;
-        private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton btnAdd;
-        private FontAwesome.Sharp.IconButton btnReset;
-        private FontAwesome.Sharp.IconButton btnEdit;
-        private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.DataGridView listEmployee;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private FontAwesome.Sharp.IconButton btnEdit;
+        private FontAwesome.Sharp.IconButton btnDelete;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton btnAdd;
+        private FontAwesome.Sharp.IconButton btnReset;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private RJCodeAdvance.RJControls.RJTextBox txtKeyword;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BirthDay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Department;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Position;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShiftStartTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShiftEndTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActualStartTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActualEndTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LateTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EarlyLeaveTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Overtime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AttendanceStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AttendanceNote;
     }
 }
