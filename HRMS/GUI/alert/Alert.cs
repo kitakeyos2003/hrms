@@ -26,7 +26,7 @@ public partial class Alert : Form
         for (int i = 1; i < 10; i++)
         {
             fname = "alert" + i.ToString();
-            Alert alert = (Alert)Application.OpenForms[fname];
+            Alert alert = (Alert)System.Windows.Forms.Application.OpenForms[fname];
             if (alert == null)
             {
                 this.Name = fname;

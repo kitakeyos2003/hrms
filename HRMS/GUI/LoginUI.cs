@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using HRMS.DAL;
+using RestSharp;
+using System;
 using System.Drawing;
-using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRMS.GUI
@@ -16,11 +13,13 @@ namespace HRMS.GUI
         private int borderSize = 2;
         private Size formSize;
         Dashboard dashboard;
+        UserService service;
 
         public LoginUI()
         {
-            InitializeComponent();
+            service = new UserService();
             dashboard = new Dashboard(this);
+            InitializeComponent();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
         }
@@ -129,7 +128,7 @@ namespace HRMS.GUI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -144,22 +143,49 @@ namespace HRMS.GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Alert alert = new Alert();
-            string username = txtUsername.Texts;
-            string password = txtPassword.Texts;
-            if (username == null || username.Equals(""))
+            try
             {
-                alert.ShowAlert("Tài khoản không được bỏ trống!", Alert.EnumType.WARNING);
-                return;
+                btnLogin.Enabled = false;
+                Alert alert = new Alert();
+                string username = txtUsername.Texts;
+                string password = txtPassword.Texts;
+                if (username == null || username.Equals(""))
+                {
+                    alert.ShowAlert("Tài khoản không được bỏ trống!", Alert.EnumType.WARNING);
+                    return;
+                }
+                if (password == null || password.Equals(""))
+                {
+                    alert.ShowAlert("Mật khẩu không được bỏ trống!", Alert.EnumType.WARNING);
+                    return;
+                }
+                RestResponse<ApiResponse<TokenModel>> res = service.Validate(username, password);
+                if (res.StatusCode == HttpStatusCode.OK)
+                {
+                    ApiResponse<TokenModel> data = res.Data;
+                    if (data.Success)
+                    {
+                        Application.AccessToken = data.Data.AccessToken;
+                        Application.RefreshToken = data.Data.RefreshToken;
+                        Hide();
+                        dashboard.Show();
+                        dashboard.SetDefaultTab();
+                        alert.ShowAlert(data.Message, Alert.EnumType.SUCCESS);
+                    }
+                    else
+                    {
+                        alert.ShowAlert(data.Message, Alert.EnumType.WARNING);
+                    }
+                } else
+                {
+                    alert.ShowAlert("Có lỗi xảy ra!", Alert.EnumType.ERROR);
+                }
             }
-            if (password == null || password.Equals(""))
+            finally
             {
-                alert.ShowAlert("Mật khẩu không được bỏ trống!", Alert.EnumType.WARNING);
-                return;
+                btnLogin.Enabled = true;
             }
-            Hide();
-            dashboard.Show();
-            alert.ShowAlert("Đăng nhập thành công", Alert.EnumType.SUCCESS);
         }
+
     }
 }

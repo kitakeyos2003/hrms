@@ -1,15 +1,9 @@
 ﻿using FontAwesome.Sharp;
 using HRMS.GUI;
-using RJCodeAdvance.RJControls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRMS
@@ -34,7 +28,6 @@ namespace HRMS
             InitializeComponent();
             Init();
             CollapseMenu();
-            SetDefaultTab();
         }
 
         private void Init()
@@ -249,11 +242,13 @@ namespace HRMS
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            Application.AccessToken = null;
+            Application.RefreshToken = null;
             Hide();
             login.Show();
         }
@@ -269,18 +264,18 @@ namespace HRMS
 
         private void HideTab(IconButton selected)
         {
-            Form form = GetFormSelected(selected);
-            if (form != null)
+            ITab tab = GetTabSelected(selected);
+            if (tab != null)
             {
                 selected.BackColor = Color.FromArgb(0, 145, 255);
                 selected.Enabled = true;
-                form.Hide();
+                tab.Hide();
             }
         }
 
         private void OpenTab(IconButton selected)
         {
-            Form form = GetFormSelected(selected);
+            Form form = (Form)GetTabSelected(selected);
             if (form != null)
             {
                 this.Text = form.Text;
@@ -289,11 +284,15 @@ namespace HRMS
                 selected.BackColor = Color.FromArgb(0, 110, 220);
                 selected.Enabled = false;
                 SetLocationForFormChildren(form, panelDesktop);
-                form.Show();
+                if (form is ITab tab)
+                {
+                    tab.Init();
+                    tab.Open();
+                }
             }
         }
 
-        private Form GetFormSelected(IconButton selected)
+        private ITab GetTabSelected(IconButton selected)
         {
             if (selected != null)
             {
@@ -332,14 +331,14 @@ namespace HRMS
             }
             return null;
         }
-        private void SetDefaultTab()
+        public void SetDefaultTab()
         {
             OpenTab(btnHome);
         }
 
         private void PanelResize(object sender, EventArgs e)
         {
-            Form form = GetFormSelected(selected);
+            Form form = (Form)GetTabSelected(selected);
             if (form != null)
             {
                 SetLocationForFormChildren(form, panelDesktop);

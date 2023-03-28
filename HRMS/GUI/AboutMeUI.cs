@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class AboutMeUI : Form
+    public partial class AboutMeUI : Form, ITab
     {
         private Panel panel;
         public AboutMeUI(Panel panel)
@@ -19,6 +11,16 @@ namespace HRMS.GUI
             InitializeComponent();
             this.BackColor = panel.BackColor;
             SetInfo();
+        }
+
+        public void Init()
+        {
+            
+        }
+
+        public void Open()
+        {
+            Show();
         }
 
         private void SetInfo()

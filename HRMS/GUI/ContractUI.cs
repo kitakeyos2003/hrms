@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class ContractUI : Form
+    public partial class ContractUI : Form, ITab
     {
         private Panel panel;
         public ContractUI(Panel panel)
@@ -18,6 +10,16 @@ namespace HRMS.GUI
             this.panel = panel;
             InitializeComponent();
             this.BackColor = panel.BackColor;
+        }
+
+        public void Init()
+        {
+            
+        }
+
+        public void Open()
+        {
+            Show();
         }
     }
 }
