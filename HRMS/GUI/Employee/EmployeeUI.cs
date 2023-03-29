@@ -3,7 +3,6 @@ using HRMS.Models;
 using RestSharp;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Net;
 using System.Windows.Forms;
 
@@ -51,12 +50,10 @@ namespace HRMS.GUI
         private void FillDataGridView(List<Employee> employees)
         {
             listEmployee.Rows.Clear();
-
-            listEmployee.Rows.Add("1", "Nguyen Van A", "24/02/2003", "Nam", "0333.444.444");
-            /*            foreach (Employee employee in employees)
-                        {
-                            //listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.Address, employee.PhoneNumber, employee.Department.Name, employee.Position.Name);
-                        }*/
+            foreach (Employee employee in employees)
+            {
+                //listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.Address, employee.PhoneNumber, employee.Department.Name, employee.Position.Name);
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -94,20 +91,14 @@ namespace HRMS.GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            listEmployee.Rows.Add();
+            Alert alert = new Alert();
+            alert.ShowAlert("add", Alert.EnumType.INFO);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            listEmployee.AllowUserToOrderColumns = !listEmployee.AllowUserToOrderColumns;
-            if (listEmployee.AllowUserToOrderColumns)
-            {
-                btnEdit.IconColor = Color.Red;
-            } else
-            {
-
-                btnEdit.IconColor = Color.Black;
-            }
+            Alert alert = new Alert();
+            alert.ShowAlert("edit", Alert.EnumType.INFO);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

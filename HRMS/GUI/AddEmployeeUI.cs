@@ -1,26 +1,26 @@
-﻿using HRMS.DAL;
-using RestSharp;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
-using System.Net;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class LoginUI : Form
+    public partial class AddEmployeeUI : Form
     {
-        private int borderSize = 2;
-        Dashboard dashboard;
-        UserService service;
-
-        public LoginUI()
+        public AddEmployeeUI()
         {
-            service = new UserService();
-            dashboard = new Dashboard(this);
             InitializeComponent();
-            this.Padding = new Padding(borderSize);
+
+            this.Padding = new Padding(2);
             this.BackColor = Color.FromArgb(98, 102, 244);
+            //cbGender.SelectedIndex = 0;
         }
 
         //Drag Form
@@ -105,61 +105,14 @@ namespace HRMS.GUI
             base.WndProc(ref m);
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
-
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            try
-            {
-                btnLogin.Enabled = false;
-                Alert alert = new Alert();
-                string username = txtUsername.Texts;
-                string password = txtPassword.Texts;
-                if (username == null || username.Equals(""))
-                {
-                    alert.ShowAlert("Tài khoản không được bỏ trống!", Alert.EnumType.WARNING);
-                    return;
-                }
-                if (password == null || password.Equals(""))
-                {
-                    alert.ShowAlert("Mật khẩu không được bỏ trống!", Alert.EnumType.WARNING);
-                    return;
-                }
-                RestResponse<ApiResponse<TokenModel>> res = service.Validate(username, password);
-                if (res.StatusCode == HttpStatusCode.OK)
-                {
-                    ApiResponse<TokenModel> data = res.Data;
-                    if (data.Success)
-                    {
-                        Application.AccessToken = data.Data.AccessToken;
-                        Application.RefreshToken = data.Data.RefreshToken;
-                        Hide();
-                        dashboard.Show();
-                        dashboard.SetDefaultTab();
-                        alert.ShowAlert(data.Message, Alert.EnumType.SUCCESS);
-                    }
-                    else
-                    {
-                        alert.ShowAlert(data.Message, Alert.EnumType.WARNING);
-                    }
-                } else
-                {
-                    alert.ShowAlert("Có lỗi xảy ra!", Alert.EnumType.ERROR);
-                }
-            }
-            finally
-            {
-                btnLogin.Enabled = true;
-            }
+            System.Windows.Forms.Application.Exit();
         }
-
     }
 }

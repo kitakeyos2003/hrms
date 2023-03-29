@@ -2,10 +2,10 @@
 
 namespace HRMS.GUI
 {
-    public partial class ContractUI : Form, ITab
+    public partial class CandidateUI : Form, ITab
     {
         private Panel panel;
-        public ContractUI(Panel panel)
+        public CandidateUI(Panel panel)
         {
             this.panel = panel;
             InitializeComponent();
@@ -20,11 +20,6 @@ namespace HRMS.GUI
         public void Open()
         {
             Show();
-        }
-
-        private void btnAdd_Click(object sender, System.EventArgs e)
-        {
-            listContract.Rows.Add();
         }
     }
 }
