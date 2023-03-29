@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listAttendance = new System.Windows.Forms.DataGridView();
@@ -56,6 +56,7 @@
             this.Overtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AttendanceStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AttendanceNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listAttendance)).BeginInit();
@@ -178,6 +179,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnReset);
             this.panel2.Controls.Add(this.btnSearch);
@@ -283,9 +285,9 @@
             // 
             // Date
             // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle2;
             this.Date.HeaderText = "Ngày làm việc";
             this.Date.MinimumWidth = 8;
             this.Date.Name = "Date";
@@ -354,6 +356,21 @@
             this.AttendanceNote.Name = "AttendanceNote";
             this.AttendanceNote.Width = 150;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Filter;
+            this.iconButton1.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(703, 13);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(30, 30);
+            this.iconButton1.TabIndex = 6;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // AttendanceUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,5 +419,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Overtime;
         private System.Windows.Forms.DataGridViewTextBoxColumn AttendanceStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn AttendanceNote;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

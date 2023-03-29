@@ -56,6 +56,7 @@
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listCandidate)).BeginInit();
@@ -278,6 +279,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnReset);
             this.panel2.Controls.Add(this.btnSearch);
@@ -357,6 +359,21 @@
             this.txtKeyword.Texts = "";
             this.txtKeyword.UnderlinedStyle = false;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Filter;
+            this.iconButton1.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(703, 13);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(30, 30);
+            this.iconButton1.TabIndex = 6;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // CandidateUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,5 +423,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn InterviewResult;
         private System.Windows.Forms.DataGridViewTextBoxColumn OfferStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn OfferDetails;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
