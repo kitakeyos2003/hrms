@@ -28,6 +28,7 @@ namespace HRMS
             InitializeComponent();
             Init();
             CollapseMenu();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Init()

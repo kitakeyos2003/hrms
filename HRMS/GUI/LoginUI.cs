@@ -21,6 +21,7 @@ namespace HRMS.GUI
             InitializeComponent();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         //Drag Form
@@ -142,9 +143,9 @@ namespace HRMS.GUI
                         Application.AccessToken = data.Data.AccessToken;
                         Application.RefreshToken = data.Data.RefreshToken;
                         Hide();
+                        alert.ShowAlert(data.Message, Alert.EnumType.SUCCESS);
                         dashboard.Show();
                         dashboard.SetDefaultTab();
-                        alert.ShowAlert(data.Message, Alert.EnumType.SUCCESS);
                     }
                     else
                     {

@@ -21,5 +21,10 @@ namespace HRMS.GUI
         {
             Show();
         }
+
+        private void btnAdd_Click(object sender, System.EventArgs e)
+        {
+            listSalary.Rows.Add();
+        }
     }
 }

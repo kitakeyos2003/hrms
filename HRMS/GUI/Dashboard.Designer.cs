@@ -120,7 +120,7 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnPerformanceReview
+            // btnEvaluate
             // 
             this.btnEvaluate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEvaluate.FlatAppearance.BorderSize = 0;
@@ -133,7 +133,7 @@
             this.btnEvaluate.IconSize = 25;
             this.btnEvaluate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEvaluate.Location = new System.Drawing.Point(0, 350);
-            this.btnEvaluate.Name = "btnPerformanceReview";
+            this.btnEvaluate.Name = "btnEvaluate";
             this.btnEvaluate.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEvaluate.Size = new System.Drawing.Size(200, 46);
             this.btnEvaluate.TabIndex = 6;
@@ -168,7 +168,7 @@
             this.btnSalaryCalculator.UseVisualStyleBackColor = true;
             this.btnSalaryCalculator.Click += new System.EventHandler(this.OpenNewTabAndCloseCurrentTab);
             // 
-            // btnTimekeeping
+            // btnAttendance
             // 
             this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAttendance.FlatAppearance.BorderSize = 0;
@@ -181,7 +181,7 @@
             this.btnAttendance.IconSize = 25;
             this.btnAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAttendance.Location = new System.Drawing.Point(0, 258);
-            this.btnAttendance.Name = "btnTimekeeping";
+            this.btnAttendance.Name = "btnAttendance";
             this.btnAttendance.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAttendance.Size = new System.Drawing.Size(200, 46);
             this.btnAttendance.TabIndex = 5;
@@ -216,7 +216,7 @@
             this.btnContract.UseVisualStyleBackColor = true;
             this.btnContract.Click += new System.EventHandler(this.OpenNewTabAndCloseCurrentTab);
             // 
-            // btnRecruitment
+            // btnCandidate
             // 
             this.btnCandidate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCandidate.FlatAppearance.BorderSize = 0;
@@ -229,7 +229,7 @@
             this.btnCandidate.IconSize = 25;
             this.btnCandidate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCandidate.Location = new System.Drawing.Point(0, 166);
-            this.btnCandidate.Name = "btnRecruitment";
+            this.btnCandidate.Name = "btnCandidate";
             this.btnCandidate.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCandidate.Size = new System.Drawing.Size(200, 46);
             this.btnCandidate.TabIndex = 3;
@@ -240,7 +240,7 @@
             this.btnCandidate.UseVisualStyleBackColor = true;
             this.btnCandidate.Click += new System.EventHandler(this.OpenNewTabAndCloseCurrentTab);
             // 
-            // btnPersonnel
+            // btnEmployee
             // 
             this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmployee.FlatAppearance.BorderSize = 0;
@@ -253,7 +253,7 @@
             this.btnEmployee.IconSize = 25;
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployee.Location = new System.Drawing.Point(0, 120);
-            this.btnEmployee.Name = "btnPersonnel";
+            this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEmployee.Size = new System.Drawing.Size(200, 46);
             this.btnEmployee.TabIndex = 2;
@@ -271,7 +271,7 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
+            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.HouseChimneyWindow;
             this.btnHome.IconColor = System.Drawing.Color.White;
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHome.IconSize = 25;

@@ -21,6 +21,18 @@ namespace HRMS.GUI
             service = new EmployeeService();
             InitializeComponent();
             this.BackColor = panel.BackColor;
+            InitDataGridView();
+        }
+
+        public void InitDataGridView()
+        {
+
+            Sex.Items.Add("Nam");
+            Sex.Items.Add("Nữ");
+            Sex.Items.Add("Không xác định");
+
+            Status.Items.Add("Đang làm việc");
+            Status.Items.Add("Đã nghỉ việc");
         }
 
         private void listEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -97,17 +109,9 @@ namespace HRMS.GUI
             listEmployee.Rows.Add();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            listEmployee.AllowUserToOrderColumns = !listEmployee.AllowUserToOrderColumns;
-            if (listEmployee.AllowUserToOrderColumns)
-            {
-                btnEdit.IconColor = Color.Red;
-            } else
-            {
 
-                btnEdit.IconColor = Color.Black;
-            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
