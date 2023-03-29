@@ -26,5 +26,10 @@ namespace HRMS.GUI
         {
             listAttendance.Rows.Add();
         }
+
+        private void btnFilter_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,8 +19,8 @@ namespace HRMS.DAL.Models
         public string Skills { get; set; }
         public DateTime InterviewDate { get; set; }
         public string Interviewer { get; set; }
-        public string InterviewResult { get; set; }
-        public string OfferStatus { get; set; }
+        public int InterviewResult { get; set; }
+        public int OfferStatus { get; set; }
         public string OfferDetails { get; set; }
     }
 }

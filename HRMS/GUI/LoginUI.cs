@@ -134,10 +134,10 @@ namespace HRMS.GUI
                     alert.ShowAlert("Mật khẩu không được bỏ trống!", Alert.EnumType.WARNING);
                     return;
                 }
-                RestResponse<ApiResponse<TokenModel>> res = service.Validate(username, password);
+                RestResponse<ApiResponse<Token>> res = service.Validate(username, password);
                 if (res.StatusCode == HttpStatusCode.OK)
                 {
-                    ApiResponse<TokenModel> data = res.Data;
+                    ApiResponse<Token> data = res.Data;
                     if (data.Success)
                     {
                         Application.AccessToken = data.Data.AccessToken;

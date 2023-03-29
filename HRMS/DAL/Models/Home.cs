@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRMS.DAL.Models
 {
-    internal class HomeModel
+    internal class Home
     {
         public int TotalEmployees { get; set; }
         public int NewEmployeesThisMonth { get; set; }

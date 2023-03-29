@@ -80,7 +80,6 @@ C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\bin\Release\System.Thread
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\bin\Release\System.ValueTuple.xml
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.csproj.AssemblyReference.cache
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.csproj.SuggestedBindingRedirects.cache
-C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.GUI.AddEmployeeUI.resources
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\Alert.resources
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.GUI.ContractUI.resources
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.Dashboard.resources
@@ -98,4 +97,3 @@ C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.csproj.C
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.csproj.CopyComplete
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.exe
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.pdb
-C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.GUI.AddContractUI.resources

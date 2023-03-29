@@ -4,7 +4,7 @@ namespace HRMS.DAL
 {
     internal class UserService 
     {
-        public RestResponse<ApiResponse<TokenModel>> Validate(string username, string password)
+        public RestResponse<ApiResponse<Token>> Validate(string username, string password)
         {
             var client = new RestClient(Application.BASE_URL);
             client.AddDefaultHeader("Content-Type", "application/json");
@@ -14,7 +14,7 @@ namespace HRMS.DAL
                 userName = username,
                 password = password
             });
-            var response = client.Execute<ApiResponse<TokenModel>>(request);
+            var response = client.Execute<ApiResponse<Token>>(request);
             return response;
         }
     }

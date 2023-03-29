@@ -22,15 +22,5 @@ namespace HRMS.DAL.Models
         public DateTime PaymentDate { get; set; }
         public string PaymentMethod { get; set; }
         public string PaySlip { get; set; }
-
-        public virtual ICollection<SalaryDetail> SalaryDetails { get; set; }
-
-        public class SalaryDetail
-        {
-            public int SalaryDetailID { get; set; }
-            public int EmployeeID { get; set; }
-            public string Description { get; set; }
-            public decimal Amount { get; set; }
-        }
     }
 }

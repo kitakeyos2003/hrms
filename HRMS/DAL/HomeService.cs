@@ -10,13 +10,13 @@ namespace HRMS.DAL
 {
     internal class HomeService
     {
-        public RestResponse<HomeModel> GetInfo()
+        public RestResponse<Home> GetInfo()
         {
             var client = new RestClient(Application.BASE_URL);
             client.AddDefaultHeader("Content-Type", "application/json");
             var request = new RestRequest("/api/Home", Method.Get);
             request.AddHeader("Authorization", "Bearer " + Application.AccessToken);
-            var response = client.Execute<HomeModel>(request);
+            var response = client.Execute<Home>(request);
             return response;
         }
     }

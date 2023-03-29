@@ -19,7 +19,7 @@ namespace HRMS.DAL.Models
         public TimeSpan LateTime { get; set; }
         public TimeSpan EarlyLeaveTime { get; set; }
         public TimeSpan Overtime { get; set; }
-        public string AttendanceStatus { get; set; }
+        public int AttendanceStatus { get; set; }
         public string AttendanceNote { get; set; }
         public virtual Employee Employee { get; set; }
     }

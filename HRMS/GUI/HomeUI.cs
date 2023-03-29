@@ -26,7 +26,7 @@ namespace HRMS.GUI
 
         public void Init()
         {
-            RestResponse<HomeModel> res = service.GetInfo();
+            RestResponse<Home> res = service.GetInfo();
             if (res.StatusCode == HttpStatusCode.OK)
             {
                 lbTotalEmployees.Text = res.Data.TotalEmployees.ToString("N0");
