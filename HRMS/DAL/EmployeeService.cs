@@ -11,8 +11,10 @@ using System.Threading.Tasks;
 
 namespace HRMS.DAL
 {
-    internal class EmployeeService
+    internal class EmployeeService : IData
     {
+        public List<Employee> Employees { get; set; }
+
         public RestResponse<List<Employee>>GetAll()
         {
             var client = new RestClient(Application.BASE_URL);
@@ -21,6 +23,15 @@ namespace HRMS.DAL
             request.AddHeader("Authorization", "Bearer " + Application.AccessToken);
             var response = client.Execute<List<Employee>>(request);
             return response;
+        }
+
+        public void Load()
+        {
+            RestResponse<List<Employee>> res = GetAll();
+            if (res.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                Employees = res.Data;
+            }
         }
     }
 }

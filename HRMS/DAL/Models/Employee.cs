@@ -16,11 +16,11 @@ namespace HRMS.Models
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
-        public string Department { get; set; }
-        public string Position { get; set; }
+        public Department Department { get; set; }
+        public Position Position { get; set; }
         public double Salary { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string Status { get; set; }
+        public DateTime EndDate { get; set; }
+        public int Status { get; set; }
     }
 }

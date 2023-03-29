@@ -13,12 +13,9 @@ namespace HRMS.GUI
     {
         private Panel panel;
         DataGridViewRow selectRow;
-        EmployeeService service;
-        List<Employee> employees;
         public EmployeeUI(Panel panel)
         {
             this.panel = panel;
-            service = new EmployeeService();
             InitializeComponent();
             this.BackColor = panel.BackColor;
             InitDataGridView();
@@ -33,6 +30,11 @@ namespace HRMS.GUI
 
             Status.Items.Add("Đang làm việc");
             Status.Items.Add("Đã nghỉ việc");
+
+            Department.Items.Add("Phòng phát triển");
+            Position.Items.Add("Developer");
+
+
         }
 
         private void listEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -52,28 +54,29 @@ namespace HRMS.GUI
 
         public void Init()
         {
-            RestResponse<List<Employee>> res = service.GetAll();
-            if (res.StatusCode == HttpStatusCode.OK)
+            var employees = DataManager.GetInstance().EmployeeService.Employees;
+            if (employees != null)
             {
-                employees = res.Data;
+                FillDataGridView(employees);
             }
-            FillDataGridView(employees);
         }
 
         private void FillDataGridView(List<Employee> employees)
         {
             listEmployee.Rows.Clear();
-
-            listEmployee.Rows.Add("1", "Nguyen Van A", "24/02/2003", "Nam", "0333.444.444");
-            /*            foreach (Employee employee in employees)
-                        {
-                            //listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.Address, employee.PhoneNumber, employee.Department.Name, employee.Position.Name);
-                        }*/
+            foreach (Employee employee in employees)
+            {
+                listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.PhoneNumber, employee.Email, employee.Address, employee.Department.Name, employee.Position.Name, employee.StartDate.ToString("dd/MM/yyyy"), employee.EndDate.ToString("dd/MM/yyyy"), Status.Items[employee.Status]);
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            FillDataGridView(employees);
+            var employees = DataManager.GetInstance().EmployeeService.Employees;
+            if (employees != null)
+            {
+                FillDataGridView(employees);
+            }
             Alert alert = new Alert();
             alert.ShowAlert("Làm mới thành công!", Alert.EnumType.SUCCESS);
         }
@@ -100,8 +103,12 @@ namespace HRMS.GUI
         }
         private void Search(string keyword)
         {
-            List<Employee> list = employees.FindAll(x => x.FullName.Contains(keyword));
-            FillDataGridView(list);
+            var employees = DataManager.GetInstance().EmployeeService.Employees;
+            if (employees != null)
+            {
+                List<Employee> list = employees.FindAll(x => x.FullName.Contains(keyword));
+                FillDataGridView(list);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

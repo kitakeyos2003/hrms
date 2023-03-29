@@ -18,11 +18,8 @@ C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\Newtonsoft.Json.xml
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.HomeUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.AboutMeUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.LoginUI.resources
-C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.PerformanceReviewUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.EmployeeUI.resources
-C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.RecruitmentUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.SalaryCalculatorUI.resources
-C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.TimekeepingUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.GUI.ContractUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\Alert.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll

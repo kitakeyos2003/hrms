@@ -136,8 +136,11 @@
   <ItemGroup>
     <Compile Include="BUS\Application.cs" />
     <Compile Include="BUS\JsonReader.cs" />
+    <Compile Include="DAL\DataManager.cs" />
+    <Compile Include="DAL\DepartmentService.cs" />
     <Compile Include="DAL\EmployeeService.cs" />
     <Compile Include="DAL\HomeService.cs" />
+    <Compile Include="DAL\IData.cs" />
     <Compile Include="DAL\Models\ApiResponse.cs" />
     <Compile Include="DAL\Models\Attendance.cs" />
     <Compile Include="DAL\Models\Candidate.cs" />

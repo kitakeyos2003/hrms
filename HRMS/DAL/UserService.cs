@@ -2,8 +2,10 @@
 
 namespace HRMS.DAL
 {
+
     internal class UserService 
     {
+
         public RestResponse<ApiResponse<Token>> Validate(string username, string password)
         {
             var client = new RestClient(Application.BASE_URL);

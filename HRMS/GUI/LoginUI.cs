@@ -144,6 +144,7 @@ namespace HRMS.GUI
                         Application.RefreshToken = data.Data.RefreshToken;
                         Hide();
                         alert.ShowAlert(data.Message, Alert.EnumType.SUCCESS);
+                        DataManager.GetInstance().LoadAll();
                         dashboard.Show();
                         dashboard.SetDefaultTab();
                     }
