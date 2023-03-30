@@ -11,13 +11,11 @@ namespace HRMS.GUI
     public partial class LoginUI : Form
     {
         private int borderSize = 2;
-        Dashboard dashboard;
         UserService service;
 
         public LoginUI()
         {
             service = new UserService();
-            dashboard = new Dashboard(this);
             InitializeComponent();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
@@ -145,6 +143,7 @@ namespace HRMS.GUI
                         Hide();
                         alert.ShowAlert(data.Message, Alert.EnumType.SUCCESS);
                         DataManager.GetInstance().LoadAll();
+                        Dashboard dashboard = new Dashboard(this);
                         dashboard.Show();
                         dashboard.SetDefaultTab();
                     }

@@ -1,9 +1,11 @@
 ﻿using HRMS.DAL;
+using HRMS.DAL.Models;
 using HRMS.Models;
 using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Net;
 using System.Windows.Forms;
 
@@ -31,9 +33,27 @@ namespace HRMS.GUI
             Status.Items.Add("Đang làm việc");
             Status.Items.Add("Đã nghỉ việc");
 
-            Department.Items.Add("Phòng phát triển");
-            Position.Items.Add("Developer");
-
+            var departments = DataManager.GetInstance().DepartmentService.Departments;
+            if (departments != null)
+            {
+                foreach (Department department in departments)
+                {
+                    Department.Items.Add(department.Name);
+                }
+            }
+            var positions = DataManager.GetInstance().PositionService.Positions;
+            if (positions != null)
+            {
+                foreach (var position in positions)
+                {
+                    Position.Items.Add(position.Name);
+                }
+            }
+            var employees = DataManager.GetInstance().EmployeeService.Employees;
+            if (employees != null)
+            {
+                FillDataGridView(employees);
+            }
 
         }
 
@@ -54,19 +74,28 @@ namespace HRMS.GUI
 
         public void Init()
         {
-            var employees = DataManager.GetInstance().EmployeeService.Employees;
-            if (employees != null)
-            {
-                FillDataGridView(employees);
-            }
+            
         }
 
         private void FillDataGridView(List<Employee> employees)
         {
+            /*var departments = DataManager.GetInstance().DepartmentService.Departments;
+            if (departments == null)
+            {
+                return;
+            }
+            var positions = DataManager.GetInstance().PositionService.Positions;
+            if (positions == null)
+            {
+                return;
+            }*/
             listEmployee.Rows.Clear();
             foreach (Employee employee in employees)
             {
+                /*string departmentName = departments.SingleOrDefault(e=> e.Id == employee.Department.Id).Name;
+                string positionName = positions.SingleOrDefault(e => e.Id == employee.Position.Id).Name;*/
                 listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.PhoneNumber, employee.Email, employee.Address, employee.Department.Name, employee.Position.Name, employee.StartDate.ToString("dd/MM/yyyy"), employee.EndDate.ToString("dd/MM/yyyy"), Status.Items[employee.Status]);
+                
             }
         }
 

@@ -43,18 +43,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listEmployee = new System.Windows.Forms.DataGridView();
-            this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sex = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Department = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Position = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -67,6 +55,18 @@
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
+            this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sex = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Department = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Position = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).BeginInit();
@@ -121,126 +121,10 @@
             this.listEmployee.Location = new System.Drawing.Point(30, 31);
             this.listEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listEmployee.Name = "listEmployee";
+            this.listEmployee.AutoGenerateColumns = false;
             this.listEmployee.RowHeadersWidth = 62;
             this.listEmployee.Size = new System.Drawing.Size(1410, 630);
             this.listEmployee.TabIndex = 4;
-            // 
-            // EmployeeID
-            // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle1;
-            this.EmployeeID.HeaderText = "Mã nhân viên";
-            this.EmployeeID.MinimumWidth = 8;
-            this.EmployeeID.Name = "EmployeeID";
-            this.EmployeeID.ReadOnly = true;
-            this.EmployeeID.Width = 150;
-            // 
-            // FullName
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.FullName.HeaderText = "Họ và tên";
-            this.FullName.MinimumWidth = 8;
-            this.FullName.Name = "FullName";
-            this.FullName.Width = 150;
-            // 
-            // BirthDay
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BirthDay.DefaultCellStyle = dataGridViewCellStyle3;
-            this.BirthDay.HeaderText = "Ngày sinh";
-            this.BirthDay.MinimumWidth = 8;
-            this.BirthDay.Name = "BirthDay";
-            this.BirthDay.Width = 150;
-            // 
-            // Sex
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sex.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Sex.HeaderText = "Giới tính";
-            this.Sex.MinimumWidth = 8;
-            this.Sex.Name = "Sex";
-            this.Sex.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Sex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Sex.Width = 150;
-            // 
-            // PhoneNumber
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle5;
-            this.PhoneNumber.HeaderText = "Số điện thoại";
-            this.PhoneNumber.MinimumWidth = 8;
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.Width = 150;
-            // 
-            // Address
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.MinimumWidth = 8;
-            this.Address.Name = "Address";
-            this.Address.Width = 150;
-            // 
-            // Department
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Department.HeaderText = "Phòng ban";
-            this.Department.MinimumWidth = 8;
-            this.Department.Name = "Department";
-            this.Department.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Department.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Department.Width = 150;
-            // 
-            // Position
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Position.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Position.HeaderText = "Chức vụ";
-            this.Position.MinimumWidth = 8;
-            this.Position.Name = "Position";
-            this.Position.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Position.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Position.Width = 150;
-            // 
-            // Salary
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salary.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Salary.HeaderText = "Lương";
-            this.Salary.MinimumWidth = 8;
-            this.Salary.Name = "Salary";
-            this.Salary.Width = 150;
-            // 
-            // StartDate
-            // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartDate.DefaultCellStyle = dataGridViewCellStyle10;
-            this.StartDate.HeaderText = "Ngày bắt đầu";
-            this.StartDate.MinimumWidth = 8;
-            this.StartDate.Name = "StartDate";
-            this.StartDate.Width = 150;
-            // 
-            // EndDate
-            // 
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EndDate.DefaultCellStyle = dataGridViewCellStyle11;
-            this.EndDate.HeaderText = "Ngày kết thúc";
-            this.EndDate.MinimumWidth = 8;
-            this.EndDate.Name = "EndDate";
-            this.EndDate.Width = 150;
-            // 
-            // Status
-            // 
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Status.HeaderText = "Trạng thái";
-            this.Status.MinimumWidth = 8;
-            this.Status.Name = "Status";
-            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Status.Width = 150;
             // 
             // panel7
             // 
@@ -418,6 +302,125 @@
             this.txtKeyword.Texts = "";
             this.txtKeyword.UnderlinedStyle = false;
             this.txtKeyword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKeyword_KeyDown);
+            // 
+            // EmployeeID
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle1;
+            this.EmployeeID.HeaderText = "Mã nhân viên";
+            this.EmployeeID.MinimumWidth = 8;
+            this.EmployeeID.Name = "EmployeeID";
+            this.EmployeeID.ReadOnly = true;
+            this.EmployeeID.Width = 150;
+            // 
+            // FullName
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.FullName.HeaderText = "Họ và tên";
+            this.FullName.MinimumWidth = 8;
+            this.FullName.Name = "FullName";
+            this.FullName.Width = 150;
+            // 
+            // BirthDay
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthDay.DefaultCellStyle = dataGridViewCellStyle3;
+            this.BirthDay.HeaderText = "Ngày sinh";
+            this.BirthDay.MinimumWidth = 8;
+            this.BirthDay.Name = "BirthDay";
+            this.BirthDay.Width = 150;
+            // 
+            // Sex
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sex.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Sex.HeaderText = "Giới tính";
+            this.Sex.MinimumWidth = 8;
+            this.Sex.Name = "Sex";
+            this.Sex.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Sex.Width = 150;
+            // 
+            // PhoneNumber
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle5;
+            this.PhoneNumber.HeaderText = "Số điện thoại";
+            this.PhoneNumber.MinimumWidth = 8;
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Width = 150;
+            // 
+            // Address
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.MinimumWidth = 8;
+            this.Address.Name = "Address";
+            this.Address.Width = 150;
+            // 
+            // Department
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Department.HeaderText = "Phòng ban";
+            this.Department.ValueType = typeof(string);
+            this.Department.MinimumWidth = 8;
+            this.Department.Name = "Department";
+            this.Department.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Department.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Department.Width = 150;
+            // 
+            // Position
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Position.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Position.HeaderText = "Chức vụ";
+            this.Position.ValueType = typeof(string);
+            this.Position.MinimumWidth = 8;
+            this.Position.Name = "Position";
+            this.Position.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Position.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Position.Width = 150;
+            // 
+            // Salary
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salary.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Salary.HeaderText = "Lương";
+            this.Salary.MinimumWidth = 8;
+            this.Salary.Name = "Salary";
+            this.Salary.Width = 150;
+            // 
+            // StartDate
+            // 
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartDate.DefaultCellStyle = dataGridViewCellStyle10;
+            this.StartDate.HeaderText = "Ngày bắt đầu";
+            this.StartDate.MinimumWidth = 8;
+            this.StartDate.Name = "StartDate";
+            this.StartDate.Width = 150;
+            // 
+            // EndDate
+            // 
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndDate.DefaultCellStyle = dataGridViewCellStyle11;
+            this.EndDate.HeaderText = "Ngày kết thúc";
+            this.EndDate.MinimumWidth = 8;
+            this.EndDate.Name = "EndDate";
+            this.EndDate.Width = 150;
+            // 
+            // Status
+            // 
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Status.HeaderText = "Trạng thái";
+            this.Status.MinimumWidth = 8;
+            this.Status.Name = "Status";
+            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Status.Width = 150;
             // 
             // EmployeeUI
             // 

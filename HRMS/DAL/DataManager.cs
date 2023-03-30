@@ -15,11 +15,13 @@ namespace HRMS.DAL
         }
         public EmployeeService EmployeeService { get; set; }
         public DepartmentService DepartmentService { get; set; }
+        public PositionService PositionService { get; set; }
 
         public DataManager()
         {
             EmployeeService = new EmployeeService();
             DepartmentService = new DepartmentService();
+            PositionService = new PositionService();
         }
 
         public void LoadAll()

@@ -151,6 +151,7 @@
     <Compile Include="DAL\Models\Position.cs" />
     <Compile Include="DAL\Models\Salary.cs" />
     <Compile Include="DAL\Models\Token.cs" />
+    <Compile Include="DAL\PositionService.cs" />
     <Compile Include="DAL\UserService.cs" />
     <Compile Include="DAL\Models\Employee.cs" />
     <Compile Include="DAL\Models\Version.cs" />
