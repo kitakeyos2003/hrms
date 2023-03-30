@@ -4,16 +4,15 @@ using System.Collections.Generic;
 
 namespace HRMS.DAL
 {
-    internal class PositionService
+    internal class SalaryService
     {
-
-        public RestResponse<List<Position>> GetAll()
+        public RestResponse<List<Salary>> GetAll()
         {
             var client = new RestClient(Application.BASE_URL);
             client.AddDefaultHeader("Content-Type", "application/json");
-            var request = new RestRequest("/api/Position", Method.Get);
+            var request = new RestRequest("/api/Salary", Method.Get);
             request.AddHeader("Authorization", "Bearer " + Application.AccessToken);
-            var response = client.Execute<List<Position>>(request);
+            var response = client.Execute<List<Salary>>(request);
             return response;
         }
     }

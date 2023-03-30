@@ -1,19 +1,11 @@
-﻿using HRMS.Models;
-using Newtonsoft.Json;
+﻿using HRMS.DAL.Models;
 using RestSharp;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HRMS.DAL
 {
-    internal class EmployeeService : IData
+    internal class EmployeeService
     {
-        public List<Employee> Employees { get; set; }
 
         public RestResponse<List<Employee>>GetAll()
         {
@@ -25,13 +17,36 @@ namespace HRMS.DAL
             return response;
         }
 
-        public void Load()
+        public Employee Add(Employee employee)
         {
-            RestResponse<List<Employee>> res = GetAll();
-            if (res.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                Employees = res.Data;
-            }
+            var client = new RestClient(Application.BASE_URL);
+            client.AddDefaultHeader("Content-Type", "application/json");
+            var request = new RestRequest("/api/Employee", Method.Post);
+            request.AddHeader("Authorization", "Bearer " + Application.AccessToken);
+            request.AddJsonBody(employee);
+            var response = client.Execute<Employee>(request);
+            return response != null ? response.Data : null;
+        }
+
+        public bool Update(Employee employee)
+        {
+            var client = new RestClient(Application.BASE_URL);
+            client.AddDefaultHeader("Content-Type", "application/json");
+            var request = new RestRequest("/api/Employee", Method.Put);
+            request.AddHeader("Authorization", "Bearer " + Application.AccessToken);
+            request.AddJsonBody(employee);
+            var response = client.Execute(request);
+            return response.StatusCode == System.Net.HttpStatusCode.OK;
+        }
+
+        public bool Delete(int id)
+        {
+            var client = new RestClient(Application.BASE_URL);
+            client.AddDefaultHeader("Content-Type", "application/json");
+            var request = new RestRequest("/api/Employee?id=" + id, Method.Delete);
+            request.AddHeader("Authorization", "Bearer " + Application.AccessToken);
+            var response = client.Execute(request);
+            return response.StatusCode == System.Net.HttpStatusCode.OK;
         }
     }
 }

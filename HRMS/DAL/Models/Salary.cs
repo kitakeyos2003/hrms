@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HRMS.DAL.Models
 {
     internal class Salary
     {
         public int EmployeeID { get; set; }
-        public string FullName { get; set; }
-        public string Position { get; set; }
-        public string Department { get; set; }
+        public Employee Employee { get; set; }
         public decimal BasicSalary { get; set; }
         public decimal Allowance { get; set; }
         public decimal Bonus { get; set; }

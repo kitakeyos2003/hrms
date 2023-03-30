@@ -10,8 +10,8 @@ namespace HRMS.DAL.Models
     {
         public int CandidateID { get; set; }
         public string FullName { get; set; }
-        public string PositionApplied { get; set; }
-        public string DepartmentApplied { get; set; }
+        public Position PositionApplied { get; set; }
+        public Department DepartmentApplied { get; set; }
         public string Resume { get; set; }
         public string ContactInformation { get; set; }
         public string Education { get; set; }
@@ -21,6 +21,5 @@ namespace HRMS.DAL.Models
         public string Interviewer { get; set; }
         public int InterviewResult { get; set; }
         public int OfferStatus { get; set; }
-        public string OfferDetails { get; set; }
     }
 }

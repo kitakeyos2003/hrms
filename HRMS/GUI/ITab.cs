@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 public interface ITab
 {
-    void Init();
     void Open();
     void Hide();
 }

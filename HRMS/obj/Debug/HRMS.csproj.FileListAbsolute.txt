@@ -54,10 +54,11 @@ C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.ContractUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.HomeUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AboutMeUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.LoginUI.resources
-C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.PerformanceReviewUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.EmployeeUI.resources
-C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.RecruitmentUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.SalaryCalculatorUI.resources
-C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.TimekeepingUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\bin\Debug\RestSharp.dll
 C:\Users\Admin\source\repos\HRMS\HRMS\bin\Debug\RestSharp.xml
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.EvaluateUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.CandidateUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AttendanceUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.Feature.AddEmployeeUI.resources

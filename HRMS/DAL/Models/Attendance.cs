@@ -1,16 +1,10 @@
-﻿using HRMS.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace HRMS.DAL.Models
 {
     internal class Attendance
     {
         public int AttendanceID { get; set; }
-        public string Department { get; set; }
         public DateTime Date { get; set; }
         public DateTime ShiftStartTime { get; set; }
         public DateTime ShiftEndTime { get; set; }

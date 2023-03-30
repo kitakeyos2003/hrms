@@ -46,32 +46,34 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
             this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sex = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Department = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Position = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,10 +81,9 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(60, 62);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(40, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1500, 769);
+            this.panel1.Size = new System.Drawing.Size(1000, 500);
             this.panel1.TabIndex = 0;
             this.panel1.Tag = "";
             // 
@@ -94,14 +95,15 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 77);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Location = new System.Drawing.Point(0, 50);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1500, 692);
+            this.panel4.Size = new System.Drawing.Size(1000, 450);
             this.panel4.TabIndex = 2;
             // 
             // listEmployee
             // 
+            this.listEmployee.AllowUserToAddRows = false;
+            this.listEmployee.AllowUserToDeleteRows = false;
             this.listEmployee.BackgroundColor = System.Drawing.Color.White;
             this.listEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -110,38 +112,37 @@
             this.BirthDay,
             this.Sex,
             this.PhoneNumber,
+            this.Email,
             this.Address,
             this.Department,
             this.Position,
-            this.Salary,
             this.StartDate,
             this.EndDate,
             this.Status});
             this.listEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listEmployee.Location = new System.Drawing.Point(30, 31);
-            this.listEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listEmployee.Location = new System.Drawing.Point(20, 20);
+            this.listEmployee.MultiSelect = false;
             this.listEmployee.Name = "listEmployee";
-            this.listEmployee.AutoGenerateColumns = false;
+            this.listEmployee.ReadOnly = true;
             this.listEmployee.RowHeadersWidth = 62;
-            this.listEmployee.Size = new System.Drawing.Size(1410, 630);
+            this.listEmployee.Size = new System.Drawing.Size(940, 410);
             this.listEmployee.TabIndex = 4;
+            this.listEmployee.SelectionChanged += new System.EventHandler(this.listEmployee_SelectionChanged);
             // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(30, 661);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel7.Location = new System.Drawing.Point(20, 430);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1410, 31);
+            this.panel7.Size = new System.Drawing.Size(940, 20);
             this.panel7.TabIndex = 3;
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 31);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(0, 20);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(30, 661);
+            this.panel6.Size = new System.Drawing.Size(20, 430);
             this.panel6.TabIndex = 2;
             // 
             // panel5
@@ -149,28 +150,78 @@
             this.panel5.Controls.Add(this.btnSave);
             this.panel5.Controls.Add(this.btnDelete);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1440, 31);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Location = new System.Drawing.Point(960, 20);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(60, 661);
+            this.panel5.Size = new System.Drawing.Size(40, 430);
             this.panel5.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1000, 20);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 50);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnAdd);
+            this.panel8.Controls.Add(this.iconButton1);
+            this.panel8.Controls.Add(this.btnReset);
+            this.panel8.Controls.Add(this.btnSearch);
+            this.panel8.Controls.Add(this.txtKeyword);
+            this.panel8.Location = new System.Drawing.Point(697, 13);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(295, 34);
+            this.panel8.TabIndex = 6;
+            // 
+            // txtKeyword
+            // 
+            this.txtKeyword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtKeyword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtKeyword.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtKeyword.BorderFocusColor = System.Drawing.Color.SeaGreen;
+            this.txtKeyword.BorderRadius = 15;
+            this.txtKeyword.BorderSize = 1;
+            this.txtKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKeyword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtKeyword.Location = new System.Drawing.Point(38, 2);
+            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKeyword.Multiline = false;
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtKeyword.PasswordChar = false;
+            this.txtKeyword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtKeyword.PlaceholderText = "Tìm kiếm";
+            this.txtKeyword.Size = new System.Drawing.Size(152, 31);
+            this.txtKeyword.TabIndex = 6;
+            this.txtKeyword.Texts = "";
+            this.txtKeyword.UnderlinedStyle = false;
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.SdCard;
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.btnSave.IconColor = System.Drawing.Color.Black;
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 30;
-            this.btnSave.Location = new System.Drawing.Point(3, 7);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSave.Location = new System.Drawing.Point(2, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 46);
+            this.btnSave.Size = new System.Drawing.Size(30, 30);
             this.btnSave.TabIndex = 6;
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -181,127 +232,75 @@
             this.btnDelete.IconColor = System.Drawing.Color.Red;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 30;
-            this.btnDelete.Location = new System.Drawing.Point(3, 64);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelete.Location = new System.Drawing.Point(2, 42);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(45, 46);
+            this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1500, 31);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.iconButton1);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.btnReset);
-            this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Controls.Add(this.txtKeyword);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1500, 77);
-            this.panel2.TabIndex = 0;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            this.iconButton1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(1054, 20);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(45, 46);
-            this.iconButton1.TabIndex = 5;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
             // btnAdd
             // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btnAdd.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 30;
-            this.btnAdd.Location = new System.Drawing.Point(1443, 20);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Location = new System.Drawing.Point(262, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(45, 46);
-            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Size = new System.Drawing.Size(30, 30);
+            this.btnAdd.TabIndex = 12;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Filter;
+            this.iconButton1.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(1, 3);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(30, 30);
+            this.iconButton1.TabIndex = 9;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // btnReset
             // 
-            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.IconChar = FontAwesome.Sharp.IconChar.Rotate;
             this.btnReset.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.btnReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReset.IconSize = 30;
-            this.btnReset.Location = new System.Drawing.Point(1392, 20);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReset.Location = new System.Drawing.Point(226, 3);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(45, 46);
-            this.btnReset.TabIndex = 3;
+            this.btnReset.Size = new System.Drawing.Size(30, 30);
+            this.btnReset.TabIndex = 8;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.btnSearch.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 30;
-            this.btnSearch.Location = new System.Drawing.Point(1338, 20);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearch.Location = new System.Drawing.Point(190, 3);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(45, 46);
-            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Size = new System.Drawing.Size(30, 30);
+            this.btnSearch.TabIndex = 7;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtKeyword
-            // 
-            this.txtKeyword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtKeyword.BackColor = System.Drawing.SystemColors.Window;
-            this.txtKeyword.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtKeyword.BorderFocusColor = System.Drawing.Color.SeaGreen;
-            this.txtKeyword.BorderRadius = 15;
-            this.txtKeyword.BorderSize = 1;
-            this.txtKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKeyword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtKeyword.Location = new System.Drawing.Point(1110, 18);
-            this.txtKeyword.Margin = new System.Windows.Forms.Padding(6);
-            this.txtKeyword.Multiline = false;
-            this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
-            this.txtKeyword.PasswordChar = false;
-            this.txtKeyword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtKeyword.PlaceholderText = "Tìm kiếm";
-            this.txtKeyword.Size = new System.Drawing.Size(228, 47);
-            this.txtKeyword.TabIndex = 0;
-            this.txtKeyword.Texts = "";
-            this.txtKeyword.UnderlinedStyle = false;
-            this.txtKeyword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKeyword_KeyDown);
             // 
             // EmployeeID
             // 
@@ -320,15 +319,19 @@
             this.FullName.HeaderText = "Họ và tên";
             this.FullName.MinimumWidth = 8;
             this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
             this.FullName.Width = 150;
             // 
             // BirthDay
             // 
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
             this.BirthDay.DefaultCellStyle = dataGridViewCellStyle3;
             this.BirthDay.HeaderText = "Ngày sinh";
             this.BirthDay.MinimumWidth = 8;
             this.BirthDay.Name = "BirthDay";
+            this.BirthDay.ReadOnly = true;
             this.BirthDay.Width = 150;
             // 
             // Sex
@@ -338,8 +341,8 @@
             this.Sex.HeaderText = "Giới tính";
             this.Sex.MinimumWidth = 8;
             this.Sex.Name = "Sex";
+            this.Sex.ReadOnly = true;
             this.Sex.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Sex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Sex.Width = 150;
             // 
             // PhoneNumber
@@ -349,49 +352,48 @@
             this.PhoneNumber.HeaderText = "Số điện thoại";
             this.PhoneNumber.MinimumWidth = 8;
             this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.ReadOnly = true;
             this.PhoneNumber.Width = 150;
+            // 
+            // Email
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // Address
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address.DefaultCellStyle = dataGridViewCellStyle7;
             this.Address.HeaderText = "Địa chỉ";
             this.Address.MinimumWidth = 8;
             this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             this.Address.Width = 150;
             // 
             // Department
             // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle8;
             this.Department.HeaderText = "Phòng ban";
-            this.Department.ValueType = typeof(string);
             this.Department.MinimumWidth = 8;
             this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
             this.Department.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Department.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Department.Width = 150;
             // 
             // Position
             // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Position.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Position.DefaultCellStyle = dataGridViewCellStyle9;
             this.Position.HeaderText = "Chức vụ";
-            this.Position.ValueType = typeof(string);
             this.Position.MinimumWidth = 8;
             this.Position.Name = "Position";
+            this.Position.ReadOnly = true;
             this.Position.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Position.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Position.Width = 150;
-            // 
-            // Salary
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salary.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Salary.HeaderText = "Lương";
-            this.Salary.MinimumWidth = 8;
-            this.Salary.Name = "Salary";
-            this.Salary.Width = 150;
             // 
             // StartDate
             // 
@@ -400,6 +402,7 @@
             this.StartDate.HeaderText = "Ngày bắt đầu";
             this.StartDate.MinimumWidth = 8;
             this.StartDate.Name = "StartDate";
+            this.StartDate.ReadOnly = true;
             this.StartDate.Width = 150;
             // 
             // EndDate
@@ -409,6 +412,7 @@
             this.EndDate.HeaderText = "Ngày kết thúc";
             this.EndDate.MinimumWidth = 8;
             this.EndDate.Name = "EndDate";
+            this.EndDate.ReadOnly = true;
             this.EndDate.Width = 150;
             // 
             // Status
@@ -418,18 +422,17 @@
             this.Status.HeaderText = "Trạng thái";
             this.Status.MinimumWidth = 8;
             this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Status.Width = 150;
             // 
             // EmployeeUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1620, 892);
+            this.ClientSize = new System.Drawing.Size(1080, 580);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EmployeeUI";
             this.Tag = "Quản lý nhân sự";
             this.Text = "Nhân sự";
@@ -438,6 +441,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -446,30 +450,31 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private RJCodeAdvance.RJControls.RJTextBox txtKeyword;
-        private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton btnAdd;
-        private FontAwesome.Sharp.IconButton btnReset;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.DataGridView listEmployee;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnReset;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private RJCodeAdvance.RJControls.RJTextBox txtKeyword;
+        private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BirthDay;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Department;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Position;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Department;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Position;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

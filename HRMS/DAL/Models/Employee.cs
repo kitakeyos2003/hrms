@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRMS.Models
+namespace HRMS.DAL.Models
 {
-    internal class Employee
+    public class Employee
     {
         public int EmployeeID { get; set; }
         public string FullName { get; set; }
@@ -18,7 +18,6 @@ namespace HRMS.Models
         public string Address { get; set; }
         public Department Department { get; set; }
         public Position Position { get; set; }
-        public double Salary { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Status { get; set; }

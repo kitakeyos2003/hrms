@@ -1,13 +1,11 @@
 ﻿using HRMS.DAL.Models;
-using HRMS.Models;
 using RestSharp;
 using System.Collections.Generic;
 
 namespace HRMS.DAL
 {
-    internal class DepartmentService : IData
+    internal class DepartmentService
     {
-        public List<Department> Departments { get; set; }
 
         public RestResponse<List<Department>> GetAll()
         {
@@ -17,14 +15,6 @@ namespace HRMS.DAL
             request.AddHeader("Authorization", "Bearer " + Application.AccessToken);
             var response = client.Execute<List<Department>>(request);
             return response;
-        }
-        public void Load()
-        {
-            RestResponse<List<Department>> res = GetAll();
-            if (res.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                Departments = res.Data;
-            }
         }
     }
 }

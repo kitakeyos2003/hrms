@@ -1,12 +1,9 @@
 ﻿using HRMS.DAL;
 using HRMS.DAL.Models;
-using HRMS.Models;
-using RestSharp;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
+using System.Globalization;
 using System.Linq;
-using System.Net;
 using System.Windows.Forms;
 
 namespace HRMS.GUI
@@ -14,7 +11,9 @@ namespace HRMS.GUI
     public partial class EmployeeUI : Form, ITab
     {
         private Panel panel;
-        DataGridViewRow selectRow;
+
+        public DataGridViewRow SelectedRow { get; private set; }
+
         public EmployeeUI(Panel panel)
         {
             this.panel = panel;
@@ -25,46 +24,12 @@ namespace HRMS.GUI
 
         public void InitDataGridView()
         {
-
-            Sex.Items.Add("Nam");
-            Sex.Items.Add("Nữ");
-            Sex.Items.Add("Không xác định");
-
-            Status.Items.Add("Đang làm việc");
-            Status.Items.Add("Đã nghỉ việc");
-
-            var departments = DataManager.GetInstance().DepartmentService.Departments;
-            if (departments != null)
-            {
-                foreach (Department department in departments)
-                {
-                    Department.Items.Add(department.Name);
-                }
-            }
-            var positions = DataManager.GetInstance().PositionService.Positions;
-            if (positions != null)
-            {
-                foreach (var position in positions)
-                {
-                    Position.Items.Add(position.Name);
-                }
-            }
-            var employees = DataManager.GetInstance().EmployeeService.Employees;
+            var employees = DataManager.GetInstance().Employees;
             if (employees != null)
             {
                 FillDataGridView(employees);
             }
 
-        }
-
-        private void listEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (listEmployee.SelectedRows.Count > 0)
-            {
-                Alert alert = new Alert();
-                alert.ShowAlert("select", Alert.EnumType.INFO);
-                selectRow = listEmployee.SelectedRows[0];
-            }
         }
 
         public void Open()
@@ -72,40 +37,19 @@ namespace HRMS.GUI
             Show();
         }
 
-        public void Init()
-        {
-            
-        }
-
         private void FillDataGridView(List<Employee> employees)
         {
-            /*var departments = DataManager.GetInstance().DepartmentService.Departments;
-            if (departments == null)
-            {
-                return;
-            }
-            var positions = DataManager.GetInstance().PositionService.Positions;
-            if (positions == null)
-            {
-                return;
-            }*/
-            listEmployee.Rows.Clear();
             foreach (Employee employee in employees)
             {
-                /*string departmentName = departments.SingleOrDefault(e=> e.Id == employee.Department.Id).Name;
-                string positionName = positions.SingleOrDefault(e => e.Id == employee.Position.Id).Name;*/
-                listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.PhoneNumber, employee.Email, employee.Address, employee.Department.Name, employee.Position.Name, employee.StartDate.ToString("dd/MM/yyyy"), employee.EndDate.ToString("dd/MM/yyyy"), Status.Items[employee.Status]);
-                
+                AddEmployee(employee);
             }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            var employees = DataManager.GetInstance().EmployeeService.Employees;
-            if (employees != null)
-            {
-                FillDataGridView(employees);
-            }
+            var employees = DataManager.GetInstance().Employees;
+            listEmployee.Rows.Clear();
+            FillDataGridView(employees);
             Alert alert = new Alert();
             alert.ShowAlert("Làm mới thành công!", Alert.EnumType.SUCCESS);
         }
@@ -113,47 +57,100 @@ namespace HRMS.GUI
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string keyword = txtKeyword.Texts;
-            if (!string.IsNullOrEmpty(keyword))
-            {
-                Search(keyword);
-            }
+            Search(keyword);
         }
-
-        private void txtKeyword_KeyDown(object sender, KeyEventArgs e)
+        private void Search(string searchText)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (!string.IsNullOrEmpty(searchText))
             {
-                string keyword = txtKeyword.Texts;
-                if (!string.IsNullOrEmpty(keyword))
+                listEmployee.ClearSelection();
+                listEmployee.Rows.Clear();
+                List<DataGridViewRow> list = new List<DataGridViewRow>();
+                foreach (DataGridViewRow row in listEmployee.Rows)
                 {
-                    Search(keyword);
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchText.ToLower()))
+                        {
+                            list.Add(row);
+                            break;
+                        }
+                    }
+                }
+                foreach (DataGridViewRow row in list)
+                {
+                    listEmployee.Rows.Add(row);
                 }
             }
         }
-        private void Search(string keyword)
-        {
-            var employees = DataManager.GetInstance().EmployeeService.Employees;
-            if (employees != null)
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {   if (SelectedRow != null)
             {
-                List<Employee> list = employees.FindAll(x => x.FullName.Contains(keyword));
-                FillDataGridView(list);
+                int employeeID = int.Parse(SelectedRow.Cells[0].Value.ToString());
+                Employee employee = DataManager.GetInstance().Employees.SingleOrDefault(em => em.EmployeeID == employeeID);
+                if (employee != null)
+                {
+                    UpdateEmployeeUI updateEmployeeUI = new UpdateEmployeeUI(SelectedRow, employee);
+                    updateEmployeeUI.ShowDialog();
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (listEmployee.SelectedRows.Count > 0)
+            {
+                Alert alert = new Alert();
+                try
+                {
+
+                    foreach (DataGridViewRow row in listEmployee.SelectedRows)
+                    {
+                        if (row.Cells[0].Value != null)
+                        {
+                            try
+                            {
+                                int eID = int.Parse(row.Cells[0].Value.ToString());
+                                Employee employee = DataManager.GetInstance().Employees.SingleOrDefault(e2 => e2.EmployeeID == eID);
+                                if (employee != null)
+                                {
+                                    listEmployee.Rows.Remove(row);
+                                }
+                            }
+                            catch
+                            {
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    alert.ShowAlert("Có lỗi xảy ra", Alert.EnumType.ERROR);
+                }
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            listEmployee.Rows.Add();
+            AddEmployeeUI addEmployeeUI = new AddEmployeeUI(this);
+            addEmployeeUI.ShowDialog();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        internal void AddEmployee(Employee employee)
         {
-
+            listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.PhoneNumber, employee.Email, employee.Address, employee.Department.Name, employee.Position.Name, employee.StartDate.ToString("dd/MM/yyyy"), employee.EndDate.ToString("dd/MM/yyyy"), employee.Status == 0 ? "Đang làm việc" : "Đã nghỉ việc");
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void listEmployee_SelectionChanged(object sender, EventArgs e)
         {
-            Alert alert = new Alert();
-            alert.ShowAlert("delete", Alert.EnumType.INFO);
+            if (listEmployee.SelectedRows.Count > 0)
+            {
+                SelectedRow = listEmployee.SelectedRows[0];
+            } else
+            {
+                SelectedRow = null;
+            }
         }
     }
 }
