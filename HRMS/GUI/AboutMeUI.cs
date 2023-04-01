@@ -10,7 +10,7 @@ namespace HRMS.GUI
             this.panel = panel;
             InitializeComponent();
             this.BackColor = panel.BackColor;
-            SetInfo();
+            //SetInfo();
         }
 
         public void Init()

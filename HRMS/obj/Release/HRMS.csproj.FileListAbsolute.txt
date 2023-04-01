@@ -96,3 +96,6 @@ C:\Users\Admin\source\repos\HRMS\HRMS\bin\Release\System.ValueTuple.xml
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.csproj.CopyComplete
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.exe
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Release\HRMS.pdb
+C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.GUI.AddEmployeeUI.resources
+C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.GUI.UpdateEmployeeUI.resources
+C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Release\HRMS.GUI.AddCandidateUI.resources

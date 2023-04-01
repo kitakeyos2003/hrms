@@ -50,7 +50,8 @@ namespace HRMS.GUI
 
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
-            listCandidate.Rows.Add();
-        }
+            AddCandidateUI addCandidateUI = new AddCandidateUI();
+            addCandidateUI.ShowDialog();
+         }
     }
 }

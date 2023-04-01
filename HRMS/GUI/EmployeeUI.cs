@@ -115,7 +115,12 @@ namespace HRMS.GUI
                                 Employee employee = DataManager.GetInstance().Employees.SingleOrDefault(e2 => e2.EmployeeID == eID);
                                 if (employee != null)
                                 {
-                                    listEmployee.Rows.Remove(row);
+                                    bool r = DataManager.GetInstance().EmployeeService.Delete(employee.EmployeeID);
+                                    if (r)
+                                    {
+                                        listEmployee.Rows.Remove(row);
+                                        DataManager.GetInstance().Employees.Remove(employee);
+                                    }
                                 }
                             }
                             catch

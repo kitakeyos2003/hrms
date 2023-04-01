@@ -159,6 +159,12 @@
     <Compile Include="DAL\UserService.cs" />
     <Compile Include="DAL\Models\Employee.cs" />
     <Compile Include="DAL\Models\Version.cs" />
+    <Compile Include="GUI\AddCandidateUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddCandidateUI.Designer.cs">
+      <DependentUpon>AddCandidateUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\alert\Alert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddCandidateUI.resx">
+      <DependentUpon>AddCandidateUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\alert\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>
