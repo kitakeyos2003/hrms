@@ -101,3 +101,4 @@ C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddCandidateUI.resource
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddEmployeeUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateEmployeeUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateCandidateUI.resources
+C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.GUI.UpdateCandidateUI.resources

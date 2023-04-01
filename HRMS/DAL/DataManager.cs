@@ -55,7 +55,7 @@ namespace HRMS.DAL
             LoadAllSalary();
         }
 
-        private void LoadAllEmployee()
+        public void LoadAllEmployee()
         {
             RestResponse<List<Employee>> res = EmployeeService.GetAll();
             if (res.StatusCode == System.Net.HttpStatusCode.OK)
@@ -117,7 +117,7 @@ namespace HRMS.DAL
             }
         }
 
-        private void LoadAllCandidate()
+        public void LoadAllCandidate()
         {
             RestResponse<List<Candidate>> res = CandidateService.GetAll();
             if (res.StatusCode == System.Net.HttpStatusCode.OK)

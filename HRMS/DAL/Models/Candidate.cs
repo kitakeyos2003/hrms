@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRMS.DAL.Models
 {
-    internal class Candidate
+    public class Candidate
     {
         public int CandidateID { get; set; }
         public string FullName { get; set; }

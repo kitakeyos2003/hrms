@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listAttendance = new System.Windows.Forms.DataGridView();
@@ -54,30 +54,30 @@
             this.AttendanceStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AttendanceNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lbPage = new System.Windows.Forms.Label();
+            this.prePage = new FontAwesome.Sharp.IconButton();
+            this.nextPage = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnEdit = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
-            this.btnEdit = new FontAwesome.Sharp.IconButton();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.nextPage = new FontAwesome.Sharp.IconButton();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.prePage = new FontAwesome.Sharp.IconButton();
-            this.lbPage = new System.Windows.Forms.Label();
+            this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listAttendance)).BeginInit();
             this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -132,8 +132,8 @@
             // 
             // EmployeeID
             // 
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle1;
             this.EmployeeID.HeaderText = "Mã nhân viên";
             this.EmployeeID.MinimumWidth = 8;
             this.EmployeeID.Name = "EmployeeID";
@@ -142,8 +142,8 @@
             // 
             // FullName
             // 
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle2;
             this.FullName.HeaderText = "Họ và tên";
             this.FullName.MinimumWidth = 8;
             this.FullName.Name = "FullName";
@@ -153,8 +153,8 @@
             // 
             // Department
             // 
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle3;
             this.Department.HeaderText = "Phòng ban";
             this.Department.MinimumWidth = 8;
             this.Department.Name = "Department";
@@ -164,9 +164,9 @@
             // 
             // Date
             // 
-            dataGridViewCellStyle26.Format = "d";
-            dataGridViewCellStyle26.NullValue = null;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle4;
             this.Date.HeaderText = "Ngày làm việc";
             this.Date.MinimumWidth = 8;
             this.Date.Name = "Date";
@@ -175,10 +175,10 @@
             // 
             // ShiftStartTime
             // 
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.Format = "d";
-            dataGridViewCellStyle27.NullValue = null;
-            this.ShiftStartTime.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Format = "d";
+            dataGridViewCellStyle5.NullValue = null;
+            this.ShiftStartTime.DefaultCellStyle = dataGridViewCellStyle5;
             this.ShiftStartTime.HeaderText = "T.gian bắt đầu ca làm việc";
             this.ShiftStartTime.MinimumWidth = 8;
             this.ShiftStartTime.Name = "ShiftStartTime";
@@ -187,10 +187,10 @@
             // 
             // ShiftEndTime
             // 
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.Format = "d";
-            dataGridViewCellStyle28.NullValue = null;
-            this.ShiftEndTime.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Format = "d";
+            dataGridViewCellStyle6.NullValue = null;
+            this.ShiftEndTime.DefaultCellStyle = dataGridViewCellStyle6;
             this.ShiftEndTime.HeaderText = "T.gian k.thúc ca làm việc";
             this.ShiftEndTime.MinimumWidth = 8;
             this.ShiftEndTime.Name = "ShiftEndTime";
@@ -199,10 +199,10 @@
             // 
             // ActualStartTime
             // 
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.Format = "d";
-            dataGridViewCellStyle29.NullValue = null;
-            this.ActualStartTime.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Format = "d";
+            dataGridViewCellStyle7.NullValue = null;
+            this.ActualStartTime.DefaultCellStyle = dataGridViewCellStyle7;
             this.ActualStartTime.HeaderText = "T.gian bắt đầu làm việc thực tế";
             this.ActualStartTime.MinimumWidth = 8;
             this.ActualStartTime.Name = "ActualStartTime";
@@ -211,10 +211,10 @@
             // 
             // ActualEndTime
             // 
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.Format = "d";
-            dataGridViewCellStyle30.NullValue = null;
-            this.ActualEndTime.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Format = "d";
+            dataGridViewCellStyle8.NullValue = null;
+            this.ActualEndTime.DefaultCellStyle = dataGridViewCellStyle8;
             this.ActualEndTime.HeaderText = "T.gian k.thúc làm việc thực tế";
             this.ActualEndTime.MinimumWidth = 8;
             this.ActualEndTime.Name = "ActualEndTime";
@@ -223,8 +223,8 @@
             // 
             // Overtime
             // 
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Overtime.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Overtime.DefaultCellStyle = dataGridViewCellStyle9;
             this.Overtime.HeaderText = "Giờ làm thêm";
             this.Overtime.MinimumWidth = 8;
             this.Overtime.Name = "Overtime";
@@ -233,8 +233,8 @@
             // 
             // AttendanceStatus
             // 
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttendanceStatus.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttendanceStatus.DefaultCellStyle = dataGridViewCellStyle10;
             this.AttendanceStatus.HeaderText = "Trạng thái điểm danh";
             this.AttendanceStatus.MinimumWidth = 8;
             this.AttendanceStatus.Name = "AttendanceStatus";
@@ -244,8 +244,8 @@
             // 
             // AttendanceNote
             // 
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttendanceNote.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttendanceNote.DefaultCellStyle = dataGridViewCellStyle11;
             this.AttendanceNote.HeaderText = "Ghi chú";
             this.AttendanceNote.MinimumWidth = 8;
             this.AttendanceNote.Name = "AttendanceNote";
@@ -260,6 +260,55 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(940, 20);
             this.panel7.TabIndex = 3;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.Controls.Add(this.lbPage);
+            this.panel9.Controls.Add(this.prePage);
+            this.panel9.Controls.Add(this.nextPage);
+            this.panel9.Location = new System.Drawing.Point(860, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(80, 20);
+            this.panel9.TabIndex = 2;
+            // 
+            // lbPage
+            // 
+            this.lbPage.AutoSize = true;
+            this.lbPage.Location = new System.Drawing.Point(32, 4);
+            this.lbPage.Name = "lbPage";
+            this.lbPage.Size = new System.Drawing.Size(13, 13);
+            this.lbPage.TabIndex = 3;
+            this.lbPage.Text = "1";
+            // 
+            // prePage
+            // 
+            this.prePage.FlatAppearance.BorderSize = 0;
+            this.prePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prePage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleLeft;
+            this.prePage.IconColor = System.Drawing.Color.Black;
+            this.prePage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.prePage.IconSize = 20;
+            this.prePage.Location = new System.Drawing.Point(0, 0);
+            this.prePage.Name = "prePage";
+            this.prePage.Size = new System.Drawing.Size(32, 20);
+            this.prePage.TabIndex = 3;
+            this.prePage.UseVisualStyleBackColor = true;
+            // 
+            // nextPage
+            // 
+            this.nextPage.FlatAppearance.BorderSize = 0;
+            this.nextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextPage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleRight;
+            this.nextPage.IconColor = System.Drawing.Color.Black;
+            this.nextPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.nextPage.IconSize = 20;
+            this.nextPage.Location = new System.Drawing.Point(48, 0);
+            this.nextPage.Name = "nextPage";
+            this.nextPage.Size = new System.Drawing.Size(32, 20);
+            this.nextPage.TabIndex = 0;
+            this.nextPage.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -278,58 +327,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(40, 430);
             this.panel5.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1000, 20);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 50);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.btnAdd);
-            this.panel8.Controls.Add(this.iconButton1);
-            this.panel8.Controls.Add(this.btnReset);
-            this.panel8.Controls.Add(this.btnSearch);
-            this.panel8.Controls.Add(this.txtKeyword);
-            this.panel8.Location = new System.Drawing.Point(697, 13);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(295, 34);
-            this.panel8.TabIndex = 7;
-            // 
-            // txtKeyword
-            // 
-            this.txtKeyword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtKeyword.BackColor = System.Drawing.SystemColors.Window;
-            this.txtKeyword.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtKeyword.BorderFocusColor = System.Drawing.Color.SeaGreen;
-            this.txtKeyword.BorderRadius = 15;
-            this.txtKeyword.BorderSize = 1;
-            this.txtKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKeyword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtKeyword.Location = new System.Drawing.Point(38, 2);
-            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4);
-            this.txtKeyword.Multiline = false;
-            this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtKeyword.PasswordChar = false;
-            this.txtKeyword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtKeyword.PlaceholderText = "Tìm kiếm";
-            this.txtKeyword.Size = new System.Drawing.Size(152, 31);
-            this.txtKeyword.TabIndex = 6;
-            this.txtKeyword.Texts = "";
-            this.txtKeyword.UnderlinedStyle = false;
             // 
             // btnEdit
             // 
@@ -360,6 +357,35 @@
             this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1000, 20);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 50);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnAdd);
+            this.panel8.Controls.Add(this.iconButton1);
+            this.panel8.Controls.Add(this.btnReset);
+            this.panel8.Controls.Add(this.btnSearch);
+            this.panel8.Controls.Add(this.txtKeyword);
+            this.panel8.Location = new System.Drawing.Point(697, 16);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(295, 34);
+            this.panel8.TabIndex = 7;
             // 
             // btnAdd
             // 
@@ -421,54 +447,28 @@
             this.btnSearch.TabIndex = 7;
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // nextPage
+            // txtKeyword
             // 
-            this.nextPage.FlatAppearance.BorderSize = 0;
-            this.nextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextPage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleRight;
-            this.nextPage.IconColor = System.Drawing.Color.Black;
-            this.nextPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.nextPage.IconSize = 20;
-            this.nextPage.Location = new System.Drawing.Point(48, 0);
-            this.nextPage.Name = "nextPage";
-            this.nextPage.Size = new System.Drawing.Size(32, 20);
-            this.nextPage.TabIndex = 0;
-            this.nextPage.UseVisualStyleBackColor = true;
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.Controls.Add(this.lbPage);
-            this.panel9.Controls.Add(this.prePage);
-            this.panel9.Controls.Add(this.nextPage);
-            this.panel9.Location = new System.Drawing.Point(860, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(80, 20);
-            this.panel9.TabIndex = 2;
-            // 
-            // prePage
-            // 
-            this.prePage.FlatAppearance.BorderSize = 0;
-            this.prePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prePage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleLeft;
-            this.prePage.IconColor = System.Drawing.Color.Black;
-            this.prePage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.prePage.IconSize = 20;
-            this.prePage.Location = new System.Drawing.Point(0, 0);
-            this.prePage.Name = "prePage";
-            this.prePage.Size = new System.Drawing.Size(32, 20);
-            this.prePage.TabIndex = 3;
-            this.prePage.UseVisualStyleBackColor = true;
-            // 
-            // lbPage
-            // 
-            this.lbPage.AutoSize = true;
-            this.lbPage.Location = new System.Drawing.Point(32, 4);
-            this.lbPage.Name = "lbPage";
-            this.lbPage.Size = new System.Drawing.Size(13, 13);
-            this.lbPage.TabIndex = 3;
-            this.lbPage.Text = "1";
+            this.txtKeyword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtKeyword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtKeyword.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtKeyword.BorderFocusColor = System.Drawing.Color.SeaGreen;
+            this.txtKeyword.BorderRadius = 15;
+            this.txtKeyword.BorderSize = 1;
+            this.txtKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKeyword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtKeyword.Location = new System.Drawing.Point(38, 2);
+            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKeyword.Multiline = false;
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtKeyword.PasswordChar = false;
+            this.txtKeyword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtKeyword.PlaceholderText = "Tìm kiếm";
+            this.txtKeyword.Size = new System.Drawing.Size(152, 31);
+            this.txtKeyword.TabIndex = 6;
+            this.txtKeyword.Texts = "";
+            this.txtKeyword.UnderlinedStyle = false;
             // 
             // AttendanceUI
             // 
@@ -484,11 +484,11 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.listAttendance)).EndInit();
             this.panel7.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
