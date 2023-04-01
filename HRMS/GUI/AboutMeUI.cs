@@ -2,7 +2,7 @@
 
 namespace HRMS.GUI
 {
-    public partial class AboutMeUI : Form, ITab
+    public partial class AboutMeUI : Form
     {
         private Panel panel;
         public AboutMeUI(Panel panel)
@@ -13,15 +13,6 @@ namespace HRMS.GUI
             //SetInfo();
         }
 
-        public void Init()
-        {
-            
-        }
-
-        public void Open()
-        {
-            Show();
-        }
 
         private void SetInfo()
         {

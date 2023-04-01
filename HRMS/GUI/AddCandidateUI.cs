@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HRMS.DAL;
+using HRMS.DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +15,31 @@ namespace HRMS.GUI
 {
     public partial class AddCandidateUI : Form
     {
-        public AddCandidateUI()
+        CandidateUI Parent;
+        public AddCandidateUI(CandidateUI candidateUI)
         {
+            Parent = candidateUI;
             InitializeComponent();
             this.Padding = new Padding(2);
             this.BackColor = Color.FromArgb(98, 102, 244);
             StartPosition = FormStartPosition.CenterScreen;
+            Init();
+        }
+
+        private void Init()
+        {
+            List<Department> departments = DataManager.GetInstance().Departments;
+            foreach (Department department in departments)
+            {
+                cbDepartment.Items.Add(department.Name);
+            }
+            List<Position> positions = DataManager.GetInstance().Positions;
+            foreach (Position position in positions)
+            {
+                cbPosition.Items.Add(position.Name);
+            }
+            cbPosition.SelectedIndex = 0;
+            cbDepartment.SelectedIndex = 0;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -56,6 +77,92 @@ namespace HRMS.GUI
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string fullName = txtFullName.Texts;
+            string contactInfomation = txtContactInfomation.Texts;
+            string education = txtEducation.Texts;
+            string workExperience = txtWorkExperience.Texts;
+            string skills = txtSkills.Texts;
+            string interviewer = txtInterviewer.Texts;
+            int departmentIndex = cbDepartment.SelectedIndex;
+            int positionIndex = cbPosition.SelectedIndex;
+            DateTime interviewDate = dpInterviewDate.Value;
+            Alert alert = new Alert();
+
+            if (string.IsNullOrEmpty(fullName))
+            {
+                alert.ShowAlert("Vui lòng nhập họ tên!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (string.IsNullOrEmpty(contactInfomation))
+            {
+                alert.ShowAlert("Vui lòng nhập thông tin liên lạc!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (string.IsNullOrEmpty(education))
+            {
+                alert.ShowAlert("Vui lòng nhập trình độ học vấn!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (string.IsNullOrEmpty(workExperience))
+            {
+                alert.ShowAlert("Vui lòng nhập kinh nghiệm làm việc!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (string.IsNullOrEmpty(skills))
+            {
+                alert.ShowAlert("Vui lòng nhập kỹ năng làm việc!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (string.IsNullOrEmpty(interviewer))
+            {
+                alert.ShowAlert("Vui lòng nhập tên người phỏng vấn!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (interviewDate > DateTime.Now)
+            {
+                alert.ShowAlert("Ngày phỏng vấn không hợp lệ!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (departmentIndex < 0)
+            {
+                alert.ShowAlert("Vui lòng chọn phòng ban!", Alert.EnumType.WARNING);
+                return;
+            }
+
+            if (positionIndex < 0)
+            {
+                alert.ShowAlert("Vui lòng chọn vị trí!", Alert.EnumType.WARNING);
+                return;
+            }
+            Department department = DataManager.GetInstance().Departments.ElementAt(departmentIndex);
+            Position position = DataManager.GetInstance().Positions.ElementAt(positionIndex);
+            Candidate candidate = new Candidate
+            {
+                FullName = fullName,
+                ContactInformation = contactInfomation,
+                Education = education,
+                WorkExperience = workExperience,
+                DepartmentApplied = department,
+                PositionApplied = position,
+                Skills = skills,
+                Interviewer = interviewer,
+                InterviewDate = interviewDate
+            };
+            Candidate c = DataManager.GetInstance().CandidateService.Add(candidate);
+            if (c != null)
+            {
+                DataManager.GetInstance().Candidates.Add(c);
+                Parent.AddCandidate(c);
+                alert.ShowAlert("Thêm thành công!", Alert.EnumType.SUCCESS);
+            } 
+            else
+            {
+                alert.ShowAlert("Có lỗi xảy ra!", Alert.EnumType.ERROR);
+            }
         }
     }
 }

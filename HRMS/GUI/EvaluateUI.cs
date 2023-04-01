@@ -2,7 +2,7 @@
 
 namespace HRMS.GUI
 {
-    public partial class EvaluateUI : Form, ITab
+    public partial class EvaluateUI : Form
     {
         private Panel panel;
         public EvaluateUI(Panel panel)
@@ -10,16 +10,6 @@ namespace HRMS.GUI
             this.panel = panel;
             InitializeComponent();
             this.BackColor = panel.BackColor;
-        }
-
-        public void Init()
-        {
-            
-        }
-
-        public void Open()
-        {
-            Show();
         }
 
         private void btnAdd_Click(object sender, System.EventArgs e)

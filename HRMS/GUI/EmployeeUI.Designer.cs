@@ -28,34 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listEmployee = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
-            this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
-            this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btnReset = new FontAwesome.Sharp.IconButton();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,12 +55,31 @@
             this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnAdd = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnReset = new FontAwesome.Sharp.IconButton();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lbPage = new System.Windows.Forms.Label();
+            this.prePage = new FontAwesome.Sharp.IconButton();
+            this.nextPage = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).BeginInit();
+            this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,8 +135,133 @@
             this.listEmployee.TabIndex = 4;
             this.listEmployee.SelectionChanged += new System.EventHandler(this.listEmployee_SelectionChanged);
             // 
+            // EmployeeID
+            // 
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle37;
+            this.EmployeeID.HeaderText = "Mã nhân viên";
+            this.EmployeeID.MinimumWidth = 8;
+            this.EmployeeID.Name = "EmployeeID";
+            this.EmployeeID.ReadOnly = true;
+            this.EmployeeID.Width = 150;
+            // 
+            // FullName
+            // 
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle38;
+            this.FullName.HeaderText = "Họ và tên";
+            this.FullName.MinimumWidth = 8;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Width = 150;
+            // 
+            // BirthDay
+            // 
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.Format = "d";
+            dataGridViewCellStyle39.NullValue = null;
+            this.BirthDay.DefaultCellStyle = dataGridViewCellStyle39;
+            this.BirthDay.HeaderText = "Ngày sinh";
+            this.BirthDay.MinimumWidth = 8;
+            this.BirthDay.Name = "BirthDay";
+            this.BirthDay.ReadOnly = true;
+            this.BirthDay.Width = 150;
+            // 
+            // Sex
+            // 
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sex.DefaultCellStyle = dataGridViewCellStyle40;
+            this.Sex.HeaderText = "Giới tính";
+            this.Sex.MinimumWidth = 8;
+            this.Sex.Name = "Sex";
+            this.Sex.ReadOnly = true;
+            this.Sex.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sex.Width = 150;
+            // 
+            // PhoneNumber
+            // 
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle41;
+            this.PhoneNumber.HeaderText = "Số điện thoại";
+            this.PhoneNumber.MinimumWidth = 8;
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.ReadOnly = true;
+            this.PhoneNumber.Width = 150;
+            // 
+            // Email
+            // 
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.DefaultCellStyle = dataGridViewCellStyle42;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Address
+            // 
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address.DefaultCellStyle = dataGridViewCellStyle43;
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.MinimumWidth = 8;
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Width = 150;
+            // 
+            // Department
+            // 
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle44;
+            this.Department.HeaderText = "Phòng ban";
+            this.Department.MinimumWidth = 8;
+            this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
+            this.Department.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Department.Width = 150;
+            // 
+            // Position
+            // 
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Position.DefaultCellStyle = dataGridViewCellStyle45;
+            this.Position.HeaderText = "Chức vụ";
+            this.Position.MinimumWidth = 8;
+            this.Position.Name = "Position";
+            this.Position.ReadOnly = true;
+            this.Position.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Position.Width = 150;
+            // 
+            // StartDate
+            // 
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartDate.DefaultCellStyle = dataGridViewCellStyle46;
+            this.StartDate.HeaderText = "Ngày bắt đầu";
+            this.StartDate.MinimumWidth = 8;
+            this.StartDate.Name = "StartDate";
+            this.StartDate.ReadOnly = true;
+            this.StartDate.Width = 150;
+            // 
+            // EndDate
+            // 
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndDate.DefaultCellStyle = dataGridViewCellStyle47;
+            this.EndDate.HeaderText = "Ngày kết thúc";
+            this.EndDate.MinimumWidth = 8;
+            this.EndDate.Name = "EndDate";
+            this.EndDate.ReadOnly = true;
+            this.EndDate.Width = 150;
+            // 
+            // Status
+            // 
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status.DefaultCellStyle = dataGridViewCellStyle48;
+            this.Status.HeaderText = "Trạng thái";
+            this.Status.MinimumWidth = 8;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Status.Width = 150;
+            // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.panel9);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(20, 430);
             this.panel7.Name = "panel7";
@@ -154,58 +285,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(40, 430);
             this.panel5.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1000, 20);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 50);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.btnAdd);
-            this.panel8.Controls.Add(this.iconButton1);
-            this.panel8.Controls.Add(this.btnReset);
-            this.panel8.Controls.Add(this.btnSearch);
-            this.panel8.Controls.Add(this.txtKeyword);
-            this.panel8.Location = new System.Drawing.Point(697, 13);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(295, 34);
-            this.panel8.TabIndex = 6;
-            // 
-            // txtKeyword
-            // 
-            this.txtKeyword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtKeyword.BackColor = System.Drawing.SystemColors.Window;
-            this.txtKeyword.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtKeyword.BorderFocusColor = System.Drawing.Color.SeaGreen;
-            this.txtKeyword.BorderRadius = 15;
-            this.txtKeyword.BorderSize = 1;
-            this.txtKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKeyword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtKeyword.Location = new System.Drawing.Point(38, 2);
-            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4);
-            this.txtKeyword.Multiline = false;
-            this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtKeyword.PasswordChar = false;
-            this.txtKeyword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtKeyword.PlaceholderText = "Tìm kiếm";
-            this.txtKeyword.Size = new System.Drawing.Size(152, 31);
-            this.txtKeyword.TabIndex = 6;
-            this.txtKeyword.Texts = "";
-            this.txtKeyword.UnderlinedStyle = false;
             // 
             // btnSave
             // 
@@ -238,6 +317,35 @@
             this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1000, 20);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 50);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnAdd);
+            this.panel8.Controls.Add(this.iconButton1);
+            this.panel8.Controls.Add(this.btnReset);
+            this.panel8.Controls.Add(this.btnSearch);
+            this.panel8.Controls.Add(this.txtKeyword);
+            this.panel8.Location = new System.Drawing.Point(697, 13);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(295, 34);
+            this.panel8.TabIndex = 6;
             // 
             // btnAdd
             // 
@@ -302,129 +410,79 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // EmployeeID
+            // txtKeyword
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle1;
-            this.EmployeeID.HeaderText = "Mã nhân viên";
-            this.EmployeeID.MinimumWidth = 8;
-            this.EmployeeID.Name = "EmployeeID";
-            this.EmployeeID.ReadOnly = true;
-            this.EmployeeID.Width = 150;
+            this.txtKeyword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtKeyword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtKeyword.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtKeyword.BorderFocusColor = System.Drawing.Color.SeaGreen;
+            this.txtKeyword.BorderRadius = 15;
+            this.txtKeyword.BorderSize = 1;
+            this.txtKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKeyword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtKeyword.Location = new System.Drawing.Point(38, 2);
+            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKeyword.Multiline = false;
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtKeyword.PasswordChar = false;
+            this.txtKeyword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtKeyword.PlaceholderText = "Tìm kiếm";
+            this.txtKeyword.Size = new System.Drawing.Size(152, 31);
+            this.txtKeyword.TabIndex = 6;
+            this.txtKeyword.Texts = "";
+            this.txtKeyword.UnderlinedStyle = false;
             // 
-            // FullName
+            // panel9
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.FullName.HeaderText = "Họ và tên";
-            this.FullName.MinimumWidth = 8;
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            this.FullName.Width = 150;
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.Controls.Add(this.lbPage);
+            this.panel9.Controls.Add(this.prePage);
+            this.panel9.Controls.Add(this.nextPage);
+            this.panel9.Location = new System.Drawing.Point(860, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(80, 20);
+            this.panel9.TabIndex = 3;
             // 
-            // BirthDay
+            // lbPage
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.BirthDay.DefaultCellStyle = dataGridViewCellStyle3;
-            this.BirthDay.HeaderText = "Ngày sinh";
-            this.BirthDay.MinimumWidth = 8;
-            this.BirthDay.Name = "BirthDay";
-            this.BirthDay.ReadOnly = true;
-            this.BirthDay.Width = 150;
+            this.lbPage.AutoSize = true;
+            this.lbPage.Location = new System.Drawing.Point(32, 4);
+            this.lbPage.Name = "lbPage";
+            this.lbPage.Size = new System.Drawing.Size(13, 13);
+            this.lbPage.TabIndex = 3;
+            this.lbPage.Text = "1";
             // 
-            // Sex
+            // prePage
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sex.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Sex.HeaderText = "Giới tính";
-            this.Sex.MinimumWidth = 8;
-            this.Sex.Name = "Sex";
-            this.Sex.ReadOnly = true;
-            this.Sex.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Sex.Width = 150;
+            this.prePage.FlatAppearance.BorderSize = 0;
+            this.prePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prePage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleLeft;
+            this.prePage.IconColor = System.Drawing.Color.Black;
+            this.prePage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.prePage.IconSize = 20;
+            this.prePage.Location = new System.Drawing.Point(0, 0);
+            this.prePage.Name = "prePage";
+            this.prePage.Size = new System.Drawing.Size(32, 20);
+            this.prePage.TabIndex = 3;
+            this.prePage.UseVisualStyleBackColor = true;
+            this.prePage.Click += new System.EventHandler(this.prePage_Click);
             // 
-            // PhoneNumber
+            // nextPage
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle5;
-            this.PhoneNumber.HeaderText = "Số điện thoại";
-            this.PhoneNumber.MinimumWidth = 8;
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.ReadOnly = true;
-            this.PhoneNumber.Width = 150;
-            // 
-            // Email
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Address
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.MinimumWidth = 8;
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Width = 150;
-            // 
-            // Department
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Department.HeaderText = "Phòng ban";
-            this.Department.MinimumWidth = 8;
-            this.Department.Name = "Department";
-            this.Department.ReadOnly = true;
-            this.Department.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Department.Width = 150;
-            // 
-            // Position
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Position.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Position.HeaderText = "Chức vụ";
-            this.Position.MinimumWidth = 8;
-            this.Position.Name = "Position";
-            this.Position.ReadOnly = true;
-            this.Position.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Position.Width = 150;
-            // 
-            // StartDate
-            // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartDate.DefaultCellStyle = dataGridViewCellStyle10;
-            this.StartDate.HeaderText = "Ngày bắt đầu";
-            this.StartDate.MinimumWidth = 8;
-            this.StartDate.Name = "StartDate";
-            this.StartDate.ReadOnly = true;
-            this.StartDate.Width = 150;
-            // 
-            // EndDate
-            // 
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EndDate.DefaultCellStyle = dataGridViewCellStyle11;
-            this.EndDate.HeaderText = "Ngày kết thúc";
-            this.EndDate.MinimumWidth = 8;
-            this.EndDate.Name = "EndDate";
-            this.EndDate.ReadOnly = true;
-            this.EndDate.Width = 150;
-            // 
-            // Status
-            // 
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Status.HeaderText = "Trạng thái";
-            this.Status.MinimumWidth = 8;
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Status.Width = 150;
+            this.nextPage.FlatAppearance.BorderSize = 0;
+            this.nextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextPage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleRight;
+            this.nextPage.IconColor = System.Drawing.Color.Black;
+            this.nextPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.nextPage.IconSize = 20;
+            this.nextPage.Location = new System.Drawing.Point(48, 0);
+            this.nextPage.Name = "nextPage";
+            this.nextPage.Size = new System.Drawing.Size(32, 20);
+            this.nextPage.TabIndex = 0;
+            this.nextPage.UseVisualStyleBackColor = true;
+            this.nextPage.Click += new System.EventHandler(this.nextPage_Click);
             // 
             // EmployeeUI
             // 
@@ -439,9 +497,12 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.listEmployee)).EndInit();
+            this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -476,5 +537,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lbPage;
+        private FontAwesome.Sharp.IconButton prePage;
+        private FontAwesome.Sharp.IconButton nextPage;
     }
 }

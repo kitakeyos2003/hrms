@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class HomeUI : Form, ITab
+    public partial class HomeUI : Form
     {
         private Panel panel;
         HomeService service;
@@ -16,15 +16,11 @@ namespace HRMS.GUI
             this.panel = panel;
             InitializeComponent();
             this.BackColor = panel.BackColor;
+            Init();
         }
 
 
-        public void Open()
-        {
-            Show();
-        }
-
-        public void Init()
+        private void Init()
         {
             RestResponse<Home> res = service.GetInfo();
             if (res.StatusCode == HttpStatusCode.OK)

@@ -12,7 +12,6 @@ namespace HRMS.DAL.Models
         public string FullName { get; set; }
         public Position PositionApplied { get; set; }
         public Department DepartmentApplied { get; set; }
-        public string Resume { get; set; }
         public string ContactInformation { get; set; }
         public string Education { get; set; }
         public string WorkExperience { get; set; }
@@ -20,6 +19,5 @@ namespace HRMS.DAL.Models
         public DateTime InterviewDate { get; set; }
         public string Interviewer { get; set; }
         public int InterviewResult { get; set; }
-        public int OfferStatus { get; set; }
     }
 }

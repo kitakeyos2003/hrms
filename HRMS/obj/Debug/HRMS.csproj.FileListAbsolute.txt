@@ -46,7 +46,6 @@ C:\Users\Admin\source\repos\HRMS\HRMS\bin\Debug\RestSharp.xml
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.EvaluateUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.CandidateUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AttendanceUI.resources
-C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.Feature.AddEmployeeUI.resources
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.csproj.AssemblyReference.cache
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.csproj.SuggestedBindingRedirects.cache
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.GUI.AddCandidateUI.resources
@@ -98,3 +97,7 @@ C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\bin\Debug\System.ValueTup
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.csproj.CopyComplete
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.exe
 C:\Users\kitakeyos\Documents\c-sharp\project\hrms\HRMS\obj\Debug\HRMS.pdb
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddCandidateUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddEmployeeUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateEmployeeUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateCandidateUI.resources

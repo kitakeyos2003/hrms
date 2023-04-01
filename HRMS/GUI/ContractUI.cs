@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class ContractUI : Form, ITab
+    public partial class ContractUI : Form
     {
         private Panel panel;
         public ContractUI(Panel panel)
@@ -39,11 +39,6 @@ namespace HRMS.GUI
                 return "1 năm";
             }
             return "Vô thời hạn";
-        }
-
-        public void Open()
-        {
-            Show();
         }
 
         private void btnAdd_Click(object sender, System.EventArgs e)

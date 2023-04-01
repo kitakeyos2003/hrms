@@ -189,12 +189,12 @@ namespace HRMS
 
         private void HideTab(IconButton selected)
         {
-            ITab tab = GetTabSelected(selected);
-            if (tab != null)
+            Form form = GetTabSelected(selected);
+            if (form != null)
             {
                 selected.BackColor = Color.FromArgb(0, 145, 255);
                 selected.Enabled = true;
-                tab.Hide();
+                form.Hide();
             }
         }
 
@@ -209,14 +209,11 @@ namespace HRMS
                 selected.BackColor = Color.FromArgb(0, 110, 220);
                 selected.Enabled = false;
                 SetLocationForFormChildren(form, panelDesktop);
-                if (form is ITab tab)
-                {
-                    tab.Open();
-                }
+                form.Show();
             }
         }
 
-        private ITab GetTabSelected(IconButton selected)
+        private Form GetTabSelected(IconButton selected)
         {
             if (selected != null)
             {

@@ -2,7 +2,7 @@
 
 namespace HRMS.GUI
 {
-    public partial class SalaryCalculatorUI : Form, ITab
+    public partial class SalaryCalculatorUI : Form
     {
         private Panel panel;
         public SalaryCalculatorUI(Panel panel)
@@ -10,16 +10,6 @@ namespace HRMS.GUI
             this.panel = panel;
             InitializeComponent();
             this.BackColor = panel.BackColor;
-        }
-
-        public void Init()
-        {
-            
-        }
-
-        public void Open()
-        {
-            Show();
         }
 
         private void btnAdd_Click(object sender, System.EventArgs e)

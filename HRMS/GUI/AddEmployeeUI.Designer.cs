@@ -30,8 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEmployeeUI));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnMinimize = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
             this.panel16 = new System.Windows.Forms.Panel();
             this.dpEndDate = new RJCodeAdvance.RJControls.RJDatePicker();
@@ -63,13 +67,11 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtFullName = new RJCodeAdvance.RJControls.RJTextBox();
-            this.btnMinimize = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -80,8 +82,6 @@
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,6 +94,16 @@
             this.panel1.Size = new System.Drawing.Size(188, 327);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HRMS.Properties.Resources.logo;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 25);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(160, 86);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -105,6 +115,40 @@
             this.panel2.Size = new System.Drawing.Size(572, 25);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(173)))), ((int)(((byte)(202)))));
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimize.IconColor = System.Drawing.Color.White;
+            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimize.IconSize = 15;
+            this.btnMinimize.Location = new System.Drawing.Point(503, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(35, 20);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(95)))), ((int)(((byte)(131)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 15;
+            this.btnClose.Location = new System.Drawing.Point(537, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 20);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel5
             // 
@@ -125,6 +169,14 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(572, 302);
             this.panel5.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Location = new System.Drawing.Point(372, 223);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(158, 59);
+            this.panel3.TabIndex = 28;
             // 
             // btnAdd
             // 
@@ -164,7 +216,8 @@
             this.dpEndDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpEndDate.Location = new System.Drawing.Point(4, 24);
-            this.dpEndDate.MinimumSize = new System.Drawing.Size(4, 31);
+            this.dpEndDate.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpEndDate.MinimumSize = new System.Drawing.Size(150, 31);
             this.dpEndDate.Name = "dpEndDate";
             this.dpEndDate.Size = new System.Drawing.Size(150, 31);
             this.dpEndDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
@@ -199,7 +252,8 @@
             this.dpStartEnd.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpStartEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpStartEnd.Location = new System.Drawing.Point(4, 24);
-            this.dpStartEnd.MinimumSize = new System.Drawing.Size(4, 31);
+            this.dpStartEnd.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpStartEnd.MinimumSize = new System.Drawing.Size(150, 31);
             this.dpStartEnd.Name = "dpStartEnd";
             this.dpStartEnd.Size = new System.Drawing.Size(150, 31);
             this.dpStartEnd.SkinColor = System.Drawing.Color.MediumSlateBlue;
@@ -246,6 +300,8 @@
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAddress.Location = new System.Drawing.Point(4, 24);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.MaximumSize = new System.Drawing.Size(314, 31);
+            this.txtAddress.MinimumSize = new System.Drawing.Size(314, 31);
             this.txtAddress.Multiline = false;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -278,6 +334,7 @@
             this.cbPosition.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbPosition.ListTextColor = System.Drawing.Color.DimGray;
             this.cbPosition.Location = new System.Drawing.Point(4, 25);
+            this.cbPosition.MaximumSize = new System.Drawing.Size(150, 31);
             this.cbPosition.MinimumSize = new System.Drawing.Size(150, 31);
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Padding = new System.Windows.Forms.Padding(1);
@@ -316,6 +373,7 @@
             this.cbDepartment.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbDepartment.ListTextColor = System.Drawing.Color.DimGray;
             this.cbDepartment.Location = new System.Drawing.Point(4, 25);
+            this.cbDepartment.MaximumSize = new System.Drawing.Size(150, 31);
             this.cbDepartment.MinimumSize = new System.Drawing.Size(150, 31);
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Padding = new System.Windows.Forms.Padding(1);
@@ -363,6 +421,8 @@
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEmail.Location = new System.Drawing.Point(4, 24);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtEmail.MinimumSize = new System.Drawing.Size(150, 31);
             this.txtEmail.Multiline = false;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -404,6 +464,8 @@
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPhoneNumber.Location = new System.Drawing.Point(4, 24);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumber.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtPhoneNumber.MinimumSize = new System.Drawing.Size(150, 31);
             this.txtPhoneNumber.Multiline = false;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -440,6 +502,7 @@
             this.cbGender.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbGender.ListTextColor = System.Drawing.Color.DimGray;
             this.cbGender.Location = new System.Drawing.Point(4, 25);
+            this.cbGender.MaximumSize = new System.Drawing.Size(150, 31);
             this.cbGender.MinimumSize = new System.Drawing.Size(150, 31);
             this.cbGender.Name = "cbGender";
             this.cbGender.Padding = new System.Windows.Forms.Padding(1);
@@ -475,7 +538,8 @@
             this.dpDateOfBirth.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpDateOfBirth.Location = new System.Drawing.Point(4, 24);
-            this.dpDateOfBirth.MinimumSize = new System.Drawing.Size(4, 31);
+            this.dpDateOfBirth.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpDateOfBirth.MinimumSize = new System.Drawing.Size(150, 31);
             this.dpDateOfBirth.Name = "dpDateOfBirth";
             this.dpDateOfBirth.Size = new System.Drawing.Size(150, 31);
             this.dpDateOfBirth.SkinColor = System.Drawing.Color.MediumSlateBlue;
@@ -522,6 +586,8 @@
             this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtFullName.Location = new System.Drawing.Point(4, 24);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFullName.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtFullName.MinimumSize = new System.Drawing.Size(150, 31);
             this.txtFullName.Multiline = false;
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -532,58 +598,6 @@
             this.txtFullName.TabIndex = 2;
             this.txtFullName.Texts = "";
             this.txtFullName.UnderlinedStyle = true;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(173)))), ((int)(((byte)(202)))));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnMinimize.IconColor = System.Drawing.Color.White;
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 15;
-            this.btnMinimize.Location = new System.Drawing.Point(503, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(35, 20);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(95)))), ((int)(((byte)(131)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(537, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(35, 20);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::HRMS.Properties.Resources.logo;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(160, 86);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Location = new System.Drawing.Point(372, 223);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 59);
-            this.panel3.TabIndex = 28;
             // 
             // AddEmployeeUI
             // 
@@ -598,8 +612,10 @@
             this.Name = "AddEmployeeUI";
             this.Text = "Thêm nhân viên";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -620,8 +636,6 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -201,7 +201,6 @@
     <Compile Include="GUI\AboutMeUI.Designer.cs">
       <DependentUpon>AboutMeUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ITab.cs" />
     <Compile Include="GUI\LoginUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +236,12 @@
     </Compile>
     <Compile Include="GUI\AttendanceUI.Designer.cs">
       <DependentUpon>AttendanceUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateCandidateUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateCandidateUI.Designer.cs">
+      <DependentUpon>UpdateCandidateUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UpdateEmployeeUI.cs">
       <SubType>Form</SubType>
@@ -284,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AttendanceUI.resx">
       <DependentUpon>AttendanceUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateCandidateUI.resx">
+      <DependentUpon>UpdateCandidateUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateEmployeeUI.resx">
       <DependentUpon>UpdateEmployeeUI.cs</DependentUpon>

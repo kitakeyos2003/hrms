@@ -36,7 +36,7 @@ namespace HRMS.GUI
             {
                 cbDepartment.Items.Add(department.Name);
             }
-            foreach(Position position in positions)
+            foreach (Position position in positions)
             {
                 cbPosition.Items.Add(position.Name);
             }
