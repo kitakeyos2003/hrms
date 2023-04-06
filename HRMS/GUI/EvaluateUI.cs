@@ -14,7 +14,8 @@ namespace HRMS.GUI
 
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
-            listEvaluate.Rows.Add();
+            AddEvaluateUI addEvaluateUI = new AddEvaluateUI(this);
+            addEvaluateUI.ShowDialog();
         }
     }
 }

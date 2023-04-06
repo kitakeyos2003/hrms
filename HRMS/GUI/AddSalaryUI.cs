@@ -13,8 +13,10 @@ namespace HRMS.GUI
 {
     public partial class AddSalaryUI : Form
     {
-        public AddSalaryUI()
+        SalaryCalculatorUI Parent;
+        public AddSalaryUI(SalaryCalculatorUI parent)
         {
+            this.Parent = parent;
             InitializeComponent();
             this.Padding = new Padding(2);
             this.BackColor = Color.FromArgb(98, 102, 244);

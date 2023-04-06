@@ -43,7 +43,8 @@ namespace HRMS.GUI
 
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
-            listContract.Rows.Add();
+            AddContractUI addContractUI = new AddContractUI(this);
+            addContractUI.ShowDialog();
         }
     }
 }

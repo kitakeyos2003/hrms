@@ -13,8 +13,10 @@ namespace HRMS.GUI
 {
     public partial class AddEvaluateUI : Form
     {
-        public AddEvaluateUI()
+        EvaluateUI Parent;
+        public AddEvaluateUI(EvaluateUI parent)
         {
+            this.Parent = parent;
             InitializeComponent();
             this.Padding = new Padding(2);
             this.BackColor = Color.FromArgb(98, 102, 244);

@@ -14,7 +14,8 @@ namespace HRMS.GUI
 
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
-            listSalary.Rows.Add();
+            AddSalaryUI addSalaryUI = new AddSalaryUI(this);
+            addSalaryUI.ShowDialog();
         }
     }
 }

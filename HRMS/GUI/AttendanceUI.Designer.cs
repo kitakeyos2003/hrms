@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listAttendance = new System.Windows.Forms.DataGridView();
@@ -132,8 +132,8 @@
             // 
             // EmployeeID
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle12;
             this.EmployeeID.HeaderText = "Mã nhân viên";
             this.EmployeeID.MinimumWidth = 8;
             this.EmployeeID.Name = "EmployeeID";
@@ -142,8 +142,8 @@
             // 
             // FullName
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle13;
             this.FullName.HeaderText = "Họ và tên";
             this.FullName.MinimumWidth = 8;
             this.FullName.Name = "FullName";
@@ -153,8 +153,8 @@
             // 
             // Department
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle14;
             this.Department.HeaderText = "Phòng ban";
             this.Department.MinimumWidth = 8;
             this.Department.Name = "Department";
@@ -164,9 +164,9 @@
             // 
             // Date
             // 
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle15.Format = "d";
+            dataGridViewCellStyle15.NullValue = null;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle15;
             this.Date.HeaderText = "Ngày làm việc";
             this.Date.MinimumWidth = 8;
             this.Date.Name = "Date";
@@ -175,10 +175,10 @@
             // 
             // ShiftStartTime
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.Format = "d";
-            dataGridViewCellStyle5.NullValue = null;
-            this.ShiftStartTime.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.Format = "d";
+            dataGridViewCellStyle16.NullValue = null;
+            this.ShiftStartTime.DefaultCellStyle = dataGridViewCellStyle16;
             this.ShiftStartTime.HeaderText = "T.gian bắt đầu ca làm việc";
             this.ShiftStartTime.MinimumWidth = 8;
             this.ShiftStartTime.Name = "ShiftStartTime";
@@ -187,10 +187,10 @@
             // 
             // ShiftEndTime
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = null;
-            this.ShiftEndTime.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.Format = "d";
+            dataGridViewCellStyle17.NullValue = null;
+            this.ShiftEndTime.DefaultCellStyle = dataGridViewCellStyle17;
             this.ShiftEndTime.HeaderText = "T.gian k.thúc ca làm việc";
             this.ShiftEndTime.MinimumWidth = 8;
             this.ShiftEndTime.Name = "ShiftEndTime";
@@ -199,10 +199,10 @@
             // 
             // ActualStartTime
             // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.Format = "d";
-            dataGridViewCellStyle7.NullValue = null;
-            this.ActualStartTime.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.Format = "d";
+            dataGridViewCellStyle18.NullValue = null;
+            this.ActualStartTime.DefaultCellStyle = dataGridViewCellStyle18;
             this.ActualStartTime.HeaderText = "T.gian bắt đầu làm việc thực tế";
             this.ActualStartTime.MinimumWidth = 8;
             this.ActualStartTime.Name = "ActualStartTime";
@@ -211,10 +211,10 @@
             // 
             // ActualEndTime
             // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Format = "d";
-            dataGridViewCellStyle8.NullValue = null;
-            this.ActualEndTime.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.Format = "d";
+            dataGridViewCellStyle19.NullValue = null;
+            this.ActualEndTime.DefaultCellStyle = dataGridViewCellStyle19;
             this.ActualEndTime.HeaderText = "T.gian k.thúc làm việc thực tế";
             this.ActualEndTime.MinimumWidth = 8;
             this.ActualEndTime.Name = "ActualEndTime";
@@ -223,8 +223,8 @@
             // 
             // Overtime
             // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Overtime.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Overtime.DefaultCellStyle = dataGridViewCellStyle20;
             this.Overtime.HeaderText = "Giờ làm thêm";
             this.Overtime.MinimumWidth = 8;
             this.Overtime.Name = "Overtime";
@@ -233,8 +233,8 @@
             // 
             // AttendanceStatus
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttendanceStatus.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttendanceStatus.DefaultCellStyle = dataGridViewCellStyle21;
             this.AttendanceStatus.HeaderText = "Trạng thái điểm danh";
             this.AttendanceStatus.MinimumWidth = 8;
             this.AttendanceStatus.Name = "AttendanceStatus";
@@ -244,8 +244,8 @@
             // 
             // AttendanceNote
             // 
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttendanceNote.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttendanceNote.DefaultCellStyle = dataGridViewCellStyle22;
             this.AttendanceNote.HeaderText = "Ghi chú";
             this.AttendanceNote.MinimumWidth = 8;
             this.AttendanceNote.Name = "AttendanceNote";
@@ -342,6 +342,7 @@
             this.btnEdit.Size = new System.Drawing.Size(30, 30);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -401,6 +402,7 @@
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // iconButton1
             // 

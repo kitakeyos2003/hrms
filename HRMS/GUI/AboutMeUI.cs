@@ -21,7 +21,7 @@ namespace HRMS.GUI
         {
             string version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             txtVersion.Text = string.Format("Phiên bản {0}", version);
-            var client = new RestClient(Application.BASE_URL);
+            var client = new RestClient(ApplicationConfig.BASE_URL);
             client.AddDefaultHeader("Content-Type", "application/json");
             var request = new RestRequest("/version", Method.Get);
             var response = client.Execute<Version>(request);

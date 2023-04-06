@@ -14,10 +14,16 @@ namespace HRMS.GUI
 
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
-            listAttendance.Rows.Add();
+            AddAttendanceUI addAttendanceUI = new AddAttendanceUI(this);
+            addAttendanceUI.ShowDialog();
         }
 
         private void btnFilter_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, System.EventArgs e)
         {
 
         }

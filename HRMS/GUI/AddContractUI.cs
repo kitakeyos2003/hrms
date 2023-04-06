@@ -13,8 +13,10 @@ namespace HRMS.GUI
 {
     public partial class AddContractUI : Form
     {
-        public AddContractUI()
+        ContractUI Parent;
+        public AddContractUI(ContractUI parent)
         {
+            this.Parent = parent;
             InitializeComponent();
             this.Padding = new Padding(2);
             this.BackColor = Color.FromArgb(98, 102, 244);
