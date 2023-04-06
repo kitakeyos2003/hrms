@@ -101,17 +101,17 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(188, 25);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(572, 278);
-            this.panel5.TabIndex = 10;
+            this.panel5.Size = new System.Drawing.Size(411, 379);
+            this.panel5.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.cbInterviewResult);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(43, 215);
+            this.panel3.Location = new System.Drawing.Point(43, 277);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(158, 59);
-            this.panel3.TabIndex = 44;
+            this.panel3.TabIndex = 8;
             // 
             // cbInterviewResult
             // 
@@ -134,7 +134,7 @@
             this.cbInterviewResult.Name = "cbInterviewResult";
             this.cbInterviewResult.Padding = new System.Windows.Forms.Padding(1);
             this.cbInterviewResult.Size = new System.Drawing.Size(150, 31);
-            this.cbInterviewResult.TabIndex = 4;
+            this.cbInterviewResult.TabIndex = 0;
             this.cbInterviewResult.Texts = "";
             // 
             // label1
@@ -150,10 +150,10 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnUpdate);
-            this.panel4.Location = new System.Drawing.Point(207, 215);
+            this.panel4.Location = new System.Drawing.Point(207, 338);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(158, 59);
-            this.panel4.TabIndex = 43;
+            this.panel4.Size = new System.Drawing.Size(158, 38);
+            this.panel4.TabIndex = 10;
             // 
             // btnUpdate
             // 
@@ -166,10 +166,10 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(3, 23);
+            this.btnUpdate.Location = new System.Drawing.Point(4, 3);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(150, 31);
-            this.btnUpdate.TabIndex = 27;
+            this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.TextColor = System.Drawing.Color.White;
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -182,7 +182,7 @@
             this.panel8.Location = new System.Drawing.Point(207, 153);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(158, 59);
-            this.panel8.TabIndex = 42;
+            this.panel8.TabIndex = 5;
             // 
             // label2
             // 
@@ -213,7 +213,7 @@
             this.txtInterviewer.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtInterviewer.PlaceholderText = "";
             this.txtInterviewer.Size = new System.Drawing.Size(150, 31);
-            this.txtInterviewer.TabIndex = 2;
+            this.txtInterviewer.TabIndex = 0;
             this.txtInterviewer.Texts = "";
             this.txtInterviewer.UnderlinedStyle = true;
             // 
@@ -224,7 +224,7 @@
             this.panel7.Location = new System.Drawing.Point(43, 153);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(158, 59);
-            this.panel7.TabIndex = 41;
+            this.panel7.TabIndex = 4;
             // 
             // label5
             // 
@@ -255,7 +255,7 @@
             this.txtSkills.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSkills.PlaceholderText = "";
             this.txtSkills.Size = new System.Drawing.Size(150, 31);
-            this.txtSkills.TabIndex = 2;
+            this.txtSkills.TabIndex = 0;
             this.txtSkills.Texts = "";
             this.txtSkills.UnderlinedStyle = true;
             // 
@@ -263,10 +263,10 @@
             // 
             this.panel15.Controls.Add(this.dpInterviewDate);
             this.panel15.Controls.Add(this.label10);
-            this.panel15.Location = new System.Drawing.Point(370, 153);
+            this.panel15.Location = new System.Drawing.Point(207, 277);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(158, 59);
-            this.panel15.TabIndex = 37;
+            this.panel15.TabIndex = 9;
             // 
             // dpInterviewDate
             // 
@@ -282,7 +282,7 @@
             this.dpInterviewDate.Name = "dpInterviewDate";
             this.dpInterviewDate.Size = new System.Drawing.Size(150, 31);
             this.dpInterviewDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpInterviewDate.TabIndex = 4;
+            this.dpInterviewDate.TabIndex = 0;
             this.dpInterviewDate.TextColor = System.Drawing.Color.White;
             // 
             // label10
@@ -302,7 +302,7 @@
             this.panel14.Location = new System.Drawing.Point(207, 91);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(158, 59);
-            this.panel14.TabIndex = 36;
+            this.panel14.TabIndex = 3;
             // 
             // label9
             // 
@@ -333,7 +333,7 @@
             this.txtWorkExperience.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtWorkExperience.PlaceholderText = "";
             this.txtWorkExperience.Size = new System.Drawing.Size(150, 31);
-            this.txtWorkExperience.TabIndex = 2;
+            this.txtWorkExperience.TabIndex = 0;
             this.txtWorkExperience.Texts = "";
             this.txtWorkExperience.UnderlinedStyle = true;
             // 
@@ -341,10 +341,10 @@
             // 
             this.panel13.Controls.Add(this.cbPosition);
             this.panel13.Controls.Add(this.label8);
-            this.panel13.Location = new System.Drawing.Point(370, 91);
+            this.panel13.Location = new System.Drawing.Point(207, 215);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(158, 59);
-            this.panel13.TabIndex = 35;
+            this.panel13.TabIndex = 7;
             // 
             // cbPosition
             // 
@@ -363,7 +363,7 @@
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Padding = new System.Windows.Forms.Padding(1);
             this.cbPosition.Size = new System.Drawing.Size(150, 31);
-            this.cbPosition.TabIndex = 4;
+            this.cbPosition.TabIndex = 0;
             this.cbPosition.Texts = "";
             // 
             // label8
@@ -380,10 +380,10 @@
             // 
             this.panel12.Controls.Add(this.cbDepartment);
             this.panel12.Controls.Add(this.label6);
-            this.panel12.Location = new System.Drawing.Point(370, 29);
+            this.panel12.Location = new System.Drawing.Point(43, 215);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(158, 59);
-            this.panel12.TabIndex = 34;
+            this.panel12.TabIndex = 6;
             // 
             // cbDepartment
             // 
@@ -402,7 +402,7 @@
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Padding = new System.Windows.Forms.Padding(1);
             this.cbDepartment.Size = new System.Drawing.Size(150, 31);
-            this.cbDepartment.TabIndex = 4;
+            this.cbDepartment.TabIndex = 0;
             this.cbDepartment.Texts = "";
             // 
             // label6
@@ -422,7 +422,7 @@
             this.panel10.Location = new System.Drawing.Point(43, 91);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(158, 59);
-            this.panel10.TabIndex = 33;
+            this.panel10.TabIndex = 2;
             // 
             // label4
             // 
@@ -453,7 +453,7 @@
             this.txtEducation.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEducation.PlaceholderText = "";
             this.txtEducation.Size = new System.Drawing.Size(150, 31);
-            this.txtEducation.TabIndex = 2;
+            this.txtEducation.TabIndex = 0;
             this.txtEducation.Texts = "";
             this.txtEducation.UnderlinedStyle = true;
             // 
@@ -464,7 +464,7 @@
             this.panel9.Location = new System.Drawing.Point(207, 29);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(158, 59);
-            this.panel9.TabIndex = 32;
+            this.panel9.TabIndex = 1;
             // 
             // label3
             // 
@@ -495,7 +495,7 @@
             this.txtContactInfomation.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtContactInfomation.PlaceholderText = "";
             this.txtContactInfomation.Size = new System.Drawing.Size(150, 31);
-            this.txtContactInfomation.TabIndex = 2;
+            this.txtContactInfomation.TabIndex = 0;
             this.txtContactInfomation.Texts = "";
             this.txtContactInfomation.UnderlinedStyle = true;
             // 
@@ -506,7 +506,7 @@
             this.panel6.Location = new System.Drawing.Point(43, 29);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(158, 59);
-            this.panel6.TabIndex = 29;
+            this.panel6.TabIndex = 0;
             // 
             // label7
             // 
@@ -537,7 +537,7 @@
             this.txtFullName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtFullName.PlaceholderText = "";
             this.txtFullName.Size = new System.Drawing.Size(150, 31);
-            this.txtFullName.TabIndex = 2;
+            this.txtFullName.TabIndex = 0;
             this.txtFullName.Texts = "";
             this.txtFullName.UnderlinedStyle = true;
             // 
@@ -549,8 +549,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(188, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(572, 25);
-            this.panel2.TabIndex = 9;
+            this.panel2.Size = new System.Drawing.Size(411, 25);
+            this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // btnMinimize
@@ -563,10 +563,10 @@
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 15;
-            this.btnMinimize.Location = new System.Drawing.Point(503, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(342, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(35, 20);
-            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabIndex = 0;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
@@ -580,10 +580,10 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(537, 0);
+            this.btnClose.Location = new System.Drawing.Point(376, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(35, 20);
-            this.btnClose.TabIndex = 3;
+            this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -594,8 +594,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 303);
-            this.panel1.TabIndex = 8;
+            this.panel1.Size = new System.Drawing.Size(188, 404);
+            this.panel1.TabIndex = 2;
             // 
             // pictureBox3
             // 
@@ -611,13 +611,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 303);
+            this.ClientSize = new System.Drawing.Size(599, 404);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateCandidateUI";
-            this.Text = "UpdateCandidateUI";
+            this.Text = "Cập nhật phỏng vấn";
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

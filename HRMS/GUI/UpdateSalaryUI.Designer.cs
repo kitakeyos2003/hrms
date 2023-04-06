@@ -92,7 +92,7 @@
             this.panel5.Location = new System.Drawing.Point(188, 25);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(579, 228);
-            this.panel5.TabIndex = 3;
+            this.panel5.TabIndex = 0;
             // 
             // panel3
             // 
@@ -457,7 +457,7 @@
             this.panelTitleBar.Location = new System.Drawing.Point(188, 0);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(579, 25);
-            this.panelTitleBar.TabIndex = 4;
+            this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // btnMinimize
@@ -502,7 +502,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 253);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 2;
             // 
             // pictureBox3
             // 

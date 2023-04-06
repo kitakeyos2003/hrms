@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEmployeeUI));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnMinimize = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
@@ -64,10 +67,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtFullName = new RJCodeAdvance.RJControls.RJTextBox();
-            this.btnMinimize = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,7 +82,6 @@
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,7 +92,17 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 309);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HRMS.Properties.Resources.logo;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 25);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(160, 86);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // panel2
             // 
@@ -105,6 +115,40 @@
             this.panel2.Size = new System.Drawing.Size(572, 25);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(173)))), ((int)(((byte)(202)))));
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimize.IconColor = System.Drawing.Color.White;
+            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimize.IconSize = 15;
+            this.btnMinimize.Location = new System.Drawing.Point(503, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(35, 20);
+            this.btnMinimize.TabIndex = 0;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(95)))), ((int)(((byte)(131)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 15;
+            this.btnClose.Location = new System.Drawing.Point(537, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 20);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel5
             // 
@@ -124,7 +168,7 @@
             this.panel5.Location = new System.Drawing.Point(188, 25);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(572, 284);
-            this.panel5.TabIndex = 4;
+            this.panel5.TabIndex = 0;
             // 
             // panel3
             // 
@@ -132,7 +176,7 @@
             this.panel3.Location = new System.Drawing.Point(372, 223);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(158, 59);
-            this.panel3.TabIndex = 28;
+            this.panel3.TabIndex = 10;
             // 
             // btnAdd
             // 
@@ -148,7 +192,7 @@
             this.btnAdd.Location = new System.Drawing.Point(3, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 31);
-            this.btnAdd.TabIndex = 27;
+            this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextColor = System.Drawing.Color.White;
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -161,7 +205,7 @@
             this.panel16.Location = new System.Drawing.Point(208, 223);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(158, 59);
-            this.panel16.TabIndex = 23;
+            this.panel16.TabIndex = 9;
             // 
             // dpEndDate
             // 
@@ -177,7 +221,7 @@
             this.dpEndDate.Name = "dpEndDate";
             this.dpEndDate.Size = new System.Drawing.Size(150, 31);
             this.dpEndDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpEndDate.TabIndex = 4;
+            this.dpEndDate.TabIndex = 0;
             this.dpEndDate.TextColor = System.Drawing.Color.White;
             // 
             // label11
@@ -187,7 +231,7 @@
             this.label11.Location = new System.Drawing.Point(1, 7);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(86, 13);
-            this.label11.TabIndex = 3;
+            this.label11.TabIndex = 1;
             this.label11.Text = "Ngày kết thúc";
             // 
             // panel15
@@ -197,7 +241,7 @@
             this.panel15.Location = new System.Drawing.Point(44, 223);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(158, 59);
-            this.panel15.TabIndex = 22;
+            this.panel15.TabIndex = 8;
             // 
             // dpStartEnd
             // 
@@ -213,7 +257,7 @@
             this.dpStartEnd.Name = "dpStartEnd";
             this.dpStartEnd.Size = new System.Drawing.Size(150, 31);
             this.dpStartEnd.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpStartEnd.TabIndex = 4;
+            this.dpStartEnd.TabIndex = 0;
             this.dpStartEnd.TextColor = System.Drawing.Color.White;
             // 
             // label10
@@ -223,7 +267,7 @@
             this.label10.Location = new System.Drawing.Point(1, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 13);
-            this.label10.TabIndex = 3;
+            this.label10.TabIndex = 1;
             this.label10.Text = "Ngày bắt đầu";
             // 
             // panel14
@@ -233,7 +277,7 @@
             this.panel14.Location = new System.Drawing.Point(44, 161);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(322, 59);
-            this.panel14.TabIndex = 21;
+            this.panel14.TabIndex = 6;
             // 
             // label9
             // 
@@ -242,7 +286,7 @@
             this.label9.Location = new System.Drawing.Point(1, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 13);
-            this.label9.TabIndex = 3;
+            this.label9.TabIndex = 1;
             this.label9.Text = "Địa chỉ";
             // 
             // txtAddress
@@ -265,7 +309,7 @@
             this.txtAddress.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtAddress.PlaceholderText = "Địa chỉ";
             this.txtAddress.Size = new System.Drawing.Size(314, 31);
-            this.txtAddress.TabIndex = 2;
+            this.txtAddress.TabIndex = 0;
             this.txtAddress.Texts = "";
             this.txtAddress.UnderlinedStyle = true;
             // 
@@ -276,7 +320,7 @@
             this.panel13.Location = new System.Drawing.Point(372, 161);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(158, 59);
-            this.panel13.TabIndex = 20;
+            this.panel13.TabIndex = 7;
             // 
             // cbPosition
             // 
@@ -295,7 +339,7 @@
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Padding = new System.Windows.Forms.Padding(1);
             this.cbPosition.Size = new System.Drawing.Size(150, 31);
-            this.cbPosition.TabIndex = 4;
+            this.cbPosition.TabIndex = 0;
             this.cbPosition.Texts = "";
             // 
             // label8
@@ -305,7 +349,7 @@
             this.label8.Location = new System.Drawing.Point(1, 7);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 13);
-            this.label8.TabIndex = 3;
+            this.label8.TabIndex = 1;
             this.label8.Text = "Chức vụ";
             // 
             // panel12
@@ -315,7 +359,7 @@
             this.panel12.Location = new System.Drawing.Point(372, 99);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(158, 59);
-            this.panel12.TabIndex = 19;
+            this.panel12.TabIndex = 5;
             // 
             // cbDepartment
             // 
@@ -334,7 +378,7 @@
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Padding = new System.Windows.Forms.Padding(1);
             this.cbDepartment.Size = new System.Drawing.Size(150, 31);
-            this.cbDepartment.TabIndex = 4;
+            this.cbDepartment.TabIndex = 0;
             this.cbDepartment.Texts = "";
             // 
             // label6
@@ -344,7 +388,7 @@
             this.label6.Location = new System.Drawing.Point(1, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
-            this.label6.TabIndex = 3;
+            this.label6.TabIndex = 1;
             this.label6.Text = "Phòng ban";
             // 
             // panel10
@@ -354,7 +398,7 @@
             this.panel10.Location = new System.Drawing.Point(208, 99);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(158, 59);
-            this.panel10.TabIndex = 17;
+            this.panel10.TabIndex = 4;
             // 
             // label4
             // 
@@ -363,7 +407,7 @@
             this.label4.Location = new System.Drawing.Point(1, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 1;
             this.label4.Text = "Email";
             // 
             // txtEmail
@@ -386,7 +430,7 @@
             this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEmail.PlaceholderText = "Email";
             this.txtEmail.Size = new System.Drawing.Size(150, 31);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 0;
             this.txtEmail.Texts = "";
             this.txtEmail.UnderlinedStyle = true;
             // 
@@ -397,7 +441,7 @@
             this.panel9.Location = new System.Drawing.Point(44, 99);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(158, 59);
-            this.panel9.TabIndex = 16;
+            this.panel9.TabIndex = 3;
             // 
             // label3
             // 
@@ -406,7 +450,7 @@
             this.label3.Location = new System.Drawing.Point(1, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 1;
             this.label3.Text = "Số điện thoại";
             // 
             // txtPhoneNumber
@@ -429,7 +473,7 @@
             this.txtPhoneNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPhoneNumber.PlaceholderText = "Số điện thoại";
             this.txtPhoneNumber.Size = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.TabIndex = 0;
             this.txtPhoneNumber.Texts = "";
             this.txtPhoneNumber.UnderlinedStyle = true;
             // 
@@ -440,7 +484,7 @@
             this.panel8.Location = new System.Drawing.Point(372, 37);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(158, 59);
-            this.panel8.TabIndex = 15;
+            this.panel8.TabIndex = 2;
             // 
             // cbGender
             // 
@@ -463,7 +507,7 @@
             this.cbGender.Name = "cbGender";
             this.cbGender.Padding = new System.Windows.Forms.Padding(1);
             this.cbGender.Size = new System.Drawing.Size(150, 31);
-            this.cbGender.TabIndex = 4;
+            this.cbGender.TabIndex = 0;
             this.cbGender.Texts = "";
             // 
             // label2
@@ -473,7 +517,7 @@
             this.label2.Location = new System.Drawing.Point(1, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Giới tính";
             // 
             // panel7
@@ -483,7 +527,7 @@
             this.panel7.Location = new System.Drawing.Point(208, 37);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(158, 59);
-            this.panel7.TabIndex = 14;
+            this.panel7.TabIndex = 1;
             // 
             // dpDateOfBirth
             // 
@@ -499,7 +543,7 @@
             this.dpDateOfBirth.Name = "dpDateOfBirth";
             this.dpDateOfBirth.Size = new System.Drawing.Size(150, 31);
             this.dpDateOfBirth.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpDateOfBirth.TabIndex = 4;
+            this.dpDateOfBirth.TabIndex = 0;
             this.dpDateOfBirth.TextColor = System.Drawing.Color.White;
             // 
             // label1
@@ -509,7 +553,7 @@
             this.label1.Location = new System.Drawing.Point(1, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Ngày sinh";
             // 
             // panel6
@@ -519,7 +563,7 @@
             this.panel6.Location = new System.Drawing.Point(44, 37);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(158, 59);
-            this.panel6.TabIndex = 13;
+            this.panel6.TabIndex = 0;
             // 
             // label7
             // 
@@ -528,7 +572,7 @@
             this.label7.Location = new System.Drawing.Point(1, 7);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 13);
-            this.label7.TabIndex = 3;
+            this.label7.TabIndex = 1;
             this.label7.Text = "Họ và tên";
             // 
             // txtFullName
@@ -551,53 +595,9 @@
             this.txtFullName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtFullName.PlaceholderText = "Họ và tên";
             this.txtFullName.Size = new System.Drawing.Size(150, 31);
-            this.txtFullName.TabIndex = 2;
+            this.txtFullName.TabIndex = 0;
             this.txtFullName.Texts = "";
             this.txtFullName.UnderlinedStyle = true;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(173)))), ((int)(((byte)(202)))));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnMinimize.IconColor = System.Drawing.Color.White;
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 15;
-            this.btnMinimize.Location = new System.Drawing.Point(503, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(35, 20);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(95)))), ((int)(((byte)(131)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(537, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(35, 20);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::HRMS.Properties.Resources.logo;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(160, 86);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
             // 
             // AddEmployeeUI
             // 
@@ -612,6 +612,7 @@
             this.Name = "AddEmployeeUI";
             this.Text = "Thêm nhân viên";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -635,7 +636,6 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

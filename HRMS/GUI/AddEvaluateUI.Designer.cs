@@ -115,7 +115,7 @@
             this.label7.Location = new System.Drawing.Point(1, 7);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 13);
-            this.label7.TabIndex = 3;
+            this.label7.TabIndex = 1;
             this.label7.Text = "Kế hoạch cải thiện";
             // 
             // rjTextBox2
@@ -158,7 +158,7 @@
             this.label8.Location = new System.Drawing.Point(1, 7);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 13);
-            this.label8.TabIndex = 3;
+            this.label8.TabIndex = 1;
             this.label8.Text = "Kết quả đánh giá";
             // 
             // rjTextBox3
@@ -201,7 +201,7 @@
             this.label2.Location = new System.Drawing.Point(1, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 13);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Nhận xét của nhân viên";
             // 
             // rjTextBox1
@@ -264,7 +264,7 @@
             this.label1.Location = new System.Drawing.Point(1, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 13);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Tiêu chí đánh giá";
             // 
             // panel3
@@ -327,7 +327,7 @@
             this.label5.Location = new System.Drawing.Point(1, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 13);
-            this.label5.TabIndex = 3;
+            this.label5.TabIndex = 1;
             this.label5.Text = "Thời gian đánh giá";
             // 
             // panel13
@@ -367,7 +367,7 @@
             this.cbEmployee.Location = new System.Drawing.Point(1, 7);
             this.cbEmployee.Name = "cbEmployee";
             this.cbEmployee.Size = new System.Drawing.Size(64, 13);
-            this.cbEmployee.TabIndex = 3;
+            this.cbEmployee.TabIndex = 1;
             this.cbEmployee.Text = "Nhân viên";
             // 
             // panel12
@@ -406,7 +406,7 @@
             this.label6.Location = new System.Drawing.Point(1, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
-            this.label6.TabIndex = 3;
+            this.label6.TabIndex = 1;
             this.label6.Text = "Phòng ban";
             // 
             // panel10
@@ -425,7 +425,7 @@
             this.label4.Location = new System.Drawing.Point(1, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 13);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 1;
             this.label4.Text = "Nhận xét của quản lý";
             // 
             // txtEmail
@@ -468,7 +468,7 @@
             this.label3.Location = new System.Drawing.Point(1, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 13);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 1;
             this.label3.Text = "Điểm đánh giá";
             // 
             // txtPhoneNumber

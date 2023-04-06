@@ -101,17 +101,17 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(188, 25);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(572, 286);
-            this.panel5.TabIndex = 3;
+            this.panel5.Size = new System.Drawing.Size(408, 397);
+            this.panel5.TabIndex = 0;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.rjComboBox1);
             this.panel8.Controls.Add(this.label7);
-            this.panel8.Location = new System.Drawing.Point(44, 223);
+            this.panel8.Location = new System.Drawing.Point(44, 284);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(158, 59);
-            this.panel8.TabIndex = 10;
+            this.panel8.TabIndex = 8;
             // 
             // rjComboBox1
             // 
@@ -147,10 +147,10 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Location = new System.Drawing.Point(209, 223);
+            this.panel3.Location = new System.Drawing.Point(209, 345);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 59);
-            this.panel3.TabIndex = 9;
+            this.panel3.Size = new System.Drawing.Size(158, 39);
+            this.panel3.TabIndex = 10;
             // 
             // btnAdd
             // 
@@ -163,7 +163,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(4, 22);
+            this.btnAdd.Location = new System.Drawing.Point(4, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 31);
             this.btnAdd.TabIndex = 0;
@@ -175,10 +175,10 @@
             // 
             this.panel7.Controls.Add(this.rjDatePicker3);
             this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(373, 37);
+            this.panel7.Location = new System.Drawing.Point(209, 284);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(158, 59);
-            this.panel7.TabIndex = 2;
+            this.panel7.TabIndex = 9;
             // 
             // rjDatePicker3
             // 
@@ -214,7 +214,7 @@
             this.panel4.Location = new System.Drawing.Point(209, 161);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(158, 59);
-            this.panel4.TabIndex = 6;
+            this.panel4.TabIndex = 5;
             // 
             // rjDatePicker1
             // 
@@ -250,7 +250,7 @@
             this.panel6.Location = new System.Drawing.Point(44, 161);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(158, 59);
-            this.panel6.TabIndex = 5;
+            this.panel6.TabIndex = 4;
             // 
             // rjDatePicker2
             // 
@@ -286,7 +286,7 @@
             this.panel16.Location = new System.Drawing.Point(209, 99);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(158, 59);
-            this.panel16.TabIndex = 4;
+            this.panel16.TabIndex = 3;
             // 
             // dpEndDate
             // 
@@ -322,7 +322,7 @@
             this.panel15.Location = new System.Drawing.Point(44, 99);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(158, 59);
-            this.panel15.TabIndex = 3;
+            this.panel15.TabIndex = 2;
             // 
             // dpStartEnd
             // 
@@ -434,10 +434,10 @@
             // 
             this.panel10.Controls.Add(this.label4);
             this.panel10.Controls.Add(this.txtEmail);
-            this.panel10.Location = new System.Drawing.Point(373, 161);
+            this.panel10.Location = new System.Drawing.Point(209, 222);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(158, 59);
-            this.panel10.TabIndex = 8;
+            this.panel10.TabIndex = 7;
             // 
             // label4
             // 
@@ -477,10 +477,10 @@
             // 
             this.panel9.Controls.Add(this.label3);
             this.panel9.Controls.Add(this.txtPhoneNumber);
-            this.panel9.Location = new System.Drawing.Point(373, 99);
+            this.panel9.Location = new System.Drawing.Point(44, 222);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(158, 59);
-            this.panel9.TabIndex = 7;
+            this.panel9.TabIndex = 6;
             // 
             // label3
             // 
@@ -524,8 +524,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(188, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(572, 25);
-            this.panel2.TabIndex = 4;
+            this.panel2.Size = new System.Drawing.Size(408, 25);
+            this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // btnMinimize
@@ -538,7 +538,7 @@
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 15;
-            this.btnMinimize.Location = new System.Drawing.Point(503, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(339, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(35, 20);
             this.btnMinimize.TabIndex = 0;
@@ -555,7 +555,7 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(537, 0);
+            this.btnClose.Location = new System.Drawing.Point(373, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(35, 20);
             this.btnClose.TabIndex = 1;
@@ -569,8 +569,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 311);
-            this.panel1.TabIndex = 5;
+            this.panel1.Size = new System.Drawing.Size(188, 422);
+            this.panel1.TabIndex = 2;
             // 
             // pictureBox3
             // 
@@ -586,7 +586,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 311);
+            this.ClientSize = new System.Drawing.Size(596, 422);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

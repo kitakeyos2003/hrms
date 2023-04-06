@@ -97,7 +97,7 @@
             this.panel5.Location = new System.Drawing.Point(188, 25);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(572, 262);
-            this.panel5.TabIndex = 7;
+            this.panel5.TabIndex = 0;
             // 
             // panel8
             // 
@@ -106,7 +106,7 @@
             this.panel8.Location = new System.Drawing.Point(207, 153);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(158, 59);
-            this.panel8.TabIndex = 42;
+            this.panel8.TabIndex = 7;
             // 
             // label2
             // 
@@ -137,7 +137,7 @@
             this.txtInterviewer.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtInterviewer.PlaceholderText = "Người phỏng vấn";
             this.txtInterviewer.Size = new System.Drawing.Size(150, 31);
-            this.txtInterviewer.TabIndex = 2;
+            this.txtInterviewer.TabIndex = 0;
             this.txtInterviewer.Texts = "";
             this.txtInterviewer.UnderlinedStyle = true;
             // 
@@ -148,7 +148,7 @@
             this.panel7.Location = new System.Drawing.Point(43, 153);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(158, 59);
-            this.panel7.TabIndex = 41;
+            this.panel7.TabIndex = 6;
             // 
             // label5
             // 
@@ -179,7 +179,7 @@
             this.txtSkills.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSkills.PlaceholderText = "Kỹ năng";
             this.txtSkills.Size = new System.Drawing.Size(150, 31);
-            this.txtSkills.TabIndex = 2;
+            this.txtSkills.TabIndex = 0;
             this.txtSkills.Texts = "";
             this.txtSkills.UnderlinedStyle = true;
             // 
@@ -189,7 +189,7 @@
             this.panel3.Location = new System.Drawing.Point(370, 218);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(158, 40);
-            this.panel3.TabIndex = 39;
+            this.panel3.TabIndex = 9;
             // 
             // btnAdd
             // 
@@ -205,7 +205,7 @@
             this.btnAdd.Location = new System.Drawing.Point(4, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 31);
-            this.btnAdd.TabIndex = 27;
+            this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextColor = System.Drawing.Color.White;
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -218,7 +218,7 @@
             this.panel15.Location = new System.Drawing.Point(370, 153);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(158, 59);
-            this.panel15.TabIndex = 37;
+            this.panel15.TabIndex = 8;
             // 
             // dpInterviewDate
             // 
@@ -234,7 +234,7 @@
             this.dpInterviewDate.Name = "dpInterviewDate";
             this.dpInterviewDate.Size = new System.Drawing.Size(150, 31);
             this.dpInterviewDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpInterviewDate.TabIndex = 4;
+            this.dpInterviewDate.TabIndex = 0;
             this.dpInterviewDate.TextColor = System.Drawing.Color.White;
             // 
             // label10
@@ -254,7 +254,7 @@
             this.panel14.Location = new System.Drawing.Point(207, 91);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(158, 59);
-            this.panel14.TabIndex = 36;
+            this.panel14.TabIndex = 4;
             // 
             // label9
             // 
@@ -285,7 +285,7 @@
             this.txtWorkExperience.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtWorkExperience.PlaceholderText = "Kinh nghiệm";
             this.txtWorkExperience.Size = new System.Drawing.Size(150, 31);
-            this.txtWorkExperience.TabIndex = 2;
+            this.txtWorkExperience.TabIndex = 0;
             this.txtWorkExperience.Texts = "";
             this.txtWorkExperience.UnderlinedStyle = true;
             // 
@@ -296,7 +296,7 @@
             this.panel13.Location = new System.Drawing.Point(370, 91);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(158, 59);
-            this.panel13.TabIndex = 35;
+            this.panel13.TabIndex = 5;
             // 
             // cbPosition
             // 
@@ -315,7 +315,7 @@
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Padding = new System.Windows.Forms.Padding(1);
             this.cbPosition.Size = new System.Drawing.Size(150, 31);
-            this.cbPosition.TabIndex = 4;
+            this.cbPosition.TabIndex = 0;
             this.cbPosition.Texts = "";
             // 
             // label8
@@ -335,7 +335,7 @@
             this.panel12.Location = new System.Drawing.Point(370, 29);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(158, 59);
-            this.panel12.TabIndex = 34;
+            this.panel12.TabIndex = 2;
             // 
             // cbDepartment
             // 
@@ -354,7 +354,7 @@
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Padding = new System.Windows.Forms.Padding(1);
             this.cbDepartment.Size = new System.Drawing.Size(150, 31);
-            this.cbDepartment.TabIndex = 4;
+            this.cbDepartment.TabIndex = 0;
             this.cbDepartment.Texts = "";
             // 
             // label6
@@ -374,7 +374,7 @@
             this.panel10.Location = new System.Drawing.Point(43, 91);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(158, 59);
-            this.panel10.TabIndex = 33;
+            this.panel10.TabIndex = 3;
             // 
             // label4
             // 
@@ -405,7 +405,7 @@
             this.txtEducation.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEducation.PlaceholderText = "Trình dộ học vấn";
             this.txtEducation.Size = new System.Drawing.Size(150, 31);
-            this.txtEducation.TabIndex = 2;
+            this.txtEducation.TabIndex = 0;
             this.txtEducation.Texts = "";
             this.txtEducation.UnderlinedStyle = true;
             // 
@@ -416,7 +416,7 @@
             this.panel9.Location = new System.Drawing.Point(207, 29);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(158, 59);
-            this.panel9.TabIndex = 32;
+            this.panel9.TabIndex = 1;
             // 
             // label3
             // 
@@ -447,7 +447,7 @@
             this.txtContactInfomation.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtContactInfomation.PlaceholderText = "Thông tin liên hệ";
             this.txtContactInfomation.Size = new System.Drawing.Size(150, 31);
-            this.txtContactInfomation.TabIndex = 2;
+            this.txtContactInfomation.TabIndex = 0;
             this.txtContactInfomation.Texts = "";
             this.txtContactInfomation.UnderlinedStyle = true;
             // 
@@ -458,7 +458,7 @@
             this.panel6.Location = new System.Drawing.Point(43, 29);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(158, 59);
-            this.panel6.TabIndex = 29;
+            this.panel6.TabIndex = 0;
             // 
             // label7
             // 
@@ -489,7 +489,7 @@
             this.txtFullName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtFullName.PlaceholderText = "Họ và tên";
             this.txtFullName.Size = new System.Drawing.Size(150, 31);
-            this.txtFullName.TabIndex = 2;
+            this.txtFullName.TabIndex = 0;
             this.txtFullName.Texts = "";
             this.txtFullName.UnderlinedStyle = true;
             // 
@@ -502,7 +502,7 @@
             this.panel2.Location = new System.Drawing.Point(188, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(572, 25);
-            this.panel2.TabIndex = 6;
+            this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // btnMinimize
@@ -518,7 +518,7 @@
             this.btnMinimize.Location = new System.Drawing.Point(503, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(35, 20);
-            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabIndex = 0;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
@@ -535,7 +535,7 @@
             this.btnClose.Location = new System.Drawing.Point(537, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(35, 20);
-            this.btnClose.TabIndex = 3;
+            this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -547,7 +547,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 287);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 2;
             // 
             // pictureBox3
             // 

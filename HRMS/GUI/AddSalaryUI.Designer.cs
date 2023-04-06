@@ -35,29 +35,29 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txtPhoneNumber = new RJCodeAdvance.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.txtEmail = new RJCodeAdvance.RJControls.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.cbDepartment = new RJCodeAdvance.RJControls.RJComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.cbEmployee = new System.Windows.Forms.Label();
             this.cbPosition = new RJCodeAdvance.RJControls.RJComboBox();
+            this.cbEmployee = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rjTextBox4 = new RJCodeAdvance.RJControls.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.rjTextBox4 = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.rjTextBox5 = new RJCodeAdvance.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rjTextBox5 = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.rjDatePicker3 = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
@@ -151,6 +151,16 @@
             this.panel9.Size = new System.Drawing.Size(158, 59);
             this.panel9.TabIndex = 4;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Tiền thưởng";
+            // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
@@ -175,16 +185,6 @@
             this.txtPhoneNumber.Texts = "";
             this.txtPhoneNumber.UnderlinedStyle = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tiền thưởng";
-            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.label4);
@@ -193,6 +193,16 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(158, 59);
             this.panel10.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Thuế";
             // 
             // txtEmail
             // 
@@ -218,16 +228,6 @@
             this.txtEmail.Texts = "";
             this.txtEmail.UnderlinedStyle = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Thuế";
-            // 
             // panel12
             // 
             this.panel12.Controls.Add(this.cbDepartment);
@@ -236,16 +236,6 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(158, 59);
             this.panel12.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Phòng ban";
             // 
             // cbDepartment
             // 
@@ -267,6 +257,16 @@
             this.cbDepartment.TabIndex = 0;
             this.cbDepartment.Texts = "";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Phòng ban";
+            // 
             // panel13
             // 
             this.panel13.Controls.Add(this.cbPosition);
@@ -275,17 +275,6 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(158, 59);
             this.panel13.TabIndex = 1;
-            // 
-            // cbEmployee
-            // 
-            this.cbEmployee.AllowDrop = true;
-            this.cbEmployee.AutoSize = true;
-            this.cbEmployee.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmployee.Location = new System.Drawing.Point(1, 7);
-            this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(64, 13);
-            this.cbEmployee.TabIndex = 3;
-            this.cbEmployee.Text = "Nhân viên";
             // 
             // cbPosition
             // 
@@ -307,6 +296,17 @@
             this.cbPosition.TabIndex = 0;
             this.cbPosition.Texts = "";
             // 
+            // cbEmployee
+            // 
+            this.cbEmployee.AllowDrop = true;
+            this.cbEmployee.AutoSize = true;
+            this.cbEmployee.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEmployee.Location = new System.Drawing.Point(1, 7);
+            this.cbEmployee.Name = "cbEmployee";
+            this.cbEmployee.Size = new System.Drawing.Size(64, 13);
+            this.cbEmployee.TabIndex = 1;
+            this.cbEmployee.Text = "Nhân viên";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label5);
@@ -315,6 +315,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(158, 59);
             this.panel2.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Lương cơ bản";
             // 
             // rjTextBox4
             // 
@@ -340,16 +350,6 @@
             this.rjTextBox4.Texts = "";
             this.rjTextBox4.UnderlinedStyle = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Lương cơ bản";
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label1);
@@ -358,6 +358,16 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(158, 59);
             this.panel4.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Phụ cấp";
             // 
             // rjTextBox5
             // 
@@ -383,16 +393,6 @@
             this.rjTextBox5.Texts = "";
             this.rjTextBox5.UnderlinedStyle = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Phụ cấp";
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.rjDatePicker3);
@@ -401,16 +401,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(158, 59);
             this.panel7.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Ngày thanh toán";
             // 
             // rjDatePicker3
             // 
@@ -429,6 +419,16 @@
             this.rjDatePicker3.TabIndex = 0;
             this.rjDatePicker3.TextColor = System.Drawing.Color.White;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ngày thanh toán";
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.rjComboBox1);
@@ -437,17 +437,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(158, 59);
             this.panel6.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AllowDrop = true;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "P.thức thanh toán";
             // 
             // rjComboBox1
             // 
@@ -468,6 +457,17 @@
             this.rjComboBox1.Size = new System.Drawing.Size(150, 31);
             this.rjComboBox1.TabIndex = 0;
             this.rjComboBox1.Texts = "";
+            // 
+            // label7
+            // 
+            this.label7.AllowDrop = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "P.thức thanh toán";
             // 
             // panel5
             // 
