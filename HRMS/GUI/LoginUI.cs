@@ -84,8 +84,7 @@ namespace HRMS.GUI
                     ApiResponse<Token> data = res.Data;
                     if (data.Success)
                     {
-                        Application.AccessToken = data.Data.AccessToken;
-                        Application.RefreshToken = data.Data.RefreshToken;
+                        ApplicationConfig.Token = data.Data;
                         Hide();
                         alert.ShowAlert(data.Message, Alert.EnumType.SUCCESS);
                         DataManager.GetInstance().LoadAll();

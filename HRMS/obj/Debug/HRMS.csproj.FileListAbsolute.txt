@@ -101,3 +101,11 @@ C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddCandidateUI.resource
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddEmployeeUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateEmployeeUI.resources
 C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateCandidateUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddAttendanceUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateAttendanceUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddContractUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateContractUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddEvaluateUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateEvaluateUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.AddSalaryUI.resources
+C:\Users\Admin\source\repos\HRMS\HRMS\obj\Debug\HRMS.GUI.UpdateSalaryUI.resources

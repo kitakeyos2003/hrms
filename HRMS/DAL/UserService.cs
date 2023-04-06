@@ -8,7 +8,7 @@ namespace HRMS.DAL
 
         public RestResponse<ApiResponse<Token>> Validate(string username, string password)
         {
-            var client = new RestClient(Application.BASE_URL);
+            var client = new RestClient(ApplicationConfig.BASE_URL);
             client.AddDefaultHeader("Content-Type", "application/json");
             var request = new RestRequest("/api/User", Method.Post);
             request.AddJsonBody(new

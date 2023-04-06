@@ -5,11 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public class Application
+public class ApplicationConfig
 {
     public const string BASE_URL = "https://localhost:7273";
-    public static string AccessToken { get; set; }
-
-    public static string RefreshToken { get; set; }
+    public static Token  Token { get; set; }
 
 }

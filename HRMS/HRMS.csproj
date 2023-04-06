@@ -134,7 +134,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\Application.cs" />
+    <Compile Include="BUS\ApplicationConfig.cs" />
     <Compile Include="BUS\JsonReader.cs" />
     <Compile Include="DAL\AttendanceService.cs" />
     <Compile Include="DAL\CandidateService.cs" />
@@ -159,11 +159,29 @@
     <Compile Include="DAL\UserService.cs" />
     <Compile Include="DAL\Models\Employee.cs" />
     <Compile Include="DAL\Models\Version.cs" />
+    <Compile Include="GUI\AddAttendanceUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddAttendanceUI.Designer.cs">
+      <DependentUpon>AddAttendanceUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\AddCandidateUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\AddCandidateUI.Designer.cs">
       <DependentUpon>AddCandidateUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddEvaluateUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddEvaluateUI.Designer.cs">
+      <DependentUpon>AddEvaluateUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddSalaryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddSalaryUI.Designer.cs">
+      <DependentUpon>AddSalaryUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\alert\Alert.cs">
       <SubType>Form</SubType>
@@ -188,6 +206,12 @@
     </Compile>
     <Compile Include="GUI\AddEmployeeUI.Designer.cs">
       <DependentUpon>AddEmployeeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddContractUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddContractUI.Designer.cs">
+      <DependentUpon>AddContractUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HomeUI.cs">
       <SubType>Form</SubType>
@@ -237,11 +261,23 @@
     <Compile Include="GUI\AttendanceUI.Designer.cs">
       <DependentUpon>AttendanceUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UpdateAttendanceUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateAttendanceUI.Designer.cs">
+      <DependentUpon>UpdateAttendanceUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UpdateCandidateUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\UpdateCandidateUI.Designer.cs">
       <DependentUpon>UpdateCandidateUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateContractUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateContractUI.Designer.cs">
+      <DependentUpon>UpdateContractUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UpdateEmployeeUI.cs">
       <SubType>Form</SubType>
@@ -249,10 +285,34 @@
     <Compile Include="GUI\UpdateEmployeeUI.Designer.cs">
       <DependentUpon>UpdateEmployeeUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UpdateEvaluateUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateEvaluateUI.Designer.cs">
+      <DependentUpon>UpdateEvaluateUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateSalaryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateSalaryUI.Designer.cs">
+      <DependentUpon>UpdateSalaryUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddAttendanceUI.resx">
+      <DependentUpon>AddAttendanceUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\AddCandidateUI.resx">
       <DependentUpon>AddCandidateUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddContractUI.resx">
+      <DependentUpon>AddContractUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddEvaluateUI.resx">
+      <DependentUpon>AddEvaluateUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddSalaryUI.resx">
+      <DependentUpon>AddSalaryUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\alert\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
@@ -290,11 +350,23 @@
     <EmbeddedResource Include="GUI\AttendanceUI.resx">
       <DependentUpon>AttendanceUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateAttendanceUI.resx">
+      <DependentUpon>UpdateAttendanceUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateCandidateUI.resx">
       <DependentUpon>UpdateCandidateUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateContractUI.resx">
+      <DependentUpon>UpdateContractUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateEmployeeUI.resx">
       <DependentUpon>UpdateEmployeeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateEvaluateUI.resx">
+      <DependentUpon>UpdateEvaluateUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateSalaryUI.resx">
+      <DependentUpon>UpdateSalaryUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

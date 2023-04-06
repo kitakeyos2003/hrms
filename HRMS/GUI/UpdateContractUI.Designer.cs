@@ -1,6 +1,6 @@
 ﻿namespace HRMS.GUI
 {
-    partial class AddEmployeeUI
+    partial class UpdateContractUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEmployeeUI));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateContractUI));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -40,12 +44,9 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.dpStartEnd = new RJCodeAdvance.RJControls.RJDatePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtAddress = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.cbPosition = new RJCodeAdvance.RJControls.RJComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.cbEmployee = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.cbDepartment = new RJCodeAdvance.RJControls.RJComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,84 +56,133 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new RJCodeAdvance.RJControls.RJTextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.cbGender = new RJCodeAdvance.RJControls.RJComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.dpDateOfBirth = new RJCodeAdvance.RJControls.RJDatePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtFullName = new RJCodeAdvance.RJControls.RJTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 309);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnMinimize);
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(188, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(572, 25);
-            this.panel2.TabIndex = 1;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.panel16);
             this.panel5.Controls.Add(this.panel15);
-            this.panel5.Controls.Add(this.panel14);
             this.panel5.Controls.Add(this.panel13);
             this.panel5.Controls.Add(this.panel12);
             this.panel5.Controls.Add(this.panel10);
             this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.panel8);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(188, 25);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(572, 284);
-            this.panel5.TabIndex = 4;
+            this.panel5.Size = new System.Drawing.Size(410, 330);
+            this.panel5.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.rjTextBox1);
+            this.panel4.Location = new System.Drawing.Point(208, 222);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(158, 59);
+            this.panel4.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Ghi chú";
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 1;
+            this.rjTextBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(4, 24);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.MaximumSize = new System.Drawing.Size(150, 31);
+            this.rjTextBox1.MinimumSize = new System.Drawing.Size(150, 31);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderText = "Ghi chú";
+            this.rjTextBox1.Size = new System.Drawing.Size(150, 31);
+            this.rjTextBox1.TabIndex = 0;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = true;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.rjComboBox1);
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Location = new System.Drawing.Point(44, 222);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(158, 59);
+            this.panel7.TabIndex = 6;
+            // 
+            // rjComboBox1
+            // 
+            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjComboBox1.BorderSize = 1;
+            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.rjComboBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.Location = new System.Drawing.Point(4, 25);
+            this.rjComboBox1.MaximumSize = new System.Drawing.Size(150, 31);
+            this.rjComboBox1.MinimumSize = new System.Drawing.Size(150, 31);
+            this.rjComboBox1.Name = "rjComboBox1";
+            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.rjComboBox1.Size = new System.Drawing.Size(150, 31);
+            this.rjComboBox1.TabIndex = 0;
+            this.rjComboBox1.Texts = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Loại hợp đồng";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Location = new System.Drawing.Point(372, 223);
+            this.panel3.Location = new System.Drawing.Point(208, 284);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 59);
-            this.panel3.TabIndex = 28;
+            this.panel3.Size = new System.Drawing.Size(158, 43);
+            this.panel3.TabIndex = 8;
             // 
             // btnAdd
             // 
@@ -145,23 +195,22 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(3, 23);
+            this.btnAdd.Location = new System.Drawing.Point(4, 9);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 31);
-            this.btnAdd.TabIndex = 27;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Cập nhật";
             this.btnAdd.TextColor = System.Drawing.Color.White;
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel16
             // 
             this.panel16.Controls.Add(this.dpEndDate);
             this.panel16.Controls.Add(this.label11);
-            this.panel16.Location = new System.Drawing.Point(208, 223);
+            this.panel16.Location = new System.Drawing.Point(209, 99);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(158, 59);
-            this.panel16.TabIndex = 23;
+            this.panel16.TabIndex = 3;
             // 
             // dpEndDate
             // 
@@ -177,7 +226,7 @@
             this.dpEndDate.Name = "dpEndDate";
             this.dpEndDate.Size = new System.Drawing.Size(150, 31);
             this.dpEndDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpEndDate.TabIndex = 4;
+            this.dpEndDate.TabIndex = 0;
             this.dpEndDate.TextColor = System.Drawing.Color.White;
             // 
             // label11
@@ -194,10 +243,10 @@
             // 
             this.panel15.Controls.Add(this.dpStartEnd);
             this.panel15.Controls.Add(this.label10);
-            this.panel15.Location = new System.Drawing.Point(44, 223);
+            this.panel15.Location = new System.Drawing.Point(44, 99);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(158, 59);
-            this.panel15.TabIndex = 22;
+            this.panel15.TabIndex = 2;
             // 
             // dpStartEnd
             // 
@@ -213,7 +262,7 @@
             this.dpStartEnd.Name = "dpStartEnd";
             this.dpStartEnd.Size = new System.Drawing.Size(150, 31);
             this.dpStartEnd.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpStartEnd.TabIndex = 4;
+            this.dpStartEnd.TabIndex = 0;
             this.dpStartEnd.TextColor = System.Drawing.Color.White;
             // 
             // label10
@@ -226,57 +275,14 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Ngày bắt đầu";
             // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.label9);
-            this.panel14.Controls.Add(this.txtAddress);
-            this.panel14.Location = new System.Drawing.Point(44, 161);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(322, 59);
-            this.panel14.TabIndex = 21;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1, 7);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Địa chỉ";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.SystemColors.Window;
-            this.txtAddress.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtAddress.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtAddress.BorderRadius = 0;
-            this.txtAddress.BorderSize = 1;
-            this.txtAddress.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtAddress.Location = new System.Drawing.Point(4, 24);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAddress.MaximumSize = new System.Drawing.Size(314, 31);
-            this.txtAddress.MinimumSize = new System.Drawing.Size(314, 31);
-            this.txtAddress.Multiline = false;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtAddress.PasswordChar = false;
-            this.txtAddress.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtAddress.PlaceholderText = "Địa chỉ";
-            this.txtAddress.Size = new System.Drawing.Size(314, 31);
-            this.txtAddress.TabIndex = 2;
-            this.txtAddress.Texts = "";
-            this.txtAddress.UnderlinedStyle = true;
-            // 
             // panel13
             // 
             this.panel13.Controls.Add(this.cbPosition);
-            this.panel13.Controls.Add(this.label8);
-            this.panel13.Location = new System.Drawing.Point(372, 161);
+            this.panel13.Controls.Add(this.cbEmployee);
+            this.panel13.Location = new System.Drawing.Point(209, 37);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(158, 59);
-            this.panel13.TabIndex = 20;
+            this.panel13.TabIndex = 1;
             // 
             // cbPosition
             // 
@@ -295,27 +301,28 @@
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Padding = new System.Windows.Forms.Padding(1);
             this.cbPosition.Size = new System.Drawing.Size(150, 31);
-            this.cbPosition.TabIndex = 4;
+            this.cbPosition.TabIndex = 0;
             this.cbPosition.Texts = "";
             // 
-            // label8
+            // cbEmployee
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1, 7);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Chức vụ";
+            this.cbEmployee.AllowDrop = true;
+            this.cbEmployee.AutoSize = true;
+            this.cbEmployee.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEmployee.Location = new System.Drawing.Point(1, 7);
+            this.cbEmployee.Name = "cbEmployee";
+            this.cbEmployee.Size = new System.Drawing.Size(64, 13);
+            this.cbEmployee.TabIndex = 3;
+            this.cbEmployee.Text = "Nhân viên";
             // 
             // panel12
             // 
             this.panel12.Controls.Add(this.cbDepartment);
             this.panel12.Controls.Add(this.label6);
-            this.panel12.Location = new System.Drawing.Point(372, 99);
+            this.panel12.Location = new System.Drawing.Point(44, 37);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(158, 59);
-            this.panel12.TabIndex = 19;
+            this.panel12.TabIndex = 0;
             // 
             // cbDepartment
             // 
@@ -334,7 +341,7 @@
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Padding = new System.Windows.Forms.Padding(1);
             this.cbDepartment.Size = new System.Drawing.Size(150, 31);
-            this.cbDepartment.TabIndex = 4;
+            this.cbDepartment.TabIndex = 0;
             this.cbDepartment.Texts = "";
             // 
             // label6
@@ -351,10 +358,10 @@
             // 
             this.panel10.Controls.Add(this.label4);
             this.panel10.Controls.Add(this.txtEmail);
-            this.panel10.Location = new System.Drawing.Point(208, 99);
+            this.panel10.Location = new System.Drawing.Point(209, 160);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(158, 59);
-            this.panel10.TabIndex = 17;
+            this.panel10.TabIndex = 5;
             // 
             // label4
             // 
@@ -362,9 +369,9 @@
             this.label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(1, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Email";
+            this.label4.Text = "Lương cơ bản";
             // 
             // txtEmail
             // 
@@ -384,9 +391,9 @@
             this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtEmail.PasswordChar = false;
             this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.PlaceholderText = "Lương";
             this.txtEmail.Size = new System.Drawing.Size(150, 31);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 0;
             this.txtEmail.Texts = "";
             this.txtEmail.UnderlinedStyle = true;
             // 
@@ -394,10 +401,10 @@
             // 
             this.panel9.Controls.Add(this.label3);
             this.panel9.Controls.Add(this.txtPhoneNumber);
-            this.panel9.Location = new System.Drawing.Point(44, 99);
+            this.panel9.Location = new System.Drawing.Point(44, 160);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(158, 59);
-            this.panel9.TabIndex = 16;
+            this.panel9.TabIndex = 4;
             // 
             // label3
             // 
@@ -405,9 +412,9 @@
             this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.Size = new System.Drawing.Size(142, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Số điện thoại";
+            this.label3.Text = "Thời gian làm việc (giờ)";
             // 
             // txtPhoneNumber
             // 
@@ -427,133 +434,23 @@
             this.txtPhoneNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtPhoneNumber.PasswordChar = false;
             this.txtPhoneNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPhoneNumber.PlaceholderText = "Số điện thoại";
+            this.txtPhoneNumber.PlaceholderText = "Thời gian làm";
             this.txtPhoneNumber.Size = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.TabIndex = 0;
             this.txtPhoneNumber.Texts = "";
             this.txtPhoneNumber.UnderlinedStyle = true;
             // 
-            // panel8
+            // panel2
             // 
-            this.panel8.Controls.Add(this.cbGender);
-            this.panel8.Controls.Add(this.label2);
-            this.panel8.Location = new System.Drawing.Point(372, 37);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(158, 59);
-            this.panel8.TabIndex = 15;
-            // 
-            // cbGender
-            // 
-            this.cbGender.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbGender.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbGender.BorderSize = 1;
-            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbGender.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGender.ForeColor = System.Drawing.Color.DimGray;
-            this.cbGender.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbGender.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Không xác định"});
-            this.cbGender.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbGender.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbGender.Location = new System.Drawing.Point(4, 25);
-            this.cbGender.MaximumSize = new System.Drawing.Size(150, 31);
-            this.cbGender.MinimumSize = new System.Drawing.Size(150, 31);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Padding = new System.Windows.Forms.Padding(1);
-            this.cbGender.Size = new System.Drawing.Size(150, 31);
-            this.cbGender.TabIndex = 4;
-            this.cbGender.Texts = "";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Giới tính";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.dpDateOfBirth);
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.Location = new System.Drawing.Point(208, 37);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(158, 59);
-            this.panel7.TabIndex = 14;
-            // 
-            // dpDateOfBirth
-            // 
-            this.dpDateOfBirth.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dpDateOfBirth.BorderSize = 0;
-            this.dpDateOfBirth.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpDateOfBirth.CustomFormat = "dd/MM/yyyy";
-            this.dpDateOfBirth.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpDateOfBirth.Location = new System.Drawing.Point(4, 24);
-            this.dpDateOfBirth.MaximumSize = new System.Drawing.Size(150, 31);
-            this.dpDateOfBirth.MinimumSize = new System.Drawing.Size(150, 31);
-            this.dpDateOfBirth.Name = "dpDateOfBirth";
-            this.dpDateOfBirth.Size = new System.Drawing.Size(150, 31);
-            this.dpDateOfBirth.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpDateOfBirth.TabIndex = 4;
-            this.dpDateOfBirth.TextColor = System.Drawing.Color.White;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Ngày sinh";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.txtFullName);
-            this.panel6.Location = new System.Drawing.Point(44, 37);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(158, 59);
-            this.panel6.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Họ và tên";
-            // 
-            // txtFullName
-            // 
-            this.txtFullName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtFullName.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtFullName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtFullName.BorderRadius = 0;
-            this.txtFullName.BorderSize = 1;
-            this.txtFullName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFullName.Location = new System.Drawing.Point(4, 24);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFullName.MaximumSize = new System.Drawing.Size(150, 31);
-            this.txtFullName.MinimumSize = new System.Drawing.Size(150, 31);
-            this.txtFullName.Multiline = false;
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtFullName.PasswordChar = false;
-            this.txtFullName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtFullName.PlaceholderText = "Họ và tên";
-            this.txtFullName.Size = new System.Drawing.Size(150, 31);
-            this.txtFullName.TabIndex = 2;
-            this.txtFullName.Texts = "";
-            this.txtFullName.UnderlinedStyle = true;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnMinimize);
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(188, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(410, 25);
+            this.panel2.TabIndex = 4;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // btnMinimize
             // 
@@ -565,10 +462,10 @@
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 15;
-            this.btnMinimize.Location = new System.Drawing.Point(503, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(341, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(35, 20);
-            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabIndex = 0;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
@@ -582,12 +479,22 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(537, 0);
+            this.btnClose.Location = new System.Drawing.Point(375, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(35, 20);
-            this.btnClose.TabIndex = 3;
+            this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(188, 355);
+            this.panel1.TabIndex = 3;
             // 
             // pictureBox3
             // 
@@ -599,28 +506,28 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // AddEmployeeUI
+            // UpdateContractUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 309);
+            this.ClientSize = new System.Drawing.Size(598, 355);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AddEmployeeUI";
-            this.Text = "Thêm nhân viên";
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.Name = "UpdateContractUI";
+            this.Text = "Cập nhật hợp đồng";
             this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -629,12 +536,8 @@
             this.panel10.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -642,43 +545,37 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton btnMinimize;
-        private FontAwesome.Sharp.IconButton btnClose;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label4;
-        private RJCodeAdvance.RJControls.RJTextBox txtEmail;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label3;
-        private RJCodeAdvance.RJControls.RJTextBox txtPhoneNumber;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel7;
-        private RJCodeAdvance.RJControls.RJDatePicker dpDateOfBirth;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label7;
-        private RJCodeAdvance.RJControls.RJTextBox txtFullName;
-        private RJCodeAdvance.RJControls.RJComboBox cbGender;
+        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private System.Windows.Forms.Panel panel7;
+        private RJCodeAdvance.RJControls.RJComboBox rjComboBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel3;
+        private RJCodeAdvance.RJControls.RJButton btnAdd;
         private System.Windows.Forms.Panel panel16;
         private RJCodeAdvance.RJControls.RJDatePicker dpEndDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel15;
         private RJCodeAdvance.RJControls.RJDatePicker dpStartEnd;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label9;
-        private RJCodeAdvance.RJControls.RJTextBox txtAddress;
         private System.Windows.Forms.Panel panel13;
         private RJCodeAdvance.RJControls.RJComboBox cbPosition;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label cbEmployee;
         private System.Windows.Forms.Panel panel12;
         private RJCodeAdvance.RJControls.RJComboBox cbDepartment;
         private System.Windows.Forms.Label label6;
-        private RJCodeAdvance.RJControls.RJButton btnAdd;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label4;
+        private RJCodeAdvance.RJControls.RJTextBox txtEmail;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label3;
+        private RJCodeAdvance.RJControls.RJTextBox txtPhoneNumber;
+        private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton btnMinimize;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

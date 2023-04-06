@@ -8,10 +8,10 @@ namespace HRMS.DAL
     {
         public RestResponse<List<Attendance>> GetAll()
         {
-            var client = new RestClient(Application.BASE_URL);
+            var client = new RestClient(ApplicationConfig.BASE_URL);
             client.AddDefaultHeader("Content-Type", "application/json");
             var request = new RestRequest("/api/Attendance", Method.Get);
-            request.AddHeader("Authorization", "Bearer " + Application.AccessToken);
+            request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
             var response = client.Execute<List<Attendance>>(request);
             return response;
         }
