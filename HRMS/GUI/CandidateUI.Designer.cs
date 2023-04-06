@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listCandidate = new System.Windows.Forms.DataGridView();
+            this.CandidateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PositionApplied = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartmentApplied = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactInformation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WorkExperience = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Skills = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InterviewDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Interviewer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InterviewResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lbPage = new System.Windows.Forms.Label();
+            this.prePage = new FontAwesome.Sharp.IconButton();
+            this.nextPage = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
@@ -54,29 +69,14 @@
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.lbPage = new System.Windows.Forms.Label();
-            this.prePage = new FontAwesome.Sharp.IconButton();
-            this.nextPage = new FontAwesome.Sharp.IconButton();
-            this.CandidateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PositionApplied = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartmentApplied = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactInformation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WorkExperience = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Skills = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InterviewDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Interviewer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InterviewResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listCandidate)).BeginInit();
             this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,6 +131,122 @@
             this.listCandidate.TabIndex = 4;
             this.listCandidate.SelectionChanged += new System.EventHandler(this.listCandidate_SelectionChanged);
             // 
+            // CandidateID
+            // 
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.Format = "N0";
+            dataGridViewCellStyle11.NullValue = null;
+            this.CandidateID.DefaultCellStyle = dataGridViewCellStyle11;
+            this.CandidateID.HeaderText = "Mã ứng viên";
+            this.CandidateID.MinimumWidth = 8;
+            this.CandidateID.Name = "CandidateID";
+            this.CandidateID.ReadOnly = true;
+            this.CandidateID.Width = 150;
+            // 
+            // FullName
+            // 
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle12;
+            this.FullName.HeaderText = "Họ và tên";
+            this.FullName.MinimumWidth = 8;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.FullName.Width = 150;
+            // 
+            // PositionApplied
+            // 
+            this.PositionApplied.HeaderText = "Vị trí ứng tuyển";
+            this.PositionApplied.MinimumWidth = 8;
+            this.PositionApplied.Name = "PositionApplied";
+            this.PositionApplied.ReadOnly = true;
+            this.PositionApplied.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PositionApplied.Width = 150;
+            // 
+            // DepartmentApplied
+            // 
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentApplied.DefaultCellStyle = dataGridViewCellStyle13;
+            this.DepartmentApplied.HeaderText = "Phòng ban ứng tuyển";
+            this.DepartmentApplied.MinimumWidth = 8;
+            this.DepartmentApplied.Name = "DepartmentApplied";
+            this.DepartmentApplied.ReadOnly = true;
+            this.DepartmentApplied.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DepartmentApplied.Width = 150;
+            // 
+            // ContactInformation
+            // 
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactInformation.DefaultCellStyle = dataGridViewCellStyle14;
+            this.ContactInformation.HeaderText = "Thông tin liên lạc";
+            this.ContactInformation.MinimumWidth = 8;
+            this.ContactInformation.Name = "ContactInformation";
+            this.ContactInformation.ReadOnly = true;
+            this.ContactInformation.Width = 150;
+            // 
+            // Education
+            // 
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Education.DefaultCellStyle = dataGridViewCellStyle15;
+            this.Education.HeaderText = "Trình độ học vấn";
+            this.Education.MinimumWidth = 8;
+            this.Education.Name = "Education";
+            this.Education.ReadOnly = true;
+            this.Education.Width = 150;
+            // 
+            // WorkExperience
+            // 
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WorkExperience.DefaultCellStyle = dataGridViewCellStyle16;
+            this.WorkExperience.HeaderText = "Kinh nghiệm làm việc";
+            this.WorkExperience.MinimumWidth = 8;
+            this.WorkExperience.Name = "WorkExperience";
+            this.WorkExperience.ReadOnly = true;
+            this.WorkExperience.Width = 150;
+            // 
+            // Skills
+            // 
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Skills.DefaultCellStyle = dataGridViewCellStyle17;
+            this.Skills.HeaderText = "Kỹ năng";
+            this.Skills.MinimumWidth = 8;
+            this.Skills.Name = "Skills";
+            this.Skills.ReadOnly = true;
+            this.Skills.Width = 150;
+            // 
+            // InterviewDate
+            // 
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.Format = "d";
+            dataGridViewCellStyle18.NullValue = null;
+            this.InterviewDate.DefaultCellStyle = dataGridViewCellStyle18;
+            this.InterviewDate.HeaderText = "Ngày phỏng vấn";
+            this.InterviewDate.MinimumWidth = 8;
+            this.InterviewDate.Name = "InterviewDate";
+            this.InterviewDate.ReadOnly = true;
+            this.InterviewDate.Width = 150;
+            // 
+            // Interviewer
+            // 
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Interviewer.DefaultCellStyle = dataGridViewCellStyle19;
+            this.Interviewer.HeaderText = "Người phỏng vấn";
+            this.Interviewer.MinimumWidth = 8;
+            this.Interviewer.Name = "Interviewer";
+            this.Interviewer.ReadOnly = true;
+            this.Interviewer.Width = 150;
+            // 
+            // InterviewResult
+            // 
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InterviewResult.DefaultCellStyle = dataGridViewCellStyle20;
+            this.InterviewResult.HeaderText = "Kết quả phỏng vấn";
+            this.InterviewResult.MinimumWidth = 8;
+            this.InterviewResult.Name = "InterviewResult";
+            this.InterviewResult.ReadOnly = true;
+            this.InterviewResult.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.InterviewResult.Width = 150;
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.panel9);
@@ -139,6 +255,57 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(940, 20);
             this.panel7.TabIndex = 3;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.Controls.Add(this.lbPage);
+            this.panel9.Controls.Add(this.prePage);
+            this.panel9.Controls.Add(this.nextPage);
+            this.panel9.Location = new System.Drawing.Point(860, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(80, 20);
+            this.panel9.TabIndex = 3;
+            // 
+            // lbPage
+            // 
+            this.lbPage.AutoSize = true;
+            this.lbPage.Location = new System.Drawing.Point(32, 4);
+            this.lbPage.Name = "lbPage";
+            this.lbPage.Size = new System.Drawing.Size(13, 13);
+            this.lbPage.TabIndex = 3;
+            this.lbPage.Text = "1";
+            // 
+            // prePage
+            // 
+            this.prePage.FlatAppearance.BorderSize = 0;
+            this.prePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prePage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleLeft;
+            this.prePage.IconColor = System.Drawing.Color.Black;
+            this.prePage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.prePage.IconSize = 20;
+            this.prePage.Location = new System.Drawing.Point(0, 0);
+            this.prePage.Name = "prePage";
+            this.prePage.Size = new System.Drawing.Size(32, 20);
+            this.prePage.TabIndex = 3;
+            this.prePage.UseVisualStyleBackColor = true;
+            this.prePage.Click += new System.EventHandler(this.prePage_Click);
+            // 
+            // nextPage
+            // 
+            this.nextPage.FlatAppearance.BorderSize = 0;
+            this.nextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextPage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleRight;
+            this.nextPage.IconColor = System.Drawing.Color.Black;
+            this.nextPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.nextPage.IconSize = 20;
+            this.nextPage.Location = new System.Drawing.Point(48, 0);
+            this.nextPage.Name = "nextPage";
+            this.nextPage.Size = new System.Drawing.Size(32, 20);
+            this.nextPage.TabIndex = 0;
+            this.nextPage.UseVisualStyleBackColor = true;
+            this.nextPage.Click += new System.EventHandler(this.nextPage_Click);
             // 
             // panel6
             // 
@@ -214,7 +381,7 @@
             this.panel8.Controls.Add(this.btnReset);
             this.panel8.Controls.Add(this.btnSearch);
             this.panel8.Controls.Add(this.txtKeyword);
-            this.panel8.Location = new System.Drawing.Point(697, 13);
+            this.panel8.Location = new System.Drawing.Point(697, 16);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(295, 34);
             this.panel8.TabIndex = 7;
@@ -264,6 +431,7 @@
             this.btnReset.Size = new System.Drawing.Size(30, 30);
             this.btnReset.TabIndex = 8;
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSearch
             // 
@@ -291,7 +459,7 @@
             this.txtKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKeyword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtKeyword.Location = new System.Drawing.Point(38, 2);
-            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4);
             this.txtKeyword.Multiline = false;
             this.txtKeyword.Name = "txtKeyword";
             this.txtKeyword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -302,173 +470,6 @@
             this.txtKeyword.TabIndex = 6;
             this.txtKeyword.Texts = "";
             this.txtKeyword.UnderlinedStyle = false;
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.Controls.Add(this.lbPage);
-            this.panel9.Controls.Add(this.prePage);
-            this.panel9.Controls.Add(this.nextPage);
-            this.panel9.Location = new System.Drawing.Point(860, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(80, 20);
-            this.panel9.TabIndex = 3;
-            // 
-            // lbPage
-            // 
-            this.lbPage.AutoSize = true;
-            this.lbPage.Location = new System.Drawing.Point(32, 4);
-            this.lbPage.Name = "lbPage";
-            this.lbPage.Size = new System.Drawing.Size(13, 13);
-            this.lbPage.TabIndex = 3;
-            this.lbPage.Text = "1";
-            // 
-            // prePage
-            // 
-            this.prePage.FlatAppearance.BorderSize = 0;
-            this.prePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prePage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleLeft;
-            this.prePage.IconColor = System.Drawing.Color.Black;
-            this.prePage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.prePage.IconSize = 20;
-            this.prePage.Location = new System.Drawing.Point(0, 0);
-            this.prePage.Name = "prePage";
-            this.prePage.Size = new System.Drawing.Size(32, 20);
-            this.prePage.TabIndex = 3;
-            this.prePage.UseVisualStyleBackColor = true;
-            this.prePage.Click += new System.EventHandler(this.prePage_Click);
-            // 
-            // nextPage
-            // 
-            this.nextPage.FlatAppearance.BorderSize = 0;
-            this.nextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextPage.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleRight;
-            this.nextPage.IconColor = System.Drawing.Color.Black;
-            this.nextPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.nextPage.IconSize = 20;
-            this.nextPage.Location = new System.Drawing.Point(48, 0);
-            this.nextPage.Name = "nextPage";
-            this.nextPage.Size = new System.Drawing.Size(32, 20);
-            this.nextPage.TabIndex = 0;
-            this.nextPage.UseVisualStyleBackColor = true;
-            this.nextPage.Click += new System.EventHandler(this.nextPage_Click);
-            // 
-            // CandidateID
-            // 
-            dataGridViewCellStyle51.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle51.Format = "N0";
-            dataGridViewCellStyle51.NullValue = null;
-            this.CandidateID.DefaultCellStyle = dataGridViewCellStyle51;
-            this.CandidateID.HeaderText = "Mã ứng viên";
-            this.CandidateID.MinimumWidth = 8;
-            this.CandidateID.Name = "CandidateID";
-            this.CandidateID.ReadOnly = true;
-            this.CandidateID.Width = 150;
-            // 
-            // FullName
-            // 
-            dataGridViewCellStyle52.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle52;
-            this.FullName.HeaderText = "Họ và tên";
-            this.FullName.MinimumWidth = 8;
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            this.FullName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.FullName.Width = 150;
-            // 
-            // PositionApplied
-            // 
-            this.PositionApplied.HeaderText = "Vị trí ứng tuyển";
-            this.PositionApplied.MinimumWidth = 8;
-            this.PositionApplied.Name = "PositionApplied";
-            this.PositionApplied.ReadOnly = true;
-            this.PositionApplied.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PositionApplied.Width = 150;
-            // 
-            // DepartmentApplied
-            // 
-            dataGridViewCellStyle53.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepartmentApplied.DefaultCellStyle = dataGridViewCellStyle53;
-            this.DepartmentApplied.HeaderText = "Phòng ban ứng tuyển";
-            this.DepartmentApplied.MinimumWidth = 8;
-            this.DepartmentApplied.Name = "DepartmentApplied";
-            this.DepartmentApplied.ReadOnly = true;
-            this.DepartmentApplied.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DepartmentApplied.Width = 150;
-            // 
-            // ContactInformation
-            // 
-            dataGridViewCellStyle54.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactInformation.DefaultCellStyle = dataGridViewCellStyle54;
-            this.ContactInformation.HeaderText = "Thông tin liên lạc";
-            this.ContactInformation.MinimumWidth = 8;
-            this.ContactInformation.Name = "ContactInformation";
-            this.ContactInformation.ReadOnly = true;
-            this.ContactInformation.Width = 150;
-            // 
-            // Education
-            // 
-            dataGridViewCellStyle55.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Education.DefaultCellStyle = dataGridViewCellStyle55;
-            this.Education.HeaderText = "Trình độ học vấn";
-            this.Education.MinimumWidth = 8;
-            this.Education.Name = "Education";
-            this.Education.ReadOnly = true;
-            this.Education.Width = 150;
-            // 
-            // WorkExperience
-            // 
-            dataGridViewCellStyle56.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkExperience.DefaultCellStyle = dataGridViewCellStyle56;
-            this.WorkExperience.HeaderText = "Kinh nghiệm làm việc";
-            this.WorkExperience.MinimumWidth = 8;
-            this.WorkExperience.Name = "WorkExperience";
-            this.WorkExperience.ReadOnly = true;
-            this.WorkExperience.Width = 150;
-            // 
-            // Skills
-            // 
-            dataGridViewCellStyle57.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Skills.DefaultCellStyle = dataGridViewCellStyle57;
-            this.Skills.HeaderText = "Kỹ năng";
-            this.Skills.MinimumWidth = 8;
-            this.Skills.Name = "Skills";
-            this.Skills.ReadOnly = true;
-            this.Skills.Width = 150;
-            // 
-            // InterviewDate
-            // 
-            dataGridViewCellStyle58.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle58.Format = "d";
-            dataGridViewCellStyle58.NullValue = null;
-            this.InterviewDate.DefaultCellStyle = dataGridViewCellStyle58;
-            this.InterviewDate.HeaderText = "Ngày phỏng vấn";
-            this.InterviewDate.MinimumWidth = 8;
-            this.InterviewDate.Name = "InterviewDate";
-            this.InterviewDate.ReadOnly = true;
-            this.InterviewDate.Width = 150;
-            // 
-            // Interviewer
-            // 
-            dataGridViewCellStyle59.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Interviewer.DefaultCellStyle = dataGridViewCellStyle59;
-            this.Interviewer.HeaderText = "Người phỏng vấn";
-            this.Interviewer.MinimumWidth = 8;
-            this.Interviewer.Name = "Interviewer";
-            this.Interviewer.ReadOnly = true;
-            this.Interviewer.Width = 150;
-            // 
-            // InterviewResult
-            // 
-            dataGridViewCellStyle60.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InterviewResult.DefaultCellStyle = dataGridViewCellStyle60;
-            this.InterviewResult.HeaderText = "Kết quả phỏng vấn";
-            this.InterviewResult.MinimumWidth = 8;
-            this.InterviewResult.Name = "InterviewResult";
-            this.InterviewResult.ReadOnly = true;
-            this.InterviewResult.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.InterviewResult.Width = 150;
             // 
             // CandidateUI
             // 
@@ -484,11 +485,11 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.listCandidate)).EndInit();
             this.panel7.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }

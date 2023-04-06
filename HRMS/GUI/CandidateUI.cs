@@ -49,16 +49,10 @@ namespace HRMS.GUI
 
             int startIndex = (page - 1) * limit;
             int length = limit;
-            if (startIndex >= candidates.Count)
-            {
-                startIndex = candidates.Count - 1;
-                length = 1;
-            }
-            else if (startIndex + length > candidates.Count)
+            if (startIndex + length > candidates.Count)
             {
                 length = candidates.Count - startIndex;
             }
-
             List<Candidate> list = candidates.GetRange(startIndex, length);
             FillDataGridView(list);
         }
@@ -93,8 +87,17 @@ namespace HRMS.GUI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            UpdateCandidateUI updateCandidateUI = new UpdateCandidateUI();
-            updateCandidateUI.ShowDialog();
+            if (SelectedRow != null)
+            {
+                int candidateID = int.Parse(SelectedRow.Cells[0].Value.ToString());
+                Candidate candidate = DataManager.GetInstance().Candidates.SingleOrDefault(em => em.CandidateID == candidateID);
+                if (candidate != null)
+                {
+                    UpdateCandidateUI updateCandidateUI = new UpdateCandidateUI(SelectedRow, candidate);
+                    updateCandidateUI.ShowDialog();
+                }
+            }
+
         }
 
         internal void AddCandidate(Candidate candidate)
@@ -115,10 +118,7 @@ namespace HRMS.GUI
             }
             else
             {
-                if (!nextPage.Enabled)
-                {
-                    nextPage.Enabled = true;
-                }
+                NextPage();
             }
         }
 
@@ -160,8 +160,8 @@ namespace HRMS.GUI
                     alert.ShowAlert("Có lỗi xảy ra", Alert.EnumType.ERROR);
                 }
             }
-        }       
-        
+        }
+
         private void nextPage_Click(object sender, EventArgs e)
         {
             NextPage();
@@ -182,7 +182,6 @@ namespace HRMS.GUI
             InitPage();
         }
 
-
         public void NextPage()
         {
             List<Candidate> candidates = DataManager.GetInstance().Candidates;
@@ -198,5 +197,14 @@ namespace HRMS.GUI
             }
             InitPage();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            DataManager.GetInstance().LoadAllCandidate();
+            InitPage();
+            Alert alert = new Alert();
+            alert.ShowAlert("Làm mới thành công!", Alert.EnumType.SUCCESS);
+        }
+
     }
 }

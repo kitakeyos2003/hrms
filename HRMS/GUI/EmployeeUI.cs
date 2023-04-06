@@ -49,12 +49,7 @@ namespace HRMS.GUI
 
             int startIndex = (page - 1) * limit;
             int length = limit;
-            if (startIndex >= employees.Count)
-            {
-                startIndex = employees.Count - 1;
-                length = 1;
-            }
-            else if (startIndex + length > employees.Count)
+            if (startIndex + length > employees.Count)
             {
                 length = employees.Count - startIndex;
             }
@@ -75,9 +70,8 @@ namespace HRMS.GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            var employees = DataManager.GetInstance().Employees;
-            listEmployee.Rows.Clear();
-            FillDataGridView(employees);
+            DataManager.GetInstance().LoadAllEmployee();
+            InitPage();
             Alert alert = new Alert();
             alert.ShowAlert("Làm mới thành công!", Alert.EnumType.SUCCESS);
         }
@@ -166,10 +160,7 @@ namespace HRMS.GUI
             }
             else
             {
-                if (!nextPage.Enabled)
-                {
-                    nextPage.Enabled = true;
-                }
+                NextPage();
             }
         }
 
@@ -184,6 +175,16 @@ namespace HRMS.GUI
             }
         }
 
+        private void prePage_Click(object sender, EventArgs e)
+        {
+            PreviousPage();
+        }
+
+        private void nextPage_Click(object sender, EventArgs e)
+        {
+            NextPage();
+        }
+
 
         public void PreviousPage()
         {
@@ -193,16 +194,6 @@ namespace HRMS.GUI
                 page = 1;
             }
             InitPage();
-        }
-
-        private void prePage_Click(object sender, EventArgs e)
-        {
-            PreviousPage();
-        }
-
-        private void nextPage_Click(object sender, EventArgs e)
-        {
-            NextPage();
         }
 
         public void NextPage()

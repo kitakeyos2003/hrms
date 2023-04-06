@@ -30,18 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateCandidateUI));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cbInterviewResult = new RJCodeAdvance.RJControls.RJComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new RJCodeAdvance.RJControls.RJButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.rjTextBox3 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtInterviewer = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtSkills = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.dpStartEnd = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.dpInterviewDate = new RJCodeAdvance.RJControls.RJDatePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtAddress = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtWorkExperience = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.cbPosition = new RJCodeAdvance.RJControls.RJComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,24 +55,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtEmail = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtEducation = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPhoneNumber = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtContactInfomation = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtFullName = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -80,8 +82,6 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -104,10 +104,81 @@
             this.panel5.Size = new System.Drawing.Size(572, 278);
             this.panel5.TabIndex = 10;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cbInterviewResult);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(43, 215);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(158, 59);
+            this.panel3.TabIndex = 44;
+            // 
+            // cbInterviewResult
+            // 
+            this.cbInterviewResult.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbInterviewResult.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbInterviewResult.BorderSize = 1;
+            this.cbInterviewResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbInterviewResult.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbInterviewResult.ForeColor = System.Drawing.Color.DimGray;
+            this.cbInterviewResult.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbInterviewResult.Items.AddRange(new object[] {
+            "Đang xét duyệt",
+            "Đạt",
+            "Trượt"});
+            this.cbInterviewResult.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbInterviewResult.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbInterviewResult.Location = new System.Drawing.Point(4, 25);
+            this.cbInterviewResult.MaximumSize = new System.Drawing.Size(150, 31);
+            this.cbInterviewResult.MinimumSize = new System.Drawing.Size(150, 31);
+            this.cbInterviewResult.Name = "cbInterviewResult";
+            this.cbInterviewResult.Padding = new System.Windows.Forms.Padding(1);
+            this.cbInterviewResult.Size = new System.Drawing.Size(150, 31);
+            this.cbInterviewResult.TabIndex = 4;
+            this.cbInterviewResult.Texts = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Trạng thái";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnUpdate);
+            this.panel4.Location = new System.Drawing.Point(207, 215);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(158, 59);
+            this.panel4.TabIndex = 43;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdate.BorderRadius = 0;
+            this.btnUpdate.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(3, 23);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(150, 31);
+            this.btnUpdate.TabIndex = 27;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.label2);
-            this.panel8.Controls.Add(this.rjTextBox3);
+            this.panel8.Controls.Add(this.txtInterviewer);
             this.panel8.Location = new System.Drawing.Point(207, 153);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(158, 59);
@@ -123,33 +194,33 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Người phỏng vấn";
             // 
-            // rjTextBox3
+            // txtInterviewer
             // 
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox3.BorderRadius = 0;
-            this.rjTextBox3.BorderSize = 1;
-            this.rjTextBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox3.Location = new System.Drawing.Point(4, 24);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "Người phỏng vấn";
-            this.rjTextBox3.Size = new System.Drawing.Size(150, 31);
-            this.rjTextBox3.TabIndex = 2;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = true;
+            this.txtInterviewer.BackColor = System.Drawing.SystemColors.Window;
+            this.txtInterviewer.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtInterviewer.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtInterviewer.BorderRadius = 0;
+            this.txtInterviewer.BorderSize = 1;
+            this.txtInterviewer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInterviewer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtInterviewer.Location = new System.Drawing.Point(4, 24);
+            this.txtInterviewer.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInterviewer.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtInterviewer.Multiline = false;
+            this.txtInterviewer.Name = "txtInterviewer";
+            this.txtInterviewer.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtInterviewer.PasswordChar = false;
+            this.txtInterviewer.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtInterviewer.PlaceholderText = "";
+            this.txtInterviewer.Size = new System.Drawing.Size(150, 31);
+            this.txtInterviewer.TabIndex = 2;
+            this.txtInterviewer.Texts = "";
+            this.txtInterviewer.UnderlinedStyle = true;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.rjTextBox2);
+            this.panel7.Controls.Add(this.txtSkills);
             this.panel7.Location = new System.Drawing.Point(43, 153);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(158, 59);
@@ -165,54 +236,54 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Kỹ năng làm việc";
             // 
-            // rjTextBox2
+            // txtSkills
             // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 1;
-            this.rjTextBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(4, 24);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "Kỹ năng";
-            this.rjTextBox2.Size = new System.Drawing.Size(150, 31);
-            this.rjTextBox2.TabIndex = 2;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = true;
+            this.txtSkills.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSkills.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtSkills.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSkills.BorderRadius = 0;
+            this.txtSkills.BorderSize = 1;
+            this.txtSkills.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSkills.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSkills.Location = new System.Drawing.Point(4, 24);
+            this.txtSkills.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSkills.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtSkills.Multiline = false;
+            this.txtSkills.Name = "txtSkills";
+            this.txtSkills.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtSkills.PasswordChar = false;
+            this.txtSkills.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSkills.PlaceholderText = "";
+            this.txtSkills.Size = new System.Drawing.Size(150, 31);
+            this.txtSkills.TabIndex = 2;
+            this.txtSkills.Texts = "";
+            this.txtSkills.UnderlinedStyle = true;
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.dpStartEnd);
+            this.panel15.Controls.Add(this.dpInterviewDate);
             this.panel15.Controls.Add(this.label10);
             this.panel15.Location = new System.Drawing.Point(370, 153);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(158, 59);
             this.panel15.TabIndex = 37;
             // 
-            // dpStartEnd
+            // dpInterviewDate
             // 
-            this.dpStartEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dpStartEnd.BorderSize = 0;
-            this.dpStartEnd.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpStartEnd.CustomFormat = "dd/MM/yyyy";
-            this.dpStartEnd.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpStartEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpStartEnd.Location = new System.Drawing.Point(4, 24);
-            this.dpStartEnd.MaximumSize = new System.Drawing.Size(150, 31);
-            this.dpStartEnd.MinimumSize = new System.Drawing.Size(4, 31);
-            this.dpStartEnd.Name = "dpStartEnd";
-            this.dpStartEnd.Size = new System.Drawing.Size(150, 31);
-            this.dpStartEnd.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpStartEnd.TabIndex = 4;
-            this.dpStartEnd.TextColor = System.Drawing.Color.White;
+            this.dpInterviewDate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dpInterviewDate.BorderSize = 0;
+            this.dpInterviewDate.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpInterviewDate.CustomFormat = "dd/MM/yyyy";
+            this.dpInterviewDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpInterviewDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpInterviewDate.Location = new System.Drawing.Point(4, 24);
+            this.dpInterviewDate.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpInterviewDate.MinimumSize = new System.Drawing.Size(4, 31);
+            this.dpInterviewDate.Name = "dpInterviewDate";
+            this.dpInterviewDate.Size = new System.Drawing.Size(150, 31);
+            this.dpInterviewDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dpInterviewDate.TabIndex = 4;
+            this.dpInterviewDate.TextColor = System.Drawing.Color.White;
             // 
             // label10
             // 
@@ -227,7 +298,7 @@
             // panel14
             // 
             this.panel14.Controls.Add(this.label9);
-            this.panel14.Controls.Add(this.txtAddress);
+            this.panel14.Controls.Add(this.txtWorkExperience);
             this.panel14.Location = new System.Drawing.Point(207, 91);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(158, 59);
@@ -243,28 +314,28 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Kinh nghiệm làm việc";
             // 
-            // txtAddress
+            // txtWorkExperience
             // 
-            this.txtAddress.BackColor = System.Drawing.SystemColors.Window;
-            this.txtAddress.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtAddress.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtAddress.BorderRadius = 0;
-            this.txtAddress.BorderSize = 1;
-            this.txtAddress.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtAddress.Location = new System.Drawing.Point(4, 24);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAddress.MaximumSize = new System.Drawing.Size(150, 31);
-            this.txtAddress.Multiline = false;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtAddress.PasswordChar = false;
-            this.txtAddress.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtAddress.PlaceholderText = "Kinh nghiệm";
-            this.txtAddress.Size = new System.Drawing.Size(150, 31);
-            this.txtAddress.TabIndex = 2;
-            this.txtAddress.Texts = "";
-            this.txtAddress.UnderlinedStyle = true;
+            this.txtWorkExperience.BackColor = System.Drawing.SystemColors.Window;
+            this.txtWorkExperience.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtWorkExperience.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtWorkExperience.BorderRadius = 0;
+            this.txtWorkExperience.BorderSize = 1;
+            this.txtWorkExperience.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWorkExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtWorkExperience.Location = new System.Drawing.Point(4, 24);
+            this.txtWorkExperience.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWorkExperience.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtWorkExperience.Multiline = false;
+            this.txtWorkExperience.Name = "txtWorkExperience";
+            this.txtWorkExperience.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtWorkExperience.PasswordChar = false;
+            this.txtWorkExperience.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtWorkExperience.PlaceholderText = "";
+            this.txtWorkExperience.Size = new System.Drawing.Size(150, 31);
+            this.txtWorkExperience.TabIndex = 2;
+            this.txtWorkExperience.Texts = "";
+            this.txtWorkExperience.UnderlinedStyle = true;
             // 
             // panel13
             // 
@@ -347,7 +418,7 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.label4);
-            this.panel10.Controls.Add(this.txtEmail);
+            this.panel10.Controls.Add(this.txtEducation);
             this.panel10.Location = new System.Drawing.Point(43, 91);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(158, 59);
@@ -363,33 +434,33 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Trình độ học vấn";
             // 
-            // txtEmail
+            // txtEducation
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtEmail.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtEmail.BorderRadius = 0;
-            this.txtEmail.BorderSize = 1;
-            this.txtEmail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.Location = new System.Drawing.Point(4, 24);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.MaximumSize = new System.Drawing.Size(150, 31);
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEmail.PasswordChar = false;
-            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.PlaceholderText = "Trình dộ học vấn";
-            this.txtEmail.Size = new System.Drawing.Size(150, 31);
-            this.txtEmail.TabIndex = 2;
-            this.txtEmail.Texts = "";
-            this.txtEmail.UnderlinedStyle = true;
+            this.txtEducation.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEducation.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtEducation.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtEducation.BorderRadius = 0;
+            this.txtEducation.BorderSize = 1;
+            this.txtEducation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEducation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEducation.Location = new System.Drawing.Point(4, 24);
+            this.txtEducation.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEducation.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtEducation.Multiline = false;
+            this.txtEducation.Name = "txtEducation";
+            this.txtEducation.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtEducation.PasswordChar = false;
+            this.txtEducation.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtEducation.PlaceholderText = "";
+            this.txtEducation.Size = new System.Drawing.Size(150, 31);
+            this.txtEducation.TabIndex = 2;
+            this.txtEducation.Texts = "";
+            this.txtEducation.UnderlinedStyle = true;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label3);
-            this.panel9.Controls.Add(this.txtPhoneNumber);
+            this.panel9.Controls.Add(this.txtContactInfomation);
             this.panel9.Location = new System.Drawing.Point(207, 29);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(158, 59);
@@ -405,28 +476,28 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Thông tin liên hệ";
             // 
-            // txtPhoneNumber
+            // txtContactInfomation
             // 
-            this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPhoneNumber.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPhoneNumber.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPhoneNumber.BorderRadius = 0;
-            this.txtPhoneNumber.BorderSize = 1;
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(4, 24);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhoneNumber.MaximumSize = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.Multiline = false;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPhoneNumber.PasswordChar = false;
-            this.txtPhoneNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPhoneNumber.PlaceholderText = "Thông tin liên hệ";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.TabIndex = 2;
-            this.txtPhoneNumber.Texts = "";
-            this.txtPhoneNumber.UnderlinedStyle = true;
+            this.txtContactInfomation.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContactInfomation.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtContactInfomation.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtContactInfomation.BorderRadius = 0;
+            this.txtContactInfomation.BorderSize = 1;
+            this.txtContactInfomation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactInfomation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtContactInfomation.Location = new System.Drawing.Point(4, 24);
+            this.txtContactInfomation.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContactInfomation.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtContactInfomation.Multiline = false;
+            this.txtContactInfomation.Name = "txtContactInfomation";
+            this.txtContactInfomation.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContactInfomation.PasswordChar = false;
+            this.txtContactInfomation.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtContactInfomation.PlaceholderText = "";
+            this.txtContactInfomation.Size = new System.Drawing.Size(150, 31);
+            this.txtContactInfomation.TabIndex = 2;
+            this.txtContactInfomation.Texts = "";
+            this.txtContactInfomation.UnderlinedStyle = true;
             // 
             // panel6
             // 
@@ -464,7 +535,7 @@
             this.txtFullName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtFullName.PasswordChar = false;
             this.txtFullName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtFullName.PlaceholderText = "Họ và tên";
+            this.txtFullName.PlaceholderText = "";
             this.txtFullName.Size = new System.Drawing.Size(150, 31);
             this.txtFullName.TabIndex = 2;
             this.txtFullName.Texts = "";
@@ -481,16 +552,6 @@
             this.panel2.Size = new System.Drawing.Size(572, 25);
             this.panel2.TabIndex = 9;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 303);
-            this.panel1.TabIndex = 8;
             // 
             // btnMinimize
             // 
@@ -526,6 +587,16 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(188, 303);
+            this.panel1.TabIndex = 8;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::HRMS.Properties.Resources.logo;
@@ -535,76 +606,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Location = new System.Drawing.Point(207, 215);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(158, 59);
-            this.panel4.TabIndex = 43;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAdd.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAdd.BorderRadius = 0;
-            this.btnAdd.BorderSize = 0;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(3, 23);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 31);
-            this.btnAdd.TabIndex = 27;
-            this.btnAdd.Text = "Cập nhật";
-            this.btnAdd.TextColor = System.Drawing.Color.White;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.rjComboBox1);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(43, 215);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 59);
-            this.panel3.TabIndex = 44;
-            // 
-            // rjComboBox1
-            // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.Items.AddRange(new object[] {
-            "Đang xét duyệt",
-            "Đạt",
-            "Trượt"});
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(4, 25);
-            this.rjComboBox1.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(150, 31);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(150, 31);
-            this.rjComboBox1.TabIndex = 4;
-            this.rjComboBox1.Texts = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Trạng thái";
             // 
             // UpdateCandidateUI
             // 
@@ -618,6 +619,9 @@
             this.Name = "UpdateCandidateUI";
             this.Text = "UpdateCandidateUI";
             this.panel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -639,9 +643,6 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -651,16 +652,16 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label2;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox3;
+        private RJCodeAdvance.RJControls.RJTextBox txtInterviewer;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label5;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox2;
+        private RJCodeAdvance.RJControls.RJTextBox txtSkills;
         private System.Windows.Forms.Panel panel15;
-        private RJCodeAdvance.RJControls.RJDatePicker dpStartEnd;
+        private RJCodeAdvance.RJControls.RJDatePicker dpInterviewDate;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label9;
-        private RJCodeAdvance.RJControls.RJTextBox txtAddress;
+        private RJCodeAdvance.RJControls.RJTextBox txtWorkExperience;
         private System.Windows.Forms.Panel panel13;
         private RJCodeAdvance.RJControls.RJComboBox cbPosition;
         private System.Windows.Forms.Label label8;
@@ -669,10 +670,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label4;
-        private RJCodeAdvance.RJControls.RJTextBox txtEmail;
+        private RJCodeAdvance.RJControls.RJTextBox txtEducation;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label3;
-        private RJCodeAdvance.RJControls.RJTextBox txtPhoneNumber;
+        private RJCodeAdvance.RJControls.RJTextBox txtContactInfomation;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label7;
         private RJCodeAdvance.RJControls.RJTextBox txtFullName;
@@ -682,9 +683,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
-        private RJCodeAdvance.RJControls.RJComboBox rjComboBox1;
+        private RJCodeAdvance.RJControls.RJComboBox cbInterviewResult;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private RJCodeAdvance.RJControls.RJButton btnAdd;
+        private RJCodeAdvance.RJControls.RJButton btnUpdate;
     }
 }

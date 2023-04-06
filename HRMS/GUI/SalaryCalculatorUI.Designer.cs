@@ -28,37 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lbPage = new System.Windows.Forms.Label();
-            this.listSalary = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
             this.prePage = new FontAwesome.Sharp.IconButton();
             this.nextPage = new FontAwesome.Sharp.IconButton();
-            this.btnEdit = new FontAwesome.Sharp.IconButton();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
-            this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btnReset = new FontAwesome.Sharp.IconButton();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.listSalary = new System.Windows.Forms.DataGridView();
             this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,10 +54,24 @@
             this.BasicSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Allowance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GrossSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NetSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaymentMethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnEdit = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnAdd = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnReset = new FontAwesome.Sharp.IconButton();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -125,110 +127,6 @@
             this.lbPage.TabIndex = 3;
             this.lbPage.Text = "1";
             // 
-            // listSalary
-            // 
-            this.listSalary.AllowUserToAddRows = false;
-            this.listSalary.AllowUserToDeleteRows = false;
-            this.listSalary.BackgroundColor = System.Drawing.Color.White;
-            this.listSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listSalary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EmployeeID,
-            this.FullName,
-            this.Position,
-            this.Department,
-            this.BasicSalary,
-            this.Allowance,
-            this.Bonus,
-            this.Tax,
-            this.NetSalary,
-            this.PaymentDate,
-            this.PaymentMethod});
-            this.listSalary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listSalary.Location = new System.Drawing.Point(20, 20);
-            this.listSalary.Name = "listSalary";
-            this.listSalary.ReadOnly = true;
-            this.listSalary.RowHeadersWidth = 62;
-            this.listSalary.Size = new System.Drawing.Size(940, 410);
-            this.listSalary.TabIndex = 4;
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(20, 430);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(940, 20);
-            this.panel7.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 20);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(20, 430);
-            this.panel6.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btnEdit);
-            this.panel5.Controls.Add(this.btnDelete);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(960, 20);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(40, 430);
-            this.panel5.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1000, 20);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 50);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.btnAdd);
-            this.panel8.Controls.Add(this.iconButton1);
-            this.panel8.Controls.Add(this.btnReset);
-            this.panel8.Controls.Add(this.btnSearch);
-            this.panel8.Controls.Add(this.txtKeyword);
-            this.panel8.Location = new System.Drawing.Point(702, 13);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(295, 34);
-            this.panel8.TabIndex = 7;
-            // 
-            // txtKeyword
-            // 
-            this.txtKeyword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtKeyword.BackColor = System.Drawing.SystemColors.Window;
-            this.txtKeyword.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtKeyword.BorderFocusColor = System.Drawing.Color.SeaGreen;
-            this.txtKeyword.BorderRadius = 15;
-            this.txtKeyword.BorderSize = 1;
-            this.txtKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKeyword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtKeyword.Location = new System.Drawing.Point(38, 2);
-            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4);
-            this.txtKeyword.Multiline = false;
-            this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtKeyword.PasswordChar = false;
-            this.txtKeyword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtKeyword.PlaceholderText = "Tìm kiếm";
-            this.txtKeyword.Size = new System.Drawing.Size(152, 31);
-            this.txtKeyword.TabIndex = 6;
-            this.txtKeyword.Texts = "";
-            this.txtKeyword.UnderlinedStyle = false;
-            // 
             // prePage
             // 
             this.prePage.FlatAppearance.BorderSize = 0;
@@ -256,6 +154,194 @@
             this.nextPage.Size = new System.Drawing.Size(32, 20);
             this.nextPage.TabIndex = 0;
             this.nextPage.UseVisualStyleBackColor = true;
+            // 
+            // listSalary
+            // 
+            this.listSalary.AllowUserToAddRows = false;
+            this.listSalary.AllowUserToDeleteRows = false;
+            this.listSalary.BackgroundColor = System.Drawing.Color.White;
+            this.listSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listSalary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EmployeeID,
+            this.FullName,
+            this.Position,
+            this.Department,
+            this.BasicSalary,
+            this.Allowance,
+            this.Bonus,
+            this.GrossSalary,
+            this.Tax,
+            this.NetSalary,
+            this.PaymentDate,
+            this.PaymentMethod});
+            this.listSalary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listSalary.Location = new System.Drawing.Point(20, 20);
+            this.listSalary.Name = "listSalary";
+            this.listSalary.ReadOnly = true;
+            this.listSalary.RowHeadersWidth = 62;
+            this.listSalary.Size = new System.Drawing.Size(940, 410);
+            this.listSalary.TabIndex = 4;
+            // 
+            // EmployeeID
+            // 
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.Format = "N2";
+            dataGridViewCellStyle13.NullValue = null;
+            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle13;
+            this.EmployeeID.HeaderText = "Mã nhân viên";
+            this.EmployeeID.MinimumWidth = 8;
+            this.EmployeeID.Name = "EmployeeID";
+            this.EmployeeID.ReadOnly = true;
+            this.EmployeeID.Width = 150;
+            // 
+            // FullName
+            // 
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle14;
+            this.FullName.HeaderText = "Họ và tên";
+            this.FullName.MinimumWidth = 8;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.FullName.Width = 150;
+            // 
+            // Position
+            // 
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Position.DefaultCellStyle = dataGridViewCellStyle15;
+            this.Position.HeaderText = "Chức vụ";
+            this.Position.MinimumWidth = 8;
+            this.Position.Name = "Position";
+            this.Position.ReadOnly = true;
+            this.Position.Width = 150;
+            // 
+            // Department
+            // 
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle16;
+            this.Department.HeaderText = "Phòng ban";
+            this.Department.MinimumWidth = 8;
+            this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
+            this.Department.Width = 150;
+            // 
+            // BasicSalary
+            // 
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.Format = "C0";
+            dataGridViewCellStyle17.NullValue = null;
+            this.BasicSalary.DefaultCellStyle = dataGridViewCellStyle17;
+            this.BasicSalary.HeaderText = "Lương cơ bản";
+            this.BasicSalary.MinimumWidth = 8;
+            this.BasicSalary.Name = "BasicSalary";
+            this.BasicSalary.ReadOnly = true;
+            this.BasicSalary.Width = 150;
+            // 
+            // Allowance
+            // 
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.Format = "C0";
+            dataGridViewCellStyle18.NullValue = null;
+            this.Allowance.DefaultCellStyle = dataGridViewCellStyle18;
+            this.Allowance.HeaderText = "Phụ cấp";
+            this.Allowance.MinimumWidth = 8;
+            this.Allowance.Name = "Allowance";
+            this.Allowance.ReadOnly = true;
+            this.Allowance.Width = 150;
+            // 
+            // Bonus
+            // 
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.Format = "C0";
+            dataGridViewCellStyle19.NullValue = null;
+            this.Bonus.DefaultCellStyle = dataGridViewCellStyle19;
+            this.Bonus.HeaderText = "Tiền thưởng";
+            this.Bonus.MinimumWidth = 8;
+            this.Bonus.Name = "Bonus";
+            this.Bonus.ReadOnly = true;
+            this.Bonus.Width = 150;
+            // 
+            // GrossSalary
+            // 
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.Format = "C0";
+            dataGridViewCellStyle20.NullValue = null;
+            this.GrossSalary.DefaultCellStyle = dataGridViewCellStyle20;
+            this.GrossSalary.HeaderText = "Tổng thu nhập";
+            this.GrossSalary.MinimumWidth = 8;
+            this.GrossSalary.Name = "GrossSalary";
+            this.GrossSalary.ReadOnly = true;
+            this.GrossSalary.Width = 150;
+            // 
+            // Tax
+            // 
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tax.DefaultCellStyle = dataGridViewCellStyle21;
+            this.Tax.HeaderText = "Thuế";
+            this.Tax.MinimumWidth = 8;
+            this.Tax.Name = "Tax";
+            this.Tax.ReadOnly = true;
+            this.Tax.Width = 150;
+            // 
+            // NetSalary
+            // 
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.Format = "C0";
+            dataGridViewCellStyle22.NullValue = null;
+            this.NetSalary.DefaultCellStyle = dataGridViewCellStyle22;
+            this.NetSalary.HeaderText = "Số tiền được nhận";
+            this.NetSalary.MinimumWidth = 8;
+            this.NetSalary.Name = "NetSalary";
+            this.NetSalary.ReadOnly = true;
+            this.NetSalary.Width = 150;
+            // 
+            // PaymentDate
+            // 
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.Format = "d";
+            dataGridViewCellStyle23.NullValue = null;
+            this.PaymentDate.DefaultCellStyle = dataGridViewCellStyle23;
+            this.PaymentDate.HeaderText = "Ngày thanh toán";
+            this.PaymentDate.MinimumWidth = 8;
+            this.PaymentDate.Name = "PaymentDate";
+            this.PaymentDate.ReadOnly = true;
+            this.PaymentDate.Width = 150;
+            // 
+            // PaymentMethod
+            // 
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PaymentMethod.DefaultCellStyle = dataGridViewCellStyle24;
+            this.PaymentMethod.HeaderText = "P.thức thanh toán";
+            this.PaymentMethod.MinimumWidth = 8;
+            this.PaymentMethod.Name = "PaymentMethod";
+            this.PaymentMethod.ReadOnly = true;
+            this.PaymentMethod.Width = 150;
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(20, 430);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(940, 20);
+            this.panel7.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 20);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(20, 430);
+            this.panel6.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnEdit);
+            this.panel5.Controls.Add(this.btnDelete);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(960, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(40, 430);
+            this.panel5.TabIndex = 1;
             // 
             // btnEdit
             // 
@@ -286,6 +372,35 @@
             this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1000, 20);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 50);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnAdd);
+            this.panel8.Controls.Add(this.iconButton1);
+            this.panel8.Controls.Add(this.btnReset);
+            this.panel8.Controls.Add(this.btnSearch);
+            this.panel8.Controls.Add(this.txtKeyword);
+            this.panel8.Location = new System.Drawing.Point(697, 16);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(295, 34);
+            this.panel8.TabIndex = 7;
             // 
             // btnAdd
             // 
@@ -347,128 +462,28 @@
             this.btnSearch.TabIndex = 7;
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // EmployeeID
+            // txtKeyword
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.EmployeeID.DefaultCellStyle = dataGridViewCellStyle1;
-            this.EmployeeID.HeaderText = "Mã nhân viên";
-            this.EmployeeID.MinimumWidth = 8;
-            this.EmployeeID.Name = "EmployeeID";
-            this.EmployeeID.ReadOnly = true;
-            this.EmployeeID.Width = 150;
-            // 
-            // FullName
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.FullName.HeaderText = "Họ và tên";
-            this.FullName.MinimumWidth = 8;
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            this.FullName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.FullName.Width = 150;
-            // 
-            // Position
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Position.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Position.HeaderText = "Chức vụ";
-            this.Position.MinimumWidth = 8;
-            this.Position.Name = "Position";
-            this.Position.ReadOnly = true;
-            this.Position.Width = 150;
-            // 
-            // Department
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Department.HeaderText = "Phòng ban";
-            this.Department.MinimumWidth = 8;
-            this.Department.Name = "Department";
-            this.Department.ReadOnly = true;
-            this.Department.Width = 150;
-            // 
-            // BasicSalary
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.Format = "C0";
-            dataGridViewCellStyle5.NullValue = null;
-            this.BasicSalary.DefaultCellStyle = dataGridViewCellStyle5;
-            this.BasicSalary.HeaderText = "Lương cơ bản";
-            this.BasicSalary.MinimumWidth = 8;
-            this.BasicSalary.Name = "BasicSalary";
-            this.BasicSalary.ReadOnly = true;
-            this.BasicSalary.Width = 150;
-            // 
-            // Allowance
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.Format = "C0";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Allowance.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Allowance.HeaderText = "Phụ cấp";
-            this.Allowance.MinimumWidth = 8;
-            this.Allowance.Name = "Allowance";
-            this.Allowance.ReadOnly = true;
-            this.Allowance.Width = 150;
-            // 
-            // Bonus
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.Format = "C0";
-            dataGridViewCellStyle7.NullValue = null;
-            this.Bonus.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Bonus.HeaderText = "Tiền thưởng";
-            this.Bonus.MinimumWidth = 8;
-            this.Bonus.Name = "Bonus";
-            this.Bonus.ReadOnly = true;
-            this.Bonus.Width = 150;
-            // 
-            // Tax
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tax.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Tax.HeaderText = "Thuế (%)";
-            this.Tax.MinimumWidth = 8;
-            this.Tax.Name = "Tax";
-            this.Tax.ReadOnly = true;
-            this.Tax.Width = 150;
-            // 
-            // NetSalary
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.Format = "C0";
-            dataGridViewCellStyle9.NullValue = null;
-            this.NetSalary.DefaultCellStyle = dataGridViewCellStyle9;
-            this.NetSalary.HeaderText = "Thực nhận";
-            this.NetSalary.MinimumWidth = 8;
-            this.NetSalary.Name = "NetSalary";
-            this.NetSalary.ReadOnly = true;
-            this.NetSalary.Width = 150;
-            // 
-            // PaymentDate
-            // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.Format = "d";
-            dataGridViewCellStyle10.NullValue = null;
-            this.PaymentDate.DefaultCellStyle = dataGridViewCellStyle10;
-            this.PaymentDate.HeaderText = "Ngày thanh toán";
-            this.PaymentDate.MinimumWidth = 8;
-            this.PaymentDate.Name = "PaymentDate";
-            this.PaymentDate.ReadOnly = true;
-            this.PaymentDate.Width = 150;
-            // 
-            // PaymentMethod
-            // 
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PaymentMethod.DefaultCellStyle = dataGridViewCellStyle11;
-            this.PaymentMethod.HeaderText = "P.thức thanh toán";
-            this.PaymentMethod.MinimumWidth = 8;
-            this.PaymentMethod.Name = "PaymentMethod";
-            this.PaymentMethod.ReadOnly = true;
-            this.PaymentMethod.Width = 150;
+            this.txtKeyword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtKeyword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtKeyword.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtKeyword.BorderFocusColor = System.Drawing.Color.SeaGreen;
+            this.txtKeyword.BorderRadius = 15;
+            this.txtKeyword.BorderSize = 1;
+            this.txtKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKeyword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtKeyword.Location = new System.Drawing.Point(38, 2);
+            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKeyword.Multiline = false;
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtKeyword.PasswordChar = false;
+            this.txtKeyword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtKeyword.PlaceholderText = "Tìm kiếm";
+            this.txtKeyword.Size = new System.Drawing.Size(152, 31);
+            this.txtKeyword.TabIndex = 6;
+            this.txtKeyword.Texts = "";
+            this.txtKeyword.UnderlinedStyle = false;
             // 
             // SalaryCalculatorUI
             // 
@@ -510,10 +525,6 @@
         private FontAwesome.Sharp.IconButton btnReset;
         private FontAwesome.Sharp.IconButton btnSearch;
         private RJCodeAdvance.RJControls.RJTextBox txtKeyword;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label lbPage;
-        private FontAwesome.Sharp.IconButton prePage;
-        private FontAwesome.Sharp.IconButton nextPage;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Position;
@@ -521,9 +532,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BasicSalary;
         private System.Windows.Forms.DataGridViewTextBoxColumn Allowance;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bonus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GrossSalary;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tax;
         private System.Windows.Forms.DataGridViewTextBoxColumn NetSalary;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentMethod;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lbPage;
+        private FontAwesome.Sharp.IconButton prePage;
+        private FontAwesome.Sharp.IconButton nextPage;
     }
 }

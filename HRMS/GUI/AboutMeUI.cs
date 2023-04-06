@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using HRMS.DAL.Models;
+using RestSharp;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
@@ -10,7 +13,7 @@ namespace HRMS.GUI
             this.panel = panel;
             InitializeComponent();
             this.BackColor = panel.BackColor;
-            //SetInfo();
+            SetInfo();
         }
 
 
@@ -18,7 +21,11 @@ namespace HRMS.GUI
         {
             string version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             txtVersion.Text = string.Format("Phiên bản {0}", version);
-            Version v = JsonReader.GetObjectFromJson<Version>("https://raw.githubusercontent.com/kitakeyos2003/check-version/master/info.json");
+            var client = new RestClient(Application.BASE_URL);
+            client.AddDefaultHeader("Content-Type", "application/json");
+            var request = new RestRequest("/version", Method.Get);
+            var response = client.Execute<Version>(request);
+            Version v = response.Data;
             if (v != null)
             {
                 if (version.Equals(v.VersionNumber))
