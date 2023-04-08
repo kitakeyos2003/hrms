@@ -2,7 +2,7 @@
 using RestSharp;
 using System.Collections.Generic;
 
-namespace HRMS.DAL
+namespace HRMS.BUS
 {
     internal class EmployeeService
     {

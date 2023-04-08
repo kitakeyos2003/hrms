@@ -135,15 +135,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\ApplicationConfig.cs" />
-    <Compile Include="BUS\JsonReader.cs" />
-    <Compile Include="DAL\AttendanceService.cs" />
-    <Compile Include="DAL\CandidateService.cs" />
-    <Compile Include="DAL\ContractService.cs" />
+    <Compile Include="BUS\AttendanceService.cs" />
+    <Compile Include="BUS\CandidateService.cs" />
+    <Compile Include="BUS\ContractService.cs" />
     <Compile Include="DAL\DataManager.cs" />
-    <Compile Include="DAL\DepartmentService.cs" />
-    <Compile Include="DAL\EmployeeService.cs" />
-    <Compile Include="DAL\EvaluationService.cs" />
-    <Compile Include="DAL\HomeService.cs" />
+    <Compile Include="BUS\DepartmentService.cs" />
+    <Compile Include="BUS\EmployeeService.cs" />
+    <Compile Include="BUS\EvaluationService.cs" />
+    <Compile Include="BUS\HomeService.cs" />
     <Compile Include="DAL\Models\ApiResponse.cs" />
     <Compile Include="DAL\Models\Attendance.cs" />
     <Compile Include="DAL\Models\Candidate.cs" />
@@ -154,9 +153,9 @@
     <Compile Include="DAL\Models\Position.cs" />
     <Compile Include="DAL\Models\Salary.cs" />
     <Compile Include="DAL\Models\Token.cs" />
-    <Compile Include="DAL\PositionService.cs" />
-    <Compile Include="DAL\SalaryService.cs" />
-    <Compile Include="DAL\UserService.cs" />
+    <Compile Include="BUS\PositionService.cs" />
+    <Compile Include="BUS\SalaryService.cs" />
+    <Compile Include="BUS\UserService.cs" />
     <Compile Include="DAL\Models\Employee.cs" />
     <Compile Include="DAL\Models\Version.cs" />
     <Compile Include="GUI\AddAttendanceUI.cs">

@@ -1,4 +1,4 @@
-﻿using HRMS.DAL;
+﻿using HRMS.BUS;
 using HRMS.DAL.Models;
 using RestSharp;
 using System.Net;

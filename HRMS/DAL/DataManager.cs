@@ -1,4 +1,5 @@
-﻿using HRMS.DAL.Models;
+﻿using HRMS.BUS;
+using HRMS.DAL.Models;
 using RestSharp;
 using System.Collections.Generic;
 

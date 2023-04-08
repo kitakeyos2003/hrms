@@ -1,4 +1,5 @@
-﻿using HRMS.DAL;
+﻿using HRMS.BUS;
+using HRMS.DAL;
 using RestSharp;
 using System;
 using System.Drawing;
@@ -52,7 +53,7 @@ namespace HRMS.GUI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

@@ -30,41 +30,45 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAttendanceUI));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.dpDate = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dpActualEndTime = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dpActualStartTime = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.dpEndDate = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.dpShiftEndTime = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.dpStartEnd = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.dpShiftStartTime = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.cbPosition = new RJCodeAdvance.RJControls.RJComboBox();
-            this.cbEmployee = new System.Windows.Forms.Label();
+            this.cbEmployee = new RJCodeAdvance.RJControls.RJComboBox();
+            this.lbEmployee = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.cbDepartment = new RJCodeAdvance.RJControls.RJComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtEmail = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtNote = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPhoneNumber = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtOvertime = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.rjDatePicker1 = new RJCodeAdvance.RJControls.RJDatePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.rjDatePicker2 = new RJCodeAdvance.RJControls.RJDatePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.rjDatePicker3 = new RJCodeAdvance.RJControls.RJDatePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -73,10 +77,6 @@
             this.panel9.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,31 +99,155 @@
             this.panel5.Size = new System.Drawing.Size(572, 265);
             this.panel5.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Location = new System.Drawing.Point(373, 223);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(158, 40);
+            this.panel3.TabIndex = 9;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAdd.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAdd.BorderRadius = 0;
+            this.btnAdd.BorderSize = 0;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(4, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(150, 31);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.dpDate);
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Location = new System.Drawing.Point(373, 37);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(158, 59);
+            this.panel7.TabIndex = 2;
+            // 
+            // dpDate
+            // 
+            this.dpDate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dpDate.BorderSize = 0;
+            this.dpDate.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpDate.CustomFormat = "dd/MM/yyyy";
+            this.dpDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpDate.Location = new System.Drawing.Point(4, 24);
+            this.dpDate.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpDate.MinimumSize = new System.Drawing.Size(150, 31);
+            this.dpDate.Name = "dpDate";
+            this.dpDate.Size = new System.Drawing.Size(150, 31);
+            this.dpDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dpDate.TabIndex = 0;
+            this.dpDate.TextColor = System.Drawing.Color.White;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Ngày làm việc";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dpActualEndTime);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(209, 161);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(158, 59);
+            this.panel4.TabIndex = 6;
+            // 
+            // dpActualEndTime
+            // 
+            this.dpActualEndTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dpActualEndTime.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpActualEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dpActualEndTime.Location = new System.Drawing.Point(4, 25);
+            this.dpActualEndTime.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpActualEndTime.MinimumSize = new System.Drawing.Size(150, 31);
+            this.dpActualEndTime.Name = "dpActualEndTime";
+            this.dpActualEndTime.ShowUpDown = true;
+            this.dpActualEndTime.Size = new System.Drawing.Size(150, 31);
+            this.dpActualEndTime.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "T.gian kết thúc ca làm thực tế";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.dpActualStartTime);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Location = new System.Drawing.Point(44, 161);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(158, 59);
+            this.panel6.TabIndex = 5;
+            // 
+            // dpActualStartTime
+            // 
+            this.dpActualStartTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dpActualStartTime.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpActualStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dpActualStartTime.Location = new System.Drawing.Point(4, 25);
+            this.dpActualStartTime.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpActualStartTime.MinimumSize = new System.Drawing.Size(150, 31);
+            this.dpActualStartTime.Name = "dpActualStartTime";
+            this.dpActualStartTime.ShowUpDown = true;
+            this.dpActualStartTime.Size = new System.Drawing.Size(150, 31);
+            this.dpActualStartTime.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(172, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "T.gian bắt đầu ca làm thực tế";
+            // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.dpEndDate);
+            this.panel16.Controls.Add(this.dpShiftEndTime);
             this.panel16.Controls.Add(this.label11);
             this.panel16.Location = new System.Drawing.Point(209, 99);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(158, 59);
             this.panel16.TabIndex = 4;
             // 
-            // dpEndDate
+            // dpShiftEndTime
             // 
-            this.dpEndDate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dpEndDate.BorderSize = 0;
-            this.dpEndDate.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpEndDate.CustomFormat = "dd/MM/yyyy";
-            this.dpEndDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpEndDate.Location = new System.Drawing.Point(4, 24);
-            this.dpEndDate.MaximumSize = new System.Drawing.Size(150, 31);
-            this.dpEndDate.MinimumSize = new System.Drawing.Size(150, 31);
-            this.dpEndDate.Name = "dpEndDate";
-            this.dpEndDate.Size = new System.Drawing.Size(150, 31);
-            this.dpEndDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpEndDate.TabIndex = 0;
-            this.dpEndDate.TextColor = System.Drawing.Color.White;
+            this.dpShiftEndTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dpShiftEndTime.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpShiftEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dpShiftEndTime.Location = new System.Drawing.Point(4, 25);
+            this.dpShiftEndTime.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpShiftEndTime.MinimumSize = new System.Drawing.Size(150, 31);
+            this.dpShiftEndTime.Name = "dpShiftEndTime";
+            this.dpShiftEndTime.ShowUpDown = true;
+            this.dpShiftEndTime.Size = new System.Drawing.Size(150, 31);
+            this.dpShiftEndTime.TabIndex = 0;
             // 
             // label11
             // 
@@ -132,34 +256,30 @@
             this.label11.Location = new System.Drawing.Point(1, 7);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(132, 13);
-            this.label11.TabIndex = 3;
+            this.label11.TabIndex = 1;
             this.label11.Text = "T.gian kết thúc ca làm";
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.dpStartEnd);
+            this.panel15.Controls.Add(this.dpShiftStartTime);
             this.panel15.Controls.Add(this.label10);
             this.panel15.Location = new System.Drawing.Point(44, 99);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(158, 59);
             this.panel15.TabIndex = 3;
             // 
-            // dpStartEnd
+            // dpShiftStartTime
             // 
-            this.dpStartEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dpStartEnd.BorderSize = 0;
-            this.dpStartEnd.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpStartEnd.CustomFormat = "dd/MM/yyyy";
-            this.dpStartEnd.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpStartEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpStartEnd.Location = new System.Drawing.Point(4, 24);
-            this.dpStartEnd.MaximumSize = new System.Drawing.Size(150, 31);
-            this.dpStartEnd.MinimumSize = new System.Drawing.Size(150, 31);
-            this.dpStartEnd.Name = "dpStartEnd";
-            this.dpStartEnd.Size = new System.Drawing.Size(150, 31);
-            this.dpStartEnd.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpStartEnd.TabIndex = 0;
-            this.dpStartEnd.TextColor = System.Drawing.Color.White;
+            this.dpShiftStartTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dpShiftStartTime.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpShiftStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dpShiftStartTime.Location = new System.Drawing.Point(4, 25);
+            this.dpShiftStartTime.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpShiftStartTime.MinimumSize = new System.Drawing.Size(150, 31);
+            this.dpShiftStartTime.Name = "dpShiftStartTime";
+            this.dpShiftStartTime.ShowUpDown = true;
+            this.dpShiftStartTime.Size = new System.Drawing.Size(150, 31);
+            this.dpShiftStartTime.TabIndex = 0;
             // 
             // label10
             // 
@@ -168,48 +288,48 @@
             this.label10.Location = new System.Drawing.Point(1, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(129, 13);
-            this.label10.TabIndex = 3;
+            this.label10.TabIndex = 1;
             this.label10.Text = "T.gian bắt đầu ca làm";
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.cbPosition);
             this.panel13.Controls.Add(this.cbEmployee);
+            this.panel13.Controls.Add(this.lbEmployee);
             this.panel13.Location = new System.Drawing.Point(209, 37);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(158, 59);
             this.panel13.TabIndex = 1;
             // 
-            // cbPosition
-            // 
-            this.cbPosition.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbPosition.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbPosition.BorderSize = 1;
-            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbPosition.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPosition.ForeColor = System.Drawing.Color.DimGray;
-            this.cbPosition.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbPosition.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbPosition.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbPosition.Location = new System.Drawing.Point(4, 25);
-            this.cbPosition.MaximumSize = new System.Drawing.Size(150, 31);
-            this.cbPosition.MinimumSize = new System.Drawing.Size(150, 31);
-            this.cbPosition.Name = "cbPosition";
-            this.cbPosition.Padding = new System.Windows.Forms.Padding(1);
-            this.cbPosition.Size = new System.Drawing.Size(150, 31);
-            this.cbPosition.TabIndex = 0;
-            this.cbPosition.Texts = "";
-            // 
             // cbEmployee
             // 
-            this.cbEmployee.AllowDrop = true;
-            this.cbEmployee.AutoSize = true;
+            this.cbEmployee.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbEmployee.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbEmployee.BorderSize = 1;
+            this.cbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cbEmployee.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmployee.Location = new System.Drawing.Point(1, 7);
+            this.cbEmployee.ForeColor = System.Drawing.Color.DimGray;
+            this.cbEmployee.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbEmployee.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbEmployee.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbEmployee.Location = new System.Drawing.Point(4, 25);
+            this.cbEmployee.MaximumSize = new System.Drawing.Size(150, 31);
+            this.cbEmployee.MinimumSize = new System.Drawing.Size(150, 31);
             this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(64, 13);
-            this.cbEmployee.TabIndex = 3;
-            this.cbEmployee.Text = "Nhân viên";
+            this.cbEmployee.Padding = new System.Windows.Forms.Padding(1);
+            this.cbEmployee.Size = new System.Drawing.Size(150, 31);
+            this.cbEmployee.TabIndex = 0;
+            this.cbEmployee.Texts = "";
+            // 
+            // lbEmployee
+            // 
+            this.lbEmployee.AllowDrop = true;
+            this.lbEmployee.AutoSize = true;
+            this.lbEmployee.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmployee.Location = new System.Drawing.Point(1, 7);
+            this.lbEmployee.Name = "lbEmployee";
+            this.lbEmployee.Size = new System.Drawing.Size(64, 13);
+            this.lbEmployee.TabIndex = 1;
+            this.lbEmployee.Text = "Nhân viên";
             // 
             // panel12
             // 
@@ -239,6 +359,7 @@
             this.cbDepartment.Size = new System.Drawing.Size(150, 31);
             this.cbDepartment.TabIndex = 0;
             this.cbDepartment.Texts = "";
+            this.cbDepartment.OnSelectedIndexChanged += new System.EventHandler(this.cbDepartment_OnSelectedIndexChanged);
             // 
             // label6
             // 
@@ -247,13 +368,13 @@
             this.label6.Location = new System.Drawing.Point(1, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
-            this.label6.TabIndex = 3;
+            this.label6.TabIndex = 1;
             this.label6.Text = "Phòng ban";
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.label4);
-            this.panel10.Controls.Add(this.txtEmail);
+            this.panel10.Controls.Add(this.txtNote);
             this.panel10.Location = new System.Drawing.Point(373, 161);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(158, 59);
@@ -269,34 +390,34 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Ghi chú";
             // 
-            // txtEmail
+            // txtNote
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtEmail.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtEmail.BorderRadius = 0;
-            this.txtEmail.BorderSize = 1;
-            this.txtEmail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.Location = new System.Drawing.Point(4, 24);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.MaximumSize = new System.Drawing.Size(150, 31);
-            this.txtEmail.MinimumSize = new System.Drawing.Size(150, 31);
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEmail.PasswordChar = false;
-            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.PlaceholderText = "Ghi chú";
-            this.txtEmail.Size = new System.Drawing.Size(150, 31);
-            this.txtEmail.TabIndex = 0;
-            this.txtEmail.Texts = "";
-            this.txtEmail.UnderlinedStyle = true;
+            this.txtNote.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNote.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtNote.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtNote.BorderRadius = 0;
+            this.txtNote.BorderSize = 1;
+            this.txtNote.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNote.Location = new System.Drawing.Point(4, 24);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNote.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtNote.MinimumSize = new System.Drawing.Size(150, 31);
+            this.txtNote.Multiline = false;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNote.PasswordChar = false;
+            this.txtNote.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNote.PlaceholderText = "Ghi chú";
+            this.txtNote.Size = new System.Drawing.Size(150, 31);
+            this.txtNote.TabIndex = 0;
+            this.txtNote.Texts = "";
+            this.txtNote.UnderlinedStyle = true;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label3);
-            this.panel9.Controls.Add(this.txtPhoneNumber);
+            this.panel9.Controls.Add(this.txtOvertime);
             this.panel9.Location = new System.Drawing.Point(373, 99);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(158, 59);
@@ -309,32 +430,32 @@
             this.label3.Location = new System.Drawing.Point(1, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 13);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Số giờ làm thêm (giờ)";
             // 
-            // txtPhoneNumber
+            // txtOvertime
             // 
-            this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPhoneNumber.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPhoneNumber.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPhoneNumber.BorderRadius = 0;
-            this.txtPhoneNumber.BorderSize = 1;
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(4, 24);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhoneNumber.MaximumSize = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.MinimumSize = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.Multiline = false;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPhoneNumber.PasswordChar = false;
-            this.txtPhoneNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPhoneNumber.PlaceholderText = "Giờ làm thêm";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.TabIndex = 0;
-            this.txtPhoneNumber.Texts = "";
-            this.txtPhoneNumber.UnderlinedStyle = true;
+            this.txtOvertime.BackColor = System.Drawing.SystemColors.Window;
+            this.txtOvertime.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtOvertime.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtOvertime.BorderRadius = 0;
+            this.txtOvertime.BorderSize = 1;
+            this.txtOvertime.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOvertime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtOvertime.Location = new System.Drawing.Point(4, 24);
+            this.txtOvertime.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOvertime.MaximumSize = new System.Drawing.Size(150, 31);
+            this.txtOvertime.MinimumSize = new System.Drawing.Size(150, 31);
+            this.txtOvertime.Multiline = false;
+            this.txtOvertime.Name = "txtOvertime";
+            this.txtOvertime.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtOvertime.PasswordChar = false;
+            this.txtOvertime.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtOvertime.PlaceholderText = "Giờ làm thêm";
+            this.txtOvertime.Size = new System.Drawing.Size(150, 31);
+            this.txtOvertime.TabIndex = 0;
+            this.txtOvertime.Texts = "";
+            this.txtOvertime.UnderlinedStyle = true;
             // 
             // panel2
             // 
@@ -347,151 +468,6 @@
             this.panel2.Size = new System.Drawing.Size(572, 25);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 290);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.rjDatePicker1);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(209, 161);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(158, 59);
-            this.panel4.TabIndex = 6;
-            // 
-            // rjDatePicker1
-            // 
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker1.BorderSize = 0;
-            this.rjDatePicker1.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker1.CustomFormat = "dd/MM/yyyy";
-            this.rjDatePicker1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.rjDatePicker1.Location = new System.Drawing.Point(4, 24);
-            this.rjDatePicker1.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(150, 31);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(150, 31);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjDatePicker1.TabIndex = 0;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.White;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "T.gian kết thúc ca làm thực tế";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.rjDatePicker2);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(44, 161);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(158, 59);
-            this.panel6.TabIndex = 5;
-            // 
-            // rjDatePicker2
-            // 
-            this.rjDatePicker2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker2.BorderSize = 0;
-            this.rjDatePicker2.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker2.CustomFormat = "dd/MM/yyyy";
-            this.rjDatePicker2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.rjDatePicker2.Location = new System.Drawing.Point(4, 24);
-            this.rjDatePicker2.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjDatePicker2.MinimumSize = new System.Drawing.Size(150, 31);
-            this.rjDatePicker2.Name = "rjDatePicker2";
-            this.rjDatePicker2.Size = new System.Drawing.Size(150, 31);
-            this.rjDatePicker2.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjDatePicker2.TabIndex = 0;
-            this.rjDatePicker2.TextColor = System.Drawing.Color.White;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "T.gian bắt đầu ca làm thực tế";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.rjDatePicker3);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(373, 37);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(158, 59);
-            this.panel7.TabIndex = 2;
-            // 
-            // rjDatePicker3
-            // 
-            this.rjDatePicker3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker3.BorderSize = 0;
-            this.rjDatePicker3.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker3.CustomFormat = "dd/MM/yyyy";
-            this.rjDatePicker3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.rjDatePicker3.Location = new System.Drawing.Point(4, 24);
-            this.rjDatePicker3.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjDatePicker3.MinimumSize = new System.Drawing.Size(150, 31);
-            this.rjDatePicker3.Name = "rjDatePicker3";
-            this.rjDatePicker3.Size = new System.Drawing.Size(150, 31);
-            this.rjDatePicker3.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjDatePicker3.TabIndex = 0;
-            this.rjDatePicker3.TextColor = System.Drawing.Color.White;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Ngày làm việc";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Location = new System.Drawing.Point(373, 223);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 40);
-            this.panel3.TabIndex = 9;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAdd.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAdd.BorderRadius = 0;
-            this.btnAdd.BorderSize = 0;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(4, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 31);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.TextColor = System.Drawing.Color.White;
-            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // btnMinimize
             // 
@@ -527,6 +503,16 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(188, 290);
+            this.panel1.TabIndex = 2;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::HRMS.Properties.Resources.logo;
@@ -550,6 +536,13 @@
             this.Name = "AddAttendanceUI";
             this.Text = "Chấm công";
             this.panel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -564,13 +557,6 @@
             this.panel9.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -580,38 +566,38 @@
 
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel16;
-        private RJCodeAdvance.RJControls.RJDatePicker dpEndDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel15;
-        private RJCodeAdvance.RJControls.RJDatePicker dpStartEnd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel13;
-        private RJCodeAdvance.RJControls.RJComboBox cbPosition;
-        private System.Windows.Forms.Label cbEmployee;
+        private RJCodeAdvance.RJControls.RJComboBox cbEmployee;
+        private System.Windows.Forms.Label lbEmployee;
         private System.Windows.Forms.Panel panel12;
         private RJCodeAdvance.RJControls.RJComboBox cbDepartment;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label4;
-        private RJCodeAdvance.RJControls.RJTextBox txtEmail;
+        private RJCodeAdvance.RJControls.RJTextBox txtNote;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label3;
-        private RJCodeAdvance.RJControls.RJTextBox txtPhoneNumber;
+        private RJCodeAdvance.RJControls.RJTextBox txtOvertime;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel4;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker3;
+        private RJCodeAdvance.RJControls.RJDatePicker dpDate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private RJCodeAdvance.RJControls.RJButton btnAdd;
+        private System.Windows.Forms.DateTimePicker dpShiftStartTime;
+        private System.Windows.Forms.DateTimePicker dpActualEndTime;
+        private System.Windows.Forms.DateTimePicker dpActualStartTime;
+        private System.Windows.Forms.DateTimePicker dpShiftEndTime;
     }
 }

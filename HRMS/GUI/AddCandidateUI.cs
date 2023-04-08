@@ -29,17 +29,23 @@ namespace HRMS.GUI
         private void Init()
         {
             List<Department> departments = DataManager.GetInstance().Departments;
-            foreach (Department department in departments)
+            if (departments.Count > 0)
             {
-                cbDepartment.Items.Add(department.Name);
+                foreach (Department department in departments)
+                {
+                    cbDepartment.Items.Add(department.Name);
+                }
+                cbDepartment.SelectedIndex = 0;
             }
             List<Position> positions = DataManager.GetInstance().Positions;
-            foreach (Position position in positions)
+            if (positions.Count > 0)
             {
-                cbPosition.Items.Add(position.Name);
+                foreach (Position position in positions)
+                {
+                    cbPosition.Items.Add(position.Name);
+                }
+                cbPosition.SelectedIndex = 0;
             }
-            cbPosition.SelectedIndex = 0;
-            cbDepartment.SelectedIndex = 0;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

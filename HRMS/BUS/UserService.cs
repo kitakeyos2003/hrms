@@ -1,6 +1,6 @@
 ﻿using RestSharp;
 
-namespace HRMS.DAL
+namespace HRMS.BUS
 {
 
     internal class UserService 
