@@ -28,20 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listAttendance = new System.Windows.Forms.DataGridView();
+            this.AttendanceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShiftStartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShiftEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActualStartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActualEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Overtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AttendanceStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AttendanceNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lbPage = new System.Windows.Forms.Label();
@@ -59,23 +70,16 @@
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
-            this.AttendanceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShiftStartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShiftEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ActualStartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ActualEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Overtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AttendanceStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AttendanceNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbPosition = new System.Windows.Forms.ComboBox();
+            this.cbDepartment = new System.Windows.Forms.ComboBox();
+            this.cbLimitPage = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listAttendance)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
@@ -124,14 +128,134 @@
             this.AttendanceNote});
             this.listAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listAttendance.Location = new System.Drawing.Point(20, 20);
+            this.listAttendance.MultiSelect = false;
             this.listAttendance.Name = "listAttendance";
             this.listAttendance.ReadOnly = true;
             this.listAttendance.RowHeadersWidth = 62;
             this.listAttendance.Size = new System.Drawing.Size(940, 410);
             this.listAttendance.TabIndex = 4;
+            this.listAttendance.SelectionChanged += new System.EventHandler(this.listAttendance_SelectionChanged);
+            // 
+            // AttendanceID
+            // 
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttendanceID.DefaultCellStyle = dataGridViewCellStyle34;
+            this.AttendanceID.HeaderText = "Mã chấm công";
+            this.AttendanceID.MinimumWidth = 8;
+            this.AttendanceID.Name = "AttendanceID";
+            this.AttendanceID.ReadOnly = true;
+            this.AttendanceID.Width = 150;
+            // 
+            // FullName
+            // 
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle35;
+            this.FullName.HeaderText = "Họ và tên";
+            this.FullName.MinimumWidth = 8;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.FullName.Width = 150;
+            // 
+            // Department
+            // 
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle36;
+            this.Department.HeaderText = "Phòng ban";
+            this.Department.MinimumWidth = 8;
+            this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
+            this.Department.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Department.Width = 150;
+            // 
+            // Date
+            // 
+            dataGridViewCellStyle37.NullValue = null;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle37;
+            this.Date.HeaderText = "Ngày làm việc";
+            this.Date.MinimumWidth = 8;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.Width = 150;
+            // 
+            // ShiftStartTime
+            // 
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.NullValue = null;
+            this.ShiftStartTime.DefaultCellStyle = dataGridViewCellStyle38;
+            this.ShiftStartTime.HeaderText = "T.gian bắt đầu ca làm việc";
+            this.ShiftStartTime.MinimumWidth = 8;
+            this.ShiftStartTime.Name = "ShiftStartTime";
+            this.ShiftStartTime.ReadOnly = true;
+            this.ShiftStartTime.Width = 150;
+            // 
+            // ShiftEndTime
+            // 
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.NullValue = null;
+            this.ShiftEndTime.DefaultCellStyle = dataGridViewCellStyle39;
+            this.ShiftEndTime.HeaderText = "T.gian k.thúc ca làm việc";
+            this.ShiftEndTime.MinimumWidth = 8;
+            this.ShiftEndTime.Name = "ShiftEndTime";
+            this.ShiftEndTime.ReadOnly = true;
+            this.ShiftEndTime.Width = 150;
+            // 
+            // ActualStartTime
+            // 
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.NullValue = null;
+            this.ActualStartTime.DefaultCellStyle = dataGridViewCellStyle40;
+            this.ActualStartTime.HeaderText = "T.gian bắt đầu làm việc thực tế";
+            this.ActualStartTime.MinimumWidth = 8;
+            this.ActualStartTime.Name = "ActualStartTime";
+            this.ActualStartTime.ReadOnly = true;
+            this.ActualStartTime.Width = 150;
+            // 
+            // ActualEndTime
+            // 
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.NullValue = null;
+            this.ActualEndTime.DefaultCellStyle = dataGridViewCellStyle41;
+            this.ActualEndTime.HeaderText = "T.gian k.thúc làm việc thực tế";
+            this.ActualEndTime.MinimumWidth = 8;
+            this.ActualEndTime.Name = "ActualEndTime";
+            this.ActualEndTime.ReadOnly = true;
+            this.ActualEndTime.Width = 150;
+            // 
+            // Overtime
+            // 
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Overtime.DefaultCellStyle = dataGridViewCellStyle42;
+            this.Overtime.HeaderText = "Giờ làm thêm";
+            this.Overtime.MinimumWidth = 8;
+            this.Overtime.Name = "Overtime";
+            this.Overtime.ReadOnly = true;
+            this.Overtime.Width = 150;
+            // 
+            // AttendanceStatus
+            // 
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttendanceStatus.DefaultCellStyle = dataGridViewCellStyle43;
+            this.AttendanceStatus.HeaderText = "Trạng thái điểm danh";
+            this.AttendanceStatus.MinimumWidth = 8;
+            this.AttendanceStatus.Name = "AttendanceStatus";
+            this.AttendanceStatus.ReadOnly = true;
+            this.AttendanceStatus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AttendanceStatus.Width = 150;
+            // 
+            // AttendanceNote
+            // 
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttendanceNote.DefaultCellStyle = dataGridViewCellStyle44;
+            this.AttendanceNote.HeaderText = "Ghi chú";
+            this.AttendanceNote.MinimumWidth = 8;
+            this.AttendanceNote.Name = "AttendanceNote";
+            this.AttendanceNote.ReadOnly = true;
+            this.AttendanceNote.Width = 150;
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.cbLimitPage);
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(20, 430);
@@ -238,9 +362,12 @@
             this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.cbPosition);
+            this.panel3.Controls.Add(this.cbDepartment);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -313,6 +440,7 @@
             this.btnReset.Size = new System.Drawing.Size(30, 30);
             this.btnReset.TabIndex = 8;
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSearch
             // 
@@ -328,6 +456,7 @@
             this.btnSearch.Size = new System.Drawing.Size(30, 30);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtKeyword
             // 
@@ -352,122 +481,35 @@
             this.txtKeyword.Texts = "";
             this.txtKeyword.UnderlinedStyle = false;
             // 
-            // AttendanceID
+            // cbPosition
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttendanceID.DefaultCellStyle = dataGridViewCellStyle1;
-            this.AttendanceID.HeaderText = "Mã chấm công";
-            this.AttendanceID.MinimumWidth = 8;
-            this.AttendanceID.Name = "AttendanceID";
-            this.AttendanceID.ReadOnly = true;
-            this.AttendanceID.Width = 150;
+            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPosition.FormattingEnabled = true;
+            this.cbPosition.Location = new System.Drawing.Point(147, 0);
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Size = new System.Drawing.Size(121, 21);
+            this.cbPosition.TabIndex = 13;
+            this.cbPosition.SelectedIndexChanged += new System.EventHandler(this.cbPosition_SelectedIndexChanged);
             // 
-            // FullName
+            // cbDepartment
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.FullName.HeaderText = "Họ và tên";
-            this.FullName.MinimumWidth = 8;
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            this.FullName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.FullName.Width = 150;
+            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDepartment.FormattingEnabled = true;
+            this.cbDepartment.Location = new System.Drawing.Point(20, 0);
+            this.cbDepartment.Name = "cbDepartment";
+            this.cbDepartment.Size = new System.Drawing.Size(121, 21);
+            this.cbDepartment.TabIndex = 12;
+            this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged);
             // 
-            // Department
+            // cbLimitPage
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Department.HeaderText = "Phòng ban";
-            this.Department.MinimumWidth = 8;
-            this.Department.Name = "Department";
-            this.Department.ReadOnly = true;
-            this.Department.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Department.Width = 150;
-            // 
-            // Date
-            // 
-            dataGridViewCellStyle4.NullValue = null;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Date.HeaderText = "Ngày làm việc";
-            this.Date.MinimumWidth = 8;
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            this.Date.Width = 150;
-            // 
-            // ShiftStartTime
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.NullValue = null;
-            this.ShiftStartTime.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ShiftStartTime.HeaderText = "T.gian bắt đầu ca làm việc";
-            this.ShiftStartTime.MinimumWidth = 8;
-            this.ShiftStartTime.Name = "ShiftStartTime";
-            this.ShiftStartTime.ReadOnly = true;
-            this.ShiftStartTime.Width = 150;
-            // 
-            // ShiftEndTime
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.NullValue = null;
-            this.ShiftEndTime.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ShiftEndTime.HeaderText = "T.gian k.thúc ca làm việc";
-            this.ShiftEndTime.MinimumWidth = 8;
-            this.ShiftEndTime.Name = "ShiftEndTime";
-            this.ShiftEndTime.ReadOnly = true;
-            this.ShiftEndTime.Width = 150;
-            // 
-            // ActualStartTime
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.NullValue = null;
-            this.ActualStartTime.DefaultCellStyle = dataGridViewCellStyle7;
-            this.ActualStartTime.HeaderText = "T.gian bắt đầu làm việc thực tế";
-            this.ActualStartTime.MinimumWidth = 8;
-            this.ActualStartTime.Name = "ActualStartTime";
-            this.ActualStartTime.ReadOnly = true;
-            this.ActualStartTime.Width = 150;
-            // 
-            // ActualEndTime
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.NullValue = null;
-            this.ActualEndTime.DefaultCellStyle = dataGridViewCellStyle8;
-            this.ActualEndTime.HeaderText = "T.gian k.thúc làm việc thực tế";
-            this.ActualEndTime.MinimumWidth = 8;
-            this.ActualEndTime.Name = "ActualEndTime";
-            this.ActualEndTime.ReadOnly = true;
-            this.ActualEndTime.Width = 150;
-            // 
-            // Overtime
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Overtime.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Overtime.HeaderText = "Giờ làm thêm";
-            this.Overtime.MinimumWidth = 8;
-            this.Overtime.Name = "Overtime";
-            this.Overtime.ReadOnly = true;
-            this.Overtime.Width = 150;
-            // 
-            // AttendanceStatus
-            // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttendanceStatus.DefaultCellStyle = dataGridViewCellStyle10;
-            this.AttendanceStatus.HeaderText = "Trạng thái điểm danh";
-            this.AttendanceStatus.MinimumWidth = 8;
-            this.AttendanceStatus.Name = "AttendanceStatus";
-            this.AttendanceStatus.ReadOnly = true;
-            this.AttendanceStatus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.AttendanceStatus.Width = 150;
-            // 
-            // AttendanceNote
-            // 
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttendanceNote.DefaultCellStyle = dataGridViewCellStyle11;
-            this.AttendanceNote.HeaderText = "Ghi chú";
-            this.AttendanceNote.MinimumWidth = 8;
-            this.AttendanceNote.Name = "AttendanceNote";
-            this.AttendanceNote.ReadOnly = true;
-            this.AttendanceNote.Width = 150;
+            this.cbLimitPage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLimitPage.FormattingEnabled = true;
+            this.cbLimitPage.Location = new System.Drawing.Point(825, -1);
+            this.cbLimitPage.Name = "cbLimitPage";
+            this.cbLimitPage.Size = new System.Drawing.Size(42, 21);
+            this.cbLimitPage.TabIndex = 3;
+            this.cbLimitPage.SelectedIndexChanged += new System.EventHandler(this.cbLimitPage_SelectedIndexChanged);
             // 
             // AttendanceUI
             // 
@@ -486,6 +528,7 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -525,5 +568,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Overtime;
         private System.Windows.Forms.DataGridViewTextBoxColumn AttendanceStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn AttendanceNote;
+        private System.Windows.Forms.ComboBox cbPosition;
+        private System.Windows.Forms.ComboBox cbDepartment;
+        private System.Windows.Forms.ComboBox cbLimitPage;
     }
 }

@@ -1,5 +1,4 @@
 ﻿using HRMS.DAL;
-using HRMS.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,20 +10,62 @@ namespace HRMS.GUI
     {
         private Panel panel;
         public DataGridViewRow SelectedRow { get; private set; }
-        private int page = 1, limit = 20;
+        private int page = 1, limit = ApplicationConfig.MAX_PAGE[0];
+
+        List<Department> Departments;
+        List<Position> Positions;
+        Department department; 
+        Position position;
         public CandidateUI(Panel panel)
         {
             this.panel = panel;
             InitializeComponent();
             this.BackColor = panel.BackColor;
+            Init();
             InitPage();
+        }
+
+        public void Init()
+        {
+            foreach (int limit in ApplicationConfig.MAX_PAGE)
+            {
+                cbLimitPage.Items.Add(limit);
+            }
+            cbLimitPage.SelectedIndex = 0;
+            limit = ApplicationConfig.MAX_PAGE[cbLimitPage.SelectedIndex];
+
+            cbDepartment.Items.Clear();
+            Departments = DataManager.GetInstance().Departments;
+            cbDepartment.Items.Add("Tất cả");
+            if (Departments.Count > 0)
+            {
+                for (int i = 0; i < Departments.Count; i++)
+                {
+                    Department department = Departments[i];
+                    cbDepartment.Items.Add(department.Name);
+                }
+            }
+            cbDepartment.SelectedIndex = 0;
+
+            cbPosition.Items.Clear();
+            Positions = DataManager.GetInstance().Positions;
+            cbPosition.Items.Add("Tất cả");
+            if (Positions.Count > 0)
+            {
+                for (int i = 0; i < Positions.Count; i++)
+                {
+                    Position position = Positions[i];
+                    cbPosition.Items.Add(position.Name);
+                }
+            }
+            cbPosition.SelectedIndex = 0;
         }
 
         public void InitPage()
         {
 
             lbPage.Text = page.ToString();
-            List<Candidate> candidates = DataManager.GetInstance().Candidates;
+            List<Candidate> candidates = DataManager.GetInstance().Candidates.FindAll(c => IsMatch(c));
             int maxPage = candidates.Count / limit;
             if (candidates.Count % limit != 0)
             {
@@ -102,23 +143,26 @@ namespace HRMS.GUI
 
         internal void AddCandidate(Candidate candidate)
         {
-            if (listCandidate.Rows.Count < limit)
+            if (IsMatch(candidate))
             {
-                listCandidate.Rows.Add(candidate.CandidateID,
-                    candidate.FullName,
-                    candidate.PositionApplied.Name,
-                    candidate.DepartmentApplied.Name,
-                    candidate.ContactInformation,
-                    candidate.Education,
-                    candidate.WorkExperience,
-                    candidate.Skills,
-                    candidate.InterviewDate,
-                    candidate.Interviewer,
-                    GetInterviewResult(candidate.InterviewResult));
-            }
-            else
-            {
-                NextPage();
+                if (listCandidate.Rows.Count < limit)
+                {
+                    listCandidate.Rows.Add(candidate.CandidateID,
+                        candidate.FullName,
+                        candidate.PositionApplied.Name,
+                        candidate.DepartmentApplied.Name,
+                        candidate.ContactInformation,
+                        candidate.Education,
+                        candidate.WorkExperience,
+                        candidate.Skills,
+                        candidate.InterviewDate,
+                        candidate.Interviewer,
+                        GetInterviewResult(candidate.InterviewResult));
+                }
+                else
+                {
+                    NextPage();
+                }
             }
         }
 
@@ -184,7 +228,7 @@ namespace HRMS.GUI
 
         public void NextPage()
         {
-            List<Candidate> candidates = DataManager.GetInstance().Candidates;
+            List<Candidate> candidates = DataManager.GetInstance().Candidates.FindAll(c => IsMatch(c)); 
             int maxPage = candidates.Count / limit;
             if (candidates.Count % limit != 0)
             {
@@ -198,12 +242,84 @@ namespace HRMS.GUI
             InitPage();
         }
 
+        private void cbDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbDepartment.SelectedIndex > 0)
+            {
+                department = Departments[cbDepartment.SelectedIndex - 1];
+            } else
+            {
+                department = null;
+            }
+            InitPage();
+        }
+
+        private void cbPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbPosition.SelectedIndex > 0)
+            {
+                position = Positions[cbPosition.SelectedIndex - 1];
+            }
+            else
+            {
+                position = null;
+            }
+            InitPage();
+        }
+
         private void btnReset_Click(object sender, EventArgs e)
         {
+            txtKeyword.Texts = string.Empty;
             DataManager.GetInstance().LoadAllCandidate();
             InitPage();
             Alert alert = new Alert();
             alert.ShowAlert("Làm mới thành công!", Alert.EnumType.SUCCESS);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string keyword = txtKeyword.Texts;
+            Search(keyword);
+        }
+        private void Search(string searchText)
+        {
+            InitPage();
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                listCandidate.ClearSelection();
+                List<DataGridViewRow> list = new List<DataGridViewRow>();
+                foreach (DataGridViewRow row in listCandidate.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchText.ToLower()))
+                        {
+                            list.Add(row);
+                            break;
+                        }
+                    }
+                }
+                listCandidate.Rows.Clear();
+                foreach (DataGridViewRow row in list)
+                {
+                    listCandidate.Rows.Add(row);
+                }
+            }
+        }
+
+        private void cbLimitPage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLimitPage.SelectedIndex >= 0)
+            {
+
+                limit = ApplicationConfig.MAX_PAGE[cbLimitPage.SelectedIndex];
+                InitPage();
+            }
+        }
+
+        private bool IsMatch(Candidate candidate)
+        {
+            return (department == null || department.Id == candidate.DepartmentApplied.Id) && (position == null || position.Id == candidate.PositionApplied.Id);
         }
 
     }

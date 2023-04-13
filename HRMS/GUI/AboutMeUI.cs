@@ -1,6 +1,4 @@
-﻿using HRMS.DAL.Models;
-using RestSharp;
-using System.Collections.Generic;
+﻿using RestSharp;
 using System.Windows.Forms;
 
 namespace HRMS.GUI

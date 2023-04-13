@@ -41,7 +41,7 @@
             this.dpEndDate = new RJCodeAdvance.RJControls.RJDatePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.dpStartEnd = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.dpStartDate = new RJCodeAdvance.RJControls.RJDatePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -91,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 309);
+            this.panel1.Size = new System.Drawing.Size(188, 312);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox3
@@ -167,7 +167,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(188, 25);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(572, 284);
+            this.panel5.Size = new System.Drawing.Size(572, 287);
             this.panel5.TabIndex = 0;
             // 
             // panel3
@@ -236,29 +236,29 @@
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.dpStartEnd);
+            this.panel15.Controls.Add(this.dpStartDate);
             this.panel15.Controls.Add(this.label10);
             this.panel15.Location = new System.Drawing.Point(44, 223);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(158, 59);
             this.panel15.TabIndex = 8;
             // 
-            // dpStartEnd
+            // dpStartDate
             // 
-            this.dpStartEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dpStartEnd.BorderSize = 0;
-            this.dpStartEnd.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpStartEnd.CustomFormat = "dd/MM/yyyy";
-            this.dpStartEnd.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpStartEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpStartEnd.Location = new System.Drawing.Point(4, 24);
-            this.dpStartEnd.MaximumSize = new System.Drawing.Size(150, 31);
-            this.dpStartEnd.MinimumSize = new System.Drawing.Size(150, 31);
-            this.dpStartEnd.Name = "dpStartEnd";
-            this.dpStartEnd.Size = new System.Drawing.Size(150, 31);
-            this.dpStartEnd.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dpStartEnd.TabIndex = 0;
-            this.dpStartEnd.TextColor = System.Drawing.Color.White;
+            this.dpStartDate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dpStartDate.BorderSize = 0;
+            this.dpStartDate.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpStartDate.CustomFormat = "dd/MM/yyyy";
+            this.dpStartDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpStartDate.Location = new System.Drawing.Point(4, 24);
+            this.dpStartDate.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpStartDate.MinimumSize = new System.Drawing.Size(150, 31);
+            this.dpStartDate.Name = "dpStartDate";
+            this.dpStartDate.Size = new System.Drawing.Size(150, 31);
+            this.dpStartDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dpStartDate.TabIndex = 0;
+            this.dpStartDate.TextColor = System.Drawing.Color.White;
             // 
             // label10
             // 
@@ -327,7 +327,7 @@
             this.cbPosition.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbPosition.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cbPosition.BorderSize = 1;
-            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPosition.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPosition.ForeColor = System.Drawing.Color.DimGray;
             this.cbPosition.IconColor = System.Drawing.Color.MediumSlateBlue;
@@ -366,7 +366,7 @@
             this.cbDepartment.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbDepartment.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cbDepartment.BorderSize = 1;
-            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartment.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartment.ForeColor = System.Drawing.Color.DimGray;
             this.cbDepartment.IconColor = System.Drawing.Color.MediumSlateBlue;
@@ -491,7 +491,7 @@
             this.cbGender.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbGender.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cbGender.BorderSize = 1;
-            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGender.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.ForeColor = System.Drawing.Color.DimGray;
             this.cbGender.IconColor = System.Drawing.Color.MediumSlateBlue;
@@ -603,7 +603,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 309);
+            this.ClientSize = new System.Drawing.Size(760, 312);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -667,7 +667,7 @@
         private RJCodeAdvance.RJControls.RJDatePicker dpEndDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel15;
-        private RJCodeAdvance.RJControls.RJDatePicker dpStartEnd;
+        private RJCodeAdvance.RJControls.RJDatePicker dpStartDate;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label9;

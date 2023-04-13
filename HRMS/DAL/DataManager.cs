@@ -1,5 +1,4 @@
 ﻿using HRMS.BUS;
-using HRMS.DAL.Models;
 using RestSharp;
 using System.Collections.Generic;
 
@@ -68,7 +67,7 @@ namespace HRMS.DAL
             }
         }
 
-        private void LoadAllDepartment()
+        public void LoadAllDepartment()
         {
             RestResponse<List<Department>> res2 = DepartmentService.GetAll();
             if (res2.StatusCode == System.Net.HttpStatusCode.OK)
@@ -80,7 +79,7 @@ namespace HRMS.DAL
             }
         }
 
-        private void LoadAllPosition()
+        public void LoadAllPosition()
         {
             RestResponse<List<Position>> res3 = PositionService.GetAll();
             if (res3.StatusCode == System.Net.HttpStatusCode.OK)
@@ -92,7 +91,7 @@ namespace HRMS.DAL
             }
         }
 
-        private void LoadAllEvaluate()
+        public void LoadAllEvaluate()
         {
             RestResponse<List<Evaluate>> res = EvaluationService.GetAll();
             if (res.StatusCode == System.Net.HttpStatusCode.OK)
@@ -105,7 +104,7 @@ namespace HRMS.DAL
             }
         }
 
-        private void LoadAllAttendance()
+        public void LoadAllAttendance()
         {
             RestResponse<List<Attendance>> res = AttendanceService.GetAll();
             if (res.StatusCode == System.Net.HttpStatusCode.OK)
@@ -131,7 +130,7 @@ namespace HRMS.DAL
             }
         }
 
-        private void LoadAllContract()
+        public void LoadAllContract()
         {
             RestResponse<List<Contract>> res = ContractService.GetAll();
             if (res.StatusCode == System.Net.HttpStatusCode.OK)
@@ -144,7 +143,7 @@ namespace HRMS.DAL
             }
         }
 
-        private void LoadAllSalary()
+        public void LoadAllSalary()
         {
             RestResponse<List<Salary>> res = SalaryService.GetAll();
             if (res.StatusCode == System.Net.HttpStatusCode.OK)

@@ -1,5 +1,4 @@
-﻿using HRMS.DAL.Models;
-using RestSharp;
+﻿using RestSharp;
 using System;
 using System.Collections.Generic;
 
@@ -25,7 +24,28 @@ namespace HRMS.BUS
             request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
             request.AddJsonBody(attendance);
             var response = client.Execute<Attendance>(request);
-            return response != null ? response.Data : null;
+            return response.StatusCode == System.Net.HttpStatusCode.OK ? response.Data : null;
+        }
+
+        public bool Delete(int attendanceID)
+        {
+            var client = new RestClient(ApplicationConfig.BASE_URL);
+            client.AddDefaultHeader("Content-Type", "application/json");
+            var request = new RestRequest("/api/Attendance?id=" + attendanceID, Method.Delete);
+            request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
+            var response = client.Execute(request);
+            return response.StatusCode == System.Net.HttpStatusCode.OK;
+        }
+
+        public bool Update(Attendance attendance)
+        {
+            var client = new RestClient(ApplicationConfig.BASE_URL);
+            client.AddDefaultHeader("Content-Type", "application/json");
+            var request = new RestRequest("/api/Attendance", Method.Put);
+            request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
+            request.AddJsonBody(attendance);
+            var response = client.Execute(request);
+            return response.StatusCode == System.Net.HttpStatusCode.OK;
         }
     }
 }

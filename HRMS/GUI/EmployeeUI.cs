@@ -1,5 +1,5 @@
 ﻿using HRMS.DAL;
-using HRMS.DAL.Models;
+using HRMS.GUI.Report;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,21 +10,62 @@ namespace HRMS.GUI
     public partial class EmployeeUI : Form
     {
         private Panel panel;
+        List<Department> Departments;
+        List<Position> Positions;
+        Department department;
+        Position position;
 
         public DataGridViewRow SelectedRow { get; private set; }
-        private int page = 1, limit = 20;
+        private int page = 1, limit = ApplicationConfig.MAX_PAGE[0];
         public EmployeeUI(Panel panel)
         {
             this.panel = panel;
             InitializeComponent();
             this.BackColor = panel.BackColor;
+            Init();
             InitPage();
+        }
+
+        public void Init()
+        {
+            foreach (int limit in ApplicationConfig.MAX_PAGE)
+            {
+                cbLimitPage.Items.Add(limit);
+            }
+            cbLimitPage.SelectedIndex = 0;
+            limit = ApplicationConfig.MAX_PAGE[cbLimitPage.SelectedIndex];
+
+            cbDepartment.Items.Clear();
+            Departments = DataManager.GetInstance().Departments;
+            cbDepartment.Items.Add("Tất cả");
+            if (Departments.Count > 0)
+            {
+                for (int i = 0; i < Departments.Count; i++)
+                {
+                    Department department = Departments[i];
+                    cbDepartment.Items.Add(department.Name);
+                }
+            }
+            cbDepartment.SelectedIndex = 0;
+
+            cbPosition.Items.Clear();
+            Positions = DataManager.GetInstance().Positions;
+            cbPosition.Items.Add("Tất cả");
+            if (Positions.Count > 0)
+            {
+                for (int i = 0; i < Positions.Count; i++)
+                {
+                    Position position = Positions[i];
+                    cbPosition.Items.Add(position.Name);
+                }
+            }
+            cbPosition.SelectedIndex = 0;
         }
 
         public void InitPage()
         {
             lbPage.Text = page.ToString();
-            List<Employee> employees = DataManager.GetInstance().Employees;
+            List<Employee> employees = DataManager.GetInstance().Employees.FindAll(em => IsMatch(em));
             int maxPage = employees.Count / limit;
             if (employees.Count % limit != 0)
             {
@@ -70,6 +111,7 @@ namespace HRMS.GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            txtKeyword.Texts = string.Empty;
             DataManager.GetInstance().LoadAllEmployee();
             InitPage();
             Alert alert = new Alert();
@@ -83,10 +125,10 @@ namespace HRMS.GUI
         }
         private void Search(string searchText)
         {
+            InitPage();
             if (!string.IsNullOrEmpty(searchText))
             {
                 listEmployee.ClearSelection();
-                listEmployee.Rows.Clear();
                 List<DataGridViewRow> list = new List<DataGridViewRow>();
                 foreach (DataGridViewRow row in listEmployee.Rows)
                 {
@@ -99,6 +141,7 @@ namespace HRMS.GUI
                         }
                     }
                 }
+                listEmployee.Rows.Clear();
                 foreach (DataGridViewRow row in list)
                 {
                     listEmployee.Rows.Add(row);
@@ -107,7 +150,8 @@ namespace HRMS.GUI
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
-        {   if (SelectedRow != null)
+        {
+            if (SelectedRow != null)
             {
                 int employeeID = int.Parse(SelectedRow.Cells[0].Value.ToString());
                 Employee employee = DataManager.GetInstance().Employees.SingleOrDefault(em => em.EmployeeID == employeeID);
@@ -154,13 +198,16 @@ namespace HRMS.GUI
 
         internal void AddEmployee(Employee employee)
         {
-            if (listEmployee.Rows.Count < limit)
+            if (IsMatch(employee))
             {
-                listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.PhoneNumber, employee.Email, employee.Address, employee.Department.Name, employee.Position.Name, employee.StartDate.ToString("dd/MM/yyyy"), employee.EndDate.ToString("dd/MM/yyyy"), employee.Status == 0 ? "Đang làm việc" : "Đã nghỉ việc");
-            }
-            else
-            {
-                NextPage();
+                if (listEmployee.Rows.Count < limit)
+                {
+                    listEmployee.Rows.Add(employee.EmployeeID, employee.FullName, employee.DateOfBirth.ToString("dd/MM/yyyy"), employee.Gender, employee.PhoneNumber, employee.Email, employee.Address, employee.Department.Name, employee.Position.Name, employee.StartDate.ToString("dd/MM/yyyy"), employee.EndDate.ToString("dd/MM/yyyy"), employee.Status == 0 ? "Đang làm việc" : "Đã nghỉ việc");
+                }
+                else
+                {
+                    NextPage();
+                }
             }
         }
 
@@ -169,7 +216,8 @@ namespace HRMS.GUI
             if (listEmployee.SelectedRows.Count > 0)
             {
                 SelectedRow = listEmployee.SelectedRows[0];
-            } else
+            }
+            else
             {
                 SelectedRow = null;
             }
@@ -196,9 +244,10 @@ namespace HRMS.GUI
             InitPage();
         }
 
+
         public void NextPage()
         {
-            List<Employee> employees = DataManager.GetInstance().Employees;
+            List<Employee> employees = DataManager.GetInstance().Employees.FindAll(em => IsMatch(em));
             int maxPage = employees.Count / limit;
             if (employees.Count % limit != 0)
             {
@@ -210,6 +259,67 @@ namespace HRMS.GUI
                 page = maxPage;
             }
             InitPage();
+        }
+
+        private void cbDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbDepartment.SelectedIndex > 0)
+            {
+                department = Departments[cbDepartment.SelectedIndex - 1];
+            } else
+            {
+                department = null;
+            }
+            InitPage();
+        }
+
+        private void cbPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbPosition.SelectedIndex > 0)
+            {
+                position = Positions[cbPosition.SelectedIndex - 1];
+            }
+            else
+            {
+                position = null;
+            }
+            InitPage();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            var list = DataManager.GetInstance().Employees.FindAll(em => IsMatch(em)).Select(em => new
+            {
+                EmployeeID = em.EmployeeID,
+                EmployeeName = em.FullName,
+                Department = em.Department.Name,
+                Position = em.Position.Name,
+                DateOfBirth = em.DateOfBirth,
+                Gender = em.Gender,
+                PhoneNumber = em.PhoneNumber,
+                Address = em.Address,
+            }).ToList();
+            EmployeeReport report = new EmployeeReport();
+            report.SetDataSource(list);
+            CrystalReport fReport = new CrystalReport();
+            fReport.Text = "In danh sách nhân viên";
+            fReport.crystalReportViewer.ReportSource = report;
+            fReport.ShowDialog();
+        }
+
+        private void cbLimitPage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLimitPage.SelectedIndex >= 0)
+            {
+
+                limit = ApplicationConfig.MAX_PAGE[cbLimitPage.SelectedIndex];
+                InitPage();
+            }
+        }
+
+        private bool IsMatch(Employee employee)
+        {
+            return (department == null || department.Id == employee.Department.Id) && (position == null || position.Id == employee.Position.Id);
         }
     }
 }

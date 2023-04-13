@@ -1,14 +1,8 @@
 ﻿using HRMS.DAL;
-using HRMS.DAL.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRMS.GUI
@@ -107,20 +101,17 @@ namespace HRMS.GUI
             bool r = int.TryParse(txtOvertime.Texts, out overtime);
             if (!r)
             {
-                alert.ShowAlert("Số giờ làm thêm phải là 1 số", Alert.EnumType.WARNING);
+                alert.ShowAlert("Số giờ làm thêm phải là số", Alert.EnumType.WARNING);
                 return;
             }
             if (shiftStartTime > shiftEndTime)
             {
-                alert.ShowAlert("Thời gian bắt đầu ca phải trước thời gian kết thúc", Alert.EnumType.WARNING);
-                return;
+                shiftEndTime = shiftEndTime.AddDays(1);
             }
             if (actualStartTime > actualEndTime)
             {
-                alert.ShowAlert("Thời gian bắt đầu thực tế phải trước thời gian kết thúc", Alert.EnumType.WARNING);
-                return;
+                actualEndTime = actualEndTime.AddDays(1);
             }
-            alert.ShowAlert("Thêm thành công!", Alert.EnumType.SUCCESS);
             Attendance attendance = new Attendance();
             attendance.AttendanceStatus = 1;
             attendance.Employee = employee;
@@ -137,7 +128,8 @@ namespace HRMS.GUI
                 DataManager.GetInstance().Attendances.Add(na);
                 Parent.AddAttendance(na);
                 alert.ShowAlert("Thêm thành công!", Alert.EnumType.SUCCESS);
-            } else
+            } 
+            else
             {
                 alert.ShowAlert("Có lỗi xảy ra", Alert.EnumType.ERROR);
             }

@@ -1,5 +1,4 @@
 ﻿using HRMS.BUS;
-using HRMS.DAL.Models;
 using RestSharp;
 using System.Net;
 using System.Windows.Forms;

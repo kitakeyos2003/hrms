@@ -118,7 +118,7 @@
             this.cbInterviewResult.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbInterviewResult.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cbInterviewResult.BorderSize = 1;
-            this.cbInterviewResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbInterviewResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInterviewResult.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbInterviewResult.ForeColor = System.Drawing.Color.DimGray;
             this.cbInterviewResult.IconColor = System.Drawing.Color.MediumSlateBlue;
@@ -351,7 +351,7 @@
             this.cbPosition.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbPosition.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cbPosition.BorderSize = 1;
-            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPosition.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPosition.ForeColor = System.Drawing.Color.DimGray;
             this.cbPosition.IconColor = System.Drawing.Color.MediumSlateBlue;
@@ -390,7 +390,7 @@
             this.cbDepartment.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbDepartment.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cbDepartment.BorderSize = 1;
-            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartment.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartment.ForeColor = System.Drawing.Color.DimGray;
             this.cbDepartment.IconColor = System.Drawing.Color.MediumSlateBlue;

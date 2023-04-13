@@ -57,11 +57,10 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -120,6 +119,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -143,6 +143,14 @@
     <Compile Include="BUS\EmployeeService.cs" />
     <Compile Include="BUS\EvaluationService.cs" />
     <Compile Include="BUS\HomeService.cs" />
+    <Compile Include="DAL\DataSet\DataSet.cs">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAL\Models\ApiResponse.cs" />
     <Compile Include="DAL\Models\Attendance.cs" />
     <Compile Include="DAL\Models\Candidate.cs" />
@@ -182,10 +190,10 @@
     <Compile Include="GUI\AddSalaryUI.Designer.cs">
       <DependentUpon>AddSalaryUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\alert\Alert.cs">
+    <Compile Include="GUI\Alert\Alert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\alert\Alert.Designer.cs">
+    <Compile Include="GUI\Alert\Alert.Designer.cs">
       <DependentUpon>Alert.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ContractUI.cs">
@@ -247,6 +255,18 @@
     </Compile>
     <Compile Include="GUI\CandidateUI.Designer.cs">
       <DependentUpon>CandidateUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Report\EmployeeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\CrystalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\CrystalReport.Designer.cs">
+      <DependentUpon>CrystalReport.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SalaryCalculatorUI.cs">
       <SubType>Form</SubType>
@@ -313,7 +333,7 @@
     <EmbeddedResource Include="GUI\AddSalaryUI.resx">
       <DependentUpon>AddSalaryUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\alert\Alert.resx">
+    <EmbeddedResource Include="GUI\Alert\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ContractUI.resx">
@@ -342,6 +362,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CandidateUI.resx">
       <DependentUpon>CandidateUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\EmployeeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\CrystalReport.resx">
+      <DependentUpon>CrystalReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SalaryCalculatorUI.resx">
       <DependentUpon>SalaryCalculatorUI.cs</DependentUpon>
@@ -377,6 +404,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DAL\DataSet\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -438,6 +476,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,4 @@
 ﻿using HRMS.DAL;
-using HRMS.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -95,7 +94,7 @@ namespace HRMS.GUI
             int departmentIndex = cbDepartment.SelectedIndex;
             int positionIndex = cbPosition.SelectedIndex;
             int salary;
-            DateTime startDate = dpStartEnd.Value;
+            DateTime startDate = dpStartDate.Value;
             DateTime endDate = dpEndDate.Value;
             Alert alert = new Alert();
 

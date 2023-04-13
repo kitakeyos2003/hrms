@@ -1,5 +1,4 @@
-﻿using HRMS.DAL.Models;
-using RestSharp;
+﻿using RestSharp;
 using System.Collections.Generic;
 
 namespace HRMS.BUS
@@ -25,7 +24,7 @@ namespace HRMS.BUS
             request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
             request.AddJsonBody(employee);
             var response = client.Execute<Employee>(request);
-            return response != null ? response.Data : null;
+            return response.StatusCode == System.Net.HttpStatusCode.OK ? response.Data : null;
         }
 
         public bool Update(Employee employee)

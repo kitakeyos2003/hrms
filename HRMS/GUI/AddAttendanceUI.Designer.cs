@@ -305,7 +305,7 @@
             this.cbEmployee.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbEmployee.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cbEmployee.BorderSize = 1;
-            this.cbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmployee.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEmployee.ForeColor = System.Drawing.Color.DimGray;
             this.cbEmployee.IconColor = System.Drawing.Color.MediumSlateBlue;
@@ -345,7 +345,7 @@
             this.cbDepartment.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbDepartment.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cbDepartment.BorderSize = 1;
-            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartment.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartment.ForeColor = System.Drawing.Color.DimGray;
             this.cbDepartment.IconColor = System.Drawing.Color.MediumSlateBlue;
