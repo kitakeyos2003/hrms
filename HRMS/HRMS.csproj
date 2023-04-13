@@ -256,6 +256,12 @@
     <Compile Include="GUI\CandidateUI.Designer.cs">
       <DependentUpon>CandidateUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Report\CandidateReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CandidateReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI\Report\EmployeeReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -362,6 +368,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CandidateUI.resx">
       <DependentUpon>CandidateUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\CandidateReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CandidateReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Report\EmployeeReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listCandidate = new System.Windows.Forms.DataGridView();
@@ -53,6 +53,7 @@
             this.Interviewer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InterviewResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.cbLimitPage = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lbPage = new System.Windows.Forms.Label();
             this.prePage = new FontAwesome.Sharp.IconButton();
@@ -62,6 +63,8 @@
             this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbPosition = new System.Windows.Forms.ComboBox();
+            this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
@@ -69,9 +72,6 @@
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
-            this.cbDepartment = new System.Windows.Forms.ComboBox();
-            this.cbPosition = new System.Windows.Forms.ComboBox();
-            this.cbLimitPage = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listCandidate)).BeginInit();
@@ -137,10 +137,10 @@
             // 
             // CandidateID
             // 
-            dataGridViewCellStyle71.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle71.Format = "N0";
-            dataGridViewCellStyle71.NullValue = null;
-            this.CandidateID.DefaultCellStyle = dataGridViewCellStyle71;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = null;
+            this.CandidateID.DefaultCellStyle = dataGridViewCellStyle1;
             this.CandidateID.HeaderText = "Mã ứng viên";
             this.CandidateID.MinimumWidth = 8;
             this.CandidateID.Name = "CandidateID";
@@ -149,8 +149,8 @@
             // 
             // FullName
             // 
-            dataGridViewCellStyle72.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle72;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle2;
             this.FullName.HeaderText = "Họ và tên";
             this.FullName.MinimumWidth = 8;
             this.FullName.Name = "FullName";
@@ -169,8 +169,8 @@
             // 
             // DepartmentApplied
             // 
-            dataGridViewCellStyle73.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepartmentApplied.DefaultCellStyle = dataGridViewCellStyle73;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentApplied.DefaultCellStyle = dataGridViewCellStyle3;
             this.DepartmentApplied.HeaderText = "Phòng ban ứng tuyển";
             this.DepartmentApplied.MinimumWidth = 8;
             this.DepartmentApplied.Name = "DepartmentApplied";
@@ -180,8 +180,8 @@
             // 
             // ContactInformation
             // 
-            dataGridViewCellStyle74.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactInformation.DefaultCellStyle = dataGridViewCellStyle74;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactInformation.DefaultCellStyle = dataGridViewCellStyle4;
             this.ContactInformation.HeaderText = "Thông tin liên lạc";
             this.ContactInformation.MinimumWidth = 8;
             this.ContactInformation.Name = "ContactInformation";
@@ -190,8 +190,8 @@
             // 
             // Education
             // 
-            dataGridViewCellStyle75.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Education.DefaultCellStyle = dataGridViewCellStyle75;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Education.DefaultCellStyle = dataGridViewCellStyle5;
             this.Education.HeaderText = "Trình độ học vấn";
             this.Education.MinimumWidth = 8;
             this.Education.Name = "Education";
@@ -200,8 +200,8 @@
             // 
             // WorkExperience
             // 
-            dataGridViewCellStyle76.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkExperience.DefaultCellStyle = dataGridViewCellStyle76;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WorkExperience.DefaultCellStyle = dataGridViewCellStyle6;
             this.WorkExperience.HeaderText = "Kinh nghiệm làm việc";
             this.WorkExperience.MinimumWidth = 8;
             this.WorkExperience.Name = "WorkExperience";
@@ -210,8 +210,8 @@
             // 
             // Skills
             // 
-            dataGridViewCellStyle77.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Skills.DefaultCellStyle = dataGridViewCellStyle77;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Skills.DefaultCellStyle = dataGridViewCellStyle7;
             this.Skills.HeaderText = "Kỹ năng";
             this.Skills.MinimumWidth = 8;
             this.Skills.Name = "Skills";
@@ -220,10 +220,10 @@
             // 
             // InterviewDate
             // 
-            dataGridViewCellStyle78.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle78.Format = "d";
-            dataGridViewCellStyle78.NullValue = null;
-            this.InterviewDate.DefaultCellStyle = dataGridViewCellStyle78;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Format = "d";
+            dataGridViewCellStyle8.NullValue = null;
+            this.InterviewDate.DefaultCellStyle = dataGridViewCellStyle8;
             this.InterviewDate.HeaderText = "Ngày phỏng vấn";
             this.InterviewDate.MinimumWidth = 8;
             this.InterviewDate.Name = "InterviewDate";
@@ -232,8 +232,8 @@
             // 
             // Interviewer
             // 
-            dataGridViewCellStyle79.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Interviewer.DefaultCellStyle = dataGridViewCellStyle79;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Interviewer.DefaultCellStyle = dataGridViewCellStyle9;
             this.Interviewer.HeaderText = "Người phỏng vấn";
             this.Interviewer.MinimumWidth = 8;
             this.Interviewer.Name = "Interviewer";
@@ -242,8 +242,8 @@
             // 
             // InterviewResult
             // 
-            dataGridViewCellStyle80.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InterviewResult.DefaultCellStyle = dataGridViewCellStyle80;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InterviewResult.DefaultCellStyle = dataGridViewCellStyle10;
             this.InterviewResult.HeaderText = "Kết quả phỏng vấn";
             this.InterviewResult.MinimumWidth = 8;
             this.InterviewResult.Name = "InterviewResult";
@@ -260,6 +260,16 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(940, 20);
             this.panel7.TabIndex = 3;
+            // 
+            // cbLimitPage
+            // 
+            this.cbLimitPage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLimitPage.FormattingEnabled = true;
+            this.cbLimitPage.Location = new System.Drawing.Point(825, -1);
+            this.cbLimitPage.Name = "cbLimitPage";
+            this.cbLimitPage.Size = new System.Drawing.Size(42, 21);
+            this.cbLimitPage.TabIndex = 4;
+            this.cbLimitPage.SelectedIndexChanged += new System.EventHandler(this.cbLimitPage_SelectedIndexChanged);
             // 
             // panel9
             // 
@@ -372,6 +382,26 @@
             this.panel3.Size = new System.Drawing.Size(1000, 20);
             this.panel3.TabIndex = 0;
             // 
+            // cbPosition
+            // 
+            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPosition.FormattingEnabled = true;
+            this.cbPosition.Location = new System.Drawing.Point(147, 0);
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Size = new System.Drawing.Size(121, 21);
+            this.cbPosition.TabIndex = 9;
+            this.cbPosition.SelectedIndexChanged += new System.EventHandler(this.cbPosition_SelectedIndexChanged);
+            // 
+            // cbDepartment
+            // 
+            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDepartment.FormattingEnabled = true;
+            this.cbDepartment.Location = new System.Drawing.Point(20, 0);
+            this.cbDepartment.Name = "cbDepartment";
+            this.cbDepartment.Size = new System.Drawing.Size(121, 21);
+            this.cbDepartment.TabIndex = 8;
+            this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel8);
@@ -423,6 +453,7 @@
             this.iconButton1.Size = new System.Drawing.Size(30, 30);
             this.iconButton1.TabIndex = 9;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btnReset
             // 
@@ -478,36 +509,6 @@
             this.txtKeyword.TabIndex = 6;
             this.txtKeyword.Texts = "";
             this.txtKeyword.UnderlinedStyle = false;
-            // 
-            // cbDepartment
-            // 
-            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDepartment.FormattingEnabled = true;
-            this.cbDepartment.Location = new System.Drawing.Point(20, 0);
-            this.cbDepartment.Name = "cbDepartment";
-            this.cbDepartment.Size = new System.Drawing.Size(121, 21);
-            this.cbDepartment.TabIndex = 8;
-            this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged);
-            // 
-            // cbPosition
-            // 
-            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPosition.FormattingEnabled = true;
-            this.cbPosition.Location = new System.Drawing.Point(147, 0);
-            this.cbPosition.Name = "cbPosition";
-            this.cbPosition.Size = new System.Drawing.Size(121, 21);
-            this.cbPosition.TabIndex = 9;
-            this.cbPosition.SelectedIndexChanged += new System.EventHandler(this.cbPosition_SelectedIndexChanged);
-            // 
-            // cbLimitPage
-            // 
-            this.cbLimitPage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLimitPage.FormattingEnabled = true;
-            this.cbLimitPage.Location = new System.Drawing.Point(825, -1);
-            this.cbLimitPage.Name = "cbLimitPage";
-            this.cbLimitPage.Size = new System.Drawing.Size(42, 21);
-            this.cbLimitPage.TabIndex = 4;
-            this.cbLimitPage.SelectedIndexChanged += new System.EventHandler(this.cbLimitPage_SelectedIndexChanged);
             // 
             // CandidateUI
             // 

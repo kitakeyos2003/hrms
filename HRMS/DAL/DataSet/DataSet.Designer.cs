@@ -499,7 +499,7 @@ namespace HRMS.DAL.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtEmployeeRow AdddtEmployeeRow(string EmployeeName, string Department, string Position, System.DateTime DateOfBirth, string Gender, string PhoneNumber, string Address, string EmployeeID) {
+            public dtEmployeeRow AdddtEmployeeRow(string EmployeeName, string Department, string Position, System.DateTime DateOfBirth, string Gender, string PhoneNumber, string Address, int EmployeeID) {
                 dtEmployeeRow rowdtEmployeeRow = ((dtEmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeName,
@@ -559,8 +559,11 @@ namespace HRMS.DAL.DataSet {
                 base.Columns.Add(this.columnPhoneNumber);
                 this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAddress);
-                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("dtEmployeeKey1", new global::System.Data.DataColumn[] {
+                                this.columnEmployeeID}, false));
+                this.columnEmployeeID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -694,6 +697,24 @@ namespace HRMS.DAL.DataSet {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class dtCandidateDataTable : global::System.Data.TypedTableBase<dtCandidateRow> {
             
+            private global::System.Data.DataColumn columnCandidateID;
+            
+            private global::System.Data.DataColumn columnFullName;
+            
+            private global::System.Data.DataColumn columnPositionApplied;
+            
+            private global::System.Data.DataColumn columnDepartmentApplied;
+            
+            private global::System.Data.DataColumn columnContactInformation;
+            
+            private global::System.Data.DataColumn columnEducation;
+            
+            private global::System.Data.DataColumn columnWorkExperience;
+            
+            private global::System.Data.DataColumn columnSkills;
+            
+            private global::System.Data.DataColumn columnInterviewer;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public dtCandidateDataTable() {
@@ -725,6 +746,78 @@ namespace HRMS.DAL.DataSet {
             protected dtCandidateDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CandidateIDColumn {
+                get {
+                    return this.columnCandidateID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FullNameColumn {
+                get {
+                    return this.columnFullName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PositionAppliedColumn {
+                get {
+                    return this.columnPositionApplied;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DepartmentAppliedColumn {
+                get {
+                    return this.columnDepartmentApplied;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ContactInformationColumn {
+                get {
+                    return this.columnContactInformation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EducationColumn {
+                get {
+                    return this.columnEducation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn WorkExperienceColumn {
+                get {
+                    return this.columnWorkExperience;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SkillsColumn {
+                get {
+                    return this.columnSkills;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn InterviewerColumn {
+                get {
+                    return this.columnInterviewer;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -764,9 +857,18 @@ namespace HRMS.DAL.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtCandidateRow AdddtCandidateRow() {
+            public dtCandidateRow AdddtCandidateRow(int CandidateID, string FullName, string PositionApplied, string DepartmentApplied, string ContactInformation, string Education, string WorkExperience, string Skills, string Interviewer) {
                 dtCandidateRow rowdtCandidateRow = ((dtCandidateRow)(this.NewRow()));
-                object[] columnValuesArray = new object[0];
+                object[] columnValuesArray = new object[] {
+                        CandidateID,
+                        FullName,
+                        PositionApplied,
+                        DepartmentApplied,
+                        ContactInformation,
+                        Education,
+                        WorkExperience,
+                        Skills,
+                        Interviewer};
                 rowdtCandidateRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtCandidateRow);
                 return rowdtCandidateRow;
@@ -789,11 +891,41 @@ namespace HRMS.DAL.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnCandidateID = base.Columns["CandidateID"];
+                this.columnFullName = base.Columns["FullName"];
+                this.columnPositionApplied = base.Columns["PositionApplied"];
+                this.columnDepartmentApplied = base.Columns["DepartmentApplied"];
+                this.columnContactInformation = base.Columns["ContactInformation"];
+                this.columnEducation = base.Columns["Education"];
+                this.columnWorkExperience = base.Columns["WorkExperience"];
+                this.columnSkills = base.Columns["Skills"];
+                this.columnInterviewer = base.Columns["Interviewer"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnCandidateID = new global::System.Data.DataColumn("CandidateID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCandidateID);
+                this.columnFullName = new global::System.Data.DataColumn("FullName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFullName);
+                this.columnPositionApplied = new global::System.Data.DataColumn("PositionApplied", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPositionApplied);
+                this.columnDepartmentApplied = new global::System.Data.DataColumn("DepartmentApplied", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartmentApplied);
+                this.columnContactInformation = new global::System.Data.DataColumn("ContactInformation", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContactInformation);
+                this.columnEducation = new global::System.Data.DataColumn("Education", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEducation);
+                this.columnWorkExperience = new global::System.Data.DataColumn("WorkExperience", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWorkExperience);
+                this.columnSkills = new global::System.Data.DataColumn("Skills", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSkills);
+                this.columnInterviewer = new global::System.Data.DataColumn("Interviewer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInterviewer);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("dtCandidateKey1", new global::System.Data.DataColumn[] {
+                                this.columnCandidateID}, false));
+                this.columnCandidateID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1281,10 +1413,10 @@ namespace HRMS.DAL.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string EmployeeID {
+            public int EmployeeID {
                 get {
                     try {
-                        return ((string)(this[this.tabledtEmployee.EmployeeIDColumn]));
+                        return ((int)(this[this.tabledtEmployee.EmployeeIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'EmployeeID\' in table \'dtEmployee\' is DBNull.", e);
@@ -1404,6 +1536,258 @@ namespace HRMS.DAL.DataSet {
             internal dtCandidateRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tabledtCandidate = ((dtCandidateDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int CandidateID {
+                get {
+                    try {
+                        return ((int)(this[this.tabledtCandidate.CandidateIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CandidateID\' in table \'dtCandidate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCandidate.CandidateIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string FullName {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtCandidate.FullNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FullName\' in table \'dtCandidate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCandidate.FullNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PositionApplied {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtCandidate.PositionAppliedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PositionApplied\' in table \'dtCandidate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCandidate.PositionAppliedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string DepartmentApplied {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtCandidate.DepartmentAppliedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DepartmentApplied\' in table \'dtCandidate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCandidate.DepartmentAppliedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ContactInformation {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtCandidate.ContactInformationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ContactInformation\' in table \'dtCandidate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCandidate.ContactInformationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Education {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtCandidate.EducationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Education\' in table \'dtCandidate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCandidate.EducationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string WorkExperience {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtCandidate.WorkExperienceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WorkExperience\' in table \'dtCandidate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCandidate.WorkExperienceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Skills {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtCandidate.SkillsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Skills\' in table \'dtCandidate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCandidate.SkillsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Interviewer {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtCandidate.InterviewerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Interviewer\' in table \'dtCandidate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCandidate.InterviewerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCandidateIDNull() {
+                return this.IsNull(this.tabledtCandidate.CandidateIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCandidateIDNull() {
+                this[this.tabledtCandidate.CandidateIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFullNameNull() {
+                return this.IsNull(this.tabledtCandidate.FullNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFullNameNull() {
+                this[this.tabledtCandidate.FullNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPositionAppliedNull() {
+                return this.IsNull(this.tabledtCandidate.PositionAppliedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPositionAppliedNull() {
+                this[this.tabledtCandidate.PositionAppliedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDepartmentAppliedNull() {
+                return this.IsNull(this.tabledtCandidate.DepartmentAppliedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDepartmentAppliedNull() {
+                this[this.tabledtCandidate.DepartmentAppliedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsContactInformationNull() {
+                return this.IsNull(this.tabledtCandidate.ContactInformationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetContactInformationNull() {
+                this[this.tabledtCandidate.ContactInformationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEducationNull() {
+                return this.IsNull(this.tabledtCandidate.EducationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEducationNull() {
+                this[this.tabledtCandidate.EducationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsWorkExperienceNull() {
+                return this.IsNull(this.tabledtCandidate.WorkExperienceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetWorkExperienceNull() {
+                this[this.tabledtCandidate.WorkExperienceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSkillsNull() {
+                return this.IsNull(this.tabledtCandidate.SkillsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSkillsNull() {
+                this[this.tabledtCandidate.SkillsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsInterviewerNull() {
+                return this.IsNull(this.tabledtCandidate.InterviewerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetInterviewerNull() {
+                this[this.tabledtCandidate.InterviewerColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -1,4 +1,5 @@
 ﻿using HRMS.DAL;
+using HRMS.GUI.Report;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -315,6 +316,28 @@ namespace HRMS.GUI
                 limit = ApplicationConfig.MAX_PAGE[cbLimitPage.SelectedIndex];
                 InitPage();
             }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            var list = DataManager.GetInstance().Candidates.FindAll(em => IsMatch(em)).Select(em => new
+            {
+                CandidateID = em.CandidateID,
+                FullName = em.FullName,
+                PositionApplied = em.PositionApplied.Name,
+                DepartmentApplied = em.DepartmentApplied.Name,
+                ContactInformation = em.ContactInformation,
+                Education = em.Education,
+                WorkExperience = em.WorkExperience,
+                Skills = em.Skills,
+                Interviewer = em.Interviewer,
+            }).ToList();
+            CandidateReport report = new CandidateReport();
+            report.SetDataSource(list);
+            CrystalReport fReport = new CrystalReport();
+            fReport.Text = "In danh sách tuyển dụng";
+            fReport.crystalReportViewer.ReportSource = report;
+            fReport.ShowDialog();
         }
 
         private bool IsMatch(Candidate candidate)
