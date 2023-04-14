@@ -340,6 +340,12 @@ namespace HRMS.GUI
             fReport.ShowDialog();
         }
 
+        private void txtKeyword__TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtKeyword.Texts;
+            Search(keyword);
+        }
+
         private bool IsMatch(Candidate candidate)
         {
             return (department == null || department.Id == candidate.DepartmentApplied.Id) && (position == null || position.Id == candidate.PositionApplied.Id);

@@ -509,6 +509,7 @@
             this.txtKeyword.TabIndex = 6;
             this.txtKeyword.Texts = "";
             this.txtKeyword.UnderlinedStyle = false;
+            this.txtKeyword._TextChanged += new System.EventHandler(this.txtKeyword__TextChanged);
             // 
             // CandidateUI
             // 

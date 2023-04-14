@@ -58,5 +58,11 @@ namespace HRMS.GUI
         {
            
         }
+
+        private void txtKeyword__TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtKeyword.Texts;
+            Search(keyword);
+        }
     }
 }

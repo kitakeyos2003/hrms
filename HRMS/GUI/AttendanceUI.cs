@@ -298,6 +298,12 @@ namespace HRMS.GUI
             }
         }
 
+        private void txtKeyword__TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtKeyword.Texts;
+            Search(keyword);
+        }
+
         private bool IsMatch(Attendance attendance)
         {
             return (department == null || department.Id == attendance.Employee.Department.Id) && (position == null || position.Id == attendance.Employee.Position.Id);
