@@ -34,46 +34,34 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtPhoneNumber = new RJCodeAdvance.RJControls.RJTextBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEmail = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.cbDepartment = new RJCodeAdvance.RJControls.RJComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.cbPosition = new RJCodeAdvance.RJControls.RJComboBox();
-            this.cbEmployee = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.rjTextBox4 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox5 = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.rjDatePicker3 = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.dpStartDate = new RJCodeAdvance.RJControls.RJDatePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cbEmployee = new RJCodeAdvance.RJControls.RJComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.cbPosition = new RJCodeAdvance.RJControls.RJComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dpEndDate = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -129,7 +117,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 253);
+            this.panel1.Size = new System.Drawing.Size(188, 197);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox3
@@ -141,92 +129,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.label3);
-            this.panel9.Controls.Add(this.txtPhoneNumber);
-            this.panel9.Location = new System.Drawing.Point(209, 99);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(158, 59);
-            this.panel9.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tiền thưởng";
-            // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPhoneNumber.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPhoneNumber.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPhoneNumber.BorderRadius = 0;
-            this.txtPhoneNumber.BorderSize = 1;
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(4, 24);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhoneNumber.MaximumSize = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.MinimumSize = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.Multiline = false;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPhoneNumber.PasswordChar = false;
-            this.txtPhoneNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPhoneNumber.PlaceholderText = "Tiền thưởng";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(150, 31);
-            this.txtPhoneNumber.TabIndex = 0;
-            this.txtPhoneNumber.Texts = "";
-            this.txtPhoneNumber.UnderlinedStyle = true;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label4);
-            this.panel10.Controls.Add(this.txtEmail);
-            this.panel10.Location = new System.Drawing.Point(373, 99);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(158, 59);
-            this.panel10.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Thuế";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtEmail.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtEmail.BorderRadius = 0;
-            this.txtEmail.BorderSize = 1;
-            this.txtEmail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.Location = new System.Drawing.Point(4, 24);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.MaximumSize = new System.Drawing.Size(150, 31);
-            this.txtEmail.MinimumSize = new System.Drawing.Size(150, 31);
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEmail.PasswordChar = false;
-            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.PlaceholderText = "Thuế";
-            this.txtEmail.Size = new System.Drawing.Size(150, 31);
-            this.txtEmail.TabIndex = 0;
-            this.txtEmail.Texts = "";
-            this.txtEmail.UnderlinedStyle = true;
             // 
             // panel12
             // 
@@ -267,14 +169,132 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Phòng ban";
             // 
-            // panel13
+            // panel7
             // 
-            this.panel13.Controls.Add(this.cbPosition);
-            this.panel13.Controls.Add(this.cbEmployee);
-            this.panel13.Location = new System.Drawing.Point(209, 37);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(158, 59);
-            this.panel13.TabIndex = 1;
+            this.panel7.Controls.Add(this.dpStartDate);
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Location = new System.Drawing.Point(44, 102);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(158, 59);
+            this.panel7.TabIndex = 6;
+            // 
+            // dpStartDate
+            // 
+            this.dpStartDate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dpStartDate.BorderSize = 0;
+            this.dpStartDate.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpStartDate.CustomFormat = "dd/MM/yyyy";
+            this.dpStartDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpStartDate.Location = new System.Drawing.Point(4, 24);
+            this.dpStartDate.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpStartDate.MinimumSize = new System.Drawing.Size(150, 31);
+            this.dpStartDate.Name = "dpStartDate";
+            this.dpStartDate.Size = new System.Drawing.Size(150, 31);
+            this.dpStartDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dpStartDate.TabIndex = 0;
+            this.dpStartDate.TextColor = System.Drawing.Color.White;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ngày bắt đầu";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Controls.Add(this.panel8);
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.panel12);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(188, 25);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(579, 172);
+            this.panel5.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Location = new System.Drawing.Point(373, 102);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(158, 59);
+            this.panel3.TabIndex = 8;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAdd.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAdd.BorderRadius = 0;
+            this.btnAdd.BorderSize = 0;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(3, 23);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(150, 31);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Tạo";
+            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cbEmployee);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(373, 37);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(158, 59);
+            this.panel2.TabIndex = 9;
+            // 
+            // cbEmployee
+            // 
+            this.cbEmployee.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbEmployee.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbEmployee.BorderSize = 1;
+            this.cbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbEmployee.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEmployee.ForeColor = System.Drawing.Color.DimGray;
+            this.cbEmployee.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbEmployee.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbEmployee.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbEmployee.Location = new System.Drawing.Point(4, 25);
+            this.cbEmployee.MaximumSize = new System.Drawing.Size(150, 31);
+            this.cbEmployee.MinimumSize = new System.Drawing.Size(150, 31);
+            this.cbEmployee.Name = "cbEmployee";
+            this.cbEmployee.Padding = new System.Windows.Forms.Padding(1);
+            this.cbEmployee.Size = new System.Drawing.Size(150, 31);
+            this.cbEmployee.TabIndex = 0;
+            this.cbEmployee.Texts = "";
+            // 
+            // label5
+            // 
+            this.label5.AllowDrop = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Nhân viên";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.cbPosition);
+            this.panel8.Controls.Add(this.label8);
+            this.panel8.Location = new System.Drawing.Point(209, 37);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(158, 59);
+            this.panel8.TabIndex = 10;
             // 
             // cbPosition
             // 
@@ -296,68 +316,42 @@
             this.cbPosition.TabIndex = 0;
             this.cbPosition.Texts = "";
             // 
-            // cbEmployee
+            // label8
             // 
-            this.cbEmployee.AllowDrop = true;
-            this.cbEmployee.AutoSize = true;
-            this.cbEmployee.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmployee.Location = new System.Drawing.Point(1, 7);
-            this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(64, 13);
-            this.cbEmployee.TabIndex = 1;
-            this.cbEmployee.Text = "Nhân viên";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.rjTextBox4);
-            this.panel2.Location = new System.Drawing.Point(373, 37);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(158, 59);
-            this.panel2.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Lương cơ bản";
-            // 
-            // rjTextBox4
-            // 
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox4.BorderRadius = 0;
-            this.rjTextBox4.BorderSize = 1;
-            this.rjTextBox4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox4.Location = new System.Drawing.Point(4, 24);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjTextBox4.MinimumSize = new System.Drawing.Size(150, 31);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "Lương cơ bản";
-            this.rjTextBox4.Size = new System.Drawing.Size(150, 31);
-            this.rjTextBox4.TabIndex = 0;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = true;
+            this.label8.AllowDrop = true;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Chức vụ";
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.dpEndDate);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.rjTextBox5);
-            this.panel4.Location = new System.Drawing.Point(44, 99);
+            this.panel4.Location = new System.Drawing.Point(209, 102);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(158, 59);
-            this.panel4.TabIndex = 3;
+            this.panel4.TabIndex = 11;
+            // 
+            // dpEndDate
+            // 
+            this.dpEndDate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dpEndDate.BorderSize = 0;
+            this.dpEndDate.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpEndDate.CustomFormat = "dd/MM/yyyy";
+            this.dpEndDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpEndDate.Location = new System.Drawing.Point(4, 24);
+            this.dpEndDate.MaximumSize = new System.Drawing.Size(150, 31);
+            this.dpEndDate.MinimumSize = new System.Drawing.Size(150, 31);
+            this.dpEndDate.Name = "dpEndDate";
+            this.dpEndDate.Size = new System.Drawing.Size(150, 31);
+            this.dpEndDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dpEndDate.TabIndex = 0;
+            this.dpEndDate.TextColor = System.Drawing.Color.White;
             // 
             // label1
             // 
@@ -365,188 +359,37 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Phụ cấp";
-            // 
-            // rjTextBox5
-            // 
-            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox5.BorderRadius = 0;
-            this.rjTextBox5.BorderSize = 1;
-            this.rjTextBox5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox5.Location = new System.Drawing.Point(4, 24);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox5.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjTextBox5.MinimumSize = new System.Drawing.Size(150, 31);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox5.PlaceholderText = "Phục cấp";
-            this.rjTextBox5.Size = new System.Drawing.Size(150, 31);
-            this.rjTextBox5.TabIndex = 0;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderlinedStyle = true;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.rjDatePicker3);
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Location = new System.Drawing.Point(44, 161);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(158, 59);
-            this.panel7.TabIndex = 6;
-            // 
-            // rjDatePicker3
-            // 
-            this.rjDatePicker3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker3.BorderSize = 0;
-            this.rjDatePicker3.CalendarFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker3.CustomFormat = "dd/MM/yyyy";
-            this.rjDatePicker3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.rjDatePicker3.Location = new System.Drawing.Point(4, 24);
-            this.rjDatePicker3.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjDatePicker3.MinimumSize = new System.Drawing.Size(150, 31);
-            this.rjDatePicker3.Name = "rjDatePicker3";
-            this.rjDatePicker3.Size = new System.Drawing.Size(150, 31);
-            this.rjDatePicker3.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjDatePicker3.TabIndex = 0;
-            this.rjDatePicker3.TextColor = System.Drawing.Color.White;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ngày thanh toán";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.rjComboBox1);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(209, 161);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(158, 59);
-            this.panel6.TabIndex = 7;
-            // 
-            // rjComboBox1
-            // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(4, 25);
-            this.rjComboBox1.MaximumSize = new System.Drawing.Size(150, 31);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(150, 31);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(150, 31);
-            this.rjComboBox1.TabIndex = 0;
-            this.rjComboBox1.Texts = "";
-            // 
-            // label7
-            // 
-            this.label7.AllowDrop = true;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "P.thức thanh toán";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.panel3);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel4);
-            this.panel5.Controls.Add(this.panel2);
-            this.panel5.Controls.Add(this.panel13);
-            this.panel5.Controls.Add(this.panel12);
-            this.panel5.Controls.Add(this.panel10);
-            this.panel5.Controls.Add(this.panel9);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(188, 25);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(579, 228);
-            this.panel5.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Location = new System.Drawing.Point(373, 161);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 59);
-            this.panel3.TabIndex = 8;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAdd.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAdd.BorderRadius = 0;
-            this.btnAdd.BorderSize = 0;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(3, 23);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 31);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.TextColor = System.Drawing.Color.White;
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.label1.Text = "Ngày kết thúc";
             // 
             // AddSalaryUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 253);
+            this.ClientSize = new System.Drawing.Size(767, 197);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddSalaryUI";
-            this.Text = "Lương";
+            this.Text = "Tính lương";
             this.panelTitleBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -557,32 +400,23 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label3;
-        private RJCodeAdvance.RJControls.RJTextBox txtPhoneNumber;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label4;
-        private RJCodeAdvance.RJControls.RJTextBox txtEmail;
         private System.Windows.Forms.Panel panel12;
         private RJCodeAdvance.RJControls.RJComboBox cbDepartment;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel13;
-        private RJCodeAdvance.RJControls.RJComboBox cbPosition;
-        private System.Windows.Forms.Label cbEmployee;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox4;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox5;
         private System.Windows.Forms.Panel panel7;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker3;
+        private RJCodeAdvance.RJControls.RJDatePicker dpStartDate;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel6;
-        private RJCodeAdvance.RJControls.RJComboBox rjComboBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private RJCodeAdvance.RJControls.RJButton btnAdd;
+        private System.Windows.Forms.Panel panel2;
+        private RJCodeAdvance.RJControls.RJComboBox cbEmployee;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel4;
+        private RJCodeAdvance.RJControls.RJDatePicker dpEndDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel8;
+        private RJCodeAdvance.RJControls.RJComboBox cbPosition;
+        private System.Windows.Forms.Label label8;
     }
 }
