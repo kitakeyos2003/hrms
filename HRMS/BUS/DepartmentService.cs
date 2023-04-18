@@ -3,8 +3,17 @@ using System.Collections.Generic;
 
 namespace HRMS.BUS
 {
-    internal class DepartmentService
+    internal class DepartmentService : IService<Department>
     {
+        public Department Add(Department e)
+        {
+            return null;
+        }
+
+        public bool Delete(int id)
+        {
+            return false;
+        }
 
         public RestResponse<List<Department>> GetAll()
         {
@@ -14,6 +23,11 @@ namespace HRMS.BUS
             request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
             var response = client.Execute<List<Department>>(request);
             return response;
+        }
+
+        public bool Update(Department e)
+        {
+            return false;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using HRMS.DAL;
+﻿using HRMS.BUS.Helper;
+using HRMS.DAL;
 using HRMS.GUI.Report;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class CandidateUI : Form
+    public partial class CandidateUI : Form, IPage
     {
         private Panel panel;
         public DataGridViewRow SelectedRow { get; private set; }
@@ -67,11 +68,7 @@ namespace HRMS.GUI
 
             lbPage.Text = page.ToString();
             List<Candidate> candidates = DataManager.GetInstance().Candidates.FindAll(c => IsMatch(c));
-            int maxPage = candidates.Count / limit;
-            if (candidates.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            int maxPage = PageHelper.TotalPages(candidates.Count, limit);
             if (page <= 1)
             {
                 prePage.Enabled = false;
@@ -88,13 +85,9 @@ namespace HRMS.GUI
             {
                 nextPage.Enabled = true;
             }
-
-            int startIndex = (page - 1) * limit;
-            int length = limit;
-            if (startIndex + length > candidates.Count)
-            {
-                length = candidates.Count - startIndex;
-            }
+            int[] array = PageHelper.GetStartIndexAndLength(page, limit, candidates.Count);
+            int startIndex = array[0];
+            int length = array[1];
             List<Candidate> list = candidates.GetRange(startIndex, length);
             FillDataGridView(list);
         }
@@ -229,12 +222,8 @@ namespace HRMS.GUI
 
         public void NextPage()
         {
-            List<Candidate> candidates = DataManager.GetInstance().Candidates.FindAll(c => IsMatch(c)); 
-            int maxPage = candidates.Count / limit;
-            if (candidates.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            List<Candidate> candidates = DataManager.GetInstance().Candidates.FindAll(c => IsMatch(c));
+            int maxPage = PageHelper.TotalPages(candidates.Count, limit);
             page++;
             if (page > maxPage)
             {

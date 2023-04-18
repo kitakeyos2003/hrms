@@ -2,8 +2,9 @@
 
 public class Salary
 {
-    public int EmployeeID { get; set; }
+    public int SalaryID { get; set; }
     public Employee Employee { get; set; }
+    public int WorkingDays { get; set; }
     public decimal BasicSalary { get; set; }
     public decimal Allowance { get; set; }
     public decimal Bonus { get; set; }
@@ -12,6 +13,6 @@ public class Salary
     public decimal Deductions { get; set; }
     public decimal NetSalary { get; set; }
     public DateTime PaymentDate { get; set; }
-    public string PaymentMethod { get; set; }
-    public string PaySlip { get; set; }
+    public int PaymentMethod { get; set; }
+    public DateTime CreatedAt { get; set; }
 }

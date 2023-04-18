@@ -66,7 +66,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new RJCodeAdvance.RJControls.RJTextBox();
@@ -400,7 +399,6 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.btnAdd);
-            this.panel8.Controls.Add(this.iconButton1);
             this.panel8.Controls.Add(this.btnReset);
             this.panel8.Controls.Add(this.btnSearch);
             this.panel8.Controls.Add(this.txtKeyword);
@@ -424,21 +422,6 @@
             this.btnAdd.TabIndex = 12;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            this.iconButton1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(1, 3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(30, 30);
-            this.iconButton1.TabIndex = 9;
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // btnReset
             // 
@@ -534,7 +517,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton btnAdd;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton btnReset;
         private FontAwesome.Sharp.IconButton btnSearch;
         private RJCodeAdvance.RJControls.RJTextBox txtKeyword;

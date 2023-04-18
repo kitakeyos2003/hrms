@@ -1,4 +1,5 @@
-﻿using HRMS.DAL;
+﻿using HRMS.BUS.Helper;
+using HRMS.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class EvaluateUI : Form
+    public partial class EvaluateUI : Form, IPage
     {
         private Panel panel;
         public DataGridViewRow SelectedRow { get; private set; }
@@ -65,11 +66,7 @@ namespace HRMS.GUI
         {
             lbPage.Text = page.ToString();
             List<Evaluate> evaluates = DataManager.GetInstance().Evaluations.FindAll(evaluate => IsMatch(evaluate));
-            int maxPage = evaluates.Count / limit;
-            if (evaluates.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            int maxPage = PageHelper.TotalPages(evaluates.Count, limit);
             if (page <= 1)
             {
                 prePage.Enabled = false;
@@ -87,12 +84,9 @@ namespace HRMS.GUI
                 nextPage.Enabled = true;
             }
 
-            int startIndex = (page - 1) * limit;
-            int length = limit;
-            if (startIndex + length > evaluates.Count)
-            {
-                length = evaluates.Count - startIndex;
-            }
+            int[] array = PageHelper.GetStartIndexAndLength(page, limit, evaluates.Count);
+            int startIndex = array[0];
+            int length = array[1]; length = evaluates.Count - startIndex;
 
             List<Evaluate> list = evaluates.GetRange(startIndex, length);
             FillDataGridView(list);
@@ -139,11 +133,7 @@ namespace HRMS.GUI
         public void NextPage()
         {
             List<Evaluate> employees = DataManager.GetInstance().Evaluations.FindAll(evaluate => IsMatch(evaluate));
-            int maxPage = employees.Count / limit;
-            if (employees.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            int maxPage = PageHelper.TotalPages(employees.Count, limit);
             page++;
             if (page > maxPage)
             {

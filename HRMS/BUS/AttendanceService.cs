@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace HRMS.BUS
 {
-    internal class AttendanceService
+    internal class AttendanceService : IService<Attendance>
     {
         public RestResponse<List<Attendance>> GetAll()
         {

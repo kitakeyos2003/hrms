@@ -139,6 +139,8 @@
     <Compile Include="BUS\AttendanceService.cs" />
     <Compile Include="BUS\CandidateService.cs" />
     <Compile Include="BUS\ContractService.cs" />
+    <Compile Include="BUS\Helper\PageHelper.cs" />
+    <Compile Include="BUS\IService.cs" />
     <Compile Include="DAL\DataManager.cs" />
     <Compile Include="BUS\DepartmentService.cs" />
     <Compile Include="BUS\EmployeeService.cs" />
@@ -233,6 +235,7 @@
     <Compile Include="GUI\AboutMeUI.Designer.cs">
       <DependentUpon>AboutMeUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\IPage.cs" />
     <Compile Include="GUI\LoginUI.cs">
       <SubType>Form</SubType>
     </Compile>

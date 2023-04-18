@@ -3,8 +3,17 @@ using System.Collections.Generic;
 
 namespace HRMS.BUS
 {
-    internal class PositionService
+    internal class PositionService : IService<Position>
     {
+        public Position Add(Position e)
+        {
+            return null;
+        }
+
+        public bool Delete(int id)
+        {
+            return false;
+        }
 
         public RestResponse<List<Position>> GetAll()
         {
@@ -14,6 +23,11 @@ namespace HRMS.BUS
             request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
             var response = client.Execute<List<Position>>(request);
             return response;
+        }
+
+        public bool Update(Position e)
+        {
+            return false;
         }
     }
 }

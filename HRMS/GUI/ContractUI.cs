@@ -1,4 +1,5 @@
-﻿using HRMS.DAL;
+﻿using HRMS.BUS.Helper;
+using HRMS.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class ContractUI : Form
+    public partial class ContractUI : Form, IPage
     {
         private Panel panel; 
         public DataGridViewRow SelectedRow { get; private set; }
@@ -64,11 +65,7 @@ namespace HRMS.GUI
         {
             lbPage.Text = page.ToString();
             List<Contract> contracts = DataManager.GetInstance().Contracts.FindAll(c => IsMatch(c));
-            int maxPage = contracts.Count / limit;
-            if (contracts.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            int maxPage = PageHelper.TotalPages(contracts.Count, limit);
             if (page <= 1)
             {
                 prePage.Enabled = false;
@@ -85,13 +82,9 @@ namespace HRMS.GUI
             {
                 nextPage.Enabled = true;
             }
-
-            int startIndex = (page - 1) * limit;
-            int length = limit;
-            if (startIndex + length > contracts.Count)
-            {
-                length = contracts.Count - startIndex;
-            }
+            int[] array = PageHelper.GetStartIndexAndLength(page, limit, contracts.Count);
+            int startIndex = array[0];
+            int length = array[1];
 
             List<Contract> list = contracts.GetRange(startIndex, length);
             FillDataGridView(list);
@@ -156,12 +149,8 @@ namespace HRMS.GUI
         }
         public void NextPage()
         {
-            List<Contract> attendances = DataManager.GetInstance().Contracts.FindAll(c => IsMatch(c));
-            int maxPage = attendances.Count / limit;
-            if (attendances.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            List<Contract> contracts = DataManager.GetInstance().Contracts.FindAll(c => IsMatch(c));
+            int maxPage = PageHelper.TotalPages(contracts.Count, limit);
             page++;
             if (page > maxPage)
             {

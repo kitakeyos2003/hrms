@@ -1,4 +1,5 @@
-﻿using HRMS.DAL;
+﻿using HRMS.BUS.Helper;
+using HRMS.DAL;
 using HRMS.GUI.Report;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class EmployeeUI : Form
+    public partial class EmployeeUI : Form, IPage
     {
         private Panel panel;
         List<Department> Departments;
@@ -66,11 +67,7 @@ namespace HRMS.GUI
         {
             lbPage.Text = page.ToString();
             List<Employee> employees = DataManager.GetInstance().Employees.FindAll(em => IsMatch(em));
-            int maxPage = employees.Count / limit;
-            if (employees.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            int maxPage = PageHelper.TotalPages(employees.Count, limit);
             if (page <= 1)
             {
                 prePage.Enabled = false;
@@ -87,14 +84,9 @@ namespace HRMS.GUI
             {
                 nextPage.Enabled = true;
             }
-
-            int startIndex = (page - 1) * limit;
-            int length = limit;
-            if (startIndex + length > employees.Count)
-            {
-                length = employees.Count - startIndex;
-            }
-
+            int[] array = PageHelper.GetStartIndexAndLength(page, limit, employees.Count);
+            int startIndex = array[0];
+            int length = array[1];
             List<Employee> list = employees.GetRange(startIndex, length);
             FillDataGridView(list);
 
@@ -248,11 +240,7 @@ namespace HRMS.GUI
         public void NextPage()
         {
             List<Employee> employees = DataManager.GetInstance().Employees.FindAll(em => IsMatch(em));
-            int maxPage = employees.Count / limit;
-            if (employees.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            int maxPage = PageHelper.TotalPages(employees.Count, limit);
             page++;
             if (page > maxPage)
             {

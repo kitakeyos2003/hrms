@@ -1,4 +1,5 @@
-﻿using HRMS.DAL;
+﻿using HRMS.BUS.Helper;
+using HRMS.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
-    public partial class AttendanceUI : Form
+    public partial class AttendanceUI : Form, IPage
     {
         
         private Panel panel;
@@ -64,11 +65,7 @@ namespace HRMS.GUI
         {
             lbPage.Text = page.ToString();
             List<Attendance> attendences = DataManager.GetInstance().Attendances.FindAll(attendance => IsMatch(attendance));
-            int maxPage = attendences.Count / limit;
-            if (attendences.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            int maxPage = PageHelper.TotalPages(attendences.Count, limit);
             if (page <= 1)
             {
                 prePage.Enabled = false;
@@ -85,14 +82,9 @@ namespace HRMS.GUI
             {
                 nextPage.Enabled = true;
             }
-
-            int startIndex = (page - 1) * limit;
-            int length = limit;
-            if (startIndex + length > attendences.Count)
-            {
-                length = attendences.Count - startIndex;
-            }
-
+            int[] array = PageHelper.GetStartIndexAndLength(page, limit, attendences.Count);
+            int startIndex = array[0];
+            int length = array[1];
             List<Attendance> list = attendences.GetRange(startIndex, length);
             FillDataGridView(list);
 
@@ -170,11 +162,7 @@ namespace HRMS.GUI
         public void NextPage()
         {
             List<Attendance> attendances = DataManager.GetInstance().Attendances.FindAll(attendance => IsMatch(attendance));
-            int maxPage = attendances.Count / limit;
-            if (attendances.Count % limit != 0)
-            {
-                maxPage += 1;
-            }
+            int maxPage = PageHelper.TotalPages(attendances.Count, limit);
             page++;
             if (page > maxPage)
             {

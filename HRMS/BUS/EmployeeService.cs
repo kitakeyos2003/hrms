@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HRMS.BUS
 {
-    internal class EmployeeService
+    internal class EmployeeService : IService<Employee>
     {
 
         public RestResponse<List<Employee>>GetAll()
