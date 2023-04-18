@@ -165,6 +165,7 @@ namespace HRMS.GUI
                     foreach (Salary salary in response.Data)
                     {
                         Parent.AddSalary(salary);
+                        DataManager.GetInstance().Salarys.Add(salary);
                     }
                     alert.ShowAlert("Tính lương thành công", Alert.EnumType.SUCCESS);
                 } else

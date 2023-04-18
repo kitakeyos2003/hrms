@@ -1,8 +1,10 @@
 ﻿using System;
+using System.ComponentModel;
 
 public class Employee
 {
     public int EmployeeID { get; set; }
+    [DisplayName("Employee")]
     public string FullName { get; set; }
     public string Gender { get; set; }
     public DateTime DateOfBirth { get; set; }

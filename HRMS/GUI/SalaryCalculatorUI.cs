@@ -2,6 +2,9 @@
 using HRMS.DAL;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace HRMS.GUI
@@ -10,11 +13,13 @@ namespace HRMS.GUI
     {
         private Panel panel;
         public DataGridViewRow SelectedRow { get; private set; }
-        private int page = 1, limit = ApplicationConfig.MAX_PAGE[0];
+        private int page = 1, pageSize = ApplicationConfig.MAX_PAGE[0];
         List<Department> Departments;
         List<Position> Positions;
         Department department;
         Position position;
+        BindingSource source;
+        string searchText;
         public SalaryCalculatorUI(Panel panel)
         {
             this.panel = panel;
@@ -26,12 +31,18 @@ namespace HRMS.GUI
 
         public void Init()
         {
+            source = new BindingSource();
+            source.RaiseListChangedEvents = true;
+            source.AllowNew = false;
+            listSalary.DataSource = source;
+
+
             foreach (int limit in ApplicationConfig.MAX_PAGE)
             {
                 cbLimitPage.Items.Add(limit);
             }
             cbLimitPage.SelectedIndex = 0;
-            limit = ApplicationConfig.MAX_PAGE[cbLimitPage.SelectedIndex];
+            pageSize = ApplicationConfig.MAX_PAGE[cbLimitPage.SelectedIndex];
 
             cbDepartment.Items.Clear();
             Departments = DataManager.GetInstance().Departments;
@@ -73,28 +84,16 @@ namespace HRMS.GUI
         }
         private void Search(string searchText)
         {
-            InitPage();
-            if (!string.IsNullOrEmpty(searchText))
+            if (string.IsNullOrEmpty(searchText))
             {
-                listSalary.ClearSelection();
-                List<DataGridViewRow> list = new List<DataGridViewRow>();
-                foreach (DataGridViewRow row in listSalary.Rows)
-                {
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchText.ToLower()))
-                        {
-                            list.Add(row);
-                            break;
-                        }
-                    }
-                }
-                listSalary.Rows.Clear();
-                foreach (DataGridViewRow row in list)
-                {
-                    listSalary.Rows.Add(row);
-                }
+                this.searchText = null;
             }
+            else
+            {
+                this.searchText = searchText;
+            }
+            InitPage();
+
         }
 
         private void txtKeyword__TextChanged(object sender, EventArgs e)
@@ -105,11 +104,11 @@ namespace HRMS.GUI
 
         public void InitPage()
         {
-            lbPage.Text = page.ToString();
-            List<Salary> salarys = DataManager.GetInstance().Salarys.FindAll(salary => IsMatch(salary));
-            int maxPage = PageHelper.TotalPages(salarys.Count, limit);
+            List<Salary> salarys = GetList();
+            int maxPage = PageHelper.TotalPages(salarys.Count, pageSize);
             if (page <= 1)
             {
+                page = 1;
                 prePage.Enabled = false;
             }
             else
@@ -118,48 +117,39 @@ namespace HRMS.GUI
             }
             if (page >= maxPage)
             {
+                page = maxPage;
                 nextPage.Enabled = false;
             }
             else
             {
                 nextPage.Enabled = true;
             }
+            lbPage.Text = page.ToString();
+            List<Salary> newList = salarys.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            source.DataSource = newList;
 
-            int[] array = PageHelper.GetStartIndexAndLength(page, limit, salarys.Count);
-            int startIndex = array[0];
-            int length = array[1]; length = salarys.Count - startIndex;
+        }
 
-            List<Salary> list = salarys.GetRange(startIndex, length);
-            FillDataGridView(list);
-
+        private List<Salary> GetList()
+        {
+            List<Salary> salarys = DataManager.GetInstance().Salarys.FindAll(e => IsMatch(e));
+            return salarys;
         }
 
         private bool IsMatch(Salary salary)
         {
-            return (department == null || department.Id == salary.Employee.Department.Id) && (position == null || position.Id == salary.Employee.Position.Id);
-        }
-
-        private void FillDataGridView(List<Salary> salarys)
-        {
-            listSalary.Rows.Clear();
-            foreach (Salary salary in salarys)
-            {
-                AddSalary(salary);
-            }
+            return (department == null || department.Id == salary.Employee.Department.Id) && (position == null || position.Id == salary.Employee.Position.Id) && (searchText == null || salary.Employee.FullName.Contains(searchText));
         }
 
         public void AddSalary(Salary salary)
         {
-            if (IsMatch(salary))
+            source.Add(salary);
+            List<Salary> salarys = GetList();
+            int maxPage = PageHelper.TotalPages(salarys.Count, pageSize);
+            if (maxPage > page)
             {
-                if (listSalary.Rows.Count < limit)
-                {
-                    listSalary.Rows.Add(salary.SalaryID, salary.Employee.FullName, salary.WorkingDays, salary.Allowance, salary.Allowance, salary.Bonus, salary.GrossSalary, salary.Tax, salary.NetSalary, "", salary.PaymentMethod);
-                }
-                else
-                {
-                    NextPage();
-                }
+                page = maxPage;
+                InitPage();
             }
         }
 
@@ -170,7 +160,7 @@ namespace HRMS.GUI
             if (cbLimitPage.SelectedIndex >= 0)
             {
 
-                limit = ApplicationConfig.MAX_PAGE[cbLimitPage.SelectedIndex];
+                pageSize = ApplicationConfig.MAX_PAGE[cbLimitPage.SelectedIndex];
                 InitPage();
             }
         }
@@ -189,8 +179,8 @@ namespace HRMS.GUI
 
         public void NextPage()
         {
-            List<Salary> salarys = DataManager.GetInstance().Salarys.FindAll(salary => IsMatch(salary));
-            int maxPage = PageHelper.TotalPages(salarys.Count, limit);
+            List<Salary> salarys = GetList();
+            int maxPage = PageHelper.TotalPages(salarys.Count, pageSize);
             page++;
             if (page > maxPage)
             {
@@ -242,6 +232,32 @@ namespace HRMS.GUI
                 position = null;
             }
             InitPage();
+        }
+
+        private void listSalary_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridViewColumn column = listSalary.Columns[e.ColumnIndex];
+            if (column.Name == "Employee")
+            {
+                column.HeaderText = "Họ và tên";
+                Employee employee = (Employee)e.Value;
+                e.Value = employee.FullName;
+            }
+            else if (column.Name == "SalaryID")
+            {
+                column.HeaderText = "Mã lương";
+
+            }
+            else if (column.Name == "WorkingDays")
+            {
+                column.HeaderText = "Ngày công";
+
+            }
+            else if (column.Name == "BasicSalary")
+            {
+                e.Value = (int) e.Value;
+
+            }
         }
 
         public void PreviousPage()
