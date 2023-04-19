@@ -127,7 +127,13 @@ namespace HRMS.GUI
             lbPage.Text = page.ToString();
             List<Salary> newList = salarys.Skip((page - 1) * pageSize).Take(pageSize).ToList();
             source.DataSource = newList;
-
+            listSalary.Columns["SalaryID"].HeaderText = "Mã lương";
+            listSalary.Columns["Employee"].HeaderText = "Họ và tên";
+            listSalary.Columns["WorkingDays"].HeaderText = "Ngày công";
+            listSalary.Columns["GrossSalary"].HeaderText = "Tổng thu nhập";
+            listSalary.Columns["BasicSalary"].HeaderText = "Lương";
+            listSalary.Columns["BasicSalary"].HeaderText = "Lương";
+            listSalary.Columns["BasicSalary"].HeaderText = "Lương";
         }
 
         private List<Salary> GetList()
@@ -239,24 +245,8 @@ namespace HRMS.GUI
             DataGridViewColumn column = listSalary.Columns[e.ColumnIndex];
             if (column.Name == "Employee")
             {
-                column.HeaderText = "Họ và tên";
                 Employee employee = (Employee)e.Value;
                 e.Value = employee.FullName;
-            }
-            else if (column.Name == "SalaryID")
-            {
-                column.HeaderText = "Mã lương";
-
-            }
-            else if (column.Name == "WorkingDays")
-            {
-                column.HeaderText = "Ngày công";
-
-            }
-            else if (column.Name == "BasicSalary")
-            {
-                e.Value = (int) e.Value;
-
             }
         }
 

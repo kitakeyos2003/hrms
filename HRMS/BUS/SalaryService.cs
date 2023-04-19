@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using HRMS.GUI;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 
@@ -31,17 +32,34 @@ namespace HRMS.BUS
 
         public Salary Add(Salary e)
         {
-            return null;
+            var client = new RestClient(ApplicationConfig.BASE_URL);
+            client.AddDefaultHeader("Content-Type", "application/json");
+            var request = new RestRequest("/api/Salary", Method.Post);
+            request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
+            request.AddJsonBody(e);
+            var response = client.Execute<Salary>(request);
+            return response.StatusCode == System.Net.HttpStatusCode.OK ? response.Data : null;
         }
 
         public bool Delete(int id)
         {
-            return false;
+            var client = new RestClient(ApplicationConfig.BASE_URL);
+            client.AddDefaultHeader("Content-Type", "application/json");
+            var request = new RestRequest("/api/Salary?id=" + id, Method.Delete);
+            request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
+            var response = client.Execute(request);
+            return response.StatusCode == System.Net.HttpStatusCode.OK;
         }
 
         public bool Update(Salary e)
         {
-            return false;
+            var client = new RestClient(ApplicationConfig.BASE_URL);
+            client.AddDefaultHeader("Content-Type", "application/json");
+            var request = new RestRequest("/api/Salary", Method.Put);
+            request.AddHeader("Authorization", "Bearer " + ApplicationConfig.Token.AccessToken);
+            request.AddJsonBody(e);
+            var response = client.Execute(request);
+            return response.StatusCode == System.Net.HttpStatusCode.OK;
         }
     }
 }
