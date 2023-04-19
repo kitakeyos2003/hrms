@@ -278,6 +278,12 @@
     <Compile Include="GUI\Report\CrystalReport.Designer.cs">
       <DependentUpon>CrystalReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Report\EmployeeSalary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeSalary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI\SalaryCalculatorUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +389,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Report\CrystalReport.resx">
       <DependentUpon>CrystalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\EmployeeSalary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeSalary.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SalaryCalculatorUI.resx">
       <DependentUpon>SalaryCalculatorUI.cs</DependentUpon>

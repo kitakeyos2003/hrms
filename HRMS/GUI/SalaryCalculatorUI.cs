@@ -1,5 +1,6 @@
 ﻿using HRMS.BUS.Helper;
 using HRMS.DAL;
+using HRMS.GUI.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -131,9 +132,15 @@ namespace HRMS.GUI
             listSalary.Columns["Employee"].HeaderText = "Họ và tên";
             listSalary.Columns["WorkingDays"].HeaderText = "Ngày công";
             listSalary.Columns["GrossSalary"].HeaderText = "Tổng thu nhập";
-            listSalary.Columns["BasicSalary"].HeaderText = "Lương";
-            listSalary.Columns["BasicSalary"].HeaderText = "Lương";
-            listSalary.Columns["BasicSalary"].HeaderText = "Lương";
+            listSalary.Columns["Tax"].HeaderText = "Thuế (%)";
+            listSalary.Columns["NetSalary"].HeaderText = "Thực nhận";
+            listSalary.Columns["BasicSalary"].HeaderText = "Lương cơ bản";
+            listSalary.Columns["Allowance"].HeaderText = "Phụ cấp";
+            listSalary.Columns["Bonus"].HeaderText = "Thưởng";
+            listSalary.Columns["Deductions"].HeaderText = "Khấu trừ";
+            listSalary.Columns["PaymentDate"].HeaderText = "Ngày thanh toán";
+            listSalary.Columns["PaymentMethod"].HeaderText = "Phương thức thanh toán";
+            listSalary.Columns["CreatedAt"].HeaderText = "Thời gian tạo";
         }
 
         private List<Salary> GetList()
@@ -247,6 +254,70 @@ namespace HRMS.GUI
             {
                 Employee employee = (Employee)e.Value;
                 e.Value = employee.FullName;
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            UpdateSalaryUI updateSalaryUI = new UpdateSalaryUI();
+            updateSalaryUI.ShowDialog();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (SelectedRow != null)
+            {
+                try
+                {
+                    int sID = int.Parse(SelectedRow.Cells[0].Value.ToString());
+                    Salary salary = DataManager.GetInstance().Salarys.SingleOrDefault(e2 => e2.SalaryID == sID);
+                    if (salary != null)
+                    {
+                        bool r = DataManager.GetInstance().SalaryService.Delete(salary.SalaryID);
+                        if (r)
+                        {
+                            DataManager.GetInstance().Salarys.Remove(salary);
+                            InitPage();
+                            SelectedRow = null;
+                        }
+                    }
+                }
+                catch
+                {
+                    Alert alert = new Alert();
+                    alert.ShowAlert("Có lỗi xảy ra", Alert.EnumType.ERROR);
+                }
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (SelectedRow != null)
+            {
+                int sID = int.Parse(SelectedRow.Cells[0].Value.ToString());
+                Salary salary = DataManager.GetInstance().Salarys.FirstOrDefault(e2 => e2.SalaryID == sID);
+                List<dynamic> pSalary = new List<dynamic>(){
+    new {
+        FullName = salary.Employee.FullName,
+        WorkingDays = salary.WorkingDays,
+        BasicSalary = salary.BasicSalary,
+        Allowance = salary.Allowance,
+        Bonus = salary.Bonus,
+        Tax = salary.Tax,
+        Deductions = salary.Deductions,
+        GrossSalary = salary.GrossSalary,
+        NetSalary = salary.NetSalary,
+        PaymentDate = salary.PaymentDate == null ? "Chưa thanh toán" : salary.PaymentDate.ToString("dd/MM/yyyy"),
+        PaymentMethod = salary.PaymentMethod == 0 ? "Tiền mặt" : "Ngân hàng",
+        CreatedAt = salary.CreatedAt
+    }
+};
+                EmployeeSalary report = new EmployeeSalary();
+                report.SetDataSource(pSalary);
+                CrystalReport fReport = new CrystalReport();
+                fReport.Text = "Bảng lương " + salary.Employee.FullName;
+                fReport.crystalReportViewer.ReportSource = report;
+                fReport.ShowDialog();
             }
         }
 

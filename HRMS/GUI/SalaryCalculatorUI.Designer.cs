@@ -208,6 +208,7 @@
             this.btnPrint.Size = new System.Drawing.Size(30, 30);
             this.btnPrint.TabIndex = 8;
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnEdit
             // 
@@ -223,6 +224,7 @@
             this.btnEdit.Size = new System.Drawing.Size(30, 30);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -238,6 +240,7 @@
             this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel3
             // 
