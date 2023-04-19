@@ -1,24 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using HRMS.DAL;
+using System;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRMS.GUI
 {
     public partial class UpdateSalaryUI : Form
     {
-        public UpdateSalaryUI()
+        DataGridViewRow Row;
+        Salary Salary;
+
+        public UpdateSalaryUI(DataGridViewRow row, Salary salary)
         {
+            this.Salary = salary;
+            this.Row = row;
             InitializeComponent();
             this.Padding = new Padding(2);
             this.BackColor = Color.FromArgb(98, 102, 244);
             StartPosition = FormStartPosition.CenterScreen;
+            Init();
+        }
+
+        public void Init()
+        {
+            dpPaymentDate.Value = DateTime.Now;
+            txtSalaryID.Texts = Salary.SalaryID.ToString();
+            cbPaymentMethod.SelectedIndex = Salary.PaymentMethod;
         }
 
         //Drag Form
@@ -57,6 +65,27 @@ namespace HRMS.GUI
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DateTime paymentDate = dpPaymentDate.Value;
+            int paymentMethod = cbPaymentMethod.SelectedIndex;
+            Salary.PaymentMethod = paymentMethod;
+            Salary.PaymentDate = paymentDate;
+            bool r = DataManager.GetInstance().SalaryService.Update(Salary);
+            if (r)
+            {
+                UpdateRow();
+                Close();
+                Alert alert = new Alert();
+                alert.ShowAlert("Cập nhật thành công!", Alert.EnumType.SUCCESS);
+            }
+        }
+        private void UpdateRow()
+        {
+            Row.Cells["PaymentDate"].Value = Salary.PaymentDate;
+            Row.Cells["PaymentMethod"].Value = Salary.PaymentMethod;
         }
     }
 }

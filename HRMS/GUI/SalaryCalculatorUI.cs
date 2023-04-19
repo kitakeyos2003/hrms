@@ -255,38 +255,75 @@ namespace HRMS.GUI
                 Employee employee = (Employee)e.Value;
                 e.Value = employee.FullName;
             }
+            else if (column.Name == "PaymentDate")
+            {
+                DateTime paymentDate = (DateTime)e.Value;
+                if (paymentDate == null)
+                {
+                    e.Value = "Chưa thanh toán";
+                }
+                else
+                {
+                    e.Value = paymentDate.ToString("dd/MM/yyyy");
+                }
+            }
+            else if (column.Name == "PaymentMethod")
+            {
+                int paymentMethod = (int)e.Value;
+                if ((paymentMethod == 0))
+                {
+                    e.Value = "Tiền mặt";
+                }
+                else
+                {
+                    e.Value = "Ngân hàng";
+                }
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            UpdateSalaryUI updateSalaryUI = new UpdateSalaryUI();
-            updateSalaryUI.ShowDialog();
+            if (SelectedRow != null)
+            {
+                int eID = int.Parse(SelectedRow.Cells[0].Value.ToString());
+                Salary salary = DataManager.GetInstance().Salarys.SingleOrDefault(em => em.SalaryID == eID);
+                if (salary != null)
+                {
+                    UpdateSalaryUI updateSalaryUI = new UpdateSalaryUI(SelectedRow, salary);
+                    updateSalaryUI.ShowDialog();
+                }
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (SelectedRow != null)
+            DataGridViewSelectedRowCollection selectedRows = listSalary.SelectedRows;
+            if (selectedRows.Count > 0)
             {
-                try
+                foreach (DataGridViewRow row in selectedRows)
                 {
-                    int sID = int.Parse(SelectedRow.Cells[0].Value.ToString());
-                    Salary salary = DataManager.GetInstance().Salarys.SingleOrDefault(e2 => e2.SalaryID == sID);
-                    if (salary != null)
+                    try
                     {
-                        bool r = DataManager.GetInstance().SalaryService.Delete(salary.SalaryID);
-                        if (r)
+                        int sID = int.Parse(row.Cells[0].Value.ToString());
+                        Salary salary = DataManager.GetInstance().Salarys.SingleOrDefault(e2 => e2.SalaryID == sID);
+                        if (salary != null)
                         {
-                            DataManager.GetInstance().Salarys.Remove(salary);
-                            InitPage();
-                            SelectedRow = null;
+                            bool r = DataManager.GetInstance().SalaryService.Delete(salary.SalaryID);
+                            if (r)
+                            {
+                                DataManager.GetInstance().Salarys.Remove(salary);
+                                
+                            }
                         }
                     }
+                    catch
+                    {
+                        Alert alert = new Alert();
+                        alert.ShowAlert("Có lỗi xảy ra", Alert.EnumType.ERROR);
+                    }
                 }
-                catch
-                {
-                    Alert alert = new Alert();
-                    alert.ShowAlert("Có lỗi xảy ra", Alert.EnumType.ERROR);
-                }
+                InitPage();
+                SelectedRow = null;
             }
         }
 
@@ -297,21 +334,21 @@ namespace HRMS.GUI
                 int sID = int.Parse(SelectedRow.Cells[0].Value.ToString());
                 Salary salary = DataManager.GetInstance().Salarys.FirstOrDefault(e2 => e2.SalaryID == sID);
                 List<dynamic> pSalary = new List<dynamic>(){
-    new {
-        FullName = salary.Employee.FullName,
-        WorkingDays = salary.WorkingDays,
-        BasicSalary = salary.BasicSalary,
-        Allowance = salary.Allowance,
-        Bonus = salary.Bonus,
-        Tax = salary.Tax,
-        Deductions = salary.Deductions,
-        GrossSalary = salary.GrossSalary,
-        NetSalary = salary.NetSalary,
-        PaymentDate = salary.PaymentDate == null ? "Chưa thanh toán" : salary.PaymentDate.ToString("dd/MM/yyyy"),
-        PaymentMethod = salary.PaymentMethod == 0 ? "Tiền mặt" : "Ngân hàng",
-        CreatedAt = salary.CreatedAt
-    }
-};
+                    new {
+                        FullName = salary.Employee.FullName,
+                        WorkingDays = salary.WorkingDays,
+                        BasicSalary = salary.BasicSalary,
+                        Allowance = salary.Allowance,
+                        Bonus = salary.Bonus,
+                        Tax = salary.Tax,
+                        Deductions = salary.Deductions,
+                        GrossSalary = salary.GrossSalary,
+                        NetSalary = salary.NetSalary,
+                        PaymentDate = salary.PaymentDate == null ? "Chưa thanh toán" : salary.PaymentDate.ToString("dd/MM/yyyy"),
+                        PaymentMethod = salary.PaymentMethod == 0 ? "Tiền mặt" : "Ngân hàng",
+                        CreatedAt = salary.CreatedAt
+                     }
+                };
                 EmployeeSalary report = new EmployeeSalary();
                 report.SetDataSource(pSalary);
                 CrystalReport fReport = new CrystalReport();
