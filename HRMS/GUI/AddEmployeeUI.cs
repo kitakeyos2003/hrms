@@ -1,4 +1,5 @@
-﻿using HRMS.DAL;
+﻿using HRMS.BUS.Helper;
+using HRMS.DAL;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -116,15 +117,16 @@ namespace HRMS.GUI
                 return;
             }
 
-            if (string.IsNullOrEmpty(address))
-            {
-                alert.ShowAlert("Vui lòng nhập địa chỉ!", Alert.EnumType.WARNING);
-                return;
-            }
+
 
             if (string.IsNullOrEmpty(phoneNumber))
             {
                 alert.ShowAlert("Vui lòng nhập số điện thoại!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (!StringHelper.IsValidPhoneNumber(phoneNumber))
+            {
+                alert.ShowAlert("Số điện thoại không hợp lệ!", Alert.EnumType.WARNING);
                 return;
             }
 
@@ -133,7 +135,16 @@ namespace HRMS.GUI
                 alert.ShowAlert("Vui lòng nhập email!", Alert.EnumType.WARNING);
                 return;
             }
-
+            if (!StringHelper.IsValidEmail(email))
+            {
+                alert.ShowAlert("Địa chỉ email không hợp lệ!!", Alert.EnumType.WARNING);
+                return;
+            }
+            if (string.IsNullOrEmpty(address))
+            {
+                alert.ShowAlert("Vui lòng nhập địa chỉ!", Alert.EnumType.WARNING);
+                return;
+            }
             if (departmentIndex < 0)
             {
                 alert.ShowAlert("Vui lòng chọn phòng ban!", Alert.EnumType.WARNING);

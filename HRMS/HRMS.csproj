@@ -140,6 +140,7 @@
     <Compile Include="BUS\CandidateService.cs" />
     <Compile Include="BUS\ContractService.cs" />
     <Compile Include="BUS\Helper\PageHelper.cs" />
+    <Compile Include="BUS\Helper\StringHelper.cs" />
     <Compile Include="BUS\IService.cs" />
     <Compile Include="DAL\DataManager.cs" />
     <Compile Include="BUS\DepartmentService.cs" />

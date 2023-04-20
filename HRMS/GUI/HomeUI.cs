@@ -31,9 +31,23 @@ namespace HRMS.GUI
                 lbSuccessfulProbationLastMonth.Text = res.Data.SuccessfulProbationLastMonth.ToString("N0");
                 lbResignedThisMonth.Text = res.Data.ResignedThisMonth.ToString("N0");
                 lbResignedLastMonth.Text = res.Data.ResignedLastMonth.ToString("N0");
-                ibNewEmployeesPercentChange.Text = (((res.Data.NewEmployeesThisMonth - res.Data.NewEmployeesLastMonth) / res.Data.NewEmployeesLastMonth) * 100) + "%";
-                ibSuccessfulProbationPercentChange.Text = (((res.Data.SuccessfulProbationThisMonth - res.Data.SuccessfulProbationLastMonth) / res.Data.SuccessfulProbationLastMonth) * 100) + "%";
-                ibResignedPercentChange.Text = (((res.Data.ResignedThisMonth - res.Data.ResignedLastMonth) / res.Data.ResignedLastMonth) * 100) + "%";
+                lbNewEmployeesPercentChange.Text = "N/A";
+                if (res.Data.NewEmployeesLastMonth != 0)
+                {
+                    lbNewEmployeesPercentChange.Text = (((res.Data.NewEmployeesThisMonth - res.Data.NewEmployeesLastMonth) / res.Data.NewEmployeesLastMonth) * 100) + "%";
+                }
+
+                lbSuccessfulProbationPercentChange.Text = "N/A";
+                if (res.Data.SuccessfulProbationLastMonth != 0)
+                {
+                    lbSuccessfulProbationPercentChange.Text = (((res.Data.SuccessfulProbationThisMonth - res.Data.SuccessfulProbationLastMonth) / res.Data.SuccessfulProbationLastMonth) * 100) + "%";
+                }
+
+                lbResignedPercentChange.Text = "N/A";
+                if (res.Data.ResignedLastMonth != 0)
+                {
+                    lbResignedPercentChange.Text = (((res.Data.ResignedThisMonth - res.Data.ResignedLastMonth) / res.Data.ResignedLastMonth) * 100) + "%";
+                }
             }
         }
     }

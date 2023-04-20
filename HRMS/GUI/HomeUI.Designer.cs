@@ -31,7 +31,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbResignedLastMonth = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.ibResignedPercentChange = new FontAwesome.Sharp.IconButton();
+            this.lbResignedPercentChange = new FontAwesome.Sharp.IconButton();
             this.lbResignedThisMonth = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,12 +49,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbNewEmployeesLastMonth = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.ibNewEmployeesPercentChange = new FontAwesome.Sharp.IconButton();
+            this.lbNewEmployeesPercentChange = new FontAwesome.Sharp.IconButton();
             this.lbNewEmployeesThisMonth = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ibSuccessfulProbationPercentChange = new FontAwesome.Sharp.IconButton();
+            this.lbSuccessfulProbationPercentChange = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,7 +72,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.lbResignedLastMonth);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.ibResignedPercentChange);
+            this.panel4.Controls.Add(this.lbResignedPercentChange);
             this.panel4.Controls.Add(this.lbResignedThisMonth);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -104,23 +104,23 @@
             // 
             // ibResignedPercentChange
             // 
-            this.ibResignedPercentChange.AutoSize = true;
-            this.ibResignedPercentChange.FlatAppearance.BorderSize = 0;
-            this.ibResignedPercentChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibResignedPercentChange.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibResignedPercentChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.ibResignedPercentChange.IconChar = FontAwesome.Sharp.IconChar.ArrowTrendDown;
-            this.ibResignedPercentChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.ibResignedPercentChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibResignedPercentChange.IconSize = 25;
-            this.ibResignedPercentChange.Location = new System.Drawing.Point(69, 61);
-            this.ibResignedPercentChange.Name = "ibResignedPercentChange";
-            this.ibResignedPercentChange.Size = new System.Drawing.Size(75, 31);
-            this.ibResignedPercentChange.TabIndex = 7;
-            this.ibResignedPercentChange.Text = "15%";
-            this.ibResignedPercentChange.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.ibResignedPercentChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibResignedPercentChange.UseVisualStyleBackColor = true;
+            this.lbResignedPercentChange.AutoSize = true;
+            this.lbResignedPercentChange.FlatAppearance.BorderSize = 0;
+            this.lbResignedPercentChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbResignedPercentChange.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbResignedPercentChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.lbResignedPercentChange.IconChar = FontAwesome.Sharp.IconChar.ArrowTrendDown;
+            this.lbResignedPercentChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.lbResignedPercentChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.lbResignedPercentChange.IconSize = 25;
+            this.lbResignedPercentChange.Location = new System.Drawing.Point(69, 61);
+            this.lbResignedPercentChange.Name = "ibResignedPercentChange";
+            this.lbResignedPercentChange.Size = new System.Drawing.Size(75, 31);
+            this.lbResignedPercentChange.TabIndex = 7;
+            this.lbResignedPercentChange.Text = "15%";
+            this.lbResignedPercentChange.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lbResignedPercentChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.lbResignedPercentChange.UseVisualStyleBackColor = true;
             // 
             // lbResignedThisMonth
             // 
@@ -154,7 +154,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.ibSuccessfulProbationPercentChange);
+            this.panel3.Controls.Add(this.lbSuccessfulProbationPercentChange);
             this.panel3.Controls.Add(this.lbSuccessfulProbationLastMonth);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.lbSuccessfulProbationThisMonth);
@@ -272,7 +272,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lbNewEmployeesLastMonth);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.ibNewEmployeesPercentChange);
+            this.panel2.Controls.Add(this.lbNewEmployeesPercentChange);
             this.panel2.Controls.Add(this.lbNewEmployeesThisMonth);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -304,23 +304,23 @@
             // 
             // ibNewEmployeesPercentChange
             // 
-            this.ibNewEmployeesPercentChange.AutoSize = true;
-            this.ibNewEmployeesPercentChange.FlatAppearance.BorderSize = 0;
-            this.ibNewEmployeesPercentChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibNewEmployeesPercentChange.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibNewEmployeesPercentChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            this.ibNewEmployeesPercentChange.IconChar = FontAwesome.Sharp.IconChar.ArrowTrendUp;
-            this.ibNewEmployeesPercentChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            this.ibNewEmployeesPercentChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibNewEmployeesPercentChange.IconSize = 25;
-            this.ibNewEmployeesPercentChange.Location = new System.Drawing.Point(69, 65);
-            this.ibNewEmployeesPercentChange.Name = "ibNewEmployeesPercentChange";
-            this.ibNewEmployeesPercentChange.Size = new System.Drawing.Size(75, 31);
-            this.ibNewEmployeesPercentChange.TabIndex = 4;
-            this.ibNewEmployeesPercentChange.Text = "15%";
-            this.ibNewEmployeesPercentChange.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.ibNewEmployeesPercentChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibNewEmployeesPercentChange.UseVisualStyleBackColor = true;
+            this.lbNewEmployeesPercentChange.AutoSize = true;
+            this.lbNewEmployeesPercentChange.FlatAppearance.BorderSize = 0;
+            this.lbNewEmployeesPercentChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbNewEmployeesPercentChange.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNewEmployeesPercentChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
+            this.lbNewEmployeesPercentChange.IconChar = FontAwesome.Sharp.IconChar.ArrowTrendUp;
+            this.lbNewEmployeesPercentChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
+            this.lbNewEmployeesPercentChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.lbNewEmployeesPercentChange.IconSize = 25;
+            this.lbNewEmployeesPercentChange.Location = new System.Drawing.Point(69, 65);
+            this.lbNewEmployeesPercentChange.Name = "ibNewEmployeesPercentChange";
+            this.lbNewEmployeesPercentChange.Size = new System.Drawing.Size(75, 31);
+            this.lbNewEmployeesPercentChange.TabIndex = 4;
+            this.lbNewEmployeesPercentChange.Text = "15%";
+            this.lbNewEmployeesPercentChange.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lbNewEmployeesPercentChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.lbNewEmployeesPercentChange.UseVisualStyleBackColor = true;
             // 
             // lbNewEmployeesThisMonth
             // 
@@ -374,23 +374,23 @@
             // 
             // ibSuccessfulProbationPercentChange
             // 
-            this.ibSuccessfulProbationPercentChange.AutoSize = true;
-            this.ibSuccessfulProbationPercentChange.FlatAppearance.BorderSize = 0;
-            this.ibSuccessfulProbationPercentChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibSuccessfulProbationPercentChange.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibSuccessfulProbationPercentChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            this.ibSuccessfulProbationPercentChange.IconChar = FontAwesome.Sharp.IconChar.ArrowTrendUp;
-            this.ibSuccessfulProbationPercentChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            this.ibSuccessfulProbationPercentChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibSuccessfulProbationPercentChange.IconSize = 25;
-            this.ibSuccessfulProbationPercentChange.Location = new System.Drawing.Point(69, 65);
-            this.ibSuccessfulProbationPercentChange.Name = "ibSuccessfulProbationPercentChange";
-            this.ibSuccessfulProbationPercentChange.Size = new System.Drawing.Size(75, 31);
-            this.ibSuccessfulProbationPercentChange.TabIndex = 10;
-            this.ibSuccessfulProbationPercentChange.Text = "15%";
-            this.ibSuccessfulProbationPercentChange.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.ibSuccessfulProbationPercentChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibSuccessfulProbationPercentChange.UseVisualStyleBackColor = true;
+            this.lbSuccessfulProbationPercentChange.AutoSize = true;
+            this.lbSuccessfulProbationPercentChange.FlatAppearance.BorderSize = 0;
+            this.lbSuccessfulProbationPercentChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbSuccessfulProbationPercentChange.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSuccessfulProbationPercentChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
+            this.lbSuccessfulProbationPercentChange.IconChar = FontAwesome.Sharp.IconChar.ArrowTrendUp;
+            this.lbSuccessfulProbationPercentChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
+            this.lbSuccessfulProbationPercentChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.lbSuccessfulProbationPercentChange.IconSize = 25;
+            this.lbSuccessfulProbationPercentChange.Location = new System.Drawing.Point(69, 65);
+            this.lbSuccessfulProbationPercentChange.Name = "ibSuccessfulProbationPercentChange";
+            this.lbSuccessfulProbationPercentChange.Size = new System.Drawing.Size(75, 31);
+            this.lbSuccessfulProbationPercentChange.TabIndex = 10;
+            this.lbSuccessfulProbationPercentChange.Text = "15%";
+            this.lbSuccessfulProbationPercentChange.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lbSuccessfulProbationPercentChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.lbSuccessfulProbationPercentChange.UseVisualStyleBackColor = true;
             // 
             // HomeUI
             // 
@@ -427,7 +427,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton ibResignedPercentChange;
+        private FontAwesome.Sharp.IconButton lbResignedPercentChange;
         private System.Windows.Forms.Label lbResignedThisMonth;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label7;
@@ -442,7 +442,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
-        private FontAwesome.Sharp.IconButton ibNewEmployeesPercentChange;
+        private FontAwesome.Sharp.IconButton lbNewEmployeesPercentChange;
         private System.Windows.Forms.Label lbNewEmployeesThisMonth;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label3;
@@ -452,6 +452,6 @@
         private System.Windows.Forms.Label lbSuccessfulProbationLastMonth;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbNewEmployeesLastMonth;
-        private FontAwesome.Sharp.IconButton ibSuccessfulProbationPercentChange;
+        private FontAwesome.Sharp.IconButton lbSuccessfulProbationPercentChange;
     }
 }
